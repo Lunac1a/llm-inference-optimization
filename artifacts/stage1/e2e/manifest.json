@@ -1,0 +1,25 @@
+{
+  "started_at": "2026-09-01T19:26:23.4880078+10:00",
+  "prompt_sha256": "7f13b774f1854fea4be27ab181b93b0fa0b97c33092b7cc1fd88c02889727b3d",
+  "prompt_recipe": "header plus 400 numbered deterministic ASCII records",
+  "repetitions": 3,
+  "context_size": 16384,
+  "generated_tokens": 128,
+  "seed": 42,
+  "temperature": 0.0,
+  "top_k": 1,
+  "top_p": 1.0,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0,
+  "ignore_eos": true,
+  "batch_size": 2048,
+  "ubatch_size": 512,
+  "threads": 24,
+  "flash_attention": "on",
+  "gpu_layers": "all",
+  "kv_types": [
+    "f16",
+    "q8_0"
+  ],
+  "completed_at": "2026-09-01T19:27:08.9040787+10:00"
+}

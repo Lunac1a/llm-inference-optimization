@@ -13,13 +13,16 @@ baseline and upstream `q8_0` KV cache as a control. The custom cache format is
 | Milestone | Status | Meaning |
 | --- | --- | --- |
 | Stage 0: reproducible environment | Passed | Unmodified upstream CUDA build and baseline smoke tests are verified |
-| Stage 1: bottleneck confirmation | Not started | No formal bottleneck or performance claim yet |
+| Stage 1: bottleneck confirmation | Complete (no-go) | KV capacity scales materially, but KV compression did not improve single-sequence decode |
 | Stage 2: CPU reference format | Not started | `q8_kv_128` is not implemented |
 | Stage 3: CUDA integration | Not started | No custom CUDA path exists yet |
 | Stages 4-6: benchmark and replay | Not started | No resume metric has been validated |
 
 See [the Stage 0 validation report](docs/stage0-validation.md) for the locked
 inputs, commands, test results, and raw-evidence references.
+
+See [the Stage 1 validation report](docs/stage1-validation.md) for the
+preregistered bottleneck test, raw data, rerun policy, and no-go decision.
 
 ## Stage 0 result
 
@@ -36,6 +39,18 @@ At a 2,048-token cache allocation:
 
 The observed 46.875% cache reduction belongs to the **upstream q8_0 control**;
 it is not a result of this project's planned custom implementation.
+
+## Stage 1 result
+
+At controlled resident depths from 512 to 32,768 tokens, F16 decode throughput
+fell by 46.54%, confirming that long context is costly. However, upstream q8_0
+was slower than F16 at every canonical depth and was 3.86% slower at depth
+32,768. A fixed 9,622-token prompt corroborated the direction: q8_0 was 1.35%
+slower despite using 46.875% less KV memory.
+
+The preregistered target performance bottleneck is therefore **not confirmed**
+for this single-sequence workload. Stage 1 reached a determinate no-go stop
+condition. Stage 2 has not started, and `q8_kv_128` remains unimplemented.
 
 ## Reproducibility locks
 

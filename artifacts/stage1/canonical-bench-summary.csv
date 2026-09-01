@@ -1,0 +1,9 @@
+depth,kv_type,repetitions,median_tokens_per_second,cv_percent,source_run_set
+512,f16,5,86.403720,1.0789,bench
+512,q8_0,5,84.074000,1.0899,bench
+4096,f16,5,81.227175,0.2668,bench-rerun
+4096,q8_0,5,78.771727,0.3277,bench-rerun
+16384,f16,5,67.218146,2.4991,bench
+16384,q8_0,5,65.092331,2.7973,bench
+32768,f16,5,46.189585,1.2851,bench-rerun
+32768,q8_0,5,44.405097,1.6559,bench-rerun
