@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/ggml-org/llama.cpp.git",
+  "commit": "f8dbcd61893702976f9ab03be89c2b9f436d532c",
+  "build_number": 10720,
+  "source_directory": "engine/llama.cpp",
+  "baseline_build_directory": "engine/llama.cpp/build-baseline"
+}

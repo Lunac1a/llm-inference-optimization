@@ -1,0 +1,12 @@
+/.idea/
+/.venv/
+/.tmp/
+/models/
+/engine/llama.cpp/build*/
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local benchmark scratch space. Curated evidence belongs under artifacts/.
+/results/raw/
