@@ -1,84 +1,88 @@
 # Stage 1: local vLLM baseline
 
-Current status: **incomplete; WSL2 runtime verified, model/API baseline pending**.
-This is a checkpoint, not a passed baseline or performance result.
+Status: **passed on 2026-09-08**. Stage 2 bottleneck investigation and all later
+stages remain unstarted.
 
-## Follow-up: user-provided WSL environment
+## Scope and fixed configuration
 
-The user installed Ubuntu 24.04.4 under WSL2. GPU passthrough is now verified.
-The project environment at `/home/lunacia/.venvs/inference-vllm` contains vLLM
-0.23.0 and PyTorch 2.11.0+cu130, with 193 resolved packages locked in
-`locks/requirements-wsl-cu130.txt`. Dependency consistency, CUDA BF16 matrix
-multiplication, vLLM RMSNorm, and CLI startup passed. See
-[environment instructions](environment.md) and
-[runtime evidence](../artifacts/stage1/wsl-runtime-check.json).
+- Host: Windows 11 with Ubuntu-24.04 WSL2; one RTX 4090 Laptop GPU, 16,376 MiB
+  VRAM, driver 596.49.
+- Runtime: Python 3.12.3, vLLM 0.23.0, PyTorch 2.11.0+cu130, Transformers 4.57.6,
+  Triton 3.6.0, isolated at `/home/lunacia/.venvs/inference-vllm`.
+- Model: `Qwen/Qwen3-4B`, revision
+  `1cfa9a7208912126459214e8b04321603b3df60c`; the downloaded snapshot and SHA256
+  manifest are in [model-lock.json](../artifacts/stage1/model-lock.json).
+- Service: `127.0.0.1:8000`, served name `qwen3-4b-baseline`, BF16, tensor parallel
+  size 1, maximum context 4096, GPU memory utilization 0.80, maximum sequences 4,
+  maximum batched tokens 2048.
+- Prefix caching was explicitly disabled; chunked prefill was enabled; speculative
+  decoding and CPU offload were not used. `--generation-config vllm` makes the
+  benchmark's temperature 0 explicit instead of inheriting the model card defaults.
+- Actual attention backend: FlashAttention 2. Startup reported 5.02 GiB available
+  KV-cache memory, 36,528 GPU KV-cache tokens, and 8.92x maximum concurrency for
+  4096-token requests.
 
-Remaining Stage 1 work: select and pin the model revision, verify loading and
-API generation, and collect a repeated baseline. No model or performance result
-is claimed. No cloud resources were used.
+The service also required two WSL compatibility switches: the V2 model runner was
+disabled because WSL reported that UVA was unavailable, and the FlashInfer sampler
+was disabled because its JIT path required an unavailable `nvcc`. `--enforce-eager`
+was used because the WSL image did not contain Python development headers for the
+torch compiler helper. User-space Ubuntu `.deb` contents were extracted under the
+ignored `.tmp/python-dev/`; no system-wide package installation or sudo change was
+made.
 
-The following sections preserve the **earlier pre-WSL checkpoint**; their missing
-WSL state and proposed package setup have been superseded by this follow-up.
+## Acceptance evidence
 
-## Observed environment
+- Environment and GPU checks: [wsl-runtime-check.json](../artifacts/stage1/wsl-runtime-check.json)
+  and [environment.md](environment.md).
+- Model snapshot manifest: [model-lock.json](../artifacts/stage1/model-lock.json).
+- Final API run: [api-check-20260907T141629Z.json](../artifacts/stage1/api/api-check-20260907T141629Z.json),
+  17/17 checks passed. This covered health, model discovery, Chinese/English/
+  arithmetic prompts, normal and streaming chat completions, invalid-model and
+  oversized-context errors, post-error health, and generation after restart.
+- Final merged benchmark report:
+  [final-benchmark-summary.json](../artifacts/stage1/final-benchmark-summary.json).
+  Every selected configuration completed 32/32 requests with zero failed or
+  detailed-error requests. The selected three-round CV values were:
 
-- Windows 11 Pro, version 10.0.26200.
-- Intel Core i9-13980HX; firmware virtualization and SLAT reported enabled.
-- Approximately 31.62 GiB usable system RAM.
-- NVIDIA RTX 4090 Laptop GPU, 16,376 MiB VRAM, compute capability 8.9.
-- Driver 596.49. NVIDIA-SMI advertises CUDA 13.2 driver compatibility; this is
-  not an installed Linux CUDA runtime or PyTorch version.
-- `wsl --status` exits 50 and reports that WSL is not installed.
-- Docker was not found on PATH; this does not prove no installation exists.
-- Windows optional-feature inspection requires an elevated administrator process;
-  VirtualMachinePlatform and WSL feature states remain unverified.
+  | Random input | Concurrency | Output throughput mean | CV |
+  | ---: | ---: | ---: | ---: |
+  | 512 | 1 | 37.32 tok/s | 4.13% |
+  | 512 | 4 | 141.15 tok/s | 4.51% |
+  | 2048 | 1 | 36.41 tok/s | 1.08% |
+  | 2048 | 4 | 109.28 tok/s | 2.55% |
 
-The raw command outcomes are recorded in
-[preflight evidence](../artifacts/stage1/preflight.json).
+  All CV values are at or below the 5% acceptance threshold. The report retains
+  p50/p95 TTFT, TPOT, and end-to-end latency for each selected raw row.
+- Formal benchmark protocol: random inputs 512/2048, concurrency 1/4, 4 warmups,
+  32 measured requests, 3 rounds, 128 output tokens, request rate `inf`,
+  `ignore-eos`, temperature 0, seed 42. GPU telemetry was sampled once per second.
 
-## Feasibility and proposed configuration
+The first complete run exposed a host-state issue: GPU power changed from roughly
+130--160W to a 55W limit while Windows was using its only available Balanced power
+scheme. That run is preserved at
+`artifacts/stage1/benchmarks/20260907T113324Z` and is not used as the final result.
+The failed groups were rerun only as needed; their raw evidence is preserved at
+`20260907T115614Z`, `20260907T135907Z`, and `20260907T140950Z`. This is why the
+final report records source provenance per configuration instead of silently
+averaging incompatible runs.
 
-The current official vLLM GPU requirements specify Linux and NVIDIA compute
-capability >= 7.5. The GPU clears this hardware check, but actual Linux GPU
-access, package compatibility, and model fit still require verification.
-Official vLLM does not support native Windows and identifies WSL as an option.
+## Reproduction commands
 
-Proposed route: WSL2 with Ubuntu 24.04, a separate Linux Python 3.12 environment,
-and an exact stable vLLM package version selected after checking its release
-dependencies against the available driver. No package version is locked yet.
-Do not reuse the Windows virtual environment.
+From Ubuntu-24.04 WSL2:
 
-Candidate baseline: Qwen/Qwen3-4B in BF16, initially capped at 4,096 context tokens
-and low concurrency. Rough weight memory alone is about 8 GB (4 billion parameters
-times two bytes); runtime, activations, and KV cache add to that. This is a sizing
-estimate, not a successful load. Model revision and final parameters are pending.
-Keep existing GGUF weights; they are not the proposed BF16 baseline.
+```sh
+cd /mnt/d/Lunacia/Inference
+bash scripts/download-qwen3-baseline.sh
+bash scripts/start-vllm-baseline.sh
+python scripts/check-vllm-api.py --base-url http://127.0.0.1:8000 --model qwen3-4b-baseline
+bash scripts/run-stage1-benchmark.sh
+bash scripts/stop-vllm-baseline.sh
+```
 
-## Next steps
+The checked-in scripts keep the service on localhost, preserve raw results, and
+support `--resume` and `--only INPUT:CONCURRENCY,...` for an explicitly recorded
+stability rerun. The service must remain attached to a persistent WSL process on
+this host; a short-lived `wsl bash -lc` caller can reap background processes.
 
-1. Install WSL2 and Ubuntu 24.04 in an administrator PowerShell session:
-
-   ```powershell
-   wsl --install -d Ubuntu-24.04 --no-launch
-   ```
-
-   This changes Windows system components and may require a restart. Let the
-   user schedule the restart and complete the Ubuntu account setup. No automatic
-   restart or system installation was performed in this checkpoint.
-2. Verify `wsl --list --verbose` reports version 2 and `nvidia-smi` works inside
-   Ubuntu before installing vLLM. Verify the distribution name if installation
-   reports it unavailable; use `wsl --list --online`.
-3. Pin the software/model revisions, create the isolated environment, and record
-   the resolved dependencies. Keep the API bound to localhost for the baseline.
-4. Run real API generation and a small repeated baseline, preserving requests,
-   outputs, configuration, and timing. Only then evaluate Stage 1 acceptance.
-
-No GPU rental, model download, dependency installation, optimization code, or
-real-model benchmark was performed. Cloud spending for this checkpoint: AUD 0.
-
-## Official sources checked
-
-- [vLLM GPU installation](https://docs.vllm.ai/en/stable/getting_started/installation/gpu/)
-- [Microsoft WSL installation](https://learn.microsoft.com/en-us/windows/wsl/install)
-- [Microsoft WSL commands](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
-- [Qwen3-4B model card](https://huggingface.co/Qwen/Qwen3-4B)
+No Docker image, cloud GPU, optimization implementation, or Stage 2 experiment was
+created by this stage.

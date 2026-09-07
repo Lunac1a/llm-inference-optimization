@@ -1,0 +1,1 @@
+{"run_id":"20260907T112847Z","model_id":"Qwen/Qwen3-4B","model_revision":"1cfa9a7208912126459214e8b04321603b3df60c","served_model_name":"qwen3-4b-baseline","host":"127.0.0.1","port":8000,"dataset":"random","request_rate":"inf","warmups":4,"measured_requests":32,"rounds":3,"seed":42,"input_lengths":[512,2048],"concurrency":[1,4],"output_length":128}

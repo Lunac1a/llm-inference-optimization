@@ -54,7 +54,8 @@ driver was installed; GPU access uses the Windows host driver through WSL.
 
 Passed: dependency consistency (193 packages), CUDA discovery, BF16 support,
 deterministic GPU matrix multiplication, vLLM's compiled RMSNorm against a
-PyTorch reference, and `vllm --help`. The setup script was syntax checked.
+PyTorch reference, `vllm --help`, Qwen3-4B model loading, and the Stage 1 API and
+repeated benchmark acceptance. The setup and serving scripts were syntax checked.
 
 The CLI emitted two non-fatal warnings: the resolved Transformers v4 path is
 deprecated, and WSL causes vLLM to disable pinned host memory. Preserve the
@@ -62,9 +63,12 @@ resolved stack for this checkpoint; reassess Transformers compatibility before
 an engine upgrade. WSL measurements must not be assumed equivalent to native
 Linux/cloud measurements because the host-memory behavior differs.
 
-No model weights were downloaded, no model was loaded, no API generation was
-run, and no performance baseline was measured in this task. Model loading will
-also test whether the current WSL RAM allocation is sufficient.
+The pinned Qwen3-4B snapshot is recorded in
+`artifacts/stage1/model-lock.json`. The final service used FlashAttention 2 and
+reported 5.02 GiB available KV-cache memory with 36,528 GPU KV-cache tokens.
+The API and benchmark evidence is documented in
+`docs/stage1-validation.md`; WSL's disabled pinned host memory remains a known
+measurement limitation.
 
 Evidence is under `artifacts/stage1/`: `wsl-install.log`, `dependency-check.log`,
 `wsl-runtime-check.json`, `wsl-runtime-check.stderr.log`, and `vllm-help.log`.
