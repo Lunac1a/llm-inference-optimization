@@ -2,11 +2,13 @@
 /.venv/
 /.tmp/
 /models/
-/engine/llama.cpp/build*/
-
+/build/
+/dist/
+.env
+.env.*
+!.env.example
 __pycache__/
 *.py[cod]
 .pytest_cache/
-
-# Local benchmark scratch space. Curated evidence belongs under artifacts/.
+# Local scratch; curated evidence belongs under artifacts/.
 /results/raw/
