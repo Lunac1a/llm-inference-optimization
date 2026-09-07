@@ -3,7 +3,9 @@
 Identify, implement, and validate one bounded inference optimization on top of
 vLLM, deliver it through an API, and reproduce the results on a cloud GPU.
 
-**Status: direction agreed; vLLM setup, baseline, and optimization not started.**
+**Status: Stage 1 preflight checked; waiting for a WSL2 Linux environment.**
+vLLM installation, API generation, baseline measurements, and optimization have
+not started. See [the Stage 1 checkpoint](docs/stage1-validation.md).
 The model, vLLM version, workload, and optimization target remain undecided.
 No vLLM performance or compatibility results are claimed.
 

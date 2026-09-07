@@ -1,6 +1,7 @@
 # vLLM project plan
 
-Decision date: 2026-09-07. All implementation stages are **not started**.
+Decision date: 2026-09-07. Stage 1 is **in progress: preflight checked, WSL2
+installation pending**. Stages 2-6 are not started.
 This numbering belongs to the vLLM route; archived llama.cpp stages do not count
 as vLLM acceptance evidence.
 

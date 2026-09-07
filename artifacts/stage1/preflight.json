@@ -1,0 +1,17 @@
+{
+  "date_local": "2026-09-07",
+  "timezone": "Australia/Sydney",
+  "status": "incomplete_linux_setup_pending",
+  "observations": [
+    {"command": "nvidia-smi --query-gpu=name,memory.total,driver_version,compute_cap --format=csv,noheader", "output": "NVIDIA GeForce RTX 4090 Laptop GPU, 16376 MiB, 596.49, 8.9"},
+    {"command": "wsl --status", "exit_code": 50, "stderr": "未安装适用于 Linux 的 Windows 子系统。可通过运行 “wsl.exe --install” 进行安装。\r\r\n有关详细信息，请访问 https://aka.ms/wslinstall\r\r\n"},
+    {"command": "Get-CimInstance Win32_OperatingSystem", "selected_fields": {"Caption": "Microsoft Windows 11 专业版", "Version": "10.0.26200", "TotalVisibleMemorySize": 33158508, "FreePhysicalMemory": 24468408}},
+    {"command": "Get-CimInstance Win32_Processor", "selected_fields": {"Name": "13th Gen Intel(R) Core(TM) i9-13980HX", "VirtualizationFirmwareEnabled": true, "SecondLevelAddressTranslationExtensions": true}},
+    {"command": "Get-WindowsOptionalFeature -Online -FeatureName <each feature>", "features": ["VirtualMachinePlatform", "Microsoft-Windows-Subsystem-Linux"], "error": "请求的操作需要提升。", "state": "unknown"}
+  ],
+  "vllm_installed_by_this_task": false,
+  "linux_gpu_verified": false,
+  "model_load_verified": false,
+  "baseline_measured": false,
+  "cloud_spend_aud": 0
+}
