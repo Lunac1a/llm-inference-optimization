@@ -72,6 +72,40 @@ def decode(body: str):
         return {"raw_body": body}
 
 
+def complete_answer(content, finish_reason, reasoning=None):
+    return (
+        isinstance(content, str) and bool(content.strip())
+        and "<think>" not in content.lower() and "</think>" not in content.lower()
+        and not reasoning and finish_reason == "stop"
+    )
+
+
+def normal_answer_passed(status, response):
+    if status != 200 or not isinstance(response, dict):
+        return False
+    choices = response.get("choices")
+    if not isinstance(choices, list) or len(choices) != 1:
+        return False
+    choice = choices[0]
+    message = choice.get("message") or {}
+    return complete_answer(message.get("content"), choice.get("finish_reason"),
+                           message.get("reasoning") or message.get("reasoning_content"))
+
+
+def stream_answer_passed(status, content, events, done):
+    finishes = []
+    for event in events:
+        if not isinstance(event, dict) or any(key in event for key in ("error", "transport_error", "raw_event")):
+            return False
+        for choice in event.get("choices", []):
+            delta = choice.get("delta") or {}
+            if delta.get("reasoning") or delta.get("reasoning_content"):
+                return False
+            if choice.get("finish_reason") is not None:
+                finishes.append(choice["finish_reason"])
+    return status == 200 and done and finishes == ["stop"] and complete_answer(content, "stop")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--base-url", default="http://127.0.0.1:8000")
@@ -111,7 +145,7 @@ def main() -> int:
         "max_tokens": 128,
         "temperature": 0,
         "seed": 42,
-        "extra_body": {"enable_thinking": False},
+        "chat_template_kwargs": {"enable_thinking": False},
     }
     for prompt in prompts:
         for repeat in (1, 2):
@@ -123,7 +157,7 @@ def main() -> int:
                 content = (decoded["choices"][0].get("message") or {}).get("content") or ""
             add_check(
                 f"chat_non_stream_{prompt['id']}_{repeat}",
-                status == 200 and bool(content.strip()),
+                normal_answer_passed(status, decoded),
                 status=status,
                 request=payload,
                 response=decoded,
@@ -138,7 +172,7 @@ def main() -> int:
             status, content, events, done = stream_chat(f"{base_url}/v1/chat/completions", stream_payload)
             add_check(
                 f"chat_stream_{prompt['id']}_{repeat}",
-                status == 200 and bool(content.strip()) and done,
+                stream_answer_passed(status, content, events, done),
                 status=status,
                 request=stream_payload,
                 content=content,
@@ -172,6 +206,11 @@ def main() -> int:
 
     status, body, _ = request_json(f"{base_url}/health")
     add_check("health_after_negative_checks", status == 200, status=status, body=body)
+    recovery_payload = {**common, "messages": [{"role": "user", "content": "Say hello in one sentence."}], "stream": False}
+    status, body, _ = request_json(f"{base_url}/v1/chat/completions", recovery_payload)
+    recovery = decode(body)
+    add_check("generation_after_negative_checks", normal_answer_passed(status, recovery),
+              status=status, request=recovery_payload, response=recovery)
     result["finished_at_utc"] = datetime.now(timezone.utc).isoformat()
     result["passed"] = all(check["passed"] for check in result["checks"])
     result["check_count"] = len(result["checks"])

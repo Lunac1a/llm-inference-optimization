@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-09-07T13:57:36.783216+00:00",
-  "run_dir": "artifacts/stage1/benchmarks/20260907T115614Z",
+  "generated_at_utc": "2026-09-07T14:34:49.697275+00:00",
+  "run_dir": "D:\\Lunacia\\Inference\\artifacts\\stage1\\benchmarks\\20260907T115614Z",
   "raw_result_count": 12,
   "rows": [
     {
@@ -22,8 +22,9 @@
       "p95_tpot_ms": 26.932788893307187,
       "p50_e2el_ms": 3533.0789439999535,
       "p95_e2el_ms": 3776.320870199879,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round1-input2048-concurrency4.json",
@@ -44,8 +45,9 @@
       "p95_tpot_ms": 33.613765966929634,
       "p50_e2el_ms": 4423.052886499818,
       "p95_e2el_ms": 4880.824799049833,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round1-input512-concurrency1.json",
@@ -66,8 +68,9 @@
       "p95_tpot_ms": 39.511849260628786,
       "p50_e2el_ms": 2986.031490499954,
       "p95_e2el_ms": 5196.887250100053,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round1-input512-concurrency4.json",
@@ -88,8 +91,9 @@
       "p95_tpot_ms": 23.984528136219787,
       "p50_e2el_ms": 2931.82664699998,
       "p95_e2el_ms": 3327.4641218500847,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round2-input2048-concurrency1.json",
@@ -110,8 +114,9 @@
       "p95_tpot_ms": 27.174526595670105,
       "p50_e2el_ms": 3556.3986294998813,
       "p95_e2el_ms": 3792.403393150039,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round2-input2048-concurrency4.json",
@@ -132,8 +137,9 @@
       "p95_tpot_ms": 39.96021630078797,
       "p50_e2el_ms": 5247.285939499989,
       "p95_e2el_ms": 5842.4394637001105,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round2-input512-concurrency1.json",
@@ -154,8 +160,9 @@
       "p95_tpot_ms": 27.93700378897609,
       "p50_e2el_ms": 3229.812202499943,
       "p95_e2el_ms": 3630.524060450125,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round2-input512-concurrency4.json",
@@ -176,8 +183,9 @@
       "p95_tpot_ms": 28.72907877165343,
       "p50_e2el_ms": 3551.856940999869,
       "p95_e2el_ms": 3960.7517529000233,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round3-input2048-concurrency1.json",
@@ -198,8 +206,9 @@
       "p95_tpot_ms": 26.27296525157471,
       "p50_e2el_ms": 3489.1982860000044,
       "p95_e2el_ms": 3687.031265549993,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round3-input2048-concurrency4.json",
@@ -220,8 +229,9 @@
       "p95_tpot_ms": 33.88392892992111,
       "p50_e2el_ms": 4577.864032000008,
       "p95_e2el_ms": 4761.905557349982,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round3-input512-concurrency1.json",
@@ -242,8 +252,9 @@
       "p95_tpot_ms": 25.36878643031495,
       "p50_e2el_ms": 2670.6558654999953,
       "p95_e2el_ms": 3303.7817156499896,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round3-input512-concurrency4.json",
@@ -264,8 +275,9 @@
       "p95_tpot_ms": 27.315350004330785,
       "p50_e2el_ms": 3465.2289864999943,
       "p95_e2el_ms": 3658.651927900007,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     }
   ],
   "stability": [
@@ -303,5 +315,6 @@
     }
   ],
   "formal_stability_passed": false,
+  "all_requests_passed": true,
   "parser_note": "Raw vLLM JSON remains authoritative; fields absent in this vLLM release are recorded as null."
 }

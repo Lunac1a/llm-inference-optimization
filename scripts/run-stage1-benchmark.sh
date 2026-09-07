@@ -93,6 +93,8 @@ for round in $(seq 1 "$BENCH_ROUNDS"); do
                 --dataset-name random \
                 --random-input-len "$input_len" \
                 --random-output-len "$BENCH_OUTPUT_LEN" \
+                --random-range-ratio 1 \
+                --random-prefix-len 0 \
                 --num-warmups "$BENCH_NUM_WARMUPS" \
                 --num-prompts "$BENCH_NUM_PROMPTS" \
                 --request-rate inf \

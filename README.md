@@ -3,9 +3,10 @@
 Identify, implement, and validate one bounded inference optimization on top of
 vLLM, deliver it through an API, and reproduce the results on a cloud GPU.
 
-**Status: Stage 1 local vLLM baseline passed; Stage 2 has not started.**
-The pinned Qwen3-4B BF16 service passed the API contract and the formal repeated
-baseline under the documented WSL2 constraints. See
+**Status: Stage 1 acceptance reopened after review; Stage 2 has not started.**
+The pinned service has generated responses and benchmark data, but the previous
+API acceptance was invalid and the selected benchmark reruns deviated from the
+protocol. Acceptance scripts are corrected; API revalidation is pending. See
 [the Stage 1 validation report](docs/stage1-validation.md) and the raw evidence
 under `artifacts/stage1/`.
 
@@ -33,8 +34,8 @@ Use the engine API initially. Add a separate API layer only for a concrete
 responsibility. Cloud work follows local validation, with a total budget target
 of **AUD 50**, including storage and incidental charges.
 
-See [the staged plan](docs/plan.md). The next authorized task is bottleneck
-investigation; optimization, Docker, and cloud work were not started here.
+See [the staged plan](docs/plan.md). Finish Stage 1 acceptance before bottleneck
+investigation; optimization, Docker, and cloud work remain unstarted.
 
 ## Previous exploration
 

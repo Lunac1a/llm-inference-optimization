@@ -1,81 +1,83 @@
-"""Merge the final Stage 1 rows after targeted stability reruns."""
-
+"""Recompute complete three-round groups from raw evidence; audit rerun policy."""
 from __future__ import annotations
 
 import argparse
 import json
 import pathlib
+import runpy
 from datetime import datetime, timezone
 
-
-EXPECTED_GROUPS = {(512, 1), (512, 4), (2048, 1), (2048, 4)}
-
-
-def load_summary(run_dir: pathlib.Path) -> dict:
-    return json.loads((run_dir / "summary.json").read_text(encoding="utf-8"))
+helpers = runpy.run_path(str(pathlib.Path(__file__).with_name("analyze-stage1-benchmark.py")))
+load_run = helpers["load_run"]
+stability_rows = helpers["stability_rows"]
+EXPECTED_GROUPS = helpers["EXPECTED_GROUPS"]
 
 
-def row_key(row: dict) -> tuple[int, int]:
-    return int(row["input_tokens"]), int(row["concurrency"])
-
-
-def main() -> int:
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("base_run", type=pathlib.Path)
-    parser.add_argument("replacement_runs", nargs="+", type=pathlib.Path)
+    parser.add_argument("replacement_runs", nargs="*", type=pathlib.Path)
     parser.add_argument("--output", type=pathlib.Path, required=True)
     args = parser.parse_args()
-
-    rows: dict[tuple[int, int], dict] = {}
-    stability: dict[tuple[int, int], dict] = {}
-    sources: dict[tuple[int, int], str] = {}
+    groups = {}
+    deviations = []
+    base_protocol = None
+    previous_dir = None
     run_dirs = [args.base_run, *args.replacement_runs]
-    for run_dir in run_dirs:
-        report = load_summary(run_dir)
-        for row in report["rows"]:
-            key = row_key(row)
-            rows[key] = row
-            sources[key] = str(run_dir)
-        for item in report["stability"]:
-            stability[row_key(item)] = item
-
-    missing = EXPECTED_GROUPS - rows.keys()
-    missing_stability = EXPECTED_GROUPS - stability.keys()
-    if missing or missing_stability:
-        raise SystemExit(f"Missing final groups: rows={sorted(missing)}, stability={sorted(missing_stability)}")
-
-    ordered_keys = sorted(EXPECTED_GROUPS)
-    selected_rows = []
-    for key in ordered_keys:
-        row = dict(rows[key])
-        row["source_run"] = sources[key]
-        selected_rows.append(row)
-
-    all_requests_passed = all(
-        row.get("completed") == 32 and row.get("failed") == 0 and row.get("detailed_error_count") == 0
-        for row in selected_rows
-    )
-    stability_rows = [stability[key] for key in ordered_keys]
+    if len({p.resolve() for p in run_dirs}) != len(run_dirs):
+        raise ValueError("Duplicate run directories")
+    if len(args.replacement_runs) > 1:
+        deviations.append("More than one rerun was selected; the original protocol allows one.")
+    fixed = ("model_id", "model_revision", "served_model_name", "dataset", "request_rate",
+             "warmups", "measured_requests", "rounds", "seed", "input_lengths", "concurrency", "output_length")
+    for index, run_dir in enumerate(run_dirs):
+        protocol, rows = load_run(run_dir)
+        if index == 0:
+            base_protocol = protocol
+            if protocol.get("rerun_of"):
+                deviations.append("Base selection is itself a rerun; original-run provenance requires review.")
+        else:
+            if any(k not in protocol or protocol[k] != base_protocol.get(k) for k in fixed):
+                raise ValueError("Cannot combine different benchmark protocols")
+            parent = protocol.get("rerun_of")
+            if not parent or pathlib.Path(parent).resolve() != previous_dir.resolve():
+                deviations.append(f"Rerun parent is not the preceding run: {run_dir}")
+        incoming = {}
+        for row in rows:
+            key = (row["input_tokens"], row["concurrency"])
+            incoming.setdefault(key, []).append({**row, "source_run": str(run_dir)})
+        if index == 0 and set(incoming) != EXPECTED_GROUPS:
+            raise ValueError("Base run must contain all four complete configuration groups")
+        for key, group in incoming.items():
+            if index and stability_rows(groups[key])[0]["stability_passed_cv_le_5_percent"]:
+                deviations.append(f"Replacement of a group that already met stability: {key}")
+            # Replace the entire group, never just its last round.
+            groups[key] = group
+        previous_dir = run_dir
+    selected_rows = [row for key in sorted(groups) for row in sorted(groups[key], key=lambda r: r["round"])]
+    stability = stability_rows(selected_rows)
+    requests_passed = all(row["request_evidence_passed"] for row in selected_rows)
+    stable = all(row["stability_passed_cv_le_5_percent"] for row in stability)
     report = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "base_run": str(args.base_run),
-        "replacement_runs": [str(path) for path in args.replacement_runs],
+        "replacement_runs": [str(p) for p in args.replacement_runs],
         "rows": selected_rows,
-        "stability": stability_rows,
-        "all_requests_passed": all_requests_passed,
-        "formal_stability_passed": all(
-            item["stability_passed_cv_le_5_percent"] for item in stability_rows
-        ),
-        "raw_evidence_note": "Each selected row remains available in its source run directory; targeted reruns replace only the failed configuration groups.",
+        "raw_result_count": len(selected_rows),
+        "stability": stability,
+        "all_requests_passed": requests_passed,
+        "formal_stability_passed": stable,
+        "protocol_compliant": not deviations,
+        "protocol_deviations": deviations,
+        "benchmark_acceptance_passed": requests_passed and stable and not deviations,
+        "stage1_passed": False,
+        "stage1_note": "Benchmark-only analysis cannot certify API acceptance or restart verification.",
+        "raw_evidence_note": "Recomputed from raw JSON. Full groups retain all three rounds; CV alone does not override protocol deviations.",
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({
-        "output": str(args.output),
-        "all_requests_passed": report["all_requests_passed"],
-        "formal_stability_passed": report["formal_stability_passed"],
-    }, indent=2))
-    return 0
+    print(json.dumps({k: report[k] for k in ("raw_result_count", "all_requests_passed", "formal_stability_passed", "protocol_compliant", "benchmark_acceptance_passed")}, indent=2))
+    return 0 if report["benchmark_acceptance_passed"] else 1
 
 
 if __name__ == "__main__":

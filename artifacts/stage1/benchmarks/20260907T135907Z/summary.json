@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-09-07T14:09:27.095006+00:00",
-  "run_dir": "artifacts/stage1/benchmarks/20260907T135907Z",
+  "generated_at_utc": "2026-09-07T14:34:49.809852+00:00",
+  "run_dir": "D:\\Lunacia\\Inference\\artifacts\\stage1\\benchmarks\\20260907T135907Z",
   "raw_result_count": 9,
   "rows": [
     {
@@ -22,8 +22,9 @@
       "p95_tpot_ms": 35.012415013779524,
       "p50_e2el_ms": 4571.875336499943,
       "p95_e2el_ms": 5184.182030299962,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round1-input512-concurrency1.json",
@@ -44,8 +45,9 @@
       "p95_tpot_ms": 26.721716765353683,
       "p50_e2el_ms": 3098.542711500045,
       "p95_e2el_ms": 3483.7781249499585,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round1-input512-concurrency4.json",
@@ -66,8 +68,9 @@
       "p95_tpot_ms": 27.24626444370061,
       "p50_e2el_ms": 3485.5412189999697,
       "p95_e2el_ms": 3600.556221500017,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round2-input2048-concurrency4.json",
@@ -88,8 +91,9 @@
       "p95_tpot_ms": 35.33547234133857,
       "p50_e2el_ms": 4633.32308650007,
       "p95_e2el_ms": 5096.241948750066,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round2-input512-concurrency1.json",
@@ -110,8 +114,9 @@
       "p95_tpot_ms": 26.858776598424768,
       "p50_e2el_ms": 3299.4790225000656,
       "p95_e2el_ms": 3499.7363697499336,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round2-input512-concurrency4.json",
@@ -132,8 +137,9 @@
       "p95_tpot_ms": 31.768406069684943,
       "p50_e2el_ms": 3812.8784539999856,
       "p95_e2el_ms": 4195.365549150023,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round3-input2048-concurrency4.json",
@@ -154,8 +160,9 @@
       "p95_tpot_ms": 35.33107410433055,
       "p50_e2el_ms": 4788.2096025000465,
       "p95_e2el_ms": 5067.678521499897,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round3-input512-concurrency1.json",
@@ -176,8 +183,9 @@
       "p95_tpot_ms": 28.049428966535807,
       "p50_e2el_ms": 3439.503150500002,
       "p95_e2el_ms": 3657.1706513500544,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     },
     {
       "file": "round3-input512-concurrency4.json",
@@ -198,8 +206,9 @@
       "p95_tpot_ms": 29.15371049291238,
       "p50_e2el_ms": 3722.22764300011,
       "p95_e2el_ms": 3811.9193664999443,
-      "detailed_request_count": 0,
-      "detailed_error_count": 0
+      "detailed_request_count": 32,
+      "detailed_error_count": 0,
+      "request_evidence_passed": true
     }
   ],
   "stability": [
@@ -229,5 +238,6 @@
     }
   ],
   "formal_stability_passed": false,
+  "all_requests_passed": true,
   "parser_note": "Raw vLLM JSON remains authoritative; fields absent in this vLLM release are recorded as null."
 }

@@ -15,7 +15,7 @@ from datetime import datetime, timezone
 def first_number(data: dict, keys: tuple[str, ...]):
     for key in keys:
         value = data.get(key)
-        if isinstance(value, (int, float)) and math.isfinite(value):
+        if type(value) in (int, float) and math.isfinite(value):
             return float(value)
     return None
 
@@ -53,15 +53,61 @@ def summarize_file(path: pathlib.Path):
                 value = percentiles.get(str(percentile), percentiles.get(percentile))
                 if isinstance(value, (int, float)):
                     summary[f"p{percentile}_{metric}_ms"] = float(value)
-    details = data.get("requests") or data.get("request_results") or data.get("per_request") or []
-    if isinstance(details, list):
-        summary["detailed_request_count"] = len(details)
-        summary["detailed_error_count"] = sum(bool(item.get("error")) for item in details if isinstance(item, dict))
-    else:
-        errors = data.get("errors")
-        summary["detailed_request_count"] = len(errors) if isinstance(errors, list) else None
-        summary["detailed_error_count"] = sum(bool(error) for error in errors) if isinstance(errors, list) else None
+    # Pinned vLLM writes parallel arrays. Missing evidence is unknown, not zero.
+    errors = data.get("errors")
+    valid_errors = isinstance(errors, list) and all(isinstance(e, str) for e in errors)
+    summary["detailed_request_count"] = len(errors) if valid_errors else None
+    summary["detailed_error_count"] = sum(bool(e) for e in errors) if valid_errors else None
+    summary["request_evidence_passed"] = (
+        valid_errors and len(errors) == 32 and not any(errors)
+        and data.get("num_prompts") == 32
+        and summary["completed"] == 32 and summary["failed"] == 0
+        and data.get("max_concurrency") == concurrency
+        and data.get("input_lens") == [input_tokens] * 32
+        and data.get("output_lens") == [128] * 32
+        and all(isinstance(data.get(key), list) and len(data[key]) == 32
+                for key in ("ttfts", "itls", "generated_texts"))
+        and all(summary[f"p{p}_{metric}_ms"] is not None
+                for p in (50, 95) for metric in ("ttft", "tpot", "e2el"))
+    )
     return summary
+
+
+EXPECTED_GROUPS = {(512, 1), (512, 4), (2048, 1), (2048, 4)}
+
+
+def load_run(run_dir):
+    protocol = json.loads((run_dir / "protocol.json").read_text(encoding="utf-8"))
+    if protocol.get("rounds") != 3 or protocol.get("measured_requests") != 32 or protocol.get("output_length") != 128:
+        raise ValueError("Expected fixed Stage 1 protocol: 3 rounds, 32 requests, 128 output tokens")
+    selected = protocol.get("only_groups", "")
+    groups = {tuple(map(int, g.split(":"))) for g in selected.split(",")} if selected else EXPECTED_GROUPS
+    if not groups or not groups <= EXPECTED_GROUPS:
+        raise ValueError("Unexpected configuration groups")
+    rows = [summarize_file(p) for p in sorted(run_dir.glob("round*-input*-concurrency*.json"))]
+    expected = {(r, i, c) for r in (1, 2, 3) for i, c in groups}
+    actual = {(row["round"], row["input_tokens"], row["concurrency"]) for row in rows}
+    if actual != expected or len(rows) != len(expected):
+        raise ValueError("Missing, duplicate, or unexpected benchmark rounds")
+    return protocol, rows
+
+
+def stability_rows(rows):
+    grouped = {}
+    for row in rows:
+        grouped.setdefault((row["input_tokens"], row["concurrency"]), []).append(row)
+    result = []
+    for (input_tokens, concurrency), group in sorted(grouped.items()):
+        values = [row["output_throughput_tok_s"] for row in group]
+        valid = (len(group) == 3 and {row["round"] for row in group} == {1, 2, 3}
+                 and all(v is not None and v > 0 for v in values))
+        mean = statistics.mean(values) if valid else None
+        cv = statistics.stdev(values) / mean * 100 if valid else None
+        result.append({"input_tokens": input_tokens, "concurrency": concurrency,
+                       "rounds": len(group), "output_throughput_mean_tok_s": mean,
+                       "output_throughput_cv_percent": cv,
+                       "stability_passed_cv_le_5_percent": cv is not None and cv <= 5})
+    return result
 
 
 def main() -> int:
@@ -69,13 +115,7 @@ def main() -> int:
     parser.add_argument("run_dir")
     args = parser.parse_args()
     run_dir = pathlib.Path(args.run_dir)
-    files = sorted(run_dir.glob("round*-input*-concurrency*.json"))
-    protocol = json.loads((run_dir / "protocol.json").read_text(encoding="utf-8"))
-    only_groups = [group for group in protocol.get("only_groups", "").split(",") if group]
-    expected_file_count = 12 if not only_groups else len(only_groups) * int(protocol.get("rounds", 3))
-    if len(files) != expected_file_count:
-        raise SystemExit(f"Expected {expected_file_count} raw benchmark JSON files, found {len(files)}")
-    rows = [summarize_file(path) for path in files]
+    protocol, rows = load_run(run_dir)
     fields = list(rows[0])
     summary_path = run_dir / "summary.csv"
     with summary_path.open("w", newline="", encoding="utf-8") as handle:
@@ -83,23 +123,7 @@ def main() -> int:
         writer.writeheader()
         writer.writerows(rows)
 
-    grouped = {}
-    for row in rows:
-        key = (row["input_tokens"], row["concurrency"])
-        grouped.setdefault(key, []).append(row)
-    cv_rows = []
-    for (input_tokens, concurrency), group in sorted(grouped.items()):
-        values = [row["output_throughput_tok_s"] for row in group if row["output_throughput_tok_s"] is not None]
-        mean = statistics.mean(values) if values else None
-        cv_percent = (statistics.stdev(values) / mean * 100) if len(values) > 1 and mean else None
-        cv_rows.append({
-            "input_tokens": input_tokens,
-            "concurrency": concurrency,
-            "rounds": len(group),
-            "output_throughput_mean_tok_s": mean,
-            "output_throughput_cv_percent": cv_percent,
-            "stability_passed_cv_le_5_percent": cv_percent is not None and cv_percent <= 5.0,
-        })
+    cv_rows = stability_rows(rows)
     cv_path = run_dir / "stability.csv"
     with cv_path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(cv_rows[0]))
@@ -109,15 +133,16 @@ def main() -> int:
     report = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "run_dir": str(run_dir),
-        "raw_result_count": len(files),
+        "raw_result_count": len(rows),
         "rows": rows,
         "stability": cv_rows,
         "formal_stability_passed": all(row["stability_passed_cv_le_5_percent"] for row in cv_rows),
+        "all_requests_passed": all(row["request_evidence_passed"] for row in rows),
         "parser_note": "Raw vLLM JSON remains authoritative; fields absent in this vLLM release are recorded as null.",
     }
     (run_dir / "summary.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"run_dir": str(run_dir), "raw_result_count": len(files), "formal_stability_passed": report["formal_stability_passed"]}, indent=2))
-    return 0
+    print(json.dumps({"run_dir": str(run_dir), "raw_result_count": len(rows), "formal_stability_passed": report["formal_stability_passed"]}, indent=2))
+    return 0 if report["all_requests_passed"] and report["formal_stability_passed"] else 1
 
 
 if __name__ == "__main__":
