@@ -1,7 +1,8 @@
 # vLLM project plan
 
-Decision date: 2026-09-07. Review correction: Stage 1 is **incomplete: acceptance
-scripts corrected, API revalidation and benchmark protocol resolution pending**.
+Decision date: 2026-09-07. Acceptance updated 2026-09-08: Stage 1 **passed under
+protocol v2**, with corrected API checks, regression checks, and a complete
+protocol-compliant benchmark rerun. Historical v1 acceptance remains withdrawn.
 Stages 2-6 are not started.
 This numbering belongs to the vLLM route; archived llama.cpp stages do not count
 as vLLM acceptance evidence.
@@ -34,6 +35,7 @@ as vLLM acceptance evidence.
 
 ## Immediate next task
 
-Finish the pending acceptance work in [stage1-validation.md](stage1-validation.md)
-before authorizing Stage 2. Preserve historical results but do not equate corrected
-code or stable post-hoc selected groups with passed stage acceptance.
+Use [stage1-validation.md](stage1-validation.md) and its linked v2 evidence as the
+handoff for a separately authorized Stage 2 task. Investigate a bounded workload
+before choosing an optimization; current WSL compatibility flags remain explicit
+limitations. Do not reuse the invalidated historical v1 selection as a baseline.

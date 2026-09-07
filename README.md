@@ -3,10 +3,10 @@
 Identify, implement, and validate one bounded inference optimization on top of
 vLLM, deliver it through an API, and reproduce the results on a cloud GPU.
 
-**Status: Stage 1 acceptance reopened after review; Stage 2 has not started.**
-The pinned service has generated responses and benchmark data, but the previous
-API acceptance was invalid and the selected benchmark reruns deviated from the
-protocol. Acceptance scripts are corrected; API revalidation is pending. See
+**Status: Stage 1 passed under protocol v2; Stage 2 has not started.**
+API checks passed 18/18 before and after restart. The accepted full benchmark
+rerun passed 384/384 requests with four group CVs of 2.70-4.29%. This is a pinned
+WSL compatibility baseline, not a custom optimization or cloud result. See
 [the Stage 1 validation report](docs/stage1-validation.md) and the raw evidence
 under `artifacts/stage1/`.
 
@@ -34,8 +34,8 @@ Use the engine API initially. Add a separate API layer only for a concrete
 responsibility. Cloud work follows local validation, with a total budget target
 of **AUD 50**, including storage and incidental charges.
 
-See [the staged plan](docs/plan.md). Finish Stage 1 acceptance before bottleneck
-investigation; optimization, Docker, and cloud work remain unstarted.
+See [the staged plan](docs/plan.md). The next stage is bottleneck investigation;
+optimization, Docker, and cloud work remain unstarted.
 
 ## Previous exploration
 

@@ -3,6 +3,7 @@
 set -euo pipefail
 repo_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 env_path="${INFERENCE_VENV:-$HOME/.venvs/inference-vllm}"
+bash "$repo_root/scripts/setup-wsl-headers.sh"
 if [[ ! -f "$env_path/pyvenv.cfg" ]]; then
     uv venv --python python3.12 "$env_path"
 fi

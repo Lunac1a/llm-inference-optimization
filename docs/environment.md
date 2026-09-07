@@ -44,6 +44,14 @@ outside that lock. Use only the dedicated project environment. To use a differen
 dedicated directory, set `INFERENCE_VENV` before running it. Package versions are
 pinned; the file is not a hash-verified artifact lock or a cloud validation.
 
+The setup also runs `scripts/setup-wsl-headers.sh`: it downloads the pinned Ubuntu
+Python 3.12 development packages, verifies SHA256, and extracts headers into
+ignored `.tmp/python-dev/` without sudo. The serving script requires these headers
+and sets the include paths for runtime compilation. The packages are
+3.12.3-1ubuntu0.16 while this machine's interpreter is 3.12.3-1ubuntu0.11;
+successful serving is local evidence for this patch-level combination, not an
+ABI guarantee for other Python versions. A clean reinstall was not performed.
+
 The system Python does not have pip; uv manages the project packages directly,
 so installing system pip is unnecessary. Docker and a system CUDA toolkit are
 not required for this prebuilt runtime checkpoint and were not added. A future
@@ -54,8 +62,8 @@ driver was installed; GPU access uses the Windows host driver through WSL.
 
 Passed: dependency consistency (193 packages), CUDA discovery, BF16 support,
 deterministic GPU matrix multiplication, vLLM's compiled RMSNorm against a
-PyTorch reference, `vllm --help`, Qwen3-4B model loading, and the Stage 1 API and
-repeated benchmark acceptance. The setup and serving scripts were syntax checked.
+PyTorch reference, `vllm --help`, and Qwen3-4B model loading. Current API and
+benchmark acceptance status is recorded in `docs/stage1-validation.md`.
 
 The CLI emitted two non-fatal warnings: the resolved Transformers v4 path is
 deprecated, and WSL causes vLLM to disable pinned host memory. Preserve the
@@ -69,6 +77,16 @@ reported 5.02 GiB available KV-cache memory with 36,528 GPU KV-cache tokens.
 The API and benchmark evidence is documented in
 `docs/stage1-validation.md`; WSL's disabled pinned host memory remains a known
 measurement limitation.
+
+The baseline uses eager execution, disables the V2 model runner (WSL UVA
+compatibility), and disables FlashInfer sampling (its JIT compiler path requires
+additional CUDA tooling). These settings are pinned in
+`configs/stage1-baseline.env`; this is a WSL compatibility baseline and must not
+be described as default optimized vLLM or a measured custom optimization.
+
+Startup also records an optional DeepGEMM import warning because CUDA_HOME is
+unavailable. The accepted BF16 service completed its API and benchmark workloads
+despite that warning; this checkpoint does not validate the DeepGEMM path.
 
 Evidence is under `artifacts/stage1/`: `wsl-install.log`, `dependency-check.log`,
 `wsl-runtime-check.json`, `wsl-runtime-check.stderr.log`, and `vllm-help.log`.

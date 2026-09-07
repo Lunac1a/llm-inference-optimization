@@ -48,8 +48,13 @@ def main():
             incoming.setdefault(key, []).append({**row, "source_run": str(run_dir)})
         if index == 0 and set(incoming) != EXPECTED_GROUPS:
             raise ValueError("Base run must contain all four complete configuration groups")
+        full_rerun = index == 1 and set(incoming) == EXPECTED_GROUPS
+        previous_stable = index and all(s["stability_passed_cv_le_5_percent"]
+                                       for s in stability_rows([r for g in groups.values() for r in g]))
+        if full_rerun and previous_stable:
+            deviations.append("Full rerun replaced an already stable baseline")
         for key, group in incoming.items():
-            if index and stability_rows(groups[key])[0]["stability_passed_cv_le_5_percent"]:
+            if index and not full_rerun and stability_rows(groups[key])[0]["stability_passed_cv_le_5_percent"]:
                 deviations.append(f"Replacement of a group that already met stability: {key}")
             # Replace the entire group, never just its last round.
             groups[key] = group

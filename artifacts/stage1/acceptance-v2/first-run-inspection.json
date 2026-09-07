@@ -1,0 +1,19 @@
+{
+  "power_draw_w": {
+    "min": 15.29,
+    "max": 175.47,
+    "mean": 140.30517811704834
+  },
+  "temperature_c": {
+    "min": 74.0,
+    "max": 90.0,
+    "mean": 85.60559796437659
+  },
+  "memory_used_mib": {
+    "min": 14309.0,
+    "max": 14493.0,
+    "mean": 14411.249363867684
+  },
+  "active_samples": 786,
+  "all_requests_passed": true
+}

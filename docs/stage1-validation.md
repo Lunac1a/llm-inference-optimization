@@ -1,84 +1,117 @@
 # Stage 1: local vLLM baseline
 
-Status on 2026-09-08: **incomplete; previous pass withdrawn after review**.
-Stage 2 and later stages have not started.
+Status on 2026-09-08: **Stage 1 passed under acceptance protocol v2**.
+Stage 2 has not started.
 
-## Current evidence and corrections
+## Scope and reproducibility
 
-The model was loaded and served, and raw benchmark data exists. The earlier
-17/17 API pass is invalid: requests did not actually disable thinking, and the
-responses ended at the token limit while still emitting reasoning. Original API
-records are retained as historical evidence, including api-check-latest.json;
-that filename does not imply acceptance under the corrected checker.
+This stage establishes local serving and measurement; it does not implement an
+inference optimization, Docker deployment, or cloud deployment.
 
-The checker now sends top-level `chat_template_kwargs.enable_thinking=false` in
-the raw HTTP body. Normal and streaming answers must be nonempty, contain no
-thinking output, and finish with `stop`. Streams must also have a clean terminal
-choice and DONE event, with no recorded transport/parse errors. Generation after
-negative requests is checked explicitly. No corrected API run was executed yet.
+- Ubuntu 24.04 WSL2; RTX 4090 Laptop, 16,376 MiB; driver 596.49.
+- Python 3.12.3; vLLM 0.23.0; PyTorch 2.11.0+cu130; Transformers 4.57.6.
+- Qwen/Qwen3-4B BF16, snapshot `1cfa9a7208912126459214e8b04321603b3df60c`.
+- Localhost:8000, context 4096, GPU memory fraction 0.80, four sequences,
+  2048 batched tokens, prefix caching off, chunked prefill on.
+- Eager execution, V2 runner off, FlashInfer sampler off. These are fixed WSL
+  compatibility settings, not a stock optimized-vLLM performance claim.
+- SHA256-verified Python header packages are provisioned without sudo by
+  `setup-wsl-headers.sh`, also invoked by the environment setup. The start script
+  checks for them. Shell scripts and shell-sourced .env files use LF in Git.
+- Dependency versions, model hashes, runtime settings, and collection-time source
+  hashes are retained. No clean-machine reinstall or cloud reproduction is claimed.
 
-The benchmark parser now reads the pinned vLLM parallel `errors` array. Missing
-or malformed details are unknown rather than zero. Acceptance requires all 32
-requests, matching input/output lengths, zero failures/errors, and timing details.
-The merger reloads raw JSON, retains all three rounds of each selected group,
-checks the complete round set, and recomputes CV rather than trusting old summaries.
+See [environment.md](environment.md), [the frozen protocol](stage1-protocol-v2.md),
+and [collection hashes](../artifacts/stage1/acceptance-v2/source-sha256.txt).
 
-## Existing benchmark reanalysis (no new GPU workload)
+## Correctness and restart evidence
 
-[Corrected report](../artifacts/stage1/final-benchmark-summary.json) contains 12
-rows (384 requests), rather than the previous four last-round rows. All selected
-requests passed the corrected data checks. The selected group CVs remain below
-5%, but `protocol_compliant` and `benchmark_acceptance_passed` are **false**.
+The corrected checker disables thinking using top-level
+`chat_template_kwargs.enable_thinking=false`. Responses must be nonempty,
+without thinking output, and finish with `stop`; streams must end cleanly with
+DONE. Invalid requests are followed by a successful generation check.
 
-Selection uses base run `20260907T115614Z` and replacements `20260907T135907Z`
-and `20260907T140950Z`. The base is itself a rerun of `20260907T113324Z`.
-This exceeds the agreed allowance of one three-round rerun. Retaining provenance
-is necessary but does not make this post-hoc selection protocol-compliant.
-The old merged report is retained as `final-benchmark-summary.superseded.json`;
-it must not be used as current acceptance evidence. Original raw results were
-not modified. Per-run derived summaries are rebuilt with the corrected parser.
+- Before restart: **18/18**, `api-before-restart/api-check-20260907T143943Z.json`.
+- After restart: **18/18**, `api-after-restart/api-check-20260907T144107Z.json`.
+- Separate startup logs and PIDs **399 -> 722** are in
+  [acceptance-v2](../artifacts/stage1/acceptance-v2/).
+- Five regression tests passed in WSL: truncated/thinking answers, incomplete
+  streams, missing/error request arrays, missing rounds, and retaining all 12 rows
+  while rejecting excessive reruns. See `regression.log` there. An earlier Windows
+  invocation hit temporary-directory permission errors; the WSL run is the
+  successful automated acceptance evidence.
 
-## Locked setup and compatibility limits
+## Performance protocol and evidence
 
-- WSL2 Ubuntu-24.04, RTX 4090 Laptop 16,376 MiB, driver 596.49.
-- Python 3.12.3, vLLM 0.23.0, PyTorch 2.11.0+cu130, Transformers 4.57.6.
-- Qwen/Qwen3-4B BF16, snapshot `1cfa9a7208912126459214e8b04321603b3df60c`;
-  [model hashes](../artifacts/stage1/model-lock.json) are retained.
-- Localhost:8000, model alias qwen3-4b-baseline, context 4096, memory fraction
-  0.80, four sequences, 2048 batched tokens; prefix caching off, chunked prefill on.
-- Existing startup logs report FlashAttention 2. V2 runner and FlashInfer sampler
-  are disabled, and enforce-eager is enabled. These are compatibility deviations
-  from normal optimized defaults, not optimization contributions. Headers are
-  referenced from ignored .tmp/python-dev; their provisioning is not currently
-  reproduced by the environment setup script.
-- Therefore this is a compatibility baseline only, not representative native-Linux
-  vLLM performance. Resolve/document setup reproducibility and the compiler path
-  before treating it as the final optimization reference.
+Fixed random input lengths 512/2048, output 128, concurrency 1/4, seed 42,
+temperature 0, ignore EOS, no shared prefix. Each group has four warmups and
+32 measured requests, repeated three times. Three preparation batches preceded
+formal measurement. Client and server both ran in WSL.
 
-## Remaining acceptance work
+A preparation command failed before sending requests because vLLM 0.23.0 uses
+range ratio **0** for fixed lengths. Installed source was checked, scripts
+corrected, and hashes refreshed before formal measurement. The failure log is
+retained; preparation results are not part of acceptance.
 
-1. When testing is authorized, run the corrected API checker before and after a
-   recorded server restart; retain both results and startup evidence. Historical
-   API records cannot be relabeled as passes under the new rules.
-2. Resolve WSL compatibility setup reproducibility. Before any fresh measurement,
-   freeze the final runtime flags and a new protocol explicitly superseding the
-   invalidated acceptance attempt. Do not retroactively waive the original rule.
-3. Under that protocol, collect a full four-group three-round baseline with at
-   most one full three-round rerun; preserve all failed data and stop if still
-   unstable. A new run is not authorized by this code-only repair.
-4. Only then update the stage to passed. Do not enter Stage 2 now.
+First run: `20260907T144656Z`, **384/384 requests passed**.
 
-## Repair verification boundary
+| Input tokens | Concurrency | Mean output tokens/s | Sample CV |
+| --- | --- | --- | --- |
+| 512 | 1 | 45.60 | 14.07% |
+| 512 | 4 | 168.39 | 11.97% |
+| 2048 | 1 | 39.86 | 3.69% |
+| 2048 | 4 | 117.37 | 4.33% |
 
-This repair executed no tests, model generation, server startup, or GPU benchmark.
-Only existing data was reprocessed and source diffs inspected. Code changes are
-not claimed to have passed automated or real-model validation. No cloud spend.
+Two groups failed the <=5% stability gate. Telemetry was inspected before the
+single permitted full rerun `20260907T150215Z`. Active telemetry samples ranged
+from 74 to 90 C, with varying power readings; this does not establish a single
+causal mechanism. The entire rerun is selected; groups are not mixed across runs.
 
-Reanalyze existing evidence without calling a server:
+The full rerun passed: **384/384 requests**, zero errors, exact token lengths,
+all 12 rows preserved, and all four CVs <=5%. The single-rerun policy passed.
+
+| Input tokens | Concurrency | Mean output tokens/s | Sample CV |
+| --- | --- | --- | --- |
+| 512 | 1 | 41.87 | 3.15% |
+| 512 | 4 | 151.21 | 4.19% |
+| 2048 | 1 | 39.09 | 4.29% |
+| 2048 | 4 | 115.48 | 2.70% |
+
+See [benchmark summary](../artifacts/stage1/acceptance-v2/benchmark-summary.json)
+and [overall acceptance](../artifacts/stage1/acceptance-v2/acceptance.json).
+The benchmark-only report intentionally leaves `stage1_passed=false` because it
+cannot certify API or restart checks. The overall report combines those gates.
+Collection-time source/config hashes verified unchanged. Final server logs show
+no OOM; service PID 722 was stopped, port 8000 was closed, and no GPU compute
+processes or model workers remained. See `cleanup.log` and `server-final.log`.
+
+## Interpretation and historical evidence
+
+Per-request details, p50/p95 TTFT, TPOT, end-to-end latency, throughput, and
+one-second GPU telemetry are retained. Throughput uses raw completions and fixed
+work; it does not measure answer quality. API smoke uses non-thinking chat.
+Three rounds and 32 requests per group are small samples; no production SLO,
+custom speedup, or cross-hardware comparison is established.
+
+The old v1 pass remains withdrawn. Its API outputs were truncated reasoning,
+its parser ignored errors, and its selected groups exceeded the rerun allowance.
+All original evidence remains preserved. See [review history](stage1-review-history.md).
+The root `final-benchmark-summary.json` is a historical rejected report; current
+v2 evidence lives under `artifacts/stage1/acceptance-v2/`.
+
+## Reproduction (WSL)
 
 ```sh
-python scripts/merge-stage1-benchmark.py artifacts/stage1/benchmarks/20260907T115614Z artifacts/stage1/benchmarks/20260907T135907Z artifacts/stage1/benchmarks/20260907T140950Z --output artifacts/stage1/final-benchmark-summary.json
+bash scripts/setup-vllm-env.sh
+bash scripts/download-qwen3-baseline.sh
+bash scripts/start-vllm-baseline.sh
+# Wait for http://127.0.0.1:8000/health to succeed.
+python scripts/check-vllm-api.py --output-dir artifacts/stage1/new-api-check
+python -m unittest discover -s tests -v
+# Follow the frozen protocol with fresh evidence paths; preserve existing runs.
+bash scripts/run-stage1-benchmark.sh
+bash scripts/stop-vllm-baseline.sh
 ```
 
-This command intentionally exits 1 for the historical protocol deviations, after
-writing the diagnostic report. It must not be used to certify overall Stage 1.
+Keep a WSL shell open while serving. Do not invoke `collect-stage1-v2.sh` again
+against the existing acceptance folder: it overwrites preparation/hash logs.

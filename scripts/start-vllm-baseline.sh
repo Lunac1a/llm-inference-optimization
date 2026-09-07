@@ -24,9 +24,8 @@ printf 'Server log: %s\n' "$stage1_log_file"
 
 export VLLM_USE_V2_MODEL_RUNNER
 export VLLM_USE_FLASHINFER_SAMPLER
-if [[ -d "$PYTHON_DEV_HEADERS" ]]; then
-    export C_INCLUDE_PATH="$PYTHON_DEV_HEADERS:$PYTHON_DEV_INCLUDE_ROOT${C_INCLUDE_PATH:+:$C_INCLUDE_PATH}"
-fi
+[[ -f "$PYTHON_DEV_HEADERS/Python.h" ]] || { echo 'Run scripts/setup-wsl-headers.sh first.' >&2; exit 2; }
+export C_INCLUDE_PATH="$PYTHON_DEV_HEADERS:$PYTHON_DEV_INCLUDE_ROOT${C_INCLUDE_PATH:+:$C_INCLUDE_PATH}"
 
 nohup "$stage1_vllm" serve "$model_path" \
     --host "$HOST" \
