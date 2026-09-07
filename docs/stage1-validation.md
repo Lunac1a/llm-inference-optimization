@@ -1,7 +1,24 @@
 # Stage 1: local vLLM baseline
 
-Status on 2026-09-07: **incomplete; preflight checked, Linux setup pending**.
+Current status: **incomplete; WSL2 runtime verified, model/API baseline pending**.
 This is a checkpoint, not a passed baseline or performance result.
+
+## Follow-up: user-provided WSL environment
+
+The user installed Ubuntu 24.04.4 under WSL2. GPU passthrough is now verified.
+The project environment at `/home/lunacia/.venvs/inference-vllm` contains vLLM
+0.23.0 and PyTorch 2.11.0+cu130, with 193 resolved packages locked in
+`locks/requirements-wsl-cu130.txt`. Dependency consistency, CUDA BF16 matrix
+multiplication, vLLM RMSNorm, and CLI startup passed. See
+[environment instructions](environment.md) and
+[runtime evidence](../artifacts/stage1/wsl-runtime-check.json).
+
+Remaining Stage 1 work: select and pin the model revision, verify loading and
+API generation, and collect a repeated baseline. No model or performance result
+is claimed. No cloud resources were used.
+
+The following sections preserve the **earlier pre-WSL checkpoint**; their missing
+WSL state and proposed package setup have been superseded by this follow-up.
 
 ## Observed environment
 

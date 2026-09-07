@@ -1,7 +1,7 @@
 # vLLM project plan
 
-Decision date: 2026-09-07. Stage 1 is **in progress: preflight checked, WSL2
-installation pending**. Stages 2-6 are not started.
+Decision date: 2026-09-07. Stage 1 is **in progress: WSL2 runtime checks passed;
+model loading and API baseline pending**. Stages 2-6 are not started.
 This numbering belongs to the vLLM route; archived llama.cpp stages do not count
 as vLLM acceptance evidence.
 
@@ -33,6 +33,6 @@ as vLLM acceptance evidence.
 
 ## Immediate next task
 
-Check the current local environment and official vLLM support, then select a
-feasible baseline model and pin the stack. Historical Windows/CUDA and GGUF
-results do not establish vLLM compatibility. Establish a new baseline.
+Use the verified WSL2 environment described in environment.md, pin a feasible
+baseline model revision, and verify model loading and API generation. Historical
+llama.cpp/GGUF results do not establish a vLLM baseline.
