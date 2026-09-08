@@ -1,0 +1,248 @@
+[
+  {
+    "status": 200,
+    "error": null,
+    "text": "预热完成",
+    "chunks": [
+      {
+        "id": "chatcmpl-96c2a40ea6331fd9",
+        "object": "chat.completion.chunk",
+        "created": 1788878601,
+        "model": "stage3-c",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "role": "assistant",
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": null
+          }
+        ],
+        "prompt_token_ids": null,
+        "prompt_text": null
+      },
+      {
+        "id": "chatcmpl-96c2a40ea6331fd9",
+        "object": "chat.completion.chunk",
+        "created": 1788878601,
+        "model": "stage3-c",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "预"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-96c2a40ea6331fd9",
+        "object": "chat.completion.chunk",
+        "created": 1788878601,
+        "model": "stage3-c",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "热"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-96c2a40ea6331fd9",
+        "object": "chat.completion.chunk",
+        "created": 1788878601,
+        "model": "stage3-c",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "完成"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-96c2a40ea6331fd9",
+        "object": "chat.completion.chunk",
+        "created": 1788878601,
+        "model": "stage3-c",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-96c2a40ea6331fd9",
+        "object": "chat.completion.chunk",
+        "created": 1788878601,
+        "model": "stage3-c",
+        "choices": [],
+        "usage": {
+          "prompt_tokens": 37,
+          "total_tokens": 41,
+          "completion_tokens": 4
+        },
+        "system_fingerprint": "vllm-0.23.0-nohash"
+      }
+    ],
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 37,
+      "total_tokens": 41,
+      "completion_tokens": 4
+    },
+    "ttft_seconds": 0.16427857500001153,
+    "e2e_seconds": 0.2281547340000003,
+    "output_tokens": 4,
+    "done_received": true,
+    "stream_complete": true,
+    "request_id": "compile-warmup-1",
+    "prompt_sha256": "a16751f9f4e7267750e8458998edcc9476ca4e1c8dc057270882941195ee54f1",
+    "prompt_chars": 36,
+    "captured_at": 1788878602.0051532
+  },
+  {
+    "status": 200,
+    "error": null,
+    "text": "预热完成",
+    "chunks": [
+      {
+        "id": "chatcmpl-8ab58d95b6c71fc6",
+        "object": "chat.completion.chunk",
+        "created": 1788878602,
+        "model": "stage3-c",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "role": "assistant",
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": null
+          }
+        ],
+        "prompt_token_ids": null,
+        "prompt_text": null
+      },
+      {
+        "id": "chatcmpl-8ab58d95b6c71fc6",
+        "object": "chat.completion.chunk",
+        "created": 1788878602,
+        "model": "stage3-c",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "预"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-8ab58d95b6c71fc6",
+        "object": "chat.completion.chunk",
+        "created": 1788878602,
+        "model": "stage3-c",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "热"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-8ab58d95b6c71fc6",
+        "object": "chat.completion.chunk",
+        "created": 1788878602,
+        "model": "stage3-c",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "完成"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-8ab58d95b6c71fc6",
+        "object": "chat.completion.chunk",
+        "created": 1788878602,
+        "model": "stage3-c",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-8ab58d95b6c71fc6",
+        "object": "chat.completion.chunk",
+        "created": 1788878602,
+        "model": "stage3-c",
+        "choices": [],
+        "usage": {
+          "prompt_tokens": 37,
+          "total_tokens": 41,
+          "completion_tokens": 4
+        },
+        "system_fingerprint": "vllm-0.23.0-nohash"
+      }
+    ],
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 37,
+      "total_tokens": 41,
+      "completion_tokens": 4
+    },
+    "ttft_seconds": 0.08047815899999478,
+    "e2e_seconds": 0.14506900699998937,
+    "output_tokens": 4,
+    "done_received": true,
+    "stream_complete": true,
+    "request_id": "compile-warmup-2",
+    "prompt_sha256": "a16751f9f4e7267750e8458998edcc9476ca4e1c8dc057270882941195ee54f1",
+    "prompt_chars": 36,
+    "captured_at": 1788878602.244781
+  }
+]

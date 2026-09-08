@@ -1,0 +1,20 @@
+{
+  "gpu": {
+    "returncode": 0,
+    "stdout": "timestamp, name, memory.used [MiB], temperature.gpu\n2026/09/09 01:13:13.359, NVIDIA GeForce RTX 4090 Laptop GPU, 729 MiB, 69\n",
+    "stderr": ""
+  },
+  "compute": {
+    "returncode": 0,
+    "stdout": "pid, process_name, used_gpu_memory [MiB]\n",
+    "stderr": ""
+  },
+  "processes": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "port_8000_closed": true,
+  "checked_epoch": 1788880393.4328246,
+  "budget_elapsed_minutes": 30.833600385983786
+}

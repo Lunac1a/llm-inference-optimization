@@ -2,7 +2,9 @@
 
 Stage 3 review update: v1 has preserved compatibility/screening evidence but a
 defective quality oracle/scorer. Corrected tooling and independent v2 materials
-are offline-verified; a real-model v2 run is still pending. See
+passed offline checks. The real-model v2 run stopped at A's 40/48 quality gate;
+remaining wording/scoring defects prevent a model-quality conclusion. See
+[the v2 acceptance report](stage3-v2-validation.md) and
 [the repair record](stage3-v2-repairs.md). Stage 4 remains unstarted.
 
 Stage 1 and Stage 2 are complete under their own locked protocols. The current
@@ -39,4 +41,7 @@ Stage 2 is complete under [stage2-plan.md](stage2-plan.md); see
 admission-cap result and its limits. Stage 3 compatibility/screening/quality
 collection is complete, but stopped before formal comparison because A scored
 41/48 against the 46/48 quality gate. See [stage3-validation.md](stage3-validation.md)
-for the no-go evidence. Stage 4 has not started.
+for the historical no-go evidence. The separate v2 real-model acceptance also
+stopped before formal comparison, at 40/48, with remaining fixture/scorer defects
+documented in [stage3-v2-validation.md](stage3-v2-validation.md). Neither score
+establishes a validated model-quality failure. Stage 4 has not started.

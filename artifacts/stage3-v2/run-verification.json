@@ -1,0 +1,102 @@
+{
+  "historical_and_protocol_hashes": {
+    "stage2": {
+      "verified_count": 545,
+      "mismatches": []
+    },
+    "stage2-bandwidth": {
+      "verified_count": 66,
+      "mismatches": []
+    },
+    "stage3": {
+      "verified_count": 140,
+      "mismatches": []
+    },
+    "stage3-v2": {
+      "verified_count": 6,
+      "mismatches": []
+    },
+    "stage1": {
+      "verified_count": 206,
+      "mismatches": []
+    },
+    "frozen_protocol": {
+      "verified_count": 10,
+      "mismatches": []
+    }
+  },
+  "quality_matrix": [
+    {
+      "candidate": "A",
+      "question_count": 48,
+      "correct": 40,
+      "complete": 48,
+      "minimum_pass": false
+    },
+    {
+      "candidate": "B",
+      "question_count": 48,
+      "correct": 40,
+      "complete": 48,
+      "minimum_pass": false
+    },
+    {
+      "candidate": "C",
+      "question_count": 48,
+      "correct": 41,
+      "complete": 48,
+      "minimum_pass": false
+    },
+    {
+      "candidate": "D",
+      "question_count": 48,
+      "correct": 41,
+      "complete": 48,
+      "minimum_pass": false
+    },
+    {
+      "candidate": "E",
+      "question_count": 48,
+      "correct": 41,
+      "complete": 48,
+      "minimum_pass": false
+    },
+    {
+      "candidate": "F",
+      "question_count": 48,
+      "correct": 41,
+      "complete": 48,
+      "minimum_pass": false
+    }
+  ],
+  "quality_response_count": 288,
+  "complete_response_count": 288,
+  "failed_scored_items": 44,
+  "collection_exit_code": 1,
+  "exit_reason": "expected baseline quality gate stop after all six candidates",
+  "formal_rounds": 0,
+  "reruns": 0,
+  "selected_candidate": null,
+  "stage_acceptance_passed": false,
+  "offline_verifier_passed": true,
+  "cleanup": {
+    "gpu": {
+      "returncode": 0,
+      "stdout": "timestamp, name, memory.used [MiB], temperature.gpu\n2026/09/09 01:13:13.359, NVIDIA GeForce RTX 4090 Laptop GPU, 729 MiB, 69\n",
+      "stderr": ""
+    },
+    "compute": {
+      "returncode": 0,
+      "stdout": "pid, process_name, used_gpu_memory [MiB]\n",
+      "stderr": ""
+    },
+    "processes": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "port_8000_closed": true,
+    "checked_epoch": 1788880393.4328246,
+    "budget_elapsed_minutes": 30.833600385983786
+  }
+}

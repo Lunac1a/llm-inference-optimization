@@ -1,0 +1,14 @@
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 3902.80it/s]
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 4397.61it/s]
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 4021.38it/s]
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 3968.70it/s]
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 3388.81it/s]
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 3298.21it/s]
+Traceback (most recent call last):
+  File "/mnt/d/Lunacia/Inference/scripts/stage3_collect.py", line 535, in <module>
+    main()
+  File "/mnt/d/Lunacia/Inference/scripts/stage3_collect.py", line 526, in main
+    phase_quality(budget)
+  File "/mnt/d/Lunacia/Inference/scripts/stage3_collect.py", line 385, in phase_quality
+    raise RuntimeError("Stage 3 stopped: A did not reach 46/48 complete correct answers")
+RuntimeError: Stage 3 stopped: A did not reach 46/48 complete correct answers

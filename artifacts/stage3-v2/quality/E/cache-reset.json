@@ -1,0 +1,50 @@
+{
+  "ok": true,
+  "method": "restart",
+  "reset_attempt": {
+    "status": 404,
+    "body": {
+      "detail": "Not Found"
+    },
+    "elapsed_seconds": 0.0018605750001370325,
+    "ok": false
+  },
+  "startup": {
+    "status": "ready",
+    "startup_seconds": 18.174642324447632,
+    "pid": 3904,
+    "args": [
+      "/home/lunacia/.venvs/inference-vllm/bin/vllm",
+      "serve",
+      "/home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8000",
+      "--served-model-name",
+      "stage3-e",
+      "--generation-config",
+      "vllm",
+      "--dtype",
+      "bfloat16",
+      "--tensor-parallel-size",
+      "1",
+      "--max-model-len",
+      "32768",
+      "--gpu-memory-utilization",
+      "0.8",
+      "--max-num-seqs",
+      "8",
+      "--max-num-batched-tokens",
+      "2048",
+      "--attention-backend",
+      "TRITON_ATTN",
+      "--kv-cache-dtype",
+      "fp8_per_token_head",
+      "--calculate-kv-scales",
+      "--enable-chunked-prefill",
+      "--enforce-eager",
+      "--no-enable-prefix-caching"
+    ]
+  }
+}

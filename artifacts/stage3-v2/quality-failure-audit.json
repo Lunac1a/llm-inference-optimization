@@ -1,0 +1,665 @@
+{
+  "quality_matrix": [
+    {
+      "candidate": "A",
+      "question_count": 48,
+      "correct": 40,
+      "complete": 48,
+      "minimum_pass": false
+    },
+    {
+      "candidate": "B",
+      "question_count": 48,
+      "correct": 40,
+      "complete": 48,
+      "minimum_pass": false
+    },
+    {
+      "candidate": "C",
+      "question_count": 48,
+      "correct": 41,
+      "complete": 48,
+      "minimum_pass": false
+    },
+    {
+      "candidate": "D",
+      "question_count": 48,
+      "correct": 41,
+      "complete": 48,
+      "minimum_pass": false
+    },
+    {
+      "candidate": "E",
+      "question_count": 48,
+      "correct": 41,
+      "complete": 48,
+      "minimum_pass": false
+    },
+    {
+      "candidate": "F",
+      "question_count": 48,
+      "correct": 41,
+      "complete": 48,
+      "minimum_pass": false
+    }
+  ],
+  "failed_items": [
+    {
+      "candidate": "A",
+      "id": "quality-doc-a-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-云桥甲-17"
+        ]
+      ],
+      "actual": "资料未提供",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "A",
+      "id": "quality-doc-a-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先校验数据层，再执行模型评估，最后提交服务报告"
+        ]
+      ],
+      "actual": "校验数据层；执行模型评估；提交服务报告",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "A",
+      "id": "quality-doc-b-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-澄海乙-29"
+        ]
+      ],
+      "actual": "资料未提供",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "A",
+      "id": "quality-doc-b-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先清理路线数据，再训练预测模型，最后进行人工抽检"
+        ]
+      ],
+      "actual": "清理路线数据;再训练预测模型;最后进行人工抽检",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "A",
+      "id": "quality-doc-c-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-星环丙-08"
+        ]
+      ],
+      "actual": "资料未提供",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "A",
+      "id": "quality-doc-c-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先整理知识库，再进行检索评测，最后接入客服试点"
+        ]
+      ],
+      "actual": "整理知识库；检索评测；最后接入客服试点。",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "A",
+      "id": "quality-doc-d-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-远岚丁-41"
+        ]
+      ],
+      "actual": "远岚制造质检项目丁卷",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "A",
+      "id": "quality-doc-d-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先标定摄像头，再验证缺陷样本，最后部署质检接口"
+        ]
+      ],
+      "actual": "摄像头标定；再验证缺陷样本；最后部署质检接口",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "B",
+      "id": "quality-doc-a-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-云桥甲-17"
+        ]
+      ],
+      "actual": "资料未提供",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "B",
+      "id": "quality-doc-a-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先校验数据层，再执行模型评估，最后提交服务报告"
+        ]
+      ],
+      "actual": "校验数据层；执行模型评估；提交服务报告",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "B",
+      "id": "quality-doc-b-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-澄海乙-29"
+        ]
+      ],
+      "actual": "资料未提供",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "B",
+      "id": "quality-doc-b-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先清理路线数据，再训练预测模型，最后进行人工抽检"
+        ]
+      ],
+      "actual": "清理路线数据;再训练预测模型;最后进行人工抽检",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "B",
+      "id": "quality-doc-c-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-星环丙-08"
+        ]
+      ],
+      "actual": "资料未提供",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "B",
+      "id": "quality-doc-c-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先整理知识库，再进行检索评测，最后接入客服试点"
+        ]
+      ],
+      "actual": "整理知识库；检索评测；最后接入客服试点。",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "B",
+      "id": "quality-doc-d-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-远岚丁-41"
+        ]
+      ],
+      "actual": "远岚制造质检项目丁卷",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "B",
+      "id": "quality-doc-d-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先标定摄像头，再验证缺陷样本，最后部署质检接口"
+        ]
+      ],
+      "actual": "摄像头标定；再验证缺陷样本；最后部署质检接口",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "C",
+      "id": "quality-doc-a-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先校验数据层，再执行模型评估，最后提交服务报告"
+        ]
+      ],
+      "actual": "校验数据层；执行模型评估；提交服务报告",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "C",
+      "id": "quality-doc-b-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-澄海乙-29"
+        ]
+      ],
+      "actual": "资料未提供",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "C",
+      "id": "quality-doc-b-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先清理路线数据，再训练预测模型，最后进行人工抽检"
+        ]
+      ],
+      "actual": "清理路线数据;再训练预测模型;最后进行人工抽检",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "C",
+      "id": "quality-doc-c-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-星环丙-08"
+        ]
+      ],
+      "actual": "资料未提供",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "C",
+      "id": "quality-doc-c-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先整理知识库，再进行检索评测，最后接入客服试点"
+        ]
+      ],
+      "actual": "正式执行顺序：整理知识库；检索评测；最后接入客服试点。",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "C",
+      "id": "quality-doc-d-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-远岚丁-41"
+        ]
+      ],
+      "actual": "远岚制造质检项目丁卷",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "C",
+      "id": "quality-doc-d-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先标定摄像头，再验证缺陷样本，最后部署质检接口"
+        ]
+      ],
+      "actual": "标定摄像头；再验证缺陷样本；最后部署质检接口",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "D",
+      "id": "quality-doc-a-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先校验数据层，再执行模型评估，最后提交服务报告"
+        ]
+      ],
+      "actual": "校验数据层；执行模型评估；提交服务报告",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "D",
+      "id": "quality-doc-b-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-澄海乙-29"
+        ]
+      ],
+      "actual": "资料未提供",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "D",
+      "id": "quality-doc-b-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先清理路线数据，再训练预测模型，最后进行人工抽检"
+        ]
+      ],
+      "actual": "清理路线数据;再训练预测模型;最后进行人工抽检",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "D",
+      "id": "quality-doc-c-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-星环丙-08"
+        ]
+      ],
+      "actual": "资料未提供",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "D",
+      "id": "quality-doc-c-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先整理知识库，再进行检索评测，最后接入客服试点"
+        ]
+      ],
+      "actual": "正式执行顺序：整理知识库；检索评测；最后接入客服试点。",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "D",
+      "id": "quality-doc-d-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-远岚丁-41"
+        ]
+      ],
+      "actual": "远岚制造质检项目丁卷",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "D",
+      "id": "quality-doc-d-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先标定摄像头，再验证缺陷样本，最后部署质检接口"
+        ]
+      ],
+      "actual": "标定摄像头；再验证缺陷样本；最后部署质检接口",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "E",
+      "id": "quality-doc-a-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先校验数据层，再执行模型评估，最后提交服务报告"
+        ]
+      ],
+      "actual": "校验数据层；执行模型评估；提交服务报告",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "E",
+      "id": "quality-doc-b-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-澄海乙-29"
+        ]
+      ],
+      "actual": "资料未提供",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "E",
+      "id": "quality-doc-b-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先清理路线数据，再训练预测模型，最后进行人工抽检"
+        ]
+      ],
+      "actual": "清理路线数据;再训练预测模型;最后进行人工抽检",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "E",
+      "id": "quality-doc-c-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-星环丙-08"
+        ]
+      ],
+      "actual": "资料未提供",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "E",
+      "id": "quality-doc-c-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先整理知识库，再进行检索评测，最后接入客服试点"
+        ]
+      ],
+      "actual": "整理知识库；检索评测；最后接入客服试点。",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "E",
+      "id": "quality-doc-d-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-远岚丁-41"
+        ]
+      ],
+      "actual": "远岚丁卷",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "E",
+      "id": "quality-doc-d-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先标定摄像头，再验证缺陷样本，最后部署质检接口"
+        ]
+      ],
+      "actual": "摄像头标定；再验证缺陷样本；最后部署质检接口",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "F",
+      "id": "quality-doc-a-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先校验数据层，再执行模型评估，最后提交服务报告"
+        ]
+      ],
+      "actual": "校验数据层；执行模型评估；提交服务报告",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "F",
+      "id": "quality-doc-b-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-澄海乙-29"
+        ]
+      ],
+      "actual": "资料未提供",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "F",
+      "id": "quality-doc-b-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先清理路线数据，再训练预测模型，最后进行人工抽检"
+        ]
+      ],
+      "actual": "清理路线数据;再训练预测模型;最后进行人工抽检",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "F",
+      "id": "quality-doc-c-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-星环丙-08"
+        ]
+      ],
+      "actual": "资料未提供",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "F",
+      "id": "quality-doc-c-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先整理知识库，再进行检索评测，最后接入客服试点"
+        ]
+      ],
+      "actual": "整理知识库；检索评测；最后接入客服试点。",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    },
+    {
+      "candidate": "F",
+      "id": "quality-doc-d-direct-1",
+      "question": "项目编号是什么？",
+      "expected": [
+        [
+          "验收-远岚丁-41"
+        ]
+      ],
+      "actual": "远岚丁卷",
+      "complete": true,
+      "review_issue": "source labels document identifier; question asks project identifier",
+      "rescored": false
+    },
+    {
+      "candidate": "F",
+      "id": "quality-doc-d-cross-1",
+      "question": "请给出该项目的正式执行顺序。",
+      "expected": [
+        [
+          "先标定摄像头，再验证缺陷样本，最后部署质检接口"
+        ]
+      ],
+      "actual": "摄像头标定；再验证缺陷样本；最后部署质检接口",
+      "complete": true,
+      "review_issue": "exact sentence rejects process list or paraphrase; inspect semantic validity separately",
+      "rescored": false
+    }
+  ],
+  "note": "Original scores unchanged. Review is not a new score or a model-quality certification."
+}

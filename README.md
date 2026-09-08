@@ -21,8 +21,12 @@ kernels are out of scope.
 Review found defects in the v1 QA oracle/scorer and formal cache controls.
 The 41/48 result remains historical and does not establish a model-quality
 failure. The [v2 repair record](docs/stage3-v2-repairs.md) documents corrected
-tools and independent materials: offline verification passed; no v2 GPU run,
-performance comparison or configuration recommendation has been made.
+tools and independent materials. The [v2 real-model acceptance](docs/stage3-v2-validation.md)
+completed compatibility and screening, but A scored 40/48 against the unchanged
+46/48 gate. Review of its failed answers found remaining identifier wording and
+process-answer scoring defects; this score does not establish a model-quality
+failure. Formal performance comparison and configuration recommendation remain
+unvalidated.
 
 A [supplemental bandwidth check](docs/stage2-bandwidth-check.md) found strong
 kernel-level support for weight-read bandwidth limitation at concurrency 1:

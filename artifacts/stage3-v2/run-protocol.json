@@ -1,0 +1,26 @@
+{
+  "authorized_at": "2026-09-08T14:42:16.281230+00:00",
+  "commit": "bfa1b92f2cfdfcbe4408e0f1ee90ed623514e723",
+  "gpu_budget_minutes": 90,
+  "phases": [
+    "compatibility",
+    "screen",
+    "quality",
+    "formal",
+    "acceptance"
+  ],
+  "stop_on_quality_failure": true,
+  "no_reruns": true,
+  "source_sha256": {
+    "scripts/stage3_analyze.py": "829d87df3f5bf29c5a417c05bd67d45dc0d749b7fe10c833bed37e87efd5c995",
+    "scripts/stage3_collect.py": "a554a535dfb9c292386c7c12b1b038542b1c36304e88baf670f3389a1ad458e7",
+    "scripts/stage3_lib.py": "2a762dbb48c19b8562d232494f6608b7a12322430bbfcf957583676dffbe18cb",
+    "scripts/stage3_prepare.py": "1eb7ce6a878a18f6f4d7a8f63b520e5923fb96e3cf7bc17ab284019189fed19c",
+    "scripts/stage3_request.py": "04045ba50b030b00c1de0ae1a65ab63f4f575d5423db6fa7185e38c0027c9012",
+    "configs/stage3-combinations.json": "879bdbf0d39fedbb40ac676906d3bc53bccc3b8de7ecd65bae4898ba1842c956",
+    "artifacts/stage3-v2/materials.json": "c8ad80ca0dce7ea608cd19e94c66667936cd28b7d6768973dc707ee5c7ef4487",
+    "artifacts/stage3-v2/materials-manifest.json": "3de839ee88a3e3f1ba831e5d29756ddff9738734bf31f722e1e56133815a18f9",
+    "docs/stage3-plan.md": "da380a01cebb8e7421f90f564c0a516a274430144d3e01c5bedd55f2ead1b778",
+    "docs/stage3-v2-repairs.md": "a043a4d6bdff27849964cbacc616a54ad5e00cf6fd45b8f2c94b791447ecf019"
+  }
+}
