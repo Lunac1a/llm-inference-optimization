@@ -1,15 +1,20 @@
 # LLM Inference Optimization with vLLM
 
-Identify, implement, and validate one bounded inference optimization on top of
-vLLM, deliver it through an API, and reproduce the results on a cloud GPU.
+Identify and validate one bounded inference-system improvement on top of pinned
+vLLM, then deliver the selected local configuration through the existing API.
 
-**Status: Stage 1 passed under protocol v2; Stage 2 completed with workload-specific bottleneck attribution.**
-For 512-input/128-output requests at client concurrency 8, the existing server
-sequence cap 4 limited throughput through queueing. Three paired rounds with
-cap 8 raised mean throughput from 184.22 to 327.46 output tokens/s (+77.75%),
-with passing stability gates and CPU/CUDA traces. This is a configuration
-effect, not a custom optimization. See [Stage 2 validation](docs/stage2-validation.md).
-Stage 3 and cloud work have not started.
+**Status: Stage 1 and Stage 2 passed; Stage 3 local KV-cache combination
+validation is in progress.** Stage 2 found a workload-specific admission-cap
+effect: for 512-input/128-output requests at client concurrency 8, changing the
+existing sequence cap from 4 to 8 raised mean throughput from 184.22 to 327.46
+output tokens/s (+77.75%). This is a configuration effect, not a custom
+optimization. See [Stage 2 validation](docs/stage2-validation.md).
+
+The current authorized work compares six existing vLLM combinations of
+FlashAttention/Triton attention, BF16/FP8 KV cache, and prefix caching for
+shared long-document QA. The fixed protocol is in
+[Stage 3 plan](docs/stage3-plan.md); cloud work, a new API layer, and custom
+kernels are out of scope.
 
 A [supplemental bandwidth check](docs/stage2-bandwidth-check.md) found strong
 kernel-level support for weight-read bandwidth limitation at concurrency 1:
@@ -38,18 +43,16 @@ virtual environment.
 
 ## Approach
 
-Develop on the local GPU first. Establish a reproducible baseline, measure a
-concrete bottleneck, inspect the existing implementation, and make a targeted
-change. Compare against unmodified vLLM under the same constraints. Configuration
-switches alone are not a custom optimization contribution.
+Develop and measure on the local GPU first. Keep model weights, the pinned vLLM
+runtime, hardware, request materials, sampling, and output requirements fixed
+within each comparison. Configuration switches are reported as configuration
+effects, not as custom kernel work.
 
-Use the engine API initially. Add a separate API layer only for a concrete
-responsibility. Cloud work follows local validation, with a total budget target
-of **AUD 50**, including storage and incidental charges.
-
-See [the staged plan](docs/plan.md). A later Stage 3 decision may investigate
-remaining eager decode gaps using existing upstream mechanisms; no optimization
-design, implementation, Docker, or cloud work has started.
+See [the staged plan](docs/plan.md) and the
+[Stage 3 execution protocol](docs/stage3-plan.md). The project contribution in
+this route is the evidence-backed selection, combination, validation, and local
+service delivery of existing vLLM capabilities; it does not claim a new CUDA
+kernel or a weight-level optimization.
 
 ## Previous exploration
 

@@ -1,47 +1,35 @@
 # vLLM project plan
 
-Decision date: 2026-09-07. Acceptance updated 2026-09-08: Stage 1 **passed under
-protocol v2**, with corrected API checks, regression checks, and a complete
-protocol-compliant benchmark rerun. Historical v1 acceptance remains withdrawn.
-Stage 2 completed on 2026-09-08 with workload-specific admission-cap attribution;
-Stages 3-6 are not started.
-This numbering belongs to the vLLM route; archived llama.cpp stages do not count
-as vLLM acceptance evidence.
+Stage 1 and Stage 2 are complete under their own locked protocols. The current
+authorized route is the local KV-cache combination study in
+[stage3-plan.md](stage3-plan.md), followed by a bounded local API delivery
+around the selected configuration. Archived llama.cpp work is not vLLM
+acceptance evidence.
 
 | Stage | Scope | Exit evidence |
 | --- | --- | --- |
-| 1. Local baseline | Check OS/runtime and GPU compatibility; select and pin vLLM, model, and configuration; run the API | Reproducible environment, stable generation, locks, and baseline measurement |
-| 2. Bottleneck investigation | Select a bounded workload; measure latency, throughput, memory, and execution | Evidence of avoidable work or waiting, separating observation from inference |
-| 3. Optimization design | Inspect upstream behavior and existing solutions; choose one change | Hypothesis, change boundary, controls, correctness criteria, success threshold, and stop conditions fixed before formal comparison |
-| 4. Implementation and comparison | Implement and compare with pinned unmodified baseline | Correctness checks, repeatable results, overheads, limitations, and failure scenarios |
-| 5. API delivery | Keep engine API; add only justified controls; containerize and document | Reproducible service invocation, logs/metrics, and experiment commands |
-| 6. Cloud reproduction | Deploy after local validation | Same-machine baseline/modified comparison, environment and cost records, exported evidence, and cleanup |
+| 1. Local baseline | Pin vLLM, model, WSL compatibility settings, and the existing API baseline | Environment lock, API acceptance, stable benchmark, and preserved raw evidence |
+| 2. Bottleneck investigation | Attribute the bounded workload's queueing and execution behavior | Controlled measurements, traces, limits, and no-go boundaries |
+| 3. Local KV combination validation | Compare FlashAttention/Triton, BF16/FP8 KV, and prefix caching on shared long-document QA | Compatibility records, fixed request/quality materials, raw responses, telemetry, analysis, hashes, and selection decision |
+| 4. Local API delivery | Keep the existing vLLM API and serve only the selected configuration | Normal/streaming/restart/cache/document-switch acceptance and cleaned local service |
 
 ## Boundaries
 
-- Inference optimization is the primary deliverable. API and cloud work support it.
-- Cache management, scheduling, and speculative decoding are candidates only.
-  Investigate the bottleneck and upstream implementation before choosing.
-- Fix hardware, model weights, workload, output requirements, and sampling within
-  each comparison. Include strategy overhead and relevant quality, fairness,
-  and latency constraints. Compare to a credible existing implementation.
-- Repeat measurements and preserve raw evidence. Report regressions and uncertainty.
-  If a hypothesis fails, record it and revisit the design; do not promise speedup.
-- Develop locally. Cloud budget target is AUD 50 total, including storage, transfer,
-  exchange rates, and applicable charges. Do not rent resources now. Multiple GPUs
-  are optional and require an experimental reason.
-- Keep the repository private. Use a separate task for each authorized stage;
-  finish with a validation document, raw evidence, commit, and push. Distinguish
-  implementation, automated checks, real-model measurements, and cloud results.
+- Keep Qwen3-4B BF16 weights, the pinned model revision, vLLM 0.23.0, and the
+  existing WSL compatibility settings.
+- Do not add a gateway, frontend, Docker layer, authentication, custom CUDA
+  kernel, weight quantization, or lossy KV eviction.
+- Use established vLLM switches only. A configuration effect is reported as a
+  configuration effect, not as a custom optimization.
+- Preserve Stage 1 and Stage 2 evidence. New Stage 3 artifacts are independent
+  and must not modify old defaults or raw files.
+- Keep the repository private. Each stage ends with a validation document,
+  raw evidence, a dedicated commit, and remote verification when credentials
+  permit. Separate automated checks, packaging, and real-model measurements.
 
-## Immediate next task
+## Current status
 
 Stage 2 is complete under [stage2-plan.md](stage2-plan.md); see
-[stage2-validation.md](stage2-validation.md) for measurements, short traces,
-limits and the no-go on treating an upstream cap adjustment as custom work.
-
-Stage 3 requires a separately authorized decision. One unproven candidate is
-avoidable eager decode launch/dispatch work, with CUDA Graph support already
-present upstream. Establish compatibility and a falsifiable controlled comparison
-before considering custom changes. No Stage 3 design or implementation is started.
-Stage 1 v2 remains the preserved starting evidence; historical v1 stays invalidated.
+[stage2-validation.md](stage2-validation.md) for the workload-specific
+admission-cap result and its limits. Stage 3 execution is authorized by the
+attached plan and is tracked in [stage3-plan.md](stage3-plan.md).
