@@ -277,3 +277,11 @@ Final evidence:
 The evidence and this report are included in the Stage 2 completion commit;
 the task's final response identifies the pushed commit. No Stage 3 or cloud work
 is included.
+
+Supplemental diagnosis: the [weight-bandwidth check](stage2-bandwidth-check.md)
+collected 24 real-model GEMV counter samples over three bounded captures.
+The inferred decode gate/up group reached 90.47–95.28% sustained DRAM peak in
+all six samples, supporting bandwidth limitation of these kernels. Cold-cache
+replay, early-layer sampling and unlocked clocks prevent treating this as a
+complete end-to-end attribution or an optimization speedup. All 30 requests
+passed; original evidence remains unchanged and services are stopped.

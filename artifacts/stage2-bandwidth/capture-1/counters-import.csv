@@ -1,0 +1,6 @@
+==WARNING== Could not deploy stock section files to "/home/lunacia/Documents/NVIDIA Nsight Compute/2026.2.1/Sections".
+Set the HOME environment variable to a writable directory.
+==WARNING== Using "/mnt/d/Lunacia/Inference/.tmp/bandwidth-ncu/../../sections" instead.
+==WARNING== See https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#faq.
+==WARNING== Failed to add default section search path /mnt/d/Lunacia/Inference/.tmp/bandwidth-ncu/../../sections.
+==ERROR== Failed to add rules search path /mnt/d/Lunacia/Inference/.tmp/bandwidth-ncu/../../sections.

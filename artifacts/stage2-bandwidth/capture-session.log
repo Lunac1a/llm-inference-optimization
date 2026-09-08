@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/mnt/d/Lunacia/Inference/scripts/run-bandwidth-check.py", line 88, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/mnt/d/Lunacia/Inference/scripts/run-bandwidth-check.py", line 30, in main
+    if any(OUT.glob('capture-*')):raise RuntimeError('Captures already exist; refuse an undeclared repeat')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Captures already exist; refuse an undeclared repeat

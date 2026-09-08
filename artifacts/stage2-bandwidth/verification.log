@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "stage1_hashes_verified": 206,
+  "stage2_hashes_verified": 545,
+  "independent_windows_linux_export_equal": true,
+  "requests_passed": 30,
+  "kernels": 24,
+  "port_8000_listeners": [],
+  "vllm_ncu_processes": [],
+  "gpu_compute_processes": "",
+  "capture_wall_minutes": 9.704116149743397,
+  "probe_cleanup_allowance_minutes": 2,
+  "charged_supplement_minutes": 11.704116149743397,
+  "charged_combined_minutes": 57.395409019788104,
+  "cloud_spend_aud": 0,
+  "source_sha256": {
+    "scripts/analyze-bandwidth-check.py": "18ddfe75dec943d872923cf45e24ff2142e4ae6f21438c780d15f792cd608c68",
+    "scripts/bandwidth-counter-probe.py": "1aac0ef23652586dab1e1585be109cf2eb933b868f89a1c68565cdcfd89eb267",
+    "scripts/bandwidth-trace-context.py": "f90c97663d4083456869e0265735db893eb8982a324a3503ba6c328a41d0d48b",
+    "scripts/run-bandwidth-check.py": "12cfb2bc9470c4993c64fdd4d3cbd2d7cb30ea5f14ebd7cd6eea83f58aef5ae2",
+    "scripts/verify-bandwidth-check.py": "a46d6963b566c6562d062e8e985d429db299c24987893be29eeaa361df55e687"
+  }
+}

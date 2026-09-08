@@ -1,0 +1,575 @@
+{
+  "captures": [
+    {
+      "capture": "capture-1",
+      "kernels": [
+        {
+          "id": "0",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 7, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(18992, 1, 1)",
+          "block": "(16, 8, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 777962624.0,
+            "dram__bytes_write.sum": 4607360.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 94.68,
+            "gpu__time_duration.sum": 1436416.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 61.12
+          },
+          "read_GB_per_s": 541.5998039565139,
+          "total_GB_per_s": 544.8073427196579,
+          "strong_indicator": false,
+          "inferred_weight_bytes": 777912320,
+          "read_to_inferred_weight_bytes_ratio": 1.0000646653854255
+        },
+        {
+          "id": "1",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(1536, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 31482880.0,
+            "dram__bytes_write.sum": 0.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 86.81,
+            "gpu__time_duration.sum": 63104.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 37.99
+          },
+          "read_GB_per_s": 498.9046653144016,
+          "total_GB_per_s": 498.9046653144016,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 31457280,
+          "read_to_inferred_weight_bytes_ratio": 1.0008138020833333
+        },
+        {
+          "id": "2",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(640, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 21004416.0,
+            "dram__bytes_write.sum": 0.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 79.14,
+            "gpu__time_duration.sum": 46208.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 33.8
+          },
+          "read_GB_per_s": 454.5623268698061,
+          "total_GB_per_s": 454.5623268698061,
+          "strong_indicator": false,
+          "inferred_weight_bytes": 20971520,
+          "read_to_inferred_weight_bytes_ratio": 1.001568603515625
+        },
+        {
+          "id": "3",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(4864, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 99649664.0,
+            "dram__bytes_write.sum": 2739328.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 95.23,
+            "gpu__time_duration.sum": 186880.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 24.22
+          },
+          "read_GB_per_s": 533.2280821917808,
+          "total_GB_per_s": 547.886301369863,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 99614720,
+          "read_to_inferred_weight_bytes_ratio": 1.0003507915296053
+        },
+        {
+          "id": "4",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 7, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(640, 1, 1)",
+          "block": "(32, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 49899776.0,
+            "dram__bytes_write.sum": 0.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 84.4,
+            "gpu__time_duration.sum": 102848.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 53.0
+          },
+          "read_GB_per_s": 485.1798382078407,
+          "total_GB_per_s": 485.1798382078407,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 49807360,
+          "read_to_inferred_weight_bytes_ratio": 1.00185546875
+        },
+        {
+          "id": "5",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(1536, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 31639808.0,
+            "dram__bytes_write.sum": 0.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 83.1,
+            "gpu__time_duration.sum": 66272.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 40.35
+          },
+          "read_GB_per_s": 477.4234669241912,
+          "total_GB_per_s": 477.4234669241912,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 31457280,
+          "read_to_inferred_weight_bytes_ratio": 1.0058024088541666
+        },
+        {
+          "id": "6",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(640, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 21000448.0,
+            "dram__bytes_write.sum": 0.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 72.66,
+            "gpu__time_duration.sum": 50304.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 44.78
+          },
+          "read_GB_per_s": 417.470737913486,
+          "total_GB_per_s": 417.470737913486,
+          "strong_indicator": false,
+          "inferred_weight_bytes": 20971520,
+          "read_to_inferred_weight_bytes_ratio": 1.00137939453125
+        },
+        {
+          "id": "7",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(4864, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 99641216.0,
+            "dram__bytes_write.sum": 2659968.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 90.47,
+            "gpu__time_duration.sum": 196608.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 51.19
+          },
+          "read_GB_per_s": 506.8014322916667,
+          "total_GB_per_s": 520.3307291666666,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 99614720,
+          "read_to_inferred_weight_bytes_ratio": 1.0002659847861841
+        }
+      ],
+      "request_count": 10,
+      "successful_requests": 10,
+      "fixed_lengths_valid": true,
+      "wall_seconds": 192.58281922340393,
+      "dram_pct_range": [
+        72.66,
+        95.23
+      ],
+      "sm_pct_range": [
+        24.22,
+        61.12
+      ],
+      "strong_indicator_count": 5
+    },
+    {
+      "capture": "capture-2",
+      "kernels": [
+        {
+          "id": "0",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 7, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(18992, 1, 1)",
+          "block": "(16, 8, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 778078976.0,
+            "dram__bytes_write.sum": 6683648.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 97.63,
+            "gpu__time_duration.sum": 1396800.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 36.37
+          },
+          "read_GB_per_s": 557.0439404352807,
+          "total_GB_per_s": 561.8289117983963,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 777912320,
+          "read_to_inferred_weight_bytes_ratio": 1.000214234941028
+        },
+        {
+          "id": "1",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(1536, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 31482880.0,
+            "dram__bytes_write.sum": 0.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 80.62,
+            "gpu__time_duration.sum": 67936.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 46.8
+          },
+          "read_GB_per_s": 463.419689119171,
+          "total_GB_per_s": 463.419689119171,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 31457280,
+          "read_to_inferred_weight_bytes_ratio": 1.0008138020833333
+        },
+        {
+          "id": "2",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(640, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 21000320.0,
+            "dram__bytes_write.sum": 0.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 75.22,
+            "gpu__time_duration.sum": 48576.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 38.05
+          },
+          "read_GB_per_s": 432.3188405797101,
+          "total_GB_per_s": 432.3188405797101,
+          "strong_indicator": false,
+          "inferred_weight_bytes": 20971520,
+          "read_to_inferred_weight_bytes_ratio": 1.001373291015625
+        },
+        {
+          "id": "3",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(4864, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 99663616.0,
+            "dram__bytes_write.sum": 2971136.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 94.2,
+            "gpu__time_duration.sum": 189376.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 32.81
+          },
+          "read_GB_per_s": 526.2737411287598,
+          "total_GB_per_s": 541.9628252788104,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 99614720,
+          "read_to_inferred_weight_bytes_ratio": 1.0004908511513158
+        },
+        {
+          "id": "4",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 7, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(640, 1, 1)",
+          "block": "(32, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 49848064.0,
+            "dram__bytes_write.sum": 37632.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 92.18,
+            "gpu__time_duration.sum": 94048.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 27.32
+          },
+          "read_GB_per_s": 530.0279006464784,
+          "total_GB_per_s": 530.4280367471929,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 49807360,
+          "read_to_inferred_weight_bytes_ratio": 1.0008172286184212
+        },
+        {
+          "id": "5",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(1536, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 31491328.0,
+            "dram__bytes_write.sum": 0.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 87.05,
+            "gpu__time_duration.sum": 62944.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 34.89
+          },
+          "read_GB_per_s": 500.30706659888153,
+          "total_GB_per_s": 500.30706659888153,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 31457280,
+          "read_to_inferred_weight_bytes_ratio": 1.0010823567708333
+        },
+        {
+          "id": "6",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(640, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 21000448.0,
+            "dram__bytes_write.sum": 0.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 84.0,
+            "gpu__time_duration.sum": 43520.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 29.4
+          },
+          "read_GB_per_s": 482.5470588235294,
+          "total_GB_per_s": 482.5470588235294,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 20971520,
+          "read_to_inferred_weight_bytes_ratio": 1.00137939453125
+        },
+        {
+          "id": "7",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(4864, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 99641216.0,
+            "dram__bytes_write.sum": 2923776.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 95.28,
+            "gpu__time_duration.sum": 187104.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 25.17
+          },
+          "read_GB_per_s": 532.5445527621002,
+          "total_GB_per_s": 548.171027877544,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 99614720,
+          "read_to_inferred_weight_bytes_ratio": 1.0002659847861841
+        }
+      ],
+      "request_count": 10,
+      "successful_requests": 10,
+      "fixed_lengths_valid": true,
+      "wall_seconds": 196.35776543617249,
+      "dram_pct_range": [
+        75.22,
+        97.63
+      ],
+      "sm_pct_range": [
+        25.17,
+        46.8
+      ],
+      "strong_indicator_count": 7
+    },
+    {
+      "capture": "capture-3",
+      "kernels": [
+        {
+          "id": "0",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 7, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(18992, 1, 1)",
+          "block": "(16, 8, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 777952640.0,
+            "dram__bytes_write.sum": 3607680.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 96.03,
+            "gpu__time_duration.sum": 1414240.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 46.18
+          },
+          "read_GB_per_s": 550.0853037673945,
+          "total_GB_per_s": 552.6362710713881,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 777912320,
+          "read_to_inferred_weight_bytes_ratio": 1.0000518310341195
+        },
+        {
+          "id": "1",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(1536, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 31483008.0,
+            "dram__bytes_write.sum": 0.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 80.82,
+            "gpu__time_duration.sum": 67744.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 52.07
+          },
+          "read_GB_per_s": 464.73500236183276,
+          "total_GB_per_s": 464.73500236183276,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 31457280,
+          "read_to_inferred_weight_bytes_ratio": 1.00081787109375
+        },
+        {
+          "id": "2",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(640, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 21000320.0,
+            "dram__bytes_write.sum": 0.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 87.52,
+            "gpu__time_duration.sum": 41728.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 21.62
+          },
+          "read_GB_per_s": 503.26687116564415,
+          "total_GB_per_s": 503.26687116564415,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 20971520,
+          "read_to_inferred_weight_bytes_ratio": 1.001373291015625
+        },
+        {
+          "id": "3",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(4864, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 99641216.0,
+            "dram__bytes_write.sum": 2970624.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 90.96,
+            "gpu__time_duration.sum": 196128.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 56.97
+          },
+          "read_GB_per_s": 508.0417686408876,
+          "total_GB_per_s": 523.1881220427476,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 99614720,
+          "read_to_inferred_weight_bytes_ratio": 1.0002659847861841
+        },
+        {
+          "id": "4",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 7, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(640, 1, 1)",
+          "block": "(32, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 49848064.0,
+            "dram__bytes_write.sum": 1408.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 85.84,
+            "gpu__time_duration.sum": 100992.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 53.97
+          },
+          "read_GB_per_s": 493.58428390367555,
+          "total_GB_per_s": 493.59822560202787,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 49807360,
+          "read_to_inferred_weight_bytes_ratio": 1.0008172286184212
+        },
+        {
+          "id": "5",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(1536, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 31483136.0,
+            "dram__bytes_write.sum": 0.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 87.58,
+            "gpu__time_duration.sum": 62528.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 33.56
+          },
+          "read_GB_per_s": 503.50460593654043,
+          "total_GB_per_s": 503.50460593654043,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 31457280,
+          "read_to_inferred_weight_bytes_ratio": 1.0008219401041667
+        },
+        {
+          "id": "6",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(640, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 21000448.0,
+            "dram__bytes_write.sum": 0.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 77.01,
+            "gpu__time_duration.sum": 47488.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 39.55
+          },
+          "read_GB_per_s": 442.22641509433964,
+          "total_GB_per_s": 442.22641509433964,
+          "strong_indicator": false,
+          "inferred_weight_bytes": 20971520,
+          "read_to_inferred_weight_bytes_ratio": 1.00137939453125
+        },
+        {
+          "id": "7",
+          "kernel": "enable_if<!T7, void>::type kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, 0, 1, 1, 0, 6, 0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+          "grid": "(4864, 1, 1)",
+          "block": "(16, 4, 1)",
+          "metrics": {
+            "dram__bytes_read.sum": 102010240.0,
+            "dram__bytes_write.sum": 2921216.0,
+            "dram__throughput.avg.pct_of_peak_sustained_elapsed": 91.28,
+            "gpu__time_duration.sum": 199840.0,
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": 54.08
+          },
+          "read_GB_per_s": 510.4595676541233,
+          "total_GB_per_s": 525.0773418734988,
+          "strong_indicator": true,
+          "inferred_weight_bytes": 99614720,
+          "read_to_inferred_weight_bytes_ratio": 1.0240478515625
+        }
+      ],
+      "request_count": 10,
+      "successful_requests": 10,
+      "fixed_lengths_valid": true,
+      "wall_seconds": 193.30638432502747,
+      "dram_pct_range": [
+        77.01,
+        96.03
+      ],
+      "sm_pct_range": [
+        21.62,
+        56.97
+      ],
+      "strong_indicator_count": 7
+    }
+  ],
+  "total_kernels": 24,
+  "capture_wall_minutes": 9.704116149743397,
+  "limits": "Cold-cache kernel replay, unlocked clocks, selected early GEMV samples; not normal API timing or a causal optimization comparison.",
+  "inferred_projection_groups": {
+    "vocabulary_after_prefill": {
+      "count": 3,
+      "strong_indicator_count": 2,
+      "dram_pct_range": [
+        94.68,
+        97.63
+      ],
+      "sm_pct_range": [
+        36.37,
+        61.12
+      ],
+      "read_GB_per_s_range": [
+        541.5998039565139,
+        557.0439404352807
+      ]
+    },
+    "decode_qkv": {
+      "count": 6,
+      "strong_indicator_count": 6,
+      "dram_pct_range": [
+        80.62,
+        87.58
+      ],
+      "sm_pct_range": [
+        33.56,
+        52.07
+      ],
+      "read_GB_per_s_range": [
+        463.419689119171,
+        503.50460593654043
+      ]
+    },
+    "decode_attention_output": {
+      "count": 6,
+      "strong_indicator_count": 2,
+      "dram_pct_range": [
+        72.66,
+        87.52
+      ],
+      "sm_pct_range": [
+        21.62,
+        44.78
+      ],
+      "read_GB_per_s_range": [
+        417.470737913486,
+        503.26687116564415
+      ]
+    },
+    "decode_gate_up": {
+      "count": 6,
+      "strong_indicator_count": 6,
+      "dram_pct_range": [
+        90.47,
+        95.28
+      ],
+      "sm_pct_range": [
+        24.22,
+        56.97
+      ],
+      "read_GB_per_s_range": [
+        506.8014322916667,
+        533.2280821917808
+      ]
+    },
+    "decode_down": {
+      "count": 3,
+      "strong_indicator_count": 3,
+      "dram_pct_range": [
+        84.4,
+        92.18
+      ],
+      "sm_pct_range": [
+        27.32,
+        53.97
+      ],
+      "read_GB_per_s_range": [
+        485.1798382078407,
+        530.0279006464784
+      ]
+    }
+  }
+}

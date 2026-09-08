@@ -11,6 +11,12 @@ with passing stability gates and CPU/CUDA traces. This is a configuration
 effect, not a custom optimization. See [Stage 2 validation](docs/stage2-validation.md).
 Stage 3 and cloud work have not started.
 
+A [supplemental bandwidth check](docs/stage2-bandwidth-check.md) found strong
+kernel-level support for weight-read bandwidth limitation at concurrency 1:
+six inferred decode gate/up GEMV samples reached 90.47–95.28% sustained DRAM
+peak. This is cold-cache profiling evidence; the end-to-end bottleneck share
+and achievable optimization speedup remain unresolved.
+
 API checks passed 18/18 before and after restart. The accepted full benchmark
 rerun passed 384/384 requests with four group CVs of 2.70-4.29%. This is a pinned
 WSL compatibility baseline, not a custom optimization or cloud result. See

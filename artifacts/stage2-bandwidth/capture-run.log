@@ -1,0 +1,9 @@
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 4470.44it/s]
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 5055.72it/s]
+Traceback (most recent call last):
+  File "/mnt/d/Lunacia/Inference/scripts/run-bandwidth-check.py", line 88, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/mnt/d/Lunacia/Inference/scripts/run-bandwidth-check.py", line 85, in main
+    raise RuntimeError('Counter collection failed; no further capture')
+RuntimeError: Counter collection failed; no further capture
