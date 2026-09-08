@@ -1,0 +1,8 @@
+{
+  "status": 404,
+  "body": {
+    "detail": "Not Found"
+  },
+  "elapsed_seconds": 0.0016235470000083296,
+  "ok": false
+}

@@ -1,0 +1,219 @@
+{
+  "started_at": "2026-09-08T08:19:00Z",
+  "started_epoch": 1788855540.00252,
+  "deadline_epoch": 1788860940.00252,
+  "budget_minutes": 90,
+  "elapsed_seconds": 1590.914,
+  "remaining_seconds": 3809.086,
+  "events": [
+    {
+      "time": 1788855540.0047193,
+      "event": "budget_started"
+    },
+    {
+      "time": 1788855540.0498781,
+      "event": "server_start",
+      "candidate": "A",
+      "run": "compatibility-A-20260908T081900Z"
+    },
+    {
+      "time": 1788855561.847519,
+      "event": "server_stop",
+      "candidate": "A",
+      "run": "compatibility-A-20260908T081900Z",
+      "pid": 385,
+      "returncode": 0,
+      "stop_seconds": 0.46570658683776855
+    },
+    {
+      "time": 1788855561.8739676,
+      "event": "server_start",
+      "candidate": "B",
+      "run": "compatibility-B-20260908T081921Z"
+    },
+    {
+      "time": 1788855579.3598332,
+      "event": "server_stop",
+      "candidate": "B",
+      "run": "compatibility-B-20260908T081921Z",
+      "pid": 651,
+      "returncode": 0,
+      "stop_seconds": 0.2706894874572754
+    },
+    {
+      "time": 1788855579.3904765,
+      "event": "server_start",
+      "candidate": "C",
+      "run": "compatibility-C-20260908T081939Z"
+    },
+    {
+      "time": 1788855611.216008,
+      "event": "server_stop",
+      "candidate": "C",
+      "run": "compatibility-C-20260908T081939Z",
+      "pid": 916,
+      "returncode": 0,
+      "stop_seconds": 0.2713308334350586
+    },
+    {
+      "time": 1788855611.2402856,
+      "event": "server_start",
+      "candidate": "D",
+      "run": "compatibility-D-20260908T082011Z"
+    },
+    {
+      "time": 1788855628.9434092,
+      "event": "server_stop",
+      "candidate": "D",
+      "run": "compatibility-D-20260908T082011Z",
+      "pid": 1197,
+      "returncode": 0,
+      "stop_seconds": 0.2655189037322998
+    },
+    {
+      "time": 1788855628.963053,
+      "event": "server_start",
+      "candidate": "E",
+      "run": "compatibility-E-20260908T082028Z"
+    },
+    {
+      "time": 1788855657.126247,
+      "event": "server_stop",
+      "candidate": "E",
+      "run": "compatibility-E-20260908T082028Z",
+      "pid": 1460,
+      "returncode": 0,
+      "stop_seconds": 0.275524377822876
+    },
+    {
+      "time": 1788855657.1409073,
+      "event": "server_start",
+      "candidate": "F",
+      "run": "compatibility-F-20260908T082057Z"
+    },
+    {
+      "time": 1788855673.4541996,
+      "event": "server_stop",
+      "candidate": "F",
+      "run": "compatibility-F-20260908T082057Z",
+      "pid": 1736,
+      "returncode": 0,
+      "stop_seconds": 0.2709085941314697
+    },
+    {
+      "time": 1788855673.4841015,
+      "event": "phase_complete",
+      "phase": "compatibility"
+    },
+    {
+      "time": 1788855802.787134,
+      "event": "server_start",
+      "candidate": "A",
+      "run": "screen-A-20260908T082322Z"
+    },
+    {
+      "time": 1788856039.3158617,
+      "event": "server_stop",
+      "candidate": "A",
+      "run": "screen-A",
+      "pid": 408,
+      "returncode": 0,
+      "stop_seconds": 0.5661783218383789
+    },
+    {
+      "time": 1788856039.342597,
+      "event": "phase_complete",
+      "phase": "screen"
+    },
+    {
+      "time": 1788856092.417962,
+      "event": "server_start",
+      "candidate": "A",
+      "run": "quality-A-20260908T082812Z"
+    },
+    {
+      "time": 1788856287.6414177,
+      "event": "server_stop",
+      "candidate": "A",
+      "run": "quality-A",
+      "pid": 382,
+      "returncode": 0,
+      "stop_seconds": 0.5269217491149902
+    },
+    {
+      "time": 1788856287.6654072,
+      "event": "server_start",
+      "candidate": "B",
+      "run": "quality-B-20260908T083127Z"
+    },
+    {
+      "time": 1788856326.932659,
+      "event": "server_stop",
+      "candidate": "B",
+      "run": "quality-B",
+      "pid": 1004,
+      "returncode": 0,
+      "stop_seconds": 0.37323498725891113
+    },
+    {
+      "time": 1788856326.943792,
+      "event": "server_start",
+      "candidate": "C",
+      "run": "quality-C-20260908T083206Z"
+    },
+    {
+      "time": 1788856596.404694,
+      "event": "server_stop",
+      "candidate": "C",
+      "run": "quality-C",
+      "pid": 1312,
+      "returncode": 0,
+      "stop_seconds": 0.4686410427093506
+    },
+    {
+      "time": 1788856596.4238968,
+      "event": "server_start",
+      "candidate": "D",
+      "run": "quality-D-20260908T083636Z"
+    },
+    {
+      "time": 1788856639.6095796,
+      "event": "server_stop",
+      "candidate": "D",
+      "run": "quality-D",
+      "pid": 2088,
+      "returncode": 0,
+      "stop_seconds": 0.38719773292541504
+    },
+    {
+      "time": 1788856639.6323087,
+      "event": "server_start",
+      "candidate": "E",
+      "run": "quality-E-20260908T083719Z"
+    },
+    {
+      "time": 1788857075.9348876,
+      "event": "server_stop",
+      "candidate": "E",
+      "run": "quality-E",
+      "pid": 2402,
+      "returncode": 0,
+      "stop_seconds": 0.4767158031463623
+    },
+    {
+      "time": 1788857075.9509141,
+      "event": "server_start",
+      "candidate": "F",
+      "run": "quality-F-20260908T084435Z"
+    },
+    {
+      "time": 1788857130.8888056,
+      "event": "server_stop",
+      "candidate": "F",
+      "run": "quality-F",
+      "pid": 3504,
+      "returncode": 0,
+      "stop_seconds": 0.3753547668457031
+    }
+  ]
+}

@@ -31,5 +31,7 @@ acceptance evidence.
 
 Stage 2 is complete under [stage2-plan.md](stage2-plan.md); see
 [stage2-validation.md](stage2-validation.md) for the workload-specific
-admission-cap result and its limits. Stage 3 execution is authorized by the
-attached plan and is tracked in [stage3-plan.md](stage3-plan.md).
+admission-cap result and its limits. Stage 3 compatibility/screening/quality
+collection is complete, but stopped before formal comparison because A scored
+41/48 against the 46/48 quality gate. See [stage3-validation.md](stage3-validation.md)
+for the no-go evidence. Stage 4 has not started.

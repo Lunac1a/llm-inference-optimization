@@ -4,16 +4,18 @@ Identify and validate one bounded inference-system improvement on top of pinned
 vLLM, then deliver the selected local configuration through the existing API.
 
 **Status: Stage 1 and Stage 2 passed; Stage 3 local KV-cache combination
-validation is in progress.** Stage 2 found a workload-specific admission-cap
+validation stopped at its preregistered quality gate.** Stage 2 found a workload-specific admission-cap
 effect: for 512-input/128-output requests at client concurrency 8, changing the
 existing sequence cap from 4 to 8 raised mean throughput from 184.22 to 327.46
 output tokens/s (+77.75%). This is a configuration effect, not a custom
 optimization. See [Stage 2 validation](docs/stage2-validation.md).
 
-The current authorized work compares six existing vLLM combinations of
-FlashAttention/Triton attention, BF16/FP8 KV cache, and prefix caching for
-shared long-document QA. The fixed protocol is in
-[Stage 3 plan](docs/stage3-plan.md); cloud work, a new API layer, and custom
+The Stage 3 run tested compatibility and A-only screening for six existing
+vLLM combinations of FlashAttention/Triton attention, BF16/FP8 KV cache, and
+prefix caching. All six passed a short request, but the fixed quality baseline
+scored 41/48 against the required 46/48, so formal throughput comparison and
+Stage 4 delivery were not started. See the [Stage 3 validation report](docs/stage3-validation.md)
+and [Stage 3 plan](docs/stage3-plan.md). Cloud work, a new API layer, and custom
 kernels are out of scope.
 
 A [supplemental bandwidth check](docs/stage2-bandwidth-check.md) found strong
@@ -51,8 +53,9 @@ effects, not as custom kernel work.
 See [the staged plan](docs/plan.md) and the
 [Stage 3 execution protocol](docs/stage3-plan.md). The project contribution in
 this route is the evidence-backed selection, combination, validation, and local
-service delivery of existing vLLM capabilities; it does not claim a new CUDA
-kernel or a weight-level optimization.
+service delivery of existing vLLM capabilities; this run reached a quality
+no-go before selection and does not claim a new CUDA kernel or a weight-level
+optimization.
 
 ## Previous exploration
 

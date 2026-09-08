@@ -1,7 +1,9 @@
 # Stage 3: local KV-cache combination validation
 
-Status: plan committed before experiment startup. This document is the
-repository copy of the authorized next-stage boundary supplied for this task.
+Status: plan committed before experiment startup. The execution reached the
+declared quality stop gate; see [stage3-validation.md](stage3-validation.md).
+This document is the repository copy of the authorized next-stage boundary
+supplied for this task.
 
 ## Goal and fixed boundary
 
