@@ -5,3 +5,4 @@ locks/*.txt text eol=lf
 # Preserve Stage 2 evidence bytes (including hashes and compressed traces).
 artifacts/stage2/** -text
 artifacts/stage2-bandwidth/** -text
+artifacts/stage3-v2/** -text whitespace=cr-at-eol

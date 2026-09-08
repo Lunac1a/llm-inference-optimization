@@ -105,20 +105,21 @@ def exact_length(tokenizer, front: str, middle: str, back: str, filler: str, tar
 
 
 def make_document(tokenizer, spec: dict, target: int) -> dict:
+    steps = spec['relation'].split('，')
     front = (
         f"{spec['title']}。这是性能与质量测试材料，文档编号为{spec['code']}。"
-        f"项目负责人是{spec['owner']}，发布日期是{spec['date']}，所在区域是{spec['region']}。"
-        f"文档明确记载的预算是{spec['budget']}。\n"
+        f"发布日期是{spec['date']}，所在区域是{spec['region']}。"
+        f"正式流程第一步：{steps[0]}。后续步骤分别见中部与末尾记录。\n"
         "以下内容是项目说明，不应把相邻章节中的示例数字当成正式事实。\n"
     )
     middle = (
-        f"跨段执行关系记录：{spec['relation']}。该顺序是本项目的正式流程。\n"
+        f"负责人记录：项目负责人是{spec['owner']}。正式流程第二步：{steps[1]}。\n"
         f"风险记录：当前已知风险是{spec['risk']}；风险记录不代表项目已经失败。\n"
         f"干扰信息：演示预算曾写作{spec['distractor_budget']}，它是培训示例，不是本项目预算。\n"
     )
     back = (
-        f"结论回顾：编号{spec['code']}对应负责人{spec['owner']}，预算仍为{spec['budget']}，"
-        f"正式流程仍是“{spec['relation']}”。文档没有给出预计日活用户数。\n"
+        f"最终确认：文档明确记载的正式预算是{spec['budget']}。"
+        f"正式流程第三步：{steps[2]}。文档没有给出预计日活用户数。\n"
     )
     text, actual = exact_length(
         tokenizer,
@@ -144,18 +145,18 @@ def quality_questions(doc: dict, spec: dict) -> list[dict]:
     text = doc["text"]
     common = {"doc_id": doc["id"], "document_sha256": doc["sha256"], "document": text}
     return [
-        {**common, "id": f"{doc['id']}-direct-1", "category": "direct", "location": "front", "question": "项目编号是什么？", "expected_markers": [spec["code"]]},
-        {**common, "id": f"{doc['id']}-direct-2", "category": "direct", "location": "front", "question": "项目负责人是谁？", "expected_markers": [spec["owner"]]},
-        {**common, "id": f"{doc['id']}-direct-3", "category": "direct", "location": "back", "question": "文档明确记载的预算是多少？", "expected_markers": [spec["budget"]]},
-        {**common, "id": f"{doc['id']}-cross-1", "category": "cross_paragraph", "location": "middle", "question": "请给出该项目的正式执行顺序。", "expected_markers": [spec["relation"]]},
-        {**common, "id": f"{doc['id']}-cross-2", "category": "cross_paragraph", "location": "front_middle", "question": "将项目编号与负责人一起写出。", "expected_markers": [spec["code"], spec["owner"]]},
-        {**common, "id": f"{doc['id']}-cross-3", "category": "cross_paragraph", "location": "middle_back", "question": "项目流程结束后要提交什么？如果资料没有说完整，请只说明资料给出的内容。", "expected_markers": ["服务报告", "客服试点", "人工抽检", "质检接口"]},
-        {**common, "id": f"{doc['id']}-distractor-1", "category": "distractor", "location": "front_middle", "question": "正式预算是培训示例预算的多少？不要回答示例数字。", "expected_markers": [spec["budget"]]},
-        {**common, "id": f"{doc['id']}-distractor-2", "category": "distractor", "location": "middle", "question": "已知风险是什么？不要把风险描述成预算或流程。", "expected_markers": [spec["risk"]]},
-        {**common, "id": f"{doc['id']}-distractor-3", "category": "distractor", "location": "front", "question": "项目所在区域是什么？不要把培训示例数字当作区域。", "expected_markers": [spec["region"]]},
-        {**common, "id": f"{doc['id']}-missing-1", "category": "missing", "location": "back", "question": "文档给出的预计日活用户数是多少？", "expected_markers": ["资料未提供", "未提供", "无法确定", "没有给出"]},
-        {**common, "id": f"{doc['id']}-missing-2", "category": "missing", "location": "middle", "question": "文档是否给出了项目的最终利润率？", "expected_markers": ["资料未提供", "未提供", "无法确定", "没有给出"]},
-        {**common, "id": f"{doc['id']}-missing-3", "category": "missing", "location": "front", "question": "文档是否明确给出了参与项目的员工人数？", "expected_markers": ["资料未提供", "未提供", "无法确定", "没有给出"]},
+        {**common, "id": f"{doc['id']}-direct-1", "category": "direct", "location": "front", "question": "项目编号是什么？", "answer_groups": [[spec["code"]]]},
+        {**common, "id": f"{doc['id']}-direct-2", "category": "direct", "location": "middle", "question": "项目负责人是谁？", "answer_groups": [[spec["owner"]]]},
+        {**common, "id": f"{doc['id']}-direct-3", "category": "direct", "location": "back", "question": "文档明确记载的预算是多少？", "answer_groups": [[spec["budget"]]]},
+        {**common, "id": f"{doc['id']}-cross-1", "category": "cross_paragraph", "location": "front_middle_back", "question": "请给出该项目的正式执行顺序。", "answer_groups": [[spec["relation"]]]},
+        {**common, "id": f"{doc['id']}-cross-2", "category": "cross_paragraph", "location": "front_middle", "question": "将项目编号与负责人一起写出。", "answer_groups": [[spec["code"]], [spec["owner"]]]},
+        {**common, "id": f"{doc['id']}-cross-3", "category": "cross_paragraph", "location": "back", "question": "正式执行顺序的最后一步是什么？请原样写出以“最后”开头的步骤。", "answer_groups": [[spec["relation"].split("，")[-1]]]},
+        {**common, "id": f"{doc['id']}-distractor-1", "category": "distractor", "location": "middle_back", "question": "本项目的正式预算金额是多少？请只回答金额及单位，忽略培训示例预算。", "answer_groups": [[spec["budget"]]]},
+        {**common, "id": f"{doc['id']}-distractor-2", "category": "distractor", "location": "middle", "question": "已知风险是什么？不要把风险描述成预算或流程。", "answer_groups": [[spec["risk"]]]},
+        {**common, "id": f"{doc['id']}-distractor-3", "category": "distractor", "location": "front", "question": "项目所在区域是什么？不要把培训示例数字当作区域。", "answer_groups": [[spec["region"]]]},
+        {**common, "id": f"{doc['id']}-missing-1", "category": "missing", "location": "global_absence", "question": "文档给出的预计日活用户数是多少？", "answer_groups": [["资料未提供", "未提供", "无法确定", "没有给出"]]},
+        {**common, "id": f"{doc['id']}-missing-2", "category": "missing", "location": "global_absence", "question": "文档是否给出了项目的最终利润率？", "answer_groups": [["资料未提供", "未提供", "无法确定", "没有给出"]]},
+        {**common, "id": f"{doc['id']}-missing-3", "category": "missing", "location": "global_absence", "question": "文档是否明确给出了参与项目的员工人数？", "answer_groups": [["资料未提供", "未提供", "无法确定", "没有给出"]]},
     ]
 
 
@@ -187,11 +188,13 @@ def build_materials(model_path: str) -> dict:
 
     quality = []
     for spec in DOC_SPECS:
-        doc = documents["16384"][spec["id"]]
-        quality.extend(quality_questions(doc, spec))
+        quality_spec = {**spec, "id": "quality-" + spec["id"],
+                        "code": "验收-" + spec["code"], "title": "独立验收材料：" + spec["title"]}
+        doc = make_document(tokenizer, quality_spec, 16384)
+        quality.extend(quality_questions(doc, quality_spec))
 
     return {
-        "schema": "stage3-materials-v1",
+        "schema": "stage3-materials-v2",
         "seed": 20260908,
         "tokenizer_model": "Qwen/Qwen3-4B",
         "short_prompt": short,
@@ -209,6 +212,8 @@ def main() -> None:
     model_path = args.model_path
     if not model_path:
         model_path = OwnedVllm(candidate_config("A"), OUT / "prepare").resolve_model()
+    if (OUT / "materials.json").exists():
+        raise SystemExit("Refuse to overwrite existing materials")
     materials = build_materials(model_path)
     write_json(OUT / "materials.json", materials)
     manifest = {

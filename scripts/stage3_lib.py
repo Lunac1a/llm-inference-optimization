@@ -9,6 +9,7 @@ from pathlib import Path
 import re
 import signal
 import subprocess
+import sys
 import threading
 import time
 from typing import Any, Iterable
@@ -18,8 +19,14 @@ import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "configs" / "stage3-combinations.json"
-OUT = ROOT / "artifacts" / "stage3"
-STATE = ROOT / ".tmp" / "stage3"
+OUT = ROOT / "artifacts" / "stage3-v2"
+STATE = ROOT / ".tmp" / "stage3-v2"
+
+
+def protect_evidence(path: Path) -> None:
+    for name in ("stage1", "stage2", "stage2-bandwidth", "stage3"):
+        if path.resolve().is_relative_to((ROOT / "artifacts" / name).resolve()):
+            raise ValueError(f"Archived evidence is read-only: {path}")
 
 
 def now_utc() -> str:
@@ -35,11 +42,13 @@ def sha256_json(value: Any) -> str:
 
 
 def write_json(path: Path, value: Any) -> None:
+    protect_evidence(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n")
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def append_jsonl(path: Path, value: Any) -> None:
+    protect_evidence(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("a", encoding="utf-8") as handle:
         handle.write(json.dumps(value, ensure_ascii=False, separators=(",", ":")) + "\n")
@@ -121,7 +130,29 @@ def http_json(url: str, body: dict[str, Any] | None = None, timeout: float = 10,
     return status, decoded, elapsed
 
 
-def stream_chat(base_url: str, body: dict[str, Any], timeout: float) -> dict[str, Any]:
+def stream_chat(base_url: str, body: dict[str, Any], timeout: float, stream: bool = True) -> dict[str, Any]:
+    """An isolated HTTP worker makes timeout an absolute wall-clock deadline."""
+    started = time.perf_counter()
+    try:
+        if timeout <= 0:
+            raise subprocess.TimeoutExpired("chat worker", timeout)
+        result = subprocess.run(
+            [sys.executable, str(ROOT / "scripts" / "stage3_request.py")],
+            input=json.dumps({"base_url": base_url, "body": body, "timeout": timeout, "stream": stream}),
+            text=True, encoding="utf-8", capture_output=True, timeout=timeout, check=True,
+        )
+        return json.loads(result.stdout)
+    except subprocess.TimeoutExpired:
+        error = "request_deadline_exceeded"
+    except (subprocess.CalledProcessError, ValueError) as exc:
+        error = f"request_worker_failed:{exc}"
+    return {"status": None, "error": error, "text": "", "chunks": [],
+            "finish_reason": None, "usage": None, "output_tokens": None,
+            "stream_complete": False, "ttft_seconds": None,
+            "e2e_seconds": time.perf_counter() - started}
+
+
+def _stream_chat(base_url: str, body: dict[str, Any], timeout: float) -> dict[str, Any]:
     request_body = dict(body)
     request_body["stream"] = True
     request = urllib.request.Request(
@@ -138,6 +169,7 @@ def stream_chat(base_url: str, body: dict[str, Any], timeout: float) -> dict[str
     usage: dict[str, Any] | None = None
     error: str | None = None
     status: int | None = None
+    done = False
     try:
         with urllib.request.urlopen(request, timeout=timeout) as response:
             status = response.status
@@ -147,7 +179,8 @@ def stream_chat(base_url: str, body: dict[str, Any], timeout: float) -> dict[str
                     continue
                 data = line[5:].strip()
                 if data == "[DONE]":
-                    continue
+                    done = True
+                    break
                 try:
                     item = json.loads(data)
                 except json.JSONDecodeError:
@@ -175,6 +208,11 @@ def stream_chat(base_url: str, body: dict[str, Any], timeout: float) -> dict[str
     ended = time.perf_counter()
     text = "".join(text_parts)
     output_tokens = (usage or {}).get("completion_tokens")
+    complete = (status == 200 and error is None and done
+                and finish_reason in ("stop", "length") and bool(text.strip())
+                and isinstance(output_tokens, int) and output_tokens > 0)
+    if status == 200 and error is None and not complete:
+        error = "incomplete_stream"
     return {
         "status": status,
         "error": error,
@@ -185,11 +223,12 @@ def stream_chat(base_url: str, body: dict[str, Any], timeout: float) -> dict[str
         "ttft_seconds": None if first_token is None else first_token - started,
         "e2e_seconds": ended - started,
         "output_tokens": output_tokens,
-        "stream_complete": error is None and bool(chunks) and (finish_reason is not None or text != ""),
+        "done_received": done,
+        "stream_complete": complete,
     }
 
 
-def chat_request(base_url: str, prompt: str, model: str, max_tokens: int, stream: bool = True, ignore_eos: bool = False) -> dict[str, Any]:
+def chat_request(base_url: str, prompt: str, model: str, max_tokens: int, stream: bool = True, ignore_eos: bool = False, timeout: float = 120) -> dict[str, Any]:
     body: dict[str, Any] = {
         "model": model,
         "messages": [{"role": "user", "content": prompt}],
@@ -203,8 +242,12 @@ def chat_request(base_url: str, prompt: str, model: str, max_tokens: int, stream
         body["stream"] = True
         if ignore_eos:
             body["ignore_eos"] = True
-        return stream_chat(base_url, body, timeout=120)
-    status, decoded, elapsed = http_json(f"{base_url}/v1/chat/completions", body, timeout=120)
+        return stream_chat(base_url, body, timeout=timeout)
+    return stream_chat(base_url, body, timeout=timeout, stream=False)
+
+
+def _nonstream_chat(base_url: str, body: dict[str, Any], timeout: float) -> dict[str, Any]:
+    status, decoded, elapsed = http_json(f"{base_url}/v1/chat/completions", body, timeout=timeout)
     if not isinstance(decoded, dict):
         return {"status": status, "error": str(decoded), "text": "", "e2e_seconds": elapsed}
     choices = decoded.get("choices") or []
@@ -216,7 +259,7 @@ def chat_request(base_url: str, prompt: str, model: str, max_tokens: int, stream
         "finish_reason": choices[0].get("finish_reason") if choices else None,
         "usage": decoded.get("usage"),
         "e2e_seconds": elapsed,
-        "stream_complete": status == 200 and bool(text),
+        "stream_complete": status == 200 and bool(text) and choices[0].get("finish_reason") in ("stop", "length"),
     }
 
 
@@ -425,7 +468,10 @@ class OwnedVllm:
 
 def reset_prefix_cache(base_url: str) -> dict[str, Any]:
     status, body, elapsed = http_json(f"{base_url}/reset_prefix_cache", body={}, timeout=20)
-    return {"status": status, "body": body, "elapsed_seconds": elapsed, "ok": status == 200}
+    accepted = status == 200 and body is not False
+    if isinstance(body, dict):
+        accepted = accepted and not body.get('error') and body.get('ok', True) is not False and body.get('success', True) is not False
+    return {"status": status, "body": body, "elapsed_seconds": elapsed, "ok": bool(accepted)}
 
 
 def metric_delta(before: dict[str, Any], after: dict[str, Any]) -> dict[str, float]:

@@ -1,0 +1,55 @@
+{
+  "schema": "stage3-materials-v2",
+  "seed": 20260908,
+  "documents": {
+    "8192": {
+      "doc-a": {
+        "target_tokens": 8192,
+        "actual_document_tokens": 8192,
+        "sha256": "4fa1e96b82e5fe56fa72505c8cd3d73c026b2c012c2f6c25dd0429e09f20fe38"
+      },
+      "doc-b": {
+        "target_tokens": 8192,
+        "actual_document_tokens": 8192,
+        "sha256": "6d06184dba48e23b0abddbb716ce954cd0122bc799474664945acb777b78c1b2"
+      },
+      "doc-c": {
+        "target_tokens": 8192,
+        "actual_document_tokens": 8192,
+        "sha256": "16f978ad3367553e106aff61579ef7ababe1bd26f682242b89c974db56005f4a"
+      },
+      "doc-d": {
+        "target_tokens": 8192,
+        "actual_document_tokens": 8192,
+        "sha256": "9702b4669867d07d1389221044d5a56ae57df12b3e10ffb8418618480d28f437"
+      }
+    },
+    "16384": {
+      "doc-a": {
+        "target_tokens": 16384,
+        "actual_document_tokens": 16384,
+        "sha256": "d55779e0b974877c82891100f19cc286c46ca2ea09edae63d821842c4700b0ac"
+      },
+      "doc-b": {
+        "target_tokens": 16384,
+        "actual_document_tokens": 16384,
+        "sha256": "8cb2f97b54cbdaaf9e0eca92faf13e7ca108edb255f4dee731bbca5dc7192905"
+      },
+      "doc-c": {
+        "target_tokens": 16384,
+        "actual_document_tokens": 16384,
+        "sha256": "0210aa95c473aed0c842c1630448e831f5d6f637e8f41aba49c68b117175c0e3"
+      },
+      "doc-d": {
+        "target_tokens": 16384,
+        "actual_document_tokens": 16384,
+        "sha256": "e6e48201fce39e5191a590e694fe5a1a93c62c98ea6c7cf2d19594089a768d6f"
+      }
+    }
+  },
+  "quality_count": 48,
+  "performance_counts": {
+    "8192": 32,
+    "16384": 32
+  }
+}

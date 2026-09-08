@@ -98,7 +98,7 @@ class Stage3CollectionTests(unittest.TestCase):
             # The successful fixture above is intentionally a length-truncated
             # answer; the scorer, rather than the transport parser, rejects it.
             collect = load("stage3_collect")
-            question = {"expected_markers": ["答案"]}
+            question = {"answer_groups": [["答案"]]}
             self.assertFalse(collect.score_quality_answer(question, {"text": "答案", "finish_reason": "length"})["correct"])
             self.assertEqual(error_response["status"], 400)
         finally:

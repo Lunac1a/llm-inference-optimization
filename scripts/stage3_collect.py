@@ -5,10 +5,12 @@ from __future__ import annotations
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import json
+import itertools
 from pathlib import Path
 import re
 import statistics
 import time
+import unicodedata
 from typing import Any
 
 from stage3_lib import (
@@ -38,7 +40,10 @@ def materials() -> dict[str, Any]:
     path = OUT / "materials.json"
     if not path.exists():
         raise SystemExit("Missing artifacts/stage3/materials.json; run phase prepare first")
-    return json.loads(path.read_text(encoding="utf-8"))
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if data.get("schema") != "stage3-materials-v2":
+        raise ValueError("Refuse to mix archived v1 materials with the corrected collector")
+    return data
 
 
 def base_url(candidate: dict[str, Any]) -> str:
@@ -56,7 +61,7 @@ def prompt_hash(prompt: str) -> str:
 def prompt_for_quality(row: dict[str, Any]) -> str:
     return (
         "只根据下面资料回答。如果资料没有明确给出，请回答‘资料未提供’，不要猜测。"
-        "请用简洁中文回答，不要展示思考过程。\n\n"
+        "只输出答案值，不要复述问题或解释；多项答案用分号分隔，不要展示思考过程。\n\n"
         f"{row['document']}\n\n问题：{row['question']}"
     )
 
@@ -64,8 +69,18 @@ def prompt_for_quality(row: dict[str, Any]) -> str:
 def score_quality_answer(question: dict[str, Any], response: dict[str, Any]) -> dict[str, Any]:
     """Deterministic bounded scorer; truncation and empty answers always fail."""
     answer = response.get("text", "") or ""
-    complete = bool(answer.strip()) and response.get("finish_reason") != "length" and not response.get("error")
-    correct = complete and any(marker in answer for marker in question["expected_markers"])
+    complete = (response.get("status") == 200 and response.get("stream_complete") is True
+                and bool(answer.strip()) and response.get("finish_reason") == "stop"
+                and not response.get("error"))
+    groups = question.get("answer_groups")
+    if not groups or any(not group for group in groups):
+        raise ValueError("Quality scoring requires the v2 answer_groups schema")
+    def normalize(value):
+        return ''.join(c for c in unicodedata.normalize('NFKC', value)
+                       if not c.isspace() and not unicodedata.category(c).startswith('P'))
+    acceptable = {normalize(''.join(order)) for values in itertools.product(*groups)
+                  for order in itertools.permutations(values)}
+    correct = complete and normalize(answer) in acceptable
     return {"question": question, "response": response, "complete": complete, "correct": correct}
 
 
@@ -73,8 +88,9 @@ def prompt_for_performance(row: dict[str, Any], independent_prefix: str = "") ->
     return independent_prefix + row["prompt"]
 
 
-def request_one(candidate: dict[str, Any], prompt: str, max_tokens: int, ignore_eos: bool, request_id: str) -> dict[str, Any]:
-    result = chat_request(base_url(candidate), prompt, model_name(candidate), max_tokens, stream=True, ignore_eos=ignore_eos)
+def request_one(candidate: dict[str, Any], prompt: str, max_tokens: int, ignore_eos: bool, request_id: str, timeout: float | None = None) -> dict[str, Any]:
+    result = chat_request(base_url(candidate), prompt, model_name(candidate), max_tokens, stream=True, ignore_eos=ignore_eos,
+                          timeout=candidate.get("request_timeout_seconds", 120) if timeout is None else timeout)
     result.update({"request_id": request_id, "prompt_sha256": prompt_hash(prompt), "prompt_chars": len(prompt), "captured_at": time.time()})
     return result
 
@@ -88,16 +104,29 @@ def run_batch(
     max_tokens: int,
     ignore_eos: bool,
     warmups: list[tuple[str, str]] | None = None,
+    budget: Budget | None = None,
 ) -> dict[str, Any]:
     """Run a bounded batch and retain one raw response object per request."""
+    budget = budget or Budget()
+    batch_timeout = candidate.get("batch_timeout_seconds", 600)
+    budget.ensure(batch_timeout, candidate.get("cleanup_reserve_seconds", 300))
     phase_dir.mkdir(parents=True, exist_ok=True)
     batch_dir = phase_dir / batch_name
-    batch_dir.mkdir(parents=True, exist_ok=True)
+    batch_dir.mkdir(parents=True, exist_ok=False)
     url = base_url(candidate)
+    deadline = time.perf_counter() + batch_timeout
+    started_epoch = time.time()
+
+    def bounded_request(request_id, prompt):
+        remaining = min(candidate.get("request_timeout_seconds", 120), deadline - time.perf_counter())
+        return request_one(candidate, prompt, max_tokens, ignore_eos, request_id, timeout=remaining)
 
     warmup_rows: list[dict[str, Any]] = []
     for request_id, prompt in warmups or []:
-        warmup_rows.append(request_one(candidate, prompt, max_tokens, ignore_eos, request_id))
+        warmup_rows.append(bounded_request(request_id, prompt))
+        if not warmup_rows[-1].get("stream_complete") or warmup_rows[-1].get("error") or (ignore_eos and warmup_rows[-1].get("output_tokens") != max_tokens):
+            write_json(batch_dir / "warmups.json", warmup_rows)
+            raise RuntimeError("Warmup failed; stop branch")
     write_json(batch_dir / "warmups.json", warmup_rows)
 
     before = metrics_snapshot(url)
@@ -107,10 +136,10 @@ def run_batch(
     rows: list[dict[str, Any]] = []
     errors: list[str] = []
     with ThreadPoolExecutor(max_workers=concurrency, thread_name_prefix="stage3-request") as pool:
-        futures = {pool.submit(request_one, candidate, prompt, max_tokens, ignore_eos, request_id): request_id
+        futures = {pool.submit(bounded_request, request_id, prompt): request_id
                    for request_id, prompt in prompts}
         try:
-            for future in as_completed(futures, timeout=600):
+            for future in as_completed(futures, timeout=max(0, deadline - time.perf_counter())):
                 try:
                     row = future.result()
                 except Exception as exc:
@@ -119,13 +148,19 @@ def run_batch(
                 if row.get("error") or row.get("status") != 200:
                     errors.append(str(row.get("error") or row.get("status")))
         except TimeoutError:
-            errors.append("batch_timeout_600_seconds")
+            errors.append("batch_deadline_exceeded")
             for future in futures:
                 future.cancel()
+    # Running HTTP subprocesses share the same deadline and are killed/reaped;
+    # exiting the thread pool cannot wait for an unbounded trickling connection.
+    observed = {row["request_id"] for row in rows}
+    for request_id, _ in prompts:
+        if request_id not in observed:
+            rows.append({"request_id": request_id, "status": None, "error": "batch_deadline_exceeded", "stream_complete": False})
     wall_seconds = time.perf_counter() - started
     telemetry.stop()
     after = metrics_snapshot(url)
-    append_jsonl(batch_dir / "requests.jsonl", {"batch_started_at": time.time(), "rows": rows})
+    append_jsonl(batch_dir / "requests.jsonl", {"batch_started_at": started_epoch, "rows": rows})
     # Also keep the request rows as a normal JSON object for easy audit.
     write_json(batch_dir / "requests.json", rows)
 
@@ -171,6 +206,8 @@ def run_batch(
         "cache_reset_not_used": True,
     }
     write_json(batch_dir / "summary.json", summary)
+    if summary["failure_count"] or errors:
+        raise RuntimeError(f"Batch failed; evidence retained at {batch_dir}")
     return summary
 
 
@@ -179,6 +216,8 @@ def compile_warmups(candidate: dict[str, Any], materials_data: dict[str, Any], r
     for index in range(2):
         rows.append(request_one(candidate, materials_data["short_prompt"], 16, False, f"compile-warmup-{index + 1}"))
     write_json(run_dir / "compile-warmups.json", rows)
+    if any(not row.get('stream_complete') or row.get('error') for row in rows):
+        raise RuntimeError("Compilation warmup failed; stop branch")
     return rows
 
 
@@ -188,7 +227,11 @@ def start_candidate(candidate: dict[str, Any], label: str, budget: Budget) -> Ow
     run_dir.mkdir(parents=True, exist_ok=True)
     server = OwnedVllm(candidate, run_dir)
     budget.record("server_start", candidate=candidate["label"], run=label)
-    server.start()
+    try:
+        server.start()
+    except BaseException:
+        stop_candidate(server, budget, label)
+        raise
     return server
 
 
@@ -197,9 +240,28 @@ def stop_candidate(server: OwnedVllm, budget: Budget, label: str) -> None:
     budget.record("server_stop", candidate=server.candidate["label"], run=label, **result)
 
 
+def cold_cache(server: OwnedVllm, budget: Budget, label: str) -> dict[str, Any]:
+    """Failed/unsupported reset must produce a new healthy owned process."""
+    reset = reset_prefix_cache(server.base_url)
+    if reset["ok"]:
+        return {**reset, "method": "reset"}
+    stop_candidate(server, budget, label)
+    budget.ensure()
+    server.run_dir = server.run_dir.parent / f"{label}-cold-{time.time_ns()}"
+    budget.record("server_start", candidate=server.candidate["label"], run=server.run_dir.name)
+    try:
+        startup = server.start()
+    except BaseException:
+        stop_candidate(server, budget, label)
+        raise
+    return {"ok": True, "method": "restart", "reset_attempt": reset, "startup": startup}
+
+
 def phase_prepare() -> None:
     from stage3_prepare import build_materials
 
+    if (OUT / "materials.json").exists():
+        raise RuntimeError("Refuse to overwrite existing materials")
     candidate = candidate_config("A")
     model_path = OwnedVllm(candidate, OUT / "prepare").resolve_model()
     materials_data = build_materials(model_path)
@@ -296,7 +358,7 @@ def phase_quality(budget: Budget) -> None:
         run_dir = OUT / "quality" / label
         rows = []
         try:
-            reset = reset_prefix_cache(server.base_url)
+            reset = cold_cache(server, budget, f"quality-{label}")
             write_json(run_dir / "cache-reset.json", reset)
             prompts = [(row["id"], prompt_for_quality(row)) for row in data["quality"]]
             result = run_batch(candidate, run_dir, "all", prompts, 4, 256, False)
@@ -329,18 +391,22 @@ def formal_prompts(data: dict[str, Any], target: int, shared: bool) -> tuple[lis
     first = []
     for doc_id in doc_ids:
         doc = docs[doc_id]
-        first.append((f"first-{doc_id}", prompt_for_performance({"prompt": f"请阅读以下固定文档。首次访问时请简要回答项目编号。\n\n{doc['text']}", "id": f"first-{doc_id}"})))
+        first.append((f"first-{doc_id}", document_prompt(doc['text'], "项目编号是什么？")))
     followups = []
     for index in range(16):
         doc_id = doc_ids[index % len(doc_ids)]
         doc = docs[doc_id]
         question = f"第{index + 1}个后续问题：请回答该文档中记录的项目负责人和正式流程。"
-        prompt = f"请阅读以下固定文档并简洁回答问题。\n\n{doc['text']}\n\n问题：{question}"
+        prompt = document_prompt(doc['text'], question)
         followups.append((f"followup-{index + 1:02d}-{doc_id}", prompt))
     if not shared:
         first = []
         followups = [(request_id, f"独立请求标识：{request_id}。" + prompt) for request_id, prompt in followups]
     return first, followups
+
+
+def document_prompt(document: str, question: str) -> str:
+    return f"请阅读以下固定文档并简洁回答问题。\n\n{document}\n\n问题：{question}"
 
 
 def phase_formal(budget: Budget) -> None:
@@ -350,7 +416,9 @@ def phase_formal(budget: Budget) -> None:
     target = selected["input_target_tokens"]
     concurrency = selected["screening_concurrency"]
     quality = json.loads((OUT / "quality-summary.json").read_text(encoding="utf-8"))["candidates"]
-    quality_pass = {row["candidate"] for row in quality if row["minimum_pass"]}
+    baseline_quality = next(row for row in quality if row["candidate"] == "A")
+    quality_pass = {row["candidate"] for row in quality if row["minimum_pass"]
+                    and row["correct"] >= baseline_quality["correct"] - 1}
     compatible = compatible_labels()
     eligible = [label for label in load_config()["candidates"] if label in compatible and label in quality_pass]
     if "A" not in eligible:
@@ -369,7 +437,7 @@ def phase_formal(budget: Budget) -> None:
             try:
                 compile_warmups(candidate, data, server.run_dir)
                 first, followups = formal_prompts(data, target, True)
-                shared_reset = reset_prefix_cache(server.base_url)
+                shared_reset = cold_cache(server, budget, f"{run}-shared")
                 shared_first = run_batch(candidate, OUT / "formal" / run / "shared", "first-visits",
                                          first, min(4, concurrency), 128, True,
                                          [(f"shared-warmup-{i}", data["short_prompt"]) for i in range(2)])
@@ -380,7 +448,7 @@ def phase_formal(budget: Budget) -> None:
                 shared = {"cache_reset": shared_reset, "first_visits": shared_first, "followups": shared_follow,
                           "including_first_throughput_tok_s": shared_total_output / shared_total_wall if shared_total_wall else None}
 
-                independent_reset = reset_prefix_cache(server.base_url)
+                independent_reset = cold_cache(server, budget, f"{run}-independent")
                 _, independent = formal_prompts(data, target, False)
                 independent_result = run_batch(candidate, OUT / "formal" / run / "independent", "requests",
                                                independent, concurrency, 128, True,
@@ -441,6 +509,11 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("phase", choices=["prepare", "compatibility", "screen", "quality", "formal", "acceptance"])
     args = parser.parse_args()
+    phase_outputs = {'prepare': 'materials.json', 'compatibility': 'compatibility',
+                     'screen': 'screen', 'quality': 'quality', 'formal': 'formal',
+                     'acceptance': 'acceptance.json'}
+    if (OUT / phase_outputs[args.phase]).exists():
+        raise SystemExit("This phase already has evidence; refusing a repeat/overwrite")
     if args.phase == "prepare":
         phase_prepare()
         return

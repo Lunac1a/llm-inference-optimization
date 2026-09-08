@@ -1,0 +1,4 @@
+archived Stage 3 hashes: 140 verified
+artifact checks: ok
+Pinned tokenizer: exact document lengths and all 32 shared-prefix pairs verified
+Stage 3 offline verifier: passed; this does not certify GPU acceptance

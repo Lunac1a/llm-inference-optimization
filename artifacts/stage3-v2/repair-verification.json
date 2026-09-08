@@ -1,0 +1,23 @@
+{
+  "scope": "offline review fixes; no GPU inference run",
+  "windows_tests_passed": 21,
+  "wsl_tests_passed": 21,
+  "pinned_tokenizer_prefix_pairs_verified": 32,
+  "original_hashes_verified": {
+    "stage1": 206,
+    "stage2": 545,
+    "stage2-bandwidth": 66,
+    "stage3": 140
+  },
+  "gpu_acceptance": false,
+  "source_sha256": {
+    "scripts/stage3_lib.py": "2a762dbb48c19b8562d232494f6608b7a12322430bbfcf957583676dffbe18cb",
+    "scripts/stage3_collect.py": "a554a535dfb9c292386c7c12b1b038542b1c36304e88baf670f3389a1ad458e7",
+    "scripts/stage3_prepare.py": "1eb7ce6a878a18f6f4d7a8f63b520e5923fb96e3cf7bc17ab284019189fed19c",
+    "scripts/stage3_analyze.py": "829d87df3f5bf29c5a417c05bd67d45dc0d749b7fe10c833bed37e87efd5c995",
+    "scripts/stage3_request.py": "04045ba50b030b00c1de0ae1a65ab63f4f575d5423db6fa7185e38c0027c9012",
+    "scripts/verify-stage3.py": "909c33243840dec74bde6aba012826d63803da11ca2be5e9cc9dc0f6b0d89234",
+    "tests/test_stage3_collection.py": "0de39a3d9bbb39855925ba5cc42c9d321782251b44fb4a2f58967e031482f018",
+    "tests/test_stage3_repairs.py": "058434b73afafea99eb4c19e16537356691a4f129ee44a421d38080531338b45"
+  }
+}

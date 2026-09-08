@@ -1,0 +1,11 @@
+{
+  "schema": "stage3-v2-offline-sha256",
+  "files": {
+    "artifacts/stage3-v2/materials-manifest.json": "3de839ee88a3e3f1ba831e5d29756ddff9738734bf31f722e1e56133815a18f9",
+    "artifacts/stage3-v2/materials.json": "c8ad80ca0dce7ea608cd19e94c66667936cd28b7d6768973dc707ee5c7ef4487",
+    "artifacts/stage3-v2/offline-verification.log": "fa97f2fbdd6419df968c814ee4eb24a47b215a94bdaf12f364fe89a121df1825",
+    "artifacts/stage3-v2/regression-windows.log": "2f62c7834b37edb49399f4d6fe546427a9b9c5b1e11debce3803f44d4ea5d7f1",
+    "artifacts/stage3-v2/regression-wsl.log": "06e33ad745b52044a8a491fc5f581546b3910d16eb272d050415949c00224f30",
+    "artifacts/stage3-v2/repair-verification.json": "8355bfab17c3f733c82d573248f35658fdf1a09e610e3d17a9fad0ea5cf03a10"
+  }
+}

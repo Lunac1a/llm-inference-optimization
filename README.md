@@ -18,6 +18,12 @@ Stage 4 delivery were not started. See the [Stage 3 validation report](docs/stag
 and [Stage 3 plan](docs/stage3-plan.md). Cloud work, a new API layer, and custom
 kernels are out of scope.
 
+Review found defects in the v1 QA oracle/scorer and formal cache controls.
+The 41/48 result remains historical and does not establish a model-quality
+failure. The [v2 repair record](docs/stage3-v2-repairs.md) documents corrected
+tools and independent materials: offline verification passed; no v2 GPU run,
+performance comparison or configuration recommendation has been made.
+
 A [supplemental bandwidth check](docs/stage2-bandwidth-check.md) found strong
 kernel-level support for weight-read bandwidth limitation at concurrency 1:
 six inferred decode gate/up GEMV samples reached 90.47–95.28% sustained DRAM

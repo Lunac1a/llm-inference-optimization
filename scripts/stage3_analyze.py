@@ -70,7 +70,7 @@ def main() -> None:
     baseline_quality = quality_by.get("A")
     if not baseline_quality or not (baseline_quality["correct"] >= 46 and baseline_quality["complete"] == 48):
         result = {
-            "schema": "stage3-analysis-v1",
+            "schema": "stage3-analysis-v2",
             "status": "stopped_before_formal_comparison",
             "stop_reason": "A failed the preregistered 46/48 quality gate",
             "quality": quality,
@@ -112,9 +112,9 @@ def main() -> None:
         e2e_changes = [relative_change(row["shared_followup_p95_e2e_seconds"], baseline["shared_followup_p95_e2e_seconds"]),
                        relative_change(row["independent_p95_e2e_seconds"], baseline["independent_p95_e2e_seconds"])]
         ttft_change = relative_change(row["independent_p95_ttft_seconds"], baseline["independent_p95_ttft_seconds"])
-        stable = row["shared_throughput_cv_percent"] is not None and row["shared_throughput_cv_percent"] <= 5
+        stable = row["round_count"] == 3 and row["shared_throughput_cv_percent"] is not None and row["shared_throughput_cv_percent"] <= 5
         gates = {
-            "quality": quality_row["correct"] >= 46 and quality_row["complete"] == 48,
+            "quality": quality_row["correct"] >= max(46, baseline_quality["correct"] - 1) and quality_row["complete"] == 48,
             "tpot_regression": all(change is not None and change <= 10 for change in tpot_changes),
             "e2e_regression": all(change is not None and change <= 15 for change in e2e_changes),
             "independent_ttft_regression": ttft_change is not None and ttft_change <= 15,
@@ -125,20 +125,20 @@ def main() -> None:
 
     passing = [row for row in decisions if row["passes_all_gates"]]
     # Sorting encodes the preregistered tie-break order. Throughput within 5%
-    # uses lower independent TTFT, then cache capacity, then simpler FA/BF16.
+    # uses lower shared-followup TTFT, then cache capacity, then simpler FA/BF16.
     chosen = None
     if passing:
         highest = max(row["shared_throughput_mean"] for row in passing)
         contenders = [row for row in passing if row["shared_throughput_mean"] >= highest * 0.95]
         chosen = sorted(contenders, key=lambda row: (
-            row["independent_p95_ttft_seconds"] if row["independent_p95_ttft_seconds"] is not None else float("inf"),
+            row["shared_followup_p95_ttft_seconds"] if row["shared_followup_p95_ttft_seconds"] is not None else float("inf"),
             -(row["cache_capacity_tokens"] or 0),
             0 if compat_by[row["candidate"]]["expected"]["attention_backend"] == "FLASH_ATTN" else 1,
             0 if compat_by[row["candidate"]]["expected"]["kv_cache_dtype"] == "bfloat16" else 1,
         ))[0]
 
     result = {
-        "schema": "stage3-analysis-v1",
+        "schema": "stage3-analysis-v2",
         "source_hashes": {"compatibility": sha256_bytes((OUT / "compatibility.json").read_bytes()),
                           "quality": sha256_bytes((OUT / "quality-summary.json").read_bytes()),
                           "formal": sha256_bytes((OUT / "formal-summary.json").read_bytes())},

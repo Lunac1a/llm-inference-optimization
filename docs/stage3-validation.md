@@ -1,5 +1,11 @@
 # Stage 3: local KV-cache combination validation
 
+Review amendment: the historical run below is preserved, but its quality
+materials/scorer were found defective. Treat 41/48 as the archived scorer's
+output, not a validated model-quality conclusion. Tooling has been repaired
+and checked offline; see [the v2 repair record](stage3-v2-repairs.md).
+No corrected GPU run or final configuration acceptance has occurred.
+
 Status on 2026-09-08: **stopped before formal throughput comparison and
 configuration recommendation.** All six declared candidates passed a short
 compatibility request, but the required A quality baseline scored 41/48 rather

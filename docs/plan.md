@@ -1,5 +1,10 @@
 # vLLM project plan
 
+Stage 3 review update: v1 has preserved compatibility/screening evidence but a
+defective quality oracle/scorer. Corrected tooling and independent v2 materials
+are offline-verified; a real-model v2 run is still pending. See
+[the repair record](stage3-v2-repairs.md). Stage 4 remains unstarted.
+
 Stage 1 and Stage 2 are complete under their own locked protocols. The current
 authorized route is the local KV-cache combination study in
 [stage3-plan.md](stage3-plan.md), followed by a bounded local API delivery
