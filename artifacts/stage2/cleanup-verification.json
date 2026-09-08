@@ -1,0 +1,7 @@
+{
+  "port_8000_listening": false,
+  "project_or_vllm_workers": [],
+  "pid_file_exists": false,
+  "gpu_compute_processes": "pid, process_name, used_gpu_memory [MiB]\n",
+  "cleanup_passed": true
+}

@@ -20,7 +20,7 @@ def first_number(data: dict, keys: tuple[str, ...]):
     return None
 
 
-def summarize_file(path: pathlib.Path):
+def summarize_file(path: pathlib.Path, expected_requests=32, expected_output=128):
     data = json.loads(path.read_text(encoding="utf-8"))
     match = re.fullmatch(r"round(\d+)-input(\d+)-concurrency(\d+)", path.stem)
     if not match:
@@ -59,13 +59,13 @@ def summarize_file(path: pathlib.Path):
     summary["detailed_request_count"] = len(errors) if valid_errors else None
     summary["detailed_error_count"] = sum(bool(e) for e in errors) if valid_errors else None
     summary["request_evidence_passed"] = (
-        valid_errors and len(errors) == 32 and not any(errors)
-        and data.get("num_prompts") == 32
-        and summary["completed"] == 32 and summary["failed"] == 0
+        valid_errors and len(errors) == expected_requests and not any(errors)
+        and data.get("num_prompts") == expected_requests
+        and summary["completed"] == expected_requests and summary["failed"] == 0
         and data.get("max_concurrency") == concurrency
-        and data.get("input_lens") == [input_tokens] * 32
-        and data.get("output_lens") == [128] * 32
-        and all(isinstance(data.get(key), list) and len(data[key]) == 32
+        and data.get("input_lens") == [input_tokens] * expected_requests
+        and data.get("output_lens") == [expected_output] * expected_requests
+        and all(isinstance(data.get(key), list) and len(data[key]) == expected_requests
                 for key in ("ttfts", "itls", "generated_texts"))
         and all(summary[f"p{p}_{metric}_ms"] is not None
                 for p in (50, 95) for metric in ("ttft", "tpot", "e2el"))

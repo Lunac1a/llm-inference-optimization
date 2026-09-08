@@ -1,0 +1,44 @@
+{
+  "groups": {
+    "4": {
+      "mean": 184.22358774593172,
+      "sample_cv_percent": 1.98086479371175,
+      "values": [
+        187.55179439007918,
+        184.7975837079617,
+        180.3213851397543
+      ]
+    },
+    "8": {
+      "mean": 327.46082659520823,
+      "sample_cv_percent": 3.3201156806225893,
+      "values": [
+        319.27720114036646,
+        323.30804768192996,
+        339.7972309633283
+      ]
+    }
+  },
+  "pairs": [
+    {
+      "round": 1,
+      "cap4": 187.55179439007918,
+      "cap8": 319.27720114036646,
+      "gain_percent": 70.2341490139617
+    },
+    {
+      "round": 2,
+      "cap4": 184.7975837079617,
+      "cap8": 323.30804768192996,
+      "gain_percent": 74.95252978678464
+    },
+    {
+      "round": 3,
+      "cap4": 180.3213851397543,
+      "cap8": 339.7972309633283,
+      "gain_percent": 88.43978527559311
+    }
+  ],
+  "stable": true,
+  "note": "Attribution only. Both settings restarted each paired round; no confirmation rows reused; no contrast repeats authorized."
+}

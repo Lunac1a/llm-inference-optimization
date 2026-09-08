@@ -3,7 +3,14 @@
 Identify, implement, and validate one bounded inference optimization on top of
 vLLM, deliver it through an API, and reproduce the results on a cloud GPU.
 
-**Status: Stage 1 passed under protocol v2; Stage 2 has not started.**
+**Status: Stage 1 passed under protocol v2; Stage 2 completed with workload-specific bottleneck attribution.**
+For 512-input/128-output requests at client concurrency 8, the existing server
+sequence cap 4 limited throughput through queueing. Three paired rounds with
+cap 8 raised mean throughput from 184.22 to 327.46 output tokens/s (+77.75%),
+with passing stability gates and CPU/CUDA traces. This is a configuration
+effect, not a custom optimization. See [Stage 2 validation](docs/stage2-validation.md).
+Stage 3 and cloud work have not started.
+
 API checks passed 18/18 before and after restart. The accepted full benchmark
 rerun passed 384/384 requests with four group CVs of 2.70-4.29%. This is a pinned
 WSL compatibility baseline, not a custom optimization or cloud result. See
@@ -34,8 +41,9 @@ Use the engine API initially. Add a separate API layer only for a concrete
 responsibility. Cloud work follows local validation, with a total budget target
 of **AUD 50**, including storage and incidental charges.
 
-See [the staged plan](docs/plan.md). The next stage is bottleneck investigation;
-optimization, Docker, and cloud work remain unstarted.
+See [the staged plan](docs/plan.md). A later Stage 3 decision may investigate
+remaining eager decode gaps using existing upstream mechanisms; no optimization
+design, implementation, Docker, or cloud work has started.
 
 ## Previous exploration
 

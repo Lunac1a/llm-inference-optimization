@@ -3,7 +3,8 @@
 Decision date: 2026-09-07. Acceptance updated 2026-09-08: Stage 1 **passed under
 protocol v2**, with corrected API checks, regression checks, and a complete
 protocol-compliant benchmark rerun. Historical v1 acceptance remains withdrawn.
-Stages 2-6 are not started.
+Stage 2 completed on 2026-09-08 with workload-specific admission-cap attribution;
+Stages 3-6 are not started.
 This numbering belongs to the vLLM route; archived llama.cpp stages do not count
 as vLLM acceptance evidence.
 
@@ -35,9 +36,12 @@ as vLLM acceptance evidence.
 
 ## Immediate next task
 
-Stage 2 is planned in [stage2-plan.md](stage2-plan.md); experiments have not started.
+Stage 2 is complete under [stage2-plan.md](stage2-plan.md); see
+[stage2-validation.md](stage2-validation.md) for measurements, short traces,
+limits and the no-go on treating an upstream cap adjustment as custom work.
 
-Use [stage1-validation.md](stage1-validation.md) and its linked v2 evidence as the
-handoff for a separately authorized Stage 2 task. Investigate a bounded workload
-before choosing an optimization; current WSL compatibility flags remain explicit
-limitations. Do not reuse the invalidated historical v1 selection as a baseline.
+Stage 3 requires a separately authorized decision. One unproven candidate is
+avoidable eager decode launch/dispatch work, with CUDA Graph support already
+present upstream. Establish compatibility and a falsifiable controlled comparison
+before considering custom changes. No Stage 3 design or implementation is started.
+Stage 1 v2 remains the preserved starting evidence; historical v1 stays invalidated.

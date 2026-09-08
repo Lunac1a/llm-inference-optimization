@@ -1,0 +1,23 @@
+{
+  "file": "round1-input512-concurrency2.json",
+  "round": 1,
+  "input_tokens": 512,
+  "concurrency": 2,
+  "completed": 16,
+  "failed": 0,
+  "request_throughput_req_s": 0.6954463245827528,
+  "output_throughput_tok_s": 89.01712954659236,
+  "total_token_throughput_tok_s": 445.0856477329618,
+  "mean_ttft_ms": 114.41300874998817,
+  "mean_tpot_ms": 21.68662314862211,
+  "mean_e2el_ms": 2868.614148624996,
+  "p50_ttft_ms": 114.24429650000434,
+  "p95_ttft_ms": 156.62707974998114,
+  "p50_tpot_ms": 21.459838240157367,
+  "p95_tpot_ms": 24.300465206693044,
+  "p50_e2el_ms": 2841.7573970000094,
+  "p95_e2el_ms": 3211.8054407500126,
+  "detailed_request_count": 16,
+  "detailed_error_count": 0,
+  "request_evidence_passed": true
+}

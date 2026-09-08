@@ -1,6 +1,8 @@
 # Stage 2: bounded bottleneck investigation
 
-Status: planned, not started. Planning date: 2026-09-08.
+Status: completed on 2026-09-08; see [stage2-validation.md](stage2-validation.md).
+Planning date: 2026-09-08. The pre-execution plan is preserved in commit 9f5778e.
+The experiment requirements below are unchanged.
 Baseline: Stage 1 acceptance v2, commit c2786e8.
 
 ## Objective

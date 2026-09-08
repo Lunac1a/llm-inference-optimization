@@ -2,3 +2,5 @@
 *.env text eol=lf
 *.py text eol=lf
 locks/*.txt text eol=lf
+# Preserve Stage 2 evidence bytes (including hashes and compressed traces).
+artifacts/stage2/** -text

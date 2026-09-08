@@ -1,0 +1,5 @@
+{
+  "finding": "Pinned CLI ready_check_timeout_sec=0 skips the initial probe despite printing Starting initial single prompt test run. Correct raw count is N+4, not N+5. All 20 requests passed in recovery-anchor1; no model request failure occurred.",
+  "action": "Fix false-positive validator. Preserve interrupted recovery, restart same readiness recovery from warmup because cleanup cooled GPU. This is not formal confirmation or a response to a second observed anchor drift. No formal results yet.",
+  "maximum_warmup": "Two continuous 128-request batches total, each capped at 180s, plus small warmups; below 10 minutes."
+}

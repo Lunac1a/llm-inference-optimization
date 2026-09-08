@@ -1,0 +1,30 @@
+{
+  "at_epoch": 1788848491.1647077,
+  "readiness": "passed",
+  "confirmation": "all three groups CV <=5%; no repeat used",
+  "reason": "Client c8 and c16 queue under cap4; confirmation throughput is near-flat across 4/8/16. Pinned scheduler checks len(running)==max_num_running_reqs before admitting waiting requests.",
+  "workload": [
+    512,
+    128
+  ],
+  "client_concurrency": 8,
+  "orders": [
+    [
+      4,
+      8
+    ],
+    [
+      8,
+      4
+    ],
+    [
+      4,
+      8
+    ]
+  ],
+  "requests_per_setting_per_round": 32,
+  "warmups": 4,
+  "restart_both_settings_each_round": true,
+  "reuse_confirmation": false,
+  "extra_contrasts": 0
+}

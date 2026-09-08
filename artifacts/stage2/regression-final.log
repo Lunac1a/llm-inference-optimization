@@ -1,0 +1,12 @@
+test_merge_preserves_twelve_rows_and_rejects_excess_reruns (test_stage1_acceptance.AcceptanceTests.test_merge_preserves_twelve_rows_and_rejects_excess_reruns) ... ok
+test_missing_rounds_are_not_stable (test_stage1_acceptance.AcceptanceTests.test_missing_rounds_are_not_stable) ... ok
+test_normal_answer_requires_stop_and_no_reasoning (test_stage1_acceptance.AcceptanceTests.test_normal_answer_requires_stop_and_no_reasoning) ... ok
+test_raw_error_array_is_required (test_stage1_acceptance.AcceptanceTests.test_raw_error_array_is_required) ... ok
+test_stream_requires_clean_terminal_event (test_stage1_acceptance.AcceptanceTests.test_stream_requires_clean_terminal_event) ... ok
+test_pinned_cli_skips_probe_and_checks_warmup_errors (test_stage2_collection.Stage2Tests.test_pinned_cli_skips_probe_and_checks_warmup_errors) ... ok
+test_variable_lengths_and_count_fail_closed (test_stage2_collection.Stage2Tests.test_variable_lengths_and_count_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.259s
+
+OK

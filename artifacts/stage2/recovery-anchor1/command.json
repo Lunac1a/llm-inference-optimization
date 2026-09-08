@@ -1,0 +1,28 @@
+{
+  "argv": [
+    "bash",
+    "scripts/run-stage1-benchmark.sh",
+    "--point",
+    "512",
+    "4",
+    "/mnt/d/Lunacia/Inference/artifacts/stage2/recovery-anchor1",
+    "round1-input512-concurrency4",
+    "16",
+    "128"
+  ],
+  "environment": {
+    "STAGE1_STATE_DIR": "/mnt/d/Lunacia/Inference/.tmp/stage2",
+    "STAGE1_CONFIG": "/mnt/d/Lunacia/Inference/configs/stage2-cap4.env",
+    "STAGE2_BENCH": "1",
+    "STAGE2_REQUEST_LOG": "/mnt/d/Lunacia/Inference/artifacts/stage2/recovery-anchor1/requests.jsonl"
+  },
+  "cap": 4,
+  "count": 16,
+  "start": 1788846744.704961,
+  "hashes": {
+    "scripts/stage2-run.py": "8ab250eb251897bba20fc0479ec9f8d75b7c86d7d0e0b5d661fcc7020c6470e1",
+    "scripts/stage2-bench-entry.py": "4076b519959e407b8bbb72c89657ed6447fcc7a5ce1305e556033519e371f02b",
+    "scripts/benchmark-point.sh": "ce021778b30f4416382080b644d9979847c47e2b8c95951ed61d745043631fe0",
+    "configs/stage2-cap4.env": "04b3786c89fce71cf7658f7b0d1fbc10a928868f645c6422d6b6689420e4d3fb"
+  }
+}

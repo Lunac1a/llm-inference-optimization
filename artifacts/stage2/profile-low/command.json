@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "bash",
+    "scripts/stage2-profile-point.sh",
+    "512",
+    "128",
+    "1",
+    "/mnt/d/Lunacia/Inference/artifacts/stage2/profile-low",
+    "2"
+  ],
+  "max_engine_iterations": 16,
+  "requests": 2,
+  "cap": 4
+}

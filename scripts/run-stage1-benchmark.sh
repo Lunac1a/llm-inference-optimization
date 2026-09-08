@@ -3,6 +3,17 @@ set -euo pipefail
 # shellcheck disable=SC1091
 source "$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)/stage1-common.sh"
 
+source "$stage1_script_dir/benchmark-point.sh"
+if [[ "${1:-}" == "--point" ]]; then
+    [[ "$#" == 7 ]] || exit 2
+    model_path="$(stage1_resolve_model_path)"
+    BENCH_NUM_PROMPTS="$6"
+    BENCH_OUTPUT_LEN="$7"
+    mkdir -p "$4"
+    run_benchmark_point "$2" "$3" "$4" "$5"
+    exit
+fi
+
 resume_dir=""
 retry_of=""
 only_groups=""
@@ -84,31 +95,7 @@ for round in $(seq 1 "$BENCH_ROUNDS"); do
                 continue
             fi
             printf 'Running %s (warmups=%s measured=%s)\n' "$result_name" "$BENCH_NUM_WARMUPS" "$BENCH_NUM_PROMPTS"
-            "$stage1_vllm" bench serve \
-                --backend openai \
-                --base-url "$stage1_base_url" \
-                --endpoint /v1/completions \
-                --model "$model_path" \
-                --served-model-name "$SERVED_MODEL_NAME" \
-                --dataset-name random \
-                --random-input-len "$input_len" \
-                --random-output-len "$BENCH_OUTPUT_LEN" \
-                --random-range-ratio 0 \
-                --random-prefix-len 0 \
-                --num-warmups "$BENCH_NUM_WARMUPS" \
-                --num-prompts "$BENCH_NUM_PROMPTS" \
-                --request-rate inf \
-                --max-concurrency "$concurrency" \
-                --ignore-eos \
-                --temperature 0 \
-                --seed "$BENCH_SEED" \
-                --percentile-metrics ttft,tpot,e2el \
-                --metric-percentiles 50,95 \
-                --save-result \
-                --save-detailed \
-                --result-dir "$run_dir" \
-                --result-filename "$result_name.json" \
-                > "$run_dir/$result_name.log" 2>&1
+            run_benchmark_point "$input_len" "$concurrency" "$run_dir" "$result_name"
         done
     done
 done
