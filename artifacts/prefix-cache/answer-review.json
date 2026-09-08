@@ -1,0 +1,184 @@
+{
+  "reviewed_epoch": 1788881973.8684595,
+  "method": "Agent inspected every retained answer against required source facts; equivalent wording allowed; no rescoring of Stage 3 fixtures",
+  "all_passed": true,
+  "checks": [
+    {
+      "source": "artifacts/prefix-cache/round-1-off/answer-checks.json",
+      "source_sha256": "ce8ef7112164827671c988dfc272b9d176a841c3667a8ffb240992ceec6c2741",
+      "question": "文档编号是什么？",
+      "required_fact": "云桥甲-17",
+      "answer": "文档编号是云桥甲-17。",
+      "complete": true,
+      "required_fact_preserved": true,
+      "contradiction_or_wrong_document_value": false,
+      "passed": true
+    },
+    {
+      "source": "artifacts/prefix-cache/round-1-off/answer-checks.json",
+      "source_sha256": "ce8ef7112164827671c988dfc272b9d176a841c3667a8ffb240992ceec6c2741",
+      "question": "发布日期是什么？",
+      "required_fact": "2026年5月12日",
+      "answer": "2026年5月12日。",
+      "complete": true,
+      "required_fact_preserved": true,
+      "contradiction_or_wrong_document_value": false,
+      "passed": true
+    },
+    {
+      "source": "artifacts/prefix-cache/round-1-off/answer-checks.json",
+      "source_sha256": "ce8ef7112164827671c988dfc272b9d176a841c3667a8ffb240992ceec6c2741",
+      "question": "项目负责人是谁？",
+      "required_fact": "林若安",
+      "answer": "项目负责人是林若安。",
+      "complete": true,
+      "required_fact_preserved": true,
+      "contradiction_or_wrong_document_value": false,
+      "passed": true
+    },
+    {
+      "source": "artifacts/prefix-cache/round-1-off/answer-checks.json",
+      "source_sha256": "ce8ef7112164827671c988dfc272b9d176a841c3667a8ffb240992ceec6c2741",
+      "question": "正式预算金额是多少？",
+      "required_fact": "480万元",
+      "answer": "正式预算金额是480万元。",
+      "complete": true,
+      "required_fact_preserved": true,
+      "contradiction_or_wrong_document_value": false,
+      "passed": true
+    },
+    {
+      "source": "artifacts/prefix-cache/round-1-off/answer-checks.json",
+      "source_sha256": "ce8ef7112164827671c988dfc272b9d176a841c3667a8ffb240992ceec6c2741",
+      "question": "项目所在区域是哪里？",
+      "required_fact": "墨尔本北区",
+      "answer": "项目所在区域是墨尔本北区。",
+      "complete": true,
+      "required_fact_preserved": true,
+      "contradiction_or_wrong_document_value": false,
+      "passed": true
+    },
+    {
+      "source": "artifacts/prefix-cache/round-1-off/answer-checks.json",
+      "source_sha256": "ce8ef7112164827671c988dfc272b9d176a841c3667a8ffb240992ceec6c2741",
+      "question": "文档记载的项目风险是什么？",
+      "required_fact": "供应商接口延迟",
+      "answer": "文档记载的项目风险是供应商接口延迟。",
+      "complete": true,
+      "required_fact_preserved": true,
+      "contradiction_or_wrong_document_value": false,
+      "passed": true
+    },
+    {
+      "source": "artifacts/prefix-cache/round-1-off/document-switch.json",
+      "source_sha256": "8f4627c60c0a6b5bf7cfd3a5cbdc780ca41c63f5c05581866285d8e951092ef9",
+      "question": "文档编号是什么？",
+      "required_fact": "澄海乙-29",
+      "answer": "文档编号是澄海乙-29。",
+      "complete": true,
+      "required_fact_preserved": true,
+      "contradiction_or_wrong_document_value": false,
+      "passed": true
+    },
+    {
+      "source": "artifacts/prefix-cache/round-1-off/document-switch.json",
+      "source_sha256": "8f4627c60c0a6b5bf7cfd3a5cbdc780ca41c63f5c05581866285d8e951092ef9",
+      "question": "项目负责人是谁？",
+      "required_fact": "周明川",
+      "answer": "项目负责人是周明川。",
+      "complete": true,
+      "required_fact_preserved": true,
+      "contradiction_or_wrong_document_value": false,
+      "passed": true
+    },
+    {
+      "source": "artifacts/prefix-cache/round-1-on/answer-checks.json",
+      "source_sha256": "659a292d881d2a15d91a0fc711971aaa96a5ae3ef2e5821e42f71bf8b3826923",
+      "question": "文档编号是什么？",
+      "required_fact": "云桥甲-17",
+      "answer": "文档编号是云桥甲-17。",
+      "complete": true,
+      "required_fact_preserved": true,
+      "contradiction_or_wrong_document_value": false,
+      "passed": true
+    },
+    {
+      "source": "artifacts/prefix-cache/round-1-on/answer-checks.json",
+      "source_sha256": "659a292d881d2a15d91a0fc711971aaa96a5ae3ef2e5821e42f71bf8b3826923",
+      "question": "发布日期是什么？",
+      "required_fact": "2026年5月12日",
+      "answer": "2026年5月12日。",
+      "complete": true,
+      "required_fact_preserved": true,
+      "contradiction_or_wrong_document_value": false,
+      "passed": true
+    },
+    {
+      "source": "artifacts/prefix-cache/round-1-on/answer-checks.json",
+      "source_sha256": "659a292d881d2a15d91a0fc711971aaa96a5ae3ef2e5821e42f71bf8b3826923",
+      "question": "项目负责人是谁？",
+      "required_fact": "林若安",
+      "answer": "项目负责人是林若安。",
+      "complete": true,
+      "required_fact_preserved": true,
+      "contradiction_or_wrong_document_value": false,
+      "passed": true
+    },
+    {
+      "source": "artifacts/prefix-cache/round-1-on/answer-checks.json",
+      "source_sha256": "659a292d881d2a15d91a0fc711971aaa96a5ae3ef2e5821e42f71bf8b3826923",
+      "question": "正式预算金额是多少？",
+      "required_fact": "480万元",
+      "answer": "正式预算金额是480万元。",
+      "complete": true,
+      "required_fact_preserved": true,
+      "contradiction_or_wrong_document_value": false,
+      "passed": true
+    },
+    {
+      "source": "artifacts/prefix-cache/round-1-on/answer-checks.json",
+      "source_sha256": "659a292d881d2a15d91a0fc711971aaa96a5ae3ef2e5821e42f71bf8b3826923",
+      "question": "项目所在区域是哪里？",
+      "required_fact": "墨尔本北区",
+      "answer": "项目所在区域是墨尔本北区。",
+      "complete": true,
+      "required_fact_preserved": true,
+      "contradiction_or_wrong_document_value": false,
+      "passed": true
+    },
+    {
+      "source": "artifacts/prefix-cache/round-1-on/answer-checks.json",
+      "source_sha256": "659a292d881d2a15d91a0fc711971aaa96a5ae3ef2e5821e42f71bf8b3826923",
+      "question": "文档记载的项目风险是什么？",
+      "required_fact": "供应商接口延迟",
+      "answer": "文档记载的项目风险是供应商接口延迟。",
+      "complete": true,
+      "required_fact_preserved": true,
+      "contradiction_or_wrong_document_value": false,
+      "passed": true
+    },
+    {
+      "source": "artifacts/prefix-cache/round-1-on/document-switch.json",
+      "source_sha256": "9930165422892a4d9d9e3c206e1d18f99dd20a3de27a6867608917987e63cba1",
+      "question": "文档编号是什么？",
+      "required_fact": "澄海乙-29",
+      "answer": "文档编号是澄海乙-29。",
+      "complete": true,
+      "required_fact_preserved": true,
+      "contradiction_or_wrong_document_value": false,
+      "passed": true
+    },
+    {
+      "source": "artifacts/prefix-cache/round-1-on/document-switch.json",
+      "source_sha256": "9930165422892a4d9d9e3c206e1d18f99dd20a3de27a6867608917987e63cba1",
+      "question": "项目负责人是谁？",
+      "required_fact": "周明川",
+      "answer": "项目负责人是周明川。",
+      "complete": true,
+      "required_fact_preserved": true,
+      "contradiction_or_wrong_document_value": false,
+      "passed": true
+    }
+  ],
+  "limitation": "Six facts per mode and two document-switch checks per mode; not a general quality benchmark"
+}

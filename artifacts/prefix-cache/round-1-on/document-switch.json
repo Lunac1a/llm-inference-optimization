@@ -1,0 +1,211 @@
+[
+  {
+    "question": "文档编号是什么？",
+    "required_fact": "澄海乙-29",
+    "response": {
+      "status": 200,
+      "error": null,
+      "text": "文档编号是澄海乙-29。",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 16435,
+        "total_tokens": 16446,
+        "completion_tokens": 11,
+        "prompt_tokens_details": null
+      },
+      "e2e_seconds": 4.053762013000011,
+      "stream_complete": true
+    }
+  },
+  {
+    "question": "项目负责人是谁？",
+    "required_fact": "周明川",
+    "response": {
+      "status": 200,
+      "error": null,
+      "text": "项目负责人是周明川。",
+      "chunks": [
+        {
+          "id": "chatcmpl-9b4acdae580faedf",
+          "object": "chat.completion.chunk",
+          "created": 1788881866,
+          "model": "stage3-document-qa",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "role": "assistant",
+                "content": ""
+              },
+              "logprobs": null,
+              "finish_reason": null
+            }
+          ],
+          "prompt_token_ids": null,
+          "prompt_text": null
+        },
+        {
+          "id": "chatcmpl-9b4acdae580faedf",
+          "object": "chat.completion.chunk",
+          "created": 1788881866,
+          "model": "stage3-document-qa",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "项目"
+              },
+              "logprobs": null,
+              "finish_reason": null,
+              "token_ids": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-9b4acdae580faedf",
+          "object": "chat.completion.chunk",
+          "created": 1788881866,
+          "model": "stage3-document-qa",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "负责人"
+              },
+              "logprobs": null,
+              "finish_reason": null,
+              "token_ids": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-9b4acdae580faedf",
+          "object": "chat.completion.chunk",
+          "created": 1788881866,
+          "model": "stage3-document-qa",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "是"
+              },
+              "logprobs": null,
+              "finish_reason": null,
+              "token_ids": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-9b4acdae580faedf",
+          "object": "chat.completion.chunk",
+          "created": 1788881866,
+          "model": "stage3-document-qa",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "周"
+              },
+              "logprobs": null,
+              "finish_reason": null,
+              "token_ids": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-9b4acdae580faedf",
+          "object": "chat.completion.chunk",
+          "created": 1788881866,
+          "model": "stage3-document-qa",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "明"
+              },
+              "logprobs": null,
+              "finish_reason": null,
+              "token_ids": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-9b4acdae580faedf",
+          "object": "chat.completion.chunk",
+          "created": 1788881866,
+          "model": "stage3-document-qa",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "川"
+              },
+              "logprobs": null,
+              "finish_reason": null,
+              "token_ids": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-9b4acdae580faedf",
+          "object": "chat.completion.chunk",
+          "created": 1788881866,
+          "model": "stage3-document-qa",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": "。"
+              },
+              "logprobs": null,
+              "finish_reason": null,
+              "token_ids": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-9b4acdae580faedf",
+          "object": "chat.completion.chunk",
+          "created": 1788881866,
+          "model": "stage3-document-qa",
+          "choices": [
+            {
+              "index": 0,
+              "delta": {
+                "content": ""
+              },
+              "logprobs": null,
+              "finish_reason": "stop",
+              "stop_reason": null,
+              "token_ids": null
+            }
+          ]
+        },
+        {
+          "id": "chatcmpl-9b4acdae580faedf",
+          "object": "chat.completion.chunk",
+          "created": 1788881866,
+          "model": "stage3-document-qa",
+          "choices": [],
+          "usage": {
+            "prompt_tokens": 16435,
+            "total_tokens": 16443,
+            "completion_tokens": 8
+          },
+          "system_fingerprint": "vllm-0.23.0-nohash"
+        }
+      ],
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 16435,
+        "total_tokens": 16443,
+        "completion_tokens": 8
+      },
+      "ttft_seconds": 0.10943714799998361,
+      "e2e_seconds": 0.3089106770000285,
+      "output_tokens": 8,
+      "done_received": true,
+      "stream_complete": true
+    }
+  }
+]

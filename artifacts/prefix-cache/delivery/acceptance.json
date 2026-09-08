@@ -1,0 +1,27 @@
+{
+  "checks": [
+    {
+      "document": "a",
+      "stream": true,
+      "text": "文档编号是云桥甲-17。",
+      "passed": true
+    },
+    {
+      "document": "b",
+      "stream": false,
+      "text": "文档编号是澄海乙-29。",
+      "passed": true
+    }
+  ],
+  "launcher_returncode": 0,
+  "port_closed": true,
+  "gpu": {
+    "captured_at": 1788882197.798222,
+    "returncode": 0,
+    "csv": "2026/09/09 01:43:17.783, NVIDIA GeForce RTX 4090 Laptop GPU, 74, 92.17, 2340, 9001, 625, 16376, 1",
+    "stderr": ""
+  },
+  "compute_processes": "pid, process_name\n",
+  "budget_elapsed_minutes": 8.438147441546123,
+  "passed": true
+}

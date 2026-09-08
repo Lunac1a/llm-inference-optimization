@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/home/lunacia/.venvs/inference-vllm/bin/python",
+    "scripts/local_document_qa.py",
+    "ask",
+    "--document",
+    "artifacts/prefix-cache/document-b.txt",
+    "--question",
+    "文档编号是什么？",
+    "--nonstream"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"status\": 200,\n  \"error\": null,\n  \"text\": \"文档编号是澄海乙-29。\",\n  \"finish_reason\": \"stop\",\n  \"usage\": {\n    \"prompt_tokens\": 16435,\n    \"total_tokens\": 16446,\n    \"completion_tokens\": 11,\n    \"prompt_tokens_details\": null\n  },\n  \"e2e_seconds\": 3.5187866799999483,\n  \"stream_complete\": true\n}\n",
+  "stderr": ""
+}

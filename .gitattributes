@@ -6,3 +6,4 @@ locks/*.txt text eol=lf
 artifacts/stage2/** -text
 artifacts/stage2-bandwidth/** -text
 artifacts/stage3-v2/** -text whitespace=cr-at-eol
+artifacts/prefix-cache/** -text whitespace=cr-at-eol

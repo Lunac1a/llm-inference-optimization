@@ -3,18 +3,26 @@
 Identify and validate one bounded inference-system improvement on top of pinned
 vLLM, then deliver the selected local configuration through the existing API.
 
-**Status: Stage 1 and Stage 2 passed; Stage 3 local KV-cache combination
-validation stopped at its preregistered quality gate.** Stage 2 found a workload-specific admission-cap
+**Status: a focused local document-QA prefix-cache optimization is validated and
+available through the existing API.** Across three paired rounds on one 16K
+document with a serial client, mean round p95 follow-up TTFT fell from **3.924 s
+to 0.104 s**; follow-up output throughput rose **100.4%**. First requests remain
+cold; the measured gain applies to subsequent questions while the prefix is
+cached. This is an upstream configuration integration, not a custom algorithm.
+See [results and limits](docs/prefix-cache-validation.md) and
+[start/query instructions](docs/local-document-qa.md).
+
+Stage 1 and Stage 2 passed. Stage 2 found a workload-specific admission-cap
 effect: for 512-input/128-output requests at client concurrency 8, changing the
 existing sequence cap from 4 to 8 raised mean throughput from 184.22 to 327.46
 output tokens/s (+77.75%). This is a configuration effect, not a custom
 optimization. See [Stage 2 validation](docs/stage2-validation.md).
 
-The Stage 3 run tested compatibility and A-only screening for six existing
+The historical Stage 3 run tested compatibility and A-only screening for six existing
 vLLM combinations of FlashAttention/Triton attention, BF16/FP8 KV cache, and
 prefix caching. All six passed a short request, but the fixed quality baseline
 scored 41/48 against the required 46/48, so formal throughput comparison and
-Stage 4 delivery were not started. See the [Stage 3 validation report](docs/stage3-validation.md)
+the originally planned Stage 4 delivery were not started at that point. See the [Stage 3 validation report](docs/stage3-validation.md)
 and [Stage 3 plan](docs/stage3-plan.md). Cloud work, a new API layer, and custom
 kernels are out of scope.
 
@@ -25,8 +33,9 @@ tools and independent materials. The [v2 real-model acceptance](docs/stage3-v2-v
 completed compatibility and screening, but A scored 40/48 against the unchanged
 46/48 gate. Review of its failed answers found remaining identifier wording and
 process-answer scoring defects; this score does not establish a model-quality
-failure. Formal performance comparison and configuration recommendation remain
-unvalidated.
+failure. The six-way ranking remains unvalidated. The user subsequently approved
+the separate [focused prefix-cache delivery protocol](docs/prefix-cache-plan.md);
+its passing result does not reinterpret either historical quality score.
 
 A [supplemental bandwidth check](docs/stage2-bandwidth-check.md) found strong
 kernel-level support for weight-read bandwidth limitation at concurrency 1:

@@ -1,17 +1,16 @@
 # vLLM project plan
 
-Stage 3 review update: v1 has preserved compatibility/screening evidence but a
-defective quality oracle/scorer. Corrected tooling and independent v2 materials
-passed offline checks. The real-model v2 run stopped at A's 40/48 quality gate;
-remaining wording/scoring defects prevent a model-quality conclusion. See
-[the v2 acceptance report](stage3-v2-validation.md) and
-[the repair record](stage3-v2-repairs.md). Stage 4 remains unstarted.
+Current route: the user approved replacing six-way configuration selection
+with a focused **local shared-document prefix-cache delivery**. It passed three
+paired rounds and real CLI/API checks. See [protocol](prefix-cache-plan.md),
+[validation](prefix-cache-validation.md), and [usage](local-document-qa.md).
+The implementation serves the existing API; no new gateway or cloud work.
 
-Stage 1 and Stage 2 are complete under their own locked protocols. The current
-authorized route is the local KV-cache combination study in
-[stage3-plan.md](stage3-plan.md), followed by a bounded local API delivery
-around the selected configuration. Archived llama.cpp work is not vLLM
-acceptance evidence.
+Stage 1 and Stage 2 remain complete under their own locked protocols. The
+original stages below are retained for provenance; the focused delivery
+supersedes the original Stage 3/4 execution route and its six-way quality gate.
+It does not claim completion of every original Stage 3/4 checklist item.
+Archived llama.cpp work is not vLLM acceptance evidence.
 
 | Stage | Scope | Exit evidence |
 | --- | --- | --- |
@@ -44,4 +43,8 @@ collection is complete, but stopped before formal comparison because A scored
 for the historical no-go evidence. The separate v2 real-model acceptance also
 stopped before formal comparison, at 40/48, with remaining fixture/scorer defects
 documented in [stage3-v2-validation.md](stage3-v2-validation.md). Neither score
-establishes a validated model-quality failure. Stage 4 has not started.
+establishes a validated model-quality failure. Those historical runs did not
+start the original Stage 4 delivery. The newly authorized focused API slice is
+complete: BF16/FlashAttention prefix reuse, a stable document-first client,
+streaming/nonstreaming document-switch checks, and clean service shutdown.
+FP8, multi-user capacity and broad QA evaluation remain unresolved.

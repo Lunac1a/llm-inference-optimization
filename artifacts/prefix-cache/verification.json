@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "scope": "local serial shared-document prefix-cache API slice only",
+  "performance_requests": 54,
+  "warmup_requests": 12,
+  "fact_and_switch_checks": 16,
+  "cli_checks": 2,
+  "targeted_unit_tests": 3,
+  "budget_elapsed_minutes": 8.438147441546123,
+  "historical_and_source_hashes": {
+    "stage2/evidence-sha256.json": {
+      "count": 545,
+      "mismatches": []
+    },
+    "stage2-bandwidth/evidence-sha256.json": {
+      "count": 66,
+      "mismatches": []
+    },
+    "stage3/evidence-sha256.json": {
+      "count": 140,
+      "mismatches": []
+    },
+    "stage3-v2/evidence-sha256.json": {
+      "count": 6,
+      "mismatches": []
+    },
+    "stage3-v2/run-evidence-sha256.json": {
+      "count": 180,
+      "mismatches": []
+    },
+    "stage1": {
+      "count": 206,
+      "mismatches": []
+    },
+    "frozen_source_hashes": {
+      "count": 7,
+      "mismatches": []
+    }
+  },
+  "actual_cache_flags_match": true,
+  "first_document_hits_zero": true,
+  "no_gpu_compute_processes_after_cleanup": true,
+  "limitations": [
+    "Synthetic single document and serial client",
+    "Six inspected facts do not establish broad QA quality",
+    "No FP8 or multi-user comparison"
+  ]
+}

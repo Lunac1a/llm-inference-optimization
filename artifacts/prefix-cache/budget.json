@@ -1,0 +1,107 @@
+{
+  "started_epoch": 1788881691.6430368,
+  "deadline_epoch": 1788883491.6430368,
+  "elapsed_seconds": 446.87535095214844,
+  "budget_minutes": 30,
+  "events": [
+    {
+      "time": 1788881691.6430402,
+      "event": "start"
+    },
+    {
+      "time": 1788881691.809882,
+      "event": "server_start",
+      "run": "round-1-off"
+    },
+    {
+      "time": 1788881803.6906176,
+      "event": "server_stop",
+      "run": "round-1-off",
+      "stop": {
+        "pid": 420,
+        "returncode": 0,
+        "stop_seconds": 0.7367422580718994
+      }
+    },
+    {
+      "time": 1788881803.7672622,
+      "event": "server_start",
+      "run": "round-1-on"
+    },
+    {
+      "time": 1788881867.629143,
+      "event": "server_stop",
+      "run": "round-1-on",
+      "stop": {
+        "pid": 833,
+        "returncode": 0,
+        "stop_seconds": 0.4176912307739258
+      }
+    },
+    {
+      "time": 1788881867.7107964,
+      "event": "server_start",
+      "run": "round-2-on"
+    },
+    {
+      "time": 1788881920.5966065,
+      "event": "server_stop",
+      "run": "round-2-on",
+      "stop": {
+        "pid": 1188,
+        "returncode": 0,
+        "stop_seconds": 0.4213571548461914
+      }
+    },
+    {
+      "time": 1788881920.672348,
+      "event": "server_start",
+      "run": "round-2-off"
+    },
+    {
+      "time": 1788882000.5459595,
+      "event": "server_stop",
+      "run": "round-2-off",
+      "stop": {
+        "pid": 1539,
+        "returncode": 0,
+        "stop_seconds": 0.4211602210998535
+      }
+    },
+    {
+      "time": 1788882000.5904434,
+      "event": "server_start",
+      "run": "round-3-off"
+    },
+    {
+      "time": 1788882082.2523482,
+      "event": "server_stop",
+      "run": "round-3-off",
+      "stop": {
+        "pid": 1935,
+        "returncode": 0,
+        "stop_seconds": 0.4239678382873535
+      }
+    },
+    {
+      "time": 1788882082.3260174,
+      "event": "server_start",
+      "run": "round-3-on"
+    },
+    {
+      "time": 1788882138.3184264,
+      "event": "server_stop",
+      "run": "round-3-on",
+      "stop": {
+        "pid": 2336,
+        "returncode": 0,
+        "stop_seconds": 0.47751855850219727
+      }
+    },
+    {
+      "time": 1788882138.5183737,
+      "event": "collection_finished",
+      "port_closed": true
+    }
+  ]
+}

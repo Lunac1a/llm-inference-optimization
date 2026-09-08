@@ -1,0 +1,30 @@
+{
+  "sources": {
+    "scripts/local_document_qa.py": "49559194399f0bb142e82931c103f8e218635f1995e359fa9686c4aa6fd20763",
+    "scripts/validate_prefix_cache.py": "aefdd67bdeb19e1bb64414bdea04725cab19659f96064abfd6a365b28a9e97fc",
+    "scripts/stage3_lib.py": "2a762dbb48c19b8562d232494f6608b7a12322430bbfcf957583676dffbe18cb",
+    "scripts/stage3_collect.py": "a554a535dfb9c292386c7c12b1b038542b1c36304e88baf670f3389a1ad458e7",
+    "scripts/stage3_request.py": "04045ba50b030b00c1de0ae1a65ab63f4f575d5423db6fa7185e38c0027c9012",
+    "configs/local-document-qa.json": "0298564cd56079433d012ae722087bd2b8482675bc2fecab138efb327e190f62",
+    "docs/prefix-cache-plan.md": "538a95ae80024b2161e9c1db4052831dfe2b4d560f584651c1cb01c37e63657c"
+  },
+  "order": [
+    [
+      false,
+      true
+    ],
+    [
+      true,
+      false
+    ],
+    [
+      false,
+      true
+    ]
+  ],
+  "rounds": 3,
+  "reruns": 0,
+  "concurrency": 1,
+  "performance_output_tokens": 128,
+  "budget_minutes": 30
+}

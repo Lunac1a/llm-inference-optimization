@@ -1,0 +1,7 @@
+{
+  "serve": [
+    "/home/lunacia/.venvs/inference-vllm/bin/python",
+    "scripts/local_document_qa.py",
+    "serve"
+  ]
+}

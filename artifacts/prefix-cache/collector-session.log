@@ -1,0 +1,12 @@
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 3518.26it/s]
+{"run": "round-1-off", "first_ttft": 3.3215605580000016, "followup_p95_ttft": 3.5625154687499916, "cache": {"queries": 0.0, "hits": 0.0, "hit_ratio": null}}
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 3482.75it/s]
+{"run": "round-1-on", "first_ttft": 3.411290326999989, "followup_p95_ttft": 0.09516440560000347, "cache": {"queries": 131492.0, "hits": 131328.0, "hit_ratio": 0.9987527758342712}}
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 4141.42it/s]
+{"run": "round-2-on", "first_ttft": 3.416057603000013, "followup_p95_ttft": 0.1120447802999962, "cache": {"queries": 131492.0, "hits": 131328.0, "hit_ratio": 0.9987527758342712}}
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 4965.03it/s]
+{"run": "round-2-off", "first_ttft": 3.1716737940000144, "followup_p95_ttft": 4.010113225399979, "cache": {"queries": 0.0, "hits": 0.0, "hit_ratio": null}}
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 4297.78it/s]
+{"run": "round-3-off", "first_ttft": 3.284214147, "followup_p95_ttft": 4.199346021800034, "cache": {"queries": 0.0, "hits": 0.0, "hit_ratio": null}}
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 3758.60it/s]
+{"run": "round-3-on", "first_ttft": 3.48673538700001, "followup_p95_ttft": 0.10480526855005223, "cache": {"queries": 131492.0, "hits": 131328.0, "hit_ratio": 0.9987527758342712}}

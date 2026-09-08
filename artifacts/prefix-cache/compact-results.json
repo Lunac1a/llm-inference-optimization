@@ -1,0 +1,24 @@
+{
+  "off": {
+    "followup_mean_of_round_p95_ttft_seconds": 3.923991571983335,
+    "followup_mean_of_round_p95_e2e_seconds": 7.017143150616679,
+    "followup_mean_throughput_tok_s": 18.92876099858526,
+    "session_mean_throughput_tok_s": 19.047761065722376,
+    "cold_ttft_seconds": [
+      3.3215605580000016,
+      3.1716737940000144,
+      3.284214147
+    ]
+  },
+  "on": {
+    "followup_mean_of_round_p95_ttft_seconds": 0.1040048181500173,
+    "followup_mean_of_round_p95_e2e_seconds": 3.286829621500008,
+    "followup_mean_throughput_tok_s": 37.93054495349843,
+    "session_mean_throughput_tok_s": 34.17402611858838,
+    "cold_ttft_seconds": [
+      3.411290326999989,
+      3.416057603000013,
+      3.48673538700001
+    ]
+  }
+}
