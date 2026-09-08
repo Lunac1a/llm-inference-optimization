@@ -35,6 +35,8 @@ as vLLM acceptance evidence.
 
 ## Immediate next task
 
+Stage 2 is planned in [stage2-plan.md](stage2-plan.md); experiments have not started.
+
 Use [stage1-validation.md](stage1-validation.md) and its linked v2 evidence as the
 handoff for a separately authorized Stage 2 task. Investigate a bounded workload
 before choosing an optimization; current WSL compatibility flags remain explicit
