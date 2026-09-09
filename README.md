@@ -78,6 +78,12 @@ optimization.
 
 ## Previous exploration
 
+The focused [prefix-cache + FP8 capacity comparison](docs/fp8-capacity-validation.md)
+completed two paired rounds at 2/3 independent 16K document clients. FP8 improved
+three-document warm follow-ups, but cold p95 TTFT was 24.54–24.86 s (limit 20 s).
+It did not pass full acceptance; the validated BF16 local API default is retained.
+All 60 performance responses and 18 inspected fact answers completed correctly.
+
 The llama.cpp KV-quantization route is archived at Git tag
 `archive/llama-cpp-stage1`, commit `99b39106539123847f860a9ac47415415e92a884`.
 The upstream q8_0 control saved KV memory but did not establish a single-request

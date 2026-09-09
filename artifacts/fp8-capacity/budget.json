@@ -1,0 +1,7 @@
+{
+  "started_epoch": 1788936312.7259617,
+  "deadline_epoch": 1788938112.7259617,
+  "elapsed_seconds": 472.7595443725586,
+  "budget_minutes": 30,
+  "event": "collection_finished"
+}

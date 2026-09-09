@@ -5,6 +5,13 @@ FlashAttention, BF16 KV and prefix caching. It binds only to localhost. The
 configuration is `configs/local-document-qa.json`; baseline scripts are unchanged.
 For measured results and their limits, see [validation](prefix-cache-validation.md).
 
+The [FP8 capacity comparison](fp8-capacity-validation.md) did not pass its full
+acceptance rule: three warm documents benefited, but cold p95 TTFT was 24.54–24.86 s
+against a fixed 20 s limit. No capacity-first FP8 option is offered; the BF16
+default remains unchanged. Both experimental arms used Triton, so those numbers
+are not a benchmark of this FlashAttention default. On this machine the WSL
+distribution is named `Ubuntu-24.04` (`wsl -d Ubuntu-24.04` from Windows).
+
 In the existing pinned WSL Ubuntu environment, terminal 1:
 
 ```bash

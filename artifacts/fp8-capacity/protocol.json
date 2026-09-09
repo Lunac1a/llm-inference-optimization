@@ -1,0 +1,12 @@
+{
+  "hashes": {
+    "docs/fp8-capacity-plan.md": "98fe06c465495e923a92ea8234d206512054b64e9a5eb1c7f1e403132ff5b0ec",
+    "scripts/validate_fp8_capacity.py": "820c19887f23b2db8960b6d9189c31071d89a2c604a56cba7cae9913133c2418",
+    "scripts/stage3_lib.py": "2a762dbb48c19b8562d232494f6608b7a12322430bbfcf957583676dffbe18cb",
+    "scripts/stage3_collect.py": "a554a535dfb9c292386c7c12b1b038542b1c36304e88baf670f3389a1ad458e7",
+    "scripts/stage3_request.py": "04045ba50b030b00c1de0ae1a65ab63f4f575d5423db6fa7185e38c0027c9012",
+    "scripts/local_document_qa.py": "49559194399f0bb142e82931c103f8e218635f1995e359fa9686c4aa6fd20763",
+    "configs/local-document-qa.json": "0298564cd56079433d012ae722087bd2b8482675bc2fecab138efb327e190f62"
+  },
+  "git_head": "7c8e8a8c26456cb973017a46ddbc04f002eb46b2"
+}

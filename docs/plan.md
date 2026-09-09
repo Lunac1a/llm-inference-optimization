@@ -47,4 +47,7 @@ establishes a validated model-quality failure. Those historical runs did not
 start the original Stage 4 delivery. The newly authorized focused API slice is
 complete: BF16/FlashAttention prefix reuse, a stable document-first client,
 streaming/nonstreaming document-switch checks, and clean service shutdown.
-FP8, multi-user capacity and broad QA evaluation remain unresolved.
+The separate [FP8 capacity experiment](fp8-capacity-validation.md) is complete:
+three warm independent documents benefit, but FP8 fails the preregistered cold
+TTFT gate in both repetitions. No FP8 profile is adopted; BF16 remains the default.
+Broader multi-user capacity and general QA evaluation remain unresolved.

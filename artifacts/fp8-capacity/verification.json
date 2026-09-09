@@ -1,0 +1,79 @@
+{
+  "old_files_unchanged": 1284,
+  "frozen_sources_unchanged": 7,
+  "performance_complete": 60,
+  "quality_transport_complete": 18,
+  "quality_content_review": "answer-review.md",
+  "verified_backend_dtype_and_clean_stops": 8,
+  "cleanup": {
+    "port_closed": true,
+    "gpu": {
+      "captured_at": 1788936785.5908306,
+      "returncode": 0,
+      "csv": "2026/09/09 16:53:05.576, NVIDIA GeForce RTX 4090 Laptop GPU, 82, 85.68, 2340, 9001, 965, 16376, 3",
+      "stderr": ""
+    },
+    "compute_processes": "pid, process_name\n"
+  },
+  "analysis": {
+    "points": [
+      {
+        "label": "r1-bf16-c2",
+        "pass": true
+      },
+      {
+        "label": "r1-bf16-c3",
+        "pass": false
+      },
+      {
+        "label": "r1-fp8-c2",
+        "pass": true
+      },
+      {
+        "label": "r1-fp8-c3",
+        "pass": false
+      },
+      {
+        "label": "r2-fp8-c2",
+        "pass": true
+      },
+      {
+        "label": "r2-fp8-c3",
+        "pass": false
+      },
+      {
+        "label": "r2-bf16-c2",
+        "pass": true
+      },
+      {
+        "label": "r2-bf16-c3",
+        "pass": false
+      }
+    ],
+    "c2_regressions": [
+      {
+        "round": 1,
+        "wave": 1,
+        "e2e_regression_percent": -5.362998843196776
+      },
+      {
+        "round": 1,
+        "wave": 2,
+        "e2e_regression_percent": 1.6663647036479379
+      },
+      {
+        "round": 2,
+        "wave": 1,
+        "e2e_regression_percent": 5.430983167679293
+      },
+      {
+        "round": 2,
+        "wave": 2,
+        "e2e_regression_percent": -2.1385763853156714
+      }
+    ],
+    "capacity_pattern_pass": false,
+    "performance_gates_pass": false,
+    "human_fact_review_and_capacity_attribution_required": true
+  }
+}

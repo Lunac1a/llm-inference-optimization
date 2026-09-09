@@ -1,0 +1,656 @@
+[
+  {
+    "status": 200,
+    "error": null,
+    "text": "阳光明媚，万物在晴空下熠熠生辉。\n",
+    "chunks": [
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "role": "assistant",
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": null
+          }
+        ],
+        "prompt_token_ids": null,
+        "prompt_text": null
+      },
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "阳光"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "明媚"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "，"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "万物"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "在"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "晴"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "空"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "下"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "熠"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "熠"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "生"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "辉"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "。"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "logprobs": null,
+            "finish_reason": "length",
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-80486b77328f515f",
+        "object": "chat.completion.chunk",
+        "created": 1788936691,
+        "model": "stage3-document-qa",
+        "choices": [],
+        "usage": {
+          "prompt_tokens": 22,
+          "total_tokens": 38,
+          "completion_tokens": 16
+        },
+        "system_fingerprint": "vllm-0.23.0-nohash"
+      }
+    ],
+    "finish_reason": "length",
+    "usage": {
+      "prompt_tokens": 22,
+      "total_tokens": 38,
+      "completion_tokens": 16
+    },
+    "ttft_seconds": 0.13046406499995555,
+    "e2e_seconds": 0.4481755789999511,
+    "output_tokens": 16,
+    "done_received": true,
+    "stream_complete": true,
+    "request_id": "0",
+    "prompt_sha256": "be56365a543db36fb48757cf1f594fbc9b02b36c498fab1246f4c78f7ebc51be",
+    "prompt_chars": 12,
+    "captured_at": 1788936692.2098029
+  },
+  {
+    "status": 200,
+    "error": null,
+    "text": "阳光明媚，万物在晴空下熠熠生辉。\n",
+    "chunks": [
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "role": "assistant",
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": null
+          }
+        ],
+        "prompt_token_ids": null,
+        "prompt_text": null
+      },
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "阳光"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "明媚"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "，"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "万物"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "在"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "晴"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "空"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "下"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "熠"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "熠"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "生"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "辉"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "。"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "logprobs": null,
+            "finish_reason": "length",
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-85e04f6619ce48df",
+        "object": "chat.completion.chunk",
+        "created": 1788936692,
+        "model": "stage3-document-qa",
+        "choices": [],
+        "usage": {
+          "prompt_tokens": 22,
+          "total_tokens": 38,
+          "completion_tokens": 16
+        },
+        "system_fingerprint": "vllm-0.23.0-nohash"
+      }
+    ],
+    "finish_reason": "length",
+    "usage": {
+      "prompt_tokens": 22,
+      "total_tokens": 38,
+      "completion_tokens": 16
+    },
+    "ttft_seconds": 0.06852656900002785,
+    "e2e_seconds": 0.3791157470000144,
+    "output_tokens": 16,
+    "done_received": true,
+    "stream_complete": true,
+    "request_id": "1",
+    "prompt_sha256": "be56365a543db36fb48757cf1f594fbc9b02b36c498fab1246f4c78f7ebc51be",
+    "prompt_chars": 12,
+    "captured_at": 1788936692.918285
+  }
+]
