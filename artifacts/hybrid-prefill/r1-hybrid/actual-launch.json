@@ -1,0 +1,41 @@
+{
+  "argv": [
+    "/mnt/d/Lunacia/Inference/scripts/hybrid_vllm_entry.py",
+    "serve",
+    "/home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8000",
+    "--served-model-name",
+    "stage3-document-qa",
+    "--generation-config",
+    "vllm",
+    "--dtype",
+    "bfloat16",
+    "--tensor-parallel-size",
+    "1",
+    "--max-model-len",
+    "16640",
+    "--gpu-memory-utilization",
+    "0.8",
+    "--max-num-seqs",
+    "8",
+    "--max-num-batched-tokens",
+    "16640",
+    "--attention-backend",
+    "TRITON_ATTN",
+    "--kv-cache-dtype",
+    "fp8_per_token_head",
+    "--calculate-kv-scales",
+    "--enforce-eager",
+    "--enable-prefix-caching",
+    "--no-enable-chunked-prefill"
+  ],
+  "environment": {
+    "PYTHONPATH": "/mnt/d/Lunacia/Inference/experiments/hybrid_prefill",
+    "VLLM_PLUGINS": "inference_hybrid_prefill",
+    "VLLM_USE_V2_MODEL_RUNNER": "0",
+    "VLLM_USE_FLASHINFER_SAMPLER": "0"
+  }
+}

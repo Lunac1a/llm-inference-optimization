@@ -1,0 +1,51 @@
+{
+  "points": [
+    {
+      "run": "r1-bf16",
+      "pass": false
+    },
+    {
+      "run": "r1-fp8",
+      "pass": false
+    },
+    {
+      "run": "r1-hybrid",
+      "pass": true
+    },
+    {
+      "run": "r2-hybrid",
+      "pass": true
+    },
+    {
+      "run": "r2-fp8",
+      "pass": false
+    },
+    {
+      "run": "r2-bf16",
+      "pass": false
+    }
+  ],
+  "comparisons": [
+    {
+      "round": 1,
+      "cold_ttft_reduction_percent": 48.52612583085827,
+      "followup_e2e_changes_percent": [
+        4.815940969562993,
+        3.5476766303978557
+      ],
+      "pass": true
+    },
+    {
+      "round": 2,
+      "cold_ttft_reduction_percent": 55.78118803610498,
+      "followup_e2e_changes_percent": [
+        0.13205144679477865,
+        -0.9760217622801104
+      ],
+      "pass": true
+    }
+  ],
+  "performance_gates_pass": true,
+  "source_aligned_answer_review_required": true,
+  "default_profile_changed": false
+}

@@ -1,0 +1,1034 @@
+[
+  {
+    "status": 200,
+    "error": null,
+    "text": "项目负责人是顾清禾，正式预算金额是260万元。",
+    "chunks": [
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "role": "assistant",
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": null
+          }
+        ],
+        "prompt_token_ids": null,
+        "prompt_text": null
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "项目"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "负责人"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "是"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "顾"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "清"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "禾"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "，"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "正式"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "预算"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "金额"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "是"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "2"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "6"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "0"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "万元"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "。"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-ae0525233d91c6c9",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [],
+        "usage": {
+          "prompt_tokens": 16448,
+          "total_tokens": 16465,
+          "completion_tokens": 17
+        },
+        "system_fingerprint": "vllm-0.23.0-nohash"
+      }
+    ],
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 16448,
+      "total_tokens": 16465,
+      "completion_tokens": 17
+    },
+    "ttft_seconds": 0.13984685900000215,
+    "e2e_seconds": 0.5245101080000012,
+    "output_tokens": 17,
+    "done_received": true,
+    "stream_complete": true,
+    "request_id": "doc-c",
+    "prompt_sha256": "219da3a187a23e12a682168692978b2633a5faf683e9c36ee4f681c189faff23",
+    "prompt_chars": 26475,
+    "captured_at": 1788938042.7211125
+  },
+  {
+    "status": 200,
+    "error": null,
+    "text": "项目负责人是周明川，正式预算金额是315万元。",
+    "chunks": [
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "role": "assistant",
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": null
+          }
+        ],
+        "prompt_token_ids": null,
+        "prompt_text": null
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "项目"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "负责人"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "是"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "周"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "明"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "川"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "，"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "正式"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "预算"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "金额"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "是"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "3"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "1"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "5"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "万元"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "。"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-bfe58a6871149c51",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [],
+        "usage": {
+          "prompt_tokens": 16448,
+          "total_tokens": 16465,
+          "completion_tokens": 17
+        },
+        "system_fingerprint": "vllm-0.23.0-nohash"
+      }
+    ],
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 16448,
+      "total_tokens": 16465,
+      "completion_tokens": 17
+    },
+    "ttft_seconds": 5.072575960000009,
+    "e2e_seconds": 5.470705617000007,
+    "output_tokens": 17,
+    "done_received": true,
+    "stream_complete": true,
+    "request_id": "doc-b",
+    "prompt_sha256": "d1958001bd1f55a1ab6f60225ab58cf9fb86def4a276fa7bdf295c8f89b9cf2e",
+    "prompt_chars": 26478,
+    "captured_at": 1788938045.6197774
+  },
+  {
+    "status": 200,
+    "error": null,
+    "text": "项目负责人是林若安，正式预算金额是480万元。",
+    "chunks": [
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "role": "assistant",
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": null
+          }
+        ],
+        "prompt_token_ids": null,
+        "prompt_text": null
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "项目"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "负责人"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "是"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "林"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "若"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "安"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "，"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "正式"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "预算"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "金额"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "是"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "4"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "8"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "0"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "万元"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "。"
+            },
+            "logprobs": null,
+            "finish_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ""
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ]
+      },
+      {
+        "id": "chatcmpl-b2b817055f2ade74",
+        "object": "chat.completion.chunk",
+        "created": 1788938042,
+        "model": "stage3-document-qa",
+        "choices": [],
+        "usage": {
+          "prompt_tokens": 16448,
+          "total_tokens": 16465,
+          "completion_tokens": 17
+        },
+        "system_fingerprint": "vllm-0.23.0-nohash"
+      }
+    ],
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 16448,
+      "total_tokens": 16465,
+      "completion_tokens": 17
+    },
+    "ttft_seconds": 10.121221935000008,
+    "e2e_seconds": 10.493251553000007,
+    "output_tokens": 17,
+    "done_received": true,
+    "stream_complete": true,
+    "request_id": "doc-a",
+    "prompt_sha256": "f3d1546b38cbcfced4f2f73a114548917180b7ebc6a4783a954d37c1b713f32d",
+    "prompt_chars": 26474,
+    "captured_at": 1788938050.6467602
+  }
+]

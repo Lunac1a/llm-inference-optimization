@@ -1,7 +1,7 @@
 {
   "sources": {
-    "docs/hybrid-prefill-plan.md": "4d97d59270f10fdb8a6bc1d01d92b37de19ed95e1c77026d3745bc71b1c734d0",
-    "scripts/validate_hybrid_prefill.py": "57e66d1ae0f8b9a5e7e257c780dd1f64cefa9b47490812b11cb86a82406c5dbe",
+    "docs/hybrid-prefill-plan.md": "37c9051e3568af98f9740d64834a6dce9da20a3dab220a0b05dc7b4702b15c21",
+    "scripts/validate_hybrid_prefill.py": "5760951dcd6635fc12b84db4a5804b5f95d15aa87f5b7c3b2e20bd766cd85af8",
     "scripts/hybrid_vllm_entry.py": "c0e2c96933b541b4f831a2c0a07c250cf9b55a5f313c29bdaaa4bdd439159df3",
     "scripts/stage3_lib.py": "2a762dbb48c19b8562d232494f6608b7a12322430bbfcf957583676dffbe18cb",
     "scripts/stage3_collect.py": "a554a535dfb9c292386c7c12b1b038542b1c36304e88baf670f3389a1ad458e7",
@@ -15,5 +15,5 @@
     "experiments/hybrid_prefill/hybrid_prefill-0.1.dist-info/entry_points.txt": "61992c45c7981974f3ae22118a8e4954d8c8892b2dfd562252f184f5eb2c34dd",
     "experiments/hybrid_prefill/hybrid_prefill-0.1.dist-info/METADATA": "efa129d5522f544651477cb028b4333896e361fc3a050a156b949e87f52ef544"
   },
-  "git_head": "4566164d5080231426b325999cc3713b7588fda4"
+  "git_head": "0625759213399750e7f0f421a80247efd1d695c4"
 }

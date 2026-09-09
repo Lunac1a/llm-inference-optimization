@@ -12,6 +12,11 @@ default remains unchanged. Both experimental arms used Triton, so those numbers
 are not a benchmark of this FlashAttention default. On this machine the WSL
 distribution is named `Ubuntu-24.04` (`wsl -d Ubuntu-24.04` from Windows).
 
+A later [experimental hybrid](hybrid-prefill.md) separates BF16 full cold
+attention from FP8 cache storage and passes its own bounded comparison, reducing
+cold TTFT by 48.5–55.8% versus a matched FP8 control. It needs full prefill and a
+16,640-token context limit; it remains an opt-in prototype, not this default.
+
 In the existing pinned WSL Ubuntu environment, terminal 1:
 
 ```bash

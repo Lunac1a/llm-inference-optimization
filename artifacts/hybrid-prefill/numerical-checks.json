@@ -1,0 +1,29 @@
+{
+  "comparisons": [
+    {
+      "name": "cold-64",
+      "max_abs": 0.00048828125,
+      "rms": 9.5367431640625e-07,
+      "pass": true
+    },
+    {
+      "name": "cold-256",
+      "max_abs": 0.00390625,
+      "rms": 0.0002221875765826553,
+      "pass": true
+    },
+    {
+      "name": "mixed-cold",
+      "max_abs": 0.0,
+      "rms": 0.0,
+      "pass": true
+    },
+    {
+      "name": "mixed-cached",
+      "max_abs": 0.0,
+      "rms": 0.0,
+      "pass": true
+    }
+  ],
+  "cache_bytes_unchanged": true
+}

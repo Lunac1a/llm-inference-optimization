@@ -8,6 +8,8 @@ sys.path.insert(0,str(ROOT/'scripts'))
 from validate_hybrid_prefill import config,launch_environment
 from local_document_qa import configuration
 import os
+from copy import deepcopy
+from analyze_hybrid_prefill import analyze
 
 class HybridRoutes(unittest.TestCase):
     def test_full_cold_is_only_original_bf16_path(self):
@@ -33,6 +35,19 @@ class HybridRoutes(unittest.TestCase):
                 self.assertEqual(os.environ['VLLM_PLUGINS'],'inference_hybrid_prefill')
                 raise RuntimeError('test')
         self.assertEqual(dict(os.environ),before)
+    def test_cold_gain_cannot_hide_warm_latency_regression(self):
+        wave={'success':3,'requests':3,'deltas':{'vllm:num_preemptions_total':0},
+              'ttft':{'p95':.2},'e2e':{'p95':4},'cache':{'hit_ratio':.99}}
+        rows=[]
+        for round_id in (1,2):
+            for arm in ('bf16','fp8','hybrid'):
+                waves=[deepcopy(wave) for _ in range(3)]
+                waves[0]['ttft']['p95']=10 if arm=='hybrid' else 20
+                waves[0]['e2e']['p95']=25
+                rows.append({'round':round_id,'arm':arm,'label':f'{round_id}-{arm}','waves':waves})
+        self.assertTrue(analyze(rows)['performance_gates_pass'])
+        rows[-1]['waves'][1]['e2e']['p95']=5
+        self.assertFalse(analyze(rows)['performance_gates_pass'])
 
 if __name__=='__main__':
     unittest.main()

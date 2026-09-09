@@ -1,15 +1,75 @@
 {
   "started_epoch": 1788937813.5594196,
   "deadline_epoch": 1788939613.5594196,
-  "elapsed_seconds": 8.804887771606445,
+  "elapsed_seconds": 571.2898609638214,
   "budget_minutes": 30,
   "events": [
     {
-      "time": 1788937813.559422,
+      "time": 1788937931.2663765,
       "event": "start"
     },
     {
-      "time": 1788937822.3643007,
+      "time": 1788938067.8465154,
+      "event": "server_stop",
+      "run": "r1-bf16",
+      "stop": {
+        "pid": 515,
+        "returncode": 0,
+        "stop_seconds": 0.37334632873535156
+      }
+    },
+    {
+      "time": 1788938131.4634726,
+      "event": "server_stop",
+      "run": "r1-fp8",
+      "stop": {
+        "pid": 1024,
+        "returncode": 0,
+        "stop_seconds": 0.43021583557128906
+      }
+    },
+    {
+      "time": 1788938185.2521012,
+      "event": "server_stop",
+      "run": "r1-hybrid",
+      "stop": {
+        "pid": 1411,
+        "returncode": 0,
+        "stop_seconds": 0.3669548034667969
+      }
+    },
+    {
+      "time": 1788938236.245196,
+      "event": "server_stop",
+      "run": "r2-hybrid",
+      "stop": {
+        "pid": 1782,
+        "returncode": 0,
+        "stop_seconds": 0.48694944381713867
+      }
+    },
+    {
+      "time": 1788938297.62513,
+      "event": "server_stop",
+      "run": "r2-fp8",
+      "stop": {
+        "pid": 2128,
+        "returncode": 0,
+        "stop_seconds": 0.4803793430328369
+      }
+    },
+    {
+      "time": 1788938384.8212461,
+      "event": "server_stop",
+      "run": "r2-bf16",
+      "stop": {
+        "pid": 2596,
+        "returncode": 0,
+        "stop_seconds": 0.38268065452575684
+      }
+    },
+    {
+      "time": 1788938384.8492703,
       "event": "collection_finished"
     }
   ]

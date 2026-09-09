@@ -84,6 +84,13 @@ three-document warm follow-ups, but cold p95 TTFT was 24.54–24.86 s (limit 20 
 It did not pass full acceptance; the validated BF16 local API default is retained.
 All 60 performance responses and 18 inspected fact answers completed correctly.
 
+The subsequent [BF16 prefill / FP8 cache prototype](docs/hybrid-prefill-validation.md)
+passes a new matched full-prefill comparison: cold p95 TTFT falls from
+20.86–21.41 s to 9.47–10.74 s while retaining three-document warm reuse.
+All 54 performance requests and 27 inspected fact answers pass. It trades a
+16,640-token context limit and lower KV budget for faster cold computation;
+the default stays unchanged. [Prototype boundaries](docs/hybrid-prefill.md).
+
 The llama.cpp KV-quantization route is archived at Git tag
 `archive/llama-cpp-stage1`, commit `99b39106539123847f860a9ac47415415e92a884`.
 The upstream q8_0 control saved KV memory but did not establish a single-request

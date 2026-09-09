@@ -1,0 +1,118 @@
+{
+  "round": 2,
+  "arm": "fp8",
+  "label": "r2-fp8",
+  "waves": [
+    {
+      "ttft": {
+        "p50": 14.52329915200005,
+        "p95": 21.411681329499963
+      },
+      "e2e": {
+        "p50": 26.110593297000037,
+        "p95": 26.11145963790001
+      },
+      "throughput": 14.638249981826213,
+      "success": 3,
+      "requests": 3,
+      "cache": {
+        "queries": 82230.0,
+        "hits": 0.0,
+        "hit_ratio": 0.0
+      },
+      "deltas": {
+        "vllm:num_preemptions_total": 0.0,
+        "vllm:request_queue_time_seconds_sum": 7.304743339999959,
+        "vllm:request_queue_time_seconds_count": 3.0
+      },
+      "gauges": {
+        "vllm:num_requests_running": {
+          "min": 0.0,
+          "max": 3.0
+        },
+        "vllm:num_requests_waiting": {
+          "min": 0.0,
+          "max": 1.0
+        },
+        "vllm:kv_cache_usage_perc": {
+          "min": 0.0,
+          "max": 0.8924978442081057
+        }
+      }
+    },
+    {
+      "ttft": {
+        "p50": 0.22191292799999474,
+        "p95": 0.22655130480000593
+      },
+      "e2e": {
+        "p50": 4.314233855999987,
+        "p95": 4.318900806000022
+      },
+      "throughput": 86.46929529997675,
+      "success": 3,
+      "requests": 3,
+      "cache": {
+        "queries": 49329.0,
+        "hits": 49248.0,
+        "hit_ratio": 0.9983579638752053
+      },
+      "deltas": {
+        "vllm:num_preemptions_total": 0.0,
+        "vllm:request_queue_time_seconds_sum": 3.9454000045680004e-05,
+        "vllm:request_queue_time_seconds_count": 3.0
+      },
+      "gauges": {
+        "vllm:num_requests_running": {
+          "min": 0.0,
+          "max": 3.0
+        },
+        "vllm:num_requests_waiting": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "vllm:kv_cache_usage_perc": {
+          "min": 0.0,
+          "max": 0.8916355274504167
+        }
+      }
+    },
+    {
+      "ttft": {
+        "p50": 0.2642682510000327,
+        "p95": 0.26663263560002404
+      },
+      "e2e": {
+        "p50": 4.340207297999996,
+        "p95": 4.342558561500004
+      },
+      "throughput": 85.93019322727818,
+      "success": 3,
+      "requests": 3,
+      "cache": {
+        "queries": 49344.0,
+        "hits": 49248.0,
+        "hit_ratio": 0.9980544747081712
+      },
+      "deltas": {
+        "vllm:num_preemptions_total": 0.0,
+        "vllm:request_queue_time_seconds_sum": 2.9208000057678873e-05,
+        "vllm:request_queue_time_seconds_count": 3.0
+      },
+      "gauges": {
+        "vllm:num_requests_running": {
+          "min": 0.0,
+          "max": 3.0
+        },
+        "vllm:num_requests_waiting": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "vllm:kv_cache_usage_perc": {
+          "min": 0.0,
+          "max": 0.8916355274504167
+        }
+      }
+    }
+  ]
+}

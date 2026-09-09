@@ -51,3 +51,10 @@ The separate [FP8 capacity experiment](fp8-capacity-validation.md) is complete:
 three warm independent documents benefit, but FP8 fails the preregistered cold
 TTFT gate in both repetitions. No FP8 profile is adopted; BF16 remains the default.
 Broader multi-user capacity and general QA evaluation remain unresolved.
+
+The separately authorized [hybrid prefill prototype](hybrid-prefill-validation.md)
+is validated for three independent 16K documents: BF16 cold attention plus FP8
+persistent storage reduces cold TTFT by 48.5–55.8% versus matched native FP8,
+with preserved warm reuse and 27/27 inspected facts. Full prefill, lower cache
+budget and a 16,640-token context limit are explicit tradeoffs. The installed
+runtime and delivered BF16 default remain unchanged.
