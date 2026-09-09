@@ -42,6 +42,10 @@ request <=60 seconds, wave <=180 seconds. No profiling or cloud work.
 GPU numerical gate: seeded BF16 causal GQA, head dimension 128, Q heads 32,
 KV heads 8, lengths 64 and 256. Compare direct upstream Triton prefill against
 torch SDPA with max absolute error <=0.04 and RMS <=0.005. One run only.
+Include one mixed batch (64 cold query tokens plus 4 query tokens over a 32-token
+cached prefix): cold output versus SDPA, cached output versus native FP8, same
+tolerances, and cache bytes unchanged by attention reads. This is a numerical
+integration check, not another performance point.
 Also verify FP8 write/cache read path via actual model answers and route logs.
 
 Exactly two rounds, C=3 only, independent doc-a/b/c from fp8-capacity materials:

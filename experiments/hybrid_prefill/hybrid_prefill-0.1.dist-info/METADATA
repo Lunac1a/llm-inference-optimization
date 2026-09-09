@@ -1,0 +1,4 @@
+Metadata-Version: 2.1
+Name: hybrid-prefill
+Version: 0.1
+Summary: Local fixed-version experimental BF16 prefill route
