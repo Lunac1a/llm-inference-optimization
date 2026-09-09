@@ -1,0 +1,12 @@
+{
+  "git_head": "8e7d728bd83058b0b5cd5b13c4d88ba6fd00cdfa",
+  "sources": {
+    "scripts/run_mixed_load_rerun.py": "da722086fca5c018f4bf37ee987695e1021625d6b857549b2db783dd48557713",
+    "scripts/validate_mixed_load.py": "c04af182a162f88686897d565fece1bfcd7a68ea60508ab90722fad22187071c",
+    "scripts/mixed_vllm_entry.py": "e66a8c8f77f602edfcd465c0b0baa6f0823e01fa90941a6d56328a96ad77e746",
+    "docs/mixed-load-plan.md": "8d66d25737abedf6bed358cc83802850c24334b7593e0075eb8437b4cef85b03",
+    "docs/mixed-load-rerun-plan.md": "ec147f0a9acb06fd6c98c12f3f3c795756385b207e221133276169744b1f7d0f"
+  },
+  "fresh_budget_minutes": 30,
+  "old_evidence_directory": "artifacts/mixed-load"
+}

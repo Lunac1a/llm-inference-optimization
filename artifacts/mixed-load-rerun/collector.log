@@ -1,0 +1,16 @@
+START full
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 3806.08it/s]
+{"mode": "full", "trial": "r1-control", "A_gap": 0.08072993599999734, "B_ttft": 0.15570494899999687}
+{"mode": "full", "trial": "r1-mixed", "A_gap": 3.028686006000001, "B_ttft": 3.456183695000007}
+{"mode": "full", "trial": "r2-mixed", "A_gap": 3.0311657909999923, "B_ttft": 3.122129251000004}
+{"mode": "full", "trial": "r2-control", "A_gap": 0.08713765400000284, "B_ttft": 0.11862523700000338}
+{"mode": "full", "trial": "r3-control", "A_gap": 0.08415435899999579, "B_ttft": 0.09672225599999251}
+{"mode": "full", "trial": "r3-mixed", "A_gap": 3.355170743000002, "B_ttft": 3.4481499970000016}
+START chunk
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 4756.69it/s]
+{"mode": "chunk", "trial": "r1-control", "A_gap": 0.0896367429999998, "B_ttft": 0.16123106099999518}
+{"mode": "chunk", "trial": "r1-mixed", "A_gap": 1.6703167150000127, "B_ttft": 0.39518510500002435}
+{"mode": "chunk", "trial": "r2-mixed", "A_gap": 1.722324872999991, "B_ttft": 0.39189810600004193}
+{"mode": "chunk", "trial": "r2-control", "A_gap": 0.08343894199998658, "B_ttft": 0.11141328499996916}
+{"mode": "chunk", "trial": "r3-control", "A_gap": 0.0836908240000298, "B_ttft": 0.10972522199995183}
+{"mode": "chunk", "trial": "r3-mixed", "A_gap": 1.8101708910000411, "B_ttft": 0.5161587740000186}

@@ -91,9 +91,11 @@ All 54 performance requests and 27 inspected fact answers pass. It trades a
 16,640-token context limit and lower KV budget for faster cold computation;
 the default stays unchanged. [Prototype boundaries](docs/hybrid-prefill.md).
 
-The [mixed-arrival follow-up](docs/mixed-load-validation.md) stopped before A/B/C
-measurement: its prefix-reset endpoint returned 404. The launcher was repaired
-offline; no GPU retry or scheduling comparison was run. Interference remains unknown.
+The [completed mixed-arrival follow-up](docs/mixed-load-rerun-validation.md) confirms
+that cold C stalls active A and cached B. Chunking reduces A's worst pause by 43%
+and B first-content latency by 89%, but increases A/B E2E by 74%/72% and reduces
+throughput by 42%; it fails the adoption gate. All 30 performance responses and
+six fact answers pass. The earlier reset-API failure remains archived separately.
 
 The llama.cpp KV-quantization route is archived at Git tag
 `archive/llama-cpp-stage1`, commit `99b39106539123847f860a9ac47415415e92a884`.

@@ -5,10 +5,12 @@ This opt-in prototype improves cold response time while retaining three cached
 default `scripts/local_document_qa.py` service. See
 [validation and tradeoffs](hybrid-prefill-validation.md) before using its results.
 
-The subsequent [mixed-arrival diagnostic](mixed-load-validation.md) stopped before
-measurement because its cache-reset API was not registered. It provides no evidence
-about long-request interference or chunked-prefill benefit. The scoped test launcher
-has an offline repair, but requires a separately budgeted fresh run for GPU validation.
+The [completed mixed-arrival diagnostic](mixed-load-rerun-validation.md) confirms
+that a cold long C stalls active A and cached B. A single 2048-token chunking
+contrast reduces the longest pause and B's first-content latency but substantially
+worsens completion time and C latency; it fails the adoption gate. Keep this
+full-prefill prototype and the BF16 default unchanged. The preceding API failure
+is retained separately in [the original attempt](mixed-load-validation.md).
 
 The reusable pieces are:
 

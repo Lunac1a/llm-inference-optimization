@@ -1,5 +1,10 @@
 # Mixed-load diagnostic: stopped before measurement
 
+**Historical attempt.** The subsequent explicitly authorized
+[fresh execution](mixed-load-rerun-validation.md) completed the diagnostic and
+single chunking comparison. The failed attempt and evidence described below
+remain unchanged; use the new report for current mixed-load conclusions.
+
 **No valid interference result and no scheduling comparison were obtained.**
 The first baseline trial stopped at prefix-cache reset, before warming the long
 documents or submitting A/B/C. This is a collector/API integration failure, not

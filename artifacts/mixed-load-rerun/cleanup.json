@@ -1,0 +1,11 @@
+{
+  "elapsed_seconds": 319.3946852684021,
+  "port_closed": true,
+  "gpu": {
+    "captured_at": 1788966085.6378338,
+    "returncode": 0,
+    "csv": "2026/09/10 01:01:25.626, NVIDIA GeForce RTX 4090 Laptop GPU, 81, 116.90, 2340, 9001, 971, 16376, 4",
+    "stderr": ""
+  },
+  "compute_processes": "pid, process_name\n"
+}

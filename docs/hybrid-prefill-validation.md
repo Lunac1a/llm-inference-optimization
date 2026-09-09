@@ -103,10 +103,11 @@ in the unchanged delivered default.
 
 ## Facts, inferences and unresolved questions
 
-Follow-up: the [mixed-load diagnostic](mixed-load-validation.md) stopped at an API
-integration error before any A/B/C trial. Continuous-arrival interference and the
-conditional chunking comparison remain unvalidated; this does not change the
-historical full-wave results below.
+Follow-up: the [completed mixed-load diagnostic](mixed-load-rerun-validation.md)
+confirms cold-arrival interference. The single chunking contrast improves A's
+worst pause and B TTFT but fails the A/B E2E gate, so it is not adopted. This is
+separate from the historical full-wave results below; the earlier API failure
+remains archived with its own evidence.
 
 **Facts:** six successful server starts and clean stops; matching native FP8/hybrid
 cache capacity; correct cold/cached routes; two paired cold-latency improvements;

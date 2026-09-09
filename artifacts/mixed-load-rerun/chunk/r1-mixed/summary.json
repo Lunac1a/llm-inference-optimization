@@ -1,0 +1,3299 @@
+{
+  "mixed": true,
+  "trigger": {
+    "time": 234.916379725,
+    "A_tokens": 16,
+    "A_finished": false
+  },
+  "dispatch": 234.916987216,
+  "A_gap": 1.6703167150000127,
+  "A_gaps": [
+    0.023407924999986562,
+    0.03143422100001203,
+    0.050325466999993296,
+    0.29008153099999845,
+    0.5218083309999884,
+    0.702851140000007,
+    0.9211159920000114,
+    1.120431879999984,
+    1.3106950430000097,
+    1.5030633009999974,
+    1.6703167150000127,
+    0.09218164699998965,
+    0.027413843000005045,
+    0.032339179999979706,
+    0.03195783700002153,
+    0.031820358999993914,
+    0.0310556839999947,
+    0.03215566400001535,
+    0.03152559899999119,
+    0.031463346999998976,
+    0.032515150999984144,
+    0.031996187000004284,
+    0.03161857000000623,
+    0.031111705999990136,
+    0.031677659000024505,
+    0.03209294699999532,
+    0.032023109999983035,
+    0.030496634000002132,
+    0.03127344399999288,
+    0.030568937000026608,
+    0.03222331999998573,
+    0.031877968999992845,
+    0.032799589999996215,
+    0.03144650200002275,
+    0.03036425799999165,
+    0.031008364999991045,
+    0.030831081000002314,
+    0.03098195900000178,
+    0.031055588000015177,
+    0.031778392999996186,
+    0.0317236949999824,
+    0.03161411199999975,
+    0.03126005500001838,
+    0.031723056000004135,
+    0.03179698099998518,
+    0.03085842499999103,
+    0.03176070600000003,
+    0.03167756600001326,
+    0.03092110800000114,
+    0.0323492290000047,
+    0.03186640199999147,
+    0.03185004799999547,
+    0.03165783899999042,
+    0.03152495100002284,
+    0.032486226999992596,
+    0.03210496399998419,
+    0.03196578300000397,
+    0.031828532000020004,
+    0.03235855299999457,
+    0.03051455799999303,
+    0.030863277999998218,
+    0.03260929900000065,
+    0.03164751500000307,
+    0.03231182300001478,
+    0.032789378999979135,
+    0.030832204000006413,
+    0.03083697499999971,
+    0.03289847700000337,
+    0.03132108500000186,
+    0.032194842999984985,
+    0.032594893000009506,
+    0.031976969999988114,
+    0.03172376900002405,
+    0.03241935599999124,
+    0.03214042999999833,
+    0.032262448000011545,
+    0.03308138999997823,
+    0.03211846000002083,
+    0.0306307879999963,
+    0.031126658000005136,
+    0.03217213299998889,
+    0.031166463999994676,
+    0.03224420200001532,
+    0.03254239299999995,
+    0.03162791399998355,
+    0.09476577500001326,
+    0.06312320399999294,
+    0.03206294899999307,
+    0.03162453199999504,
+    0.03282947000002423,
+    0.030976997999999867,
+    0.03189351599999668,
+    0.03173677499998462,
+    0.03168649599999185,
+    0.03134309300000382,
+    0.03229630699999575,
+    0.03112982400000419,
+    0.030534393000010596,
+    0.03135599199998751,
+    0.03130513199999996,
+    0.03098787800001901,
+    0.03144292700000051,
+    0.03219325699998876,
+    0.03141426600001296,
+    0.03271256099998254,
+    0.03243140400002176,
+    0.031179459999975734,
+    0.030589901000013242,
+    0.03268822199999022
+  ],
+  "B_ttft": 0.39518510500002435,
+  "requests": {
+    "A": {
+      "start": 234.47208386,
+      "end": 246.319885303,
+      "ttft": 0.09389903300001379,
+      "e2e": 11.847801443000009,
+      "output_tok_s": 10.803692196886516,
+      "token_count": 128,
+      "usage": {
+        "prompt_tokens": 16446,
+        "total_tokens": 16574,
+        "completion_tokens": 128,
+        "prompt_tokens_details": {
+          "cached_tokens": 16416
+        }
+      }
+    },
+    "B": {
+      "start": 234.916466736,
+      "end": 246.872428438,
+      "ttft": 0.39518510500002435,
+      "e2e": 11.955961701999996,
+      "output_tok_s": 10.705956006750016,
+      "token_count": 128,
+      "usage": {
+        "prompt_tokens": 16446,
+        "total_tokens": 16574,
+        "completion_tokens": 128,
+        "prompt_tokens_details": {
+          "cached_tokens": 16416
+        }
+      }
+    },
+    "C": {
+      "start": 234.916987216,
+      "end": 247.062822115,
+      "ttft": 8.237082998000005,
+      "e2e": 12.145834898999993,
+      "output_tok_s": 10.538592123505538,
+      "token_count": 128,
+      "usage": {
+        "prompt_tokens": 16446,
+        "total_tokens": 16574,
+        "completion_tokens": 128
+      }
+    }
+  },
+  "throughput": 30.498353918022733,
+  "metrics_before": {
+    "status": 200,
+    "elapsed_seconds": 0.0038915080000094804,
+    "raw": "# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 12439.0\npython_gc_objects_collected_total{generation=\"1\"} 2552.0\npython_gc_objects_collected_total{generation=\"2\"} 344.0\n# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC\n# TYPE python_gc_objects_uncollectable_total counter\npython_gc_objects_uncollectable_total{generation=\"0\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"1\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"2\"} 0.0\n# HELP python_gc_collections_total Number of times this generation was collected\n# TYPE python_gc_collections_total counter\npython_gc_collections_total{generation=\"0\"} 1374.0\npython_gc_collections_total{generation=\"1\"} 125.0\npython_gc_collections_total{generation=\"2\"} 9.0\n# HELP python_info Python platform information\n# TYPE python_info gauge\npython_info{implementation=\"CPython\",major=\"3\",minor=\"12\",patchlevel=\"3\",version=\"3.12.3\"} 1.0\n# HELP process_virtual_memory_bytes Virtual memory size in bytes.\n# TYPE process_virtual_memory_bytes gauge\nprocess_virtual_memory_bytes 1.2947320832e+10\n# HELP process_resident_memory_bytes Resident memory size in bytes.\n# TYPE process_resident_memory_bytes gauge\nprocess_resident_memory_bytes 1.300471808e+09\n# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.\n# TYPE process_start_time_seconds gauge\nprocess_start_time_seconds 1.78896588187e+09\n# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.\n# TYPE process_cpu_seconds_total counter\nprocess_cpu_seconds_total 13.94\n# HELP process_open_fds Number of open file descriptors.\n# TYPE process_open_fds gauge\nprocess_open_fds 48.0\n# HELP process_max_fds Maximum number of open file descriptors.\n# TYPE process_max_fds gauge\nprocess_max_fds 65535.0\n# HELP vllm:estimated_flops_per_gpu_total Estimated number of floating point operations per GPU (for Model Flops Utilization calculations).\n# TYPE vllm:estimated_flops_per_gpu_total counter\nvllm:estimated_flops_per_gpu_total{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:estimated_flops_per_gpu_created Estimated number of floating point operations per GPU (for Model Flops Utilization calculations).\n# TYPE vllm:estimated_flops_per_gpu_created gauge\nvllm:estimated_flops_per_gpu_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042835162e+09\n# HELP vllm:estimated_read_bytes_per_gpu_total Estimated number of bytes read from memory per GPU (for Model Flops Utilization calculations).\n# TYPE vllm:estimated_read_bytes_per_gpu_total counter\nvllm:estimated_read_bytes_per_gpu_total{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:estimated_read_bytes_per_gpu_created Estimated number of bytes read from memory per GPU (for Model Flops Utilization calculations).\n# TYPE vllm:estimated_read_bytes_per_gpu_created gauge\nvllm:estimated_read_bytes_per_gpu_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042835448e+09\n# HELP vllm:estimated_write_bytes_per_gpu_total Estimated number of bytes written to memory per GPU (for Model Flops Utilization calculations).\n# TYPE vllm:estimated_write_bytes_per_gpu_total counter\nvllm:estimated_write_bytes_per_gpu_total{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:estimated_write_bytes_per_gpu_created Estimated number of bytes written to memory per GPU (for Model Flops Utilization calculations).\n# TYPE vllm:estimated_write_bytes_per_gpu_created gauge\nvllm:estimated_write_bytes_per_gpu_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.788965904283561e+09\n# HELP vllm:num_requests_running Number of requests in model execution batches.\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:num_requests_waiting Number of requests waiting to be processed.\n# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:num_requests_waiting_by_reason Number of waiting requests by reason. Reason labels: 'capacity' = waiting for scheduling capacity; 'deferred' = deferred by transient constraints (LoRA budget, KV transfer, blocked status). Sum of all reasons equals vllm:num_requests_waiting.\n# TYPE vllm:num_requests_waiting_by_reason gauge\nvllm:num_requests_waiting_by_reason{engine=\"0\",model_name=\"stage3-document-qa\",reason=\"capacity\"} 0.0\nvllm:num_requests_waiting_by_reason{engine=\"0\",model_name=\"stage3-document-qa\",reason=\"deferred\"} 0.0\n# HELP vllm:engine_sleep_state Engine sleep state; awake = 0 means engine is sleeping; awake = 1 means engine is awake; weights_offloaded = 1 means sleep level 1; discard_all = 1 means sleep level 2.\n# TYPE vllm:engine_sleep_state gauge\nvllm:engine_sleep_state{engine=\"0\",model_name=\"stage3-document-qa\",sleep_state=\"awake\"} 1.0\nvllm:engine_sleep_state{engine=\"0\",model_name=\"stage3-document-qa\",sleep_state=\"weights_offloaded\"} 0.0\nvllm:engine_sleep_state{engine=\"0\",model_name=\"stage3-document-qa\",sleep_state=\"discard_all\"} 0.0\n# HELP vllm:kv_cache_usage_perc KV-cache usage. 1 means 100 percent usage.\n# TYPE vllm:kv_cache_usage_perc gauge\nvllm:kv_cache_usage_perc{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:prefix_cache_queries_total Prefix cache queries, in terms of number of queried tokens.\n# TYPE vllm:prefix_cache_queries_total counter\nvllm:prefix_cache_queries_total{engine=\"0\",model_name=\"stage3-document-qa\"} 98782.0\n# HELP vllm:prefix_cache_queries_created Prefix cache queries, in terms of number of queried tokens.\n# TYPE vllm:prefix_cache_queries_created gauge\nvllm:prefix_cache_queries_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042838056e+09\n# HELP vllm:prefix_cache_hits_total Prefix cache hits, in terms of number of cached tokens.\n# TYPE vllm:prefix_cache_hits_total counter\nvllm:prefix_cache_hits_total{engine=\"0\",model_name=\"stage3-document-qa\"} 32880.0\n# HELP vllm:prefix_cache_hits_created Prefix cache hits, in terms of number of cached tokens.\n# TYPE vllm:prefix_cache_hits_created gauge\nvllm:prefix_cache_hits_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.788965904283828e+09\n# HELP vllm:external_prefix_cache_queries_total External prefix cache queries from KV connector cross-instance cache sharing, in terms of number of queried tokens.\n# TYPE vllm:external_prefix_cache_queries_total counter\nvllm:external_prefix_cache_queries_total{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:external_prefix_cache_queries_created External prefix cache queries from KV connector cross-instance cache sharing, in terms of number of queried tokens.\n# TYPE vllm:external_prefix_cache_queries_created gauge\nvllm:external_prefix_cache_queries_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.788965904283858e+09\n# HELP vllm:external_prefix_cache_hits_total External prefix cache hits from KV connector cross-instance cache sharing, in terms of number of cached tokens.\n# TYPE vllm:external_prefix_cache_hits_total counter\nvllm:external_prefix_cache_hits_total{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:external_prefix_cache_hits_created External prefix cache hits from KV connector cross-instance cache sharing, in terms of number of cached tokens.\n# TYPE vllm:external_prefix_cache_hits_created gauge\nvllm:external_prefix_cache_hits_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042839086e+09\n# HELP vllm:mm_cache_queries_total Multi-modal cache queries, in terms of number of queried items.\n# TYPE vllm:mm_cache_queries_total counter\nvllm:mm_cache_queries_total{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:mm_cache_queries_created Multi-modal cache queries, in terms of number of queried items.\n# TYPE vllm:mm_cache_queries_created gauge\nvllm:mm_cache_queries_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.788965904283941e+09\n# HELP vllm:mm_cache_hits_total Multi-modal cache hits, in terms of number of cached items.\n# TYPE vllm:mm_cache_hits_total counter\nvllm:mm_cache_hits_total{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:mm_cache_hits_created Multi-modal cache hits, in terms of number of cached items.\n# TYPE vllm:mm_cache_hits_created gauge\nvllm:mm_cache_hits_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.788965904283971e+09\n# HELP vllm:num_preemptions_total Cumulative number of preemption from the engine.\n# TYPE vllm:num_preemptions_total counter\nvllm:num_preemptions_total{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:num_preemptions_created Cumulative number of preemption from the engine.\n# TYPE vllm:num_preemptions_created gauge\nvllm:num_preemptions_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042839978e+09\n# HELP vllm:prompt_tokens_total Number of prefill tokens processed.\n# TYPE vllm:prompt_tokens_total counter\nvllm:prompt_tokens_total{engine=\"0\",model_name=\"stage3-document-qa\"} 98782.0\n# HELP vllm:prompt_tokens_created Number of prefill tokens processed.\n# TYPE vllm:prompt_tokens_created gauge\nvllm:prompt_tokens_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042840147e+09\n# HELP vllm:prompt_tokens_by_source_total Number of prompt tokens by source.\n# TYPE vllm:prompt_tokens_by_source_total counter\nvllm:prompt_tokens_by_source_total{engine=\"0\",model_name=\"stage3-document-qa\",source=\"local_compute\"} 65902.0\nvllm:prompt_tokens_by_source_total{engine=\"0\",model_name=\"stage3-document-qa\",source=\"local_cache_hit\"} 32880.0\nvllm:prompt_tokens_by_source_total{engine=\"0\",model_name=\"stage3-document-qa\",source=\"external_kv_transfer\"} 0.0\n# HELP vllm:prompt_tokens_by_source_created Number of prompt tokens by source.\n# TYPE vllm:prompt_tokens_by_source_created gauge\nvllm:prompt_tokens_by_source_created{engine=\"0\",model_name=\"stage3-document-qa\",source=\"local_compute\"} 1.7889659042840412e+09\nvllm:prompt_tokens_by_source_created{engine=\"0\",model_name=\"stage3-document-qa\",source=\"local_cache_hit\"} 1.7889659042840652e+09\nvllm:prompt_tokens_by_source_created{engine=\"0\",model_name=\"stage3-document-qa\",source=\"external_kv_transfer\"} 1.7889659042840753e+09\n# HELP vllm:prompt_tokens_cached_total Number of cached prompt tokens (local + external).\n# TYPE vllm:prompt_tokens_cached_total counter\nvllm:prompt_tokens_cached_total{engine=\"0\",model_name=\"stage3-document-qa\"} 32880.0\n# HELP vllm:prompt_tokens_cached_created Number of cached prompt tokens (local + external).\n# TYPE vllm:prompt_tokens_cached_created gauge\nvllm:prompt_tokens_cached_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042841175e+09\n# HELP vllm:generation_tokens_total Number of generation tokens processed.\n# TYPE vllm:generation_tokens_total counter\nvllm:generation_tokens_total{engine=\"0\",model_name=\"stage3-document-qa\"} 352.0\n# HELP vllm:generation_tokens_created Number of generation tokens processed.\n# TYPE vllm:generation_tokens_created gauge\nvllm:generation_tokens_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042841318e+09\n# HELP vllm:request_success_total Count of successfully processed requests.\n# TYPE vllm:request_success_total counter\nvllm:request_success_total{engine=\"0\",finished_reason=\"stop\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_success_total{engine=\"0\",finished_reason=\"length\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_success_total{engine=\"0\",finished_reason=\"abort\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_success_total{engine=\"0\",finished_reason=\"error\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_success_total{engine=\"0\",finished_reason=\"repetition\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:request_success_created Count of successfully processed requests.\n# TYPE vllm:request_success_created gauge\nvllm:request_success_created{engine=\"0\",finished_reason=\"stop\",model_name=\"stage3-document-qa\"} 1.788965904284155e+09\nvllm:request_success_created{engine=\"0\",finished_reason=\"length\",model_name=\"stage3-document-qa\"} 1.7889659042841606e+09\nvllm:request_success_created{engine=\"0\",finished_reason=\"abort\",model_name=\"stage3-document-qa\"} 1.7889659042841835e+09\nvllm:request_success_created{engine=\"0\",finished_reason=\"error\",model_name=\"stage3-document-qa\"} 1.7889659042842035e+09\nvllm:request_success_created{engine=\"0\",finished_reason=\"repetition\",model_name=\"stage3-document-qa\"} 1.788965904284214e+09\n# HELP vllm:request_prompt_tokens Number of prefill tokens processed.\n# TYPE vllm:request_prompt_tokens histogram\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"100.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"200.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"500.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"1000.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"2000.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"5000.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"10000.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prompt_tokens_count{engine=\"0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prompt_tokens_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 98782.0\n# HELP vllm:request_prompt_tokens_created Number of prefill tokens processed.\n# TYPE vllm:request_prompt_tokens_created gauge\nvllm:request_prompt_tokens_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.788965904284282e+09\n# HELP vllm:request_generation_tokens Number of generation tokens processed.\n# TYPE vllm:request_generation_tokens histogram\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"100.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"200.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"500.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"1000.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"2000.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"5000.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"10000.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_generation_tokens_count{engine=\"0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_generation_tokens_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 352.0\n# HELP vllm:request_generation_tokens_created Number of generation tokens processed.\n# TYPE vllm:request_generation_tokens_created gauge\nvllm:request_generation_tokens_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042843666e+09\n# HELP vllm:iteration_tokens_total Histogram of number of tokens per engine_step.\n# TYPE vllm:iteration_tokens_total histogram\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 125.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"8.0\",model_name=\"stage3-document-qa\"} 234.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"16.0\",model_name=\"stage3-document-qa\"} 235.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"32.0\",model_name=\"stage3-document-qa\"} 237.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"64.0\",model_name=\"stage3-document-qa\"} 238.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"128.0\",model_name=\"stage3-document-qa\"} 238.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"256.0\",model_name=\"stage3-document-qa\"} 238.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"512.0\",model_name=\"stage3-document-qa\"} 238.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"1024.0\",model_name=\"stage3-document-qa\"} 238.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"2048.0\",model_name=\"stage3-document-qa\"} 238.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"4096.0\",model_name=\"stage3-document-qa\"} 238.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"8192.0\",model_name=\"stage3-document-qa\"} 238.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"16384.0\",model_name=\"stage3-document-qa\"} 238.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 242.0\nvllm:iteration_tokens_total_count{engine=\"0\",model_name=\"stage3-document-qa\"} 242.0\nvllm:iteration_tokens_total_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 66254.0\n# HELP vllm:iteration_tokens_total_created Histogram of number of tokens per engine_step.\n# TYPE vllm:iteration_tokens_total_created gauge\nvllm:iteration_tokens_total_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.788965904284432e+09\n# HELP vllm:request_max_num_generation_tokens Histogram of maximum number of requested generation tokens.\n# TYPE vllm:request_max_num_generation_tokens histogram\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"100.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"200.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"500.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"1000.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"2000.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"5000.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"10000.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_max_num_generation_tokens_count{engine=\"0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_max_num_generation_tokens_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 352.0\n# HELP vllm:request_max_num_generation_tokens_created Histogram of maximum number of requested generation tokens.\n# TYPE vllm:request_max_num_generation_tokens_created gauge\nvllm:request_max_num_generation_tokens_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042844791e+09\n# HELP vllm:request_params_n Histogram of the n request parameter.\n# TYPE vllm:request_params_n histogram\nvllm:request_params_n_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_params_n_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_params_n_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_params_n_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_params_n_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_params_n_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_params_n_count{engine=\"0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_params_n_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 8.0\n# HELP vllm:request_params_n_created Histogram of the n request parameter.\n# TYPE vllm:request_params_n_created gauge\nvllm:request_params_n_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042845085e+09\n# HELP vllm:request_params_max_tokens Histogram of the max_tokens request parameter.\n# TYPE vllm:request_params_max_tokens histogram\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"100.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"200.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"500.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"1000.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"2000.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"5000.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"10000.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_params_max_tokens_count{engine=\"0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_params_max_tokens_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 352.0\n# HELP vllm:request_params_max_tokens_created Histogram of the max_tokens request parameter.\n# TYPE vllm:request_params_max_tokens_created gauge\nvllm:request_params_max_tokens_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.788965904284529e+09\n# HELP vllm:time_to_first_token_seconds Histogram of time to first token in seconds.\n# TYPE vllm:time_to_first_token_seconds histogram\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.001\",model_name=\"stage3-document-qa\"} 0.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.005\",model_name=\"stage3-document-qa\"} 0.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.01\",model_name=\"stage3-document-qa\"} 0.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.02\",model_name=\"stage3-document-qa\"} 0.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.04\",model_name=\"stage3-document-qa\"} 0.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.06\",model_name=\"stage3-document-qa\"} 0.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.08\",model_name=\"stage3-document-qa\"} 0.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.1\",model_name=\"stage3-document-qa\"} 1.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.25\",model_name=\"stage3-document-qa\"} 4.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.5\",model_name=\"stage3-document-qa\"} 4.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.75\",model_name=\"stage3-document-qa\"} 4.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 4.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"2.5\",model_name=\"stage3-document-qa\"} 4.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 4.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"7.5\",model_name=\"stage3-document-qa\"} 7.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"40.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"80.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"160.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"640.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"2560.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 8.0\nvllm:time_to_first_token_seconds_count{engine=\"0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:time_to_first_token_seconds_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 29.903937339782715\n# HELP vllm:time_to_first_token_seconds_created Histogram of time to first token in seconds.\n# TYPE vllm:time_to_first_token_seconds_created gauge\nvllm:time_to_first_token_seconds_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042845712e+09\n# HELP vllm:inter_token_latency_seconds Histogram of inter-token latency in seconds.\n# TYPE vllm:inter_token_latency_seconds histogram\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.01\",model_name=\"stage3-document-qa\"} 0.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.025\",model_name=\"stage3-document-qa\"} 121.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.05\",model_name=\"stage3-document-qa\"} 342.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.075\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.1\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.15\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.2\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.3\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.4\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.5\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.75\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"2.5\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"7.5\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"40.0\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"80.0\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_count{engine=\"0\",model_name=\"stage3-document-qa\"} 344.0\nvllm:inter_token_latency_seconds_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 9.491885578999955\n# HELP vllm:inter_token_latency_seconds_created Histogram of inter-token latency in seconds.\n# TYPE vllm:inter_token_latency_seconds_created gauge\nvllm:inter_token_latency_seconds_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042846367e+09\n# HELP vllm:request_time_per_output_token_seconds Histogram of time_per_output_token_seconds per request.\n# TYPE vllm:request_time_per_output_token_seconds histogram\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.01\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.025\",model_name=\"stage3-document-qa\"} 5.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.05\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.075\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.1\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.15\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.2\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.3\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.4\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.5\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.75\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"2.5\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"7.5\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"40.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"80.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_count{engine=\"0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_time_per_output_token_seconds_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 0.19936487707138925\n# HELP vllm:request_time_per_output_token_seconds_created Histogram of time_per_output_token_seconds per request.\n# TYPE vllm:request_time_per_output_token_seconds_created gauge\nvllm:request_time_per_output_token_seconds_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042847037e+09\n# HELP vllm:e2e_request_latency_seconds Histogram of e2e request latency in seconds.\n# TYPE vllm:e2e_request_latency_seconds histogram\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"0.3\",model_name=\"stage3-document-qa\"} 0.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"0.5\",model_name=\"stage3-document-qa\"} 1.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"0.8\",model_name=\"stage3-document-qa\"} 2.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"1.5\",model_name=\"stage3-document-qa\"} 2.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"2.5\",model_name=\"stage3-document-qa\"} 2.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 4.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"15.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"30.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"40.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"60.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"120.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"240.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"480.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"960.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"1920.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"7680.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 8.0\nvllm:e2e_request_latency_seconds_count{engine=\"0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:e2e_request_latency_seconds_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 39.39428734779358\n# HELP vllm:e2e_request_latency_seconds_created Histogram of e2e request latency in seconds.\n# TYPE vllm:e2e_request_latency_seconds_created gauge\nvllm:e2e_request_latency_seconds_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042848108e+09\n# HELP vllm:request_queue_time_seconds Histogram of time spent in WAITING phase for request.\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"0.3\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"0.5\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"0.8\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"1.5\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"2.5\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"15.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"30.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"40.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"60.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"120.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"240.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"480.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"960.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"1920.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"7680.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_count{engine=\"0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_queue_time_seconds_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 7.858300000407326e-05\n# HELP vllm:request_queue_time_seconds_created Histogram of time spent in WAITING phase for request.\n# TYPE vllm:request_queue_time_seconds_created gauge\nvllm:request_queue_time_seconds_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042848628e+09\n# HELP vllm:request_inference_time_seconds Histogram of time spent in RUNNING phase for request.\n# TYPE vllm:request_inference_time_seconds histogram\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"0.3\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"0.5\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"0.8\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"1.5\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"2.5\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 4.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"15.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"30.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"40.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"60.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"120.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"240.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"480.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"960.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"1920.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"7680.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_inference_time_seconds_count{engine=\"0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_inference_time_seconds_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 39.25568863800001\n# HELP vllm:request_inference_time_seconds_created Histogram of time spent in RUNNING phase for request.\n# TYPE vllm:request_inference_time_seconds_created gauge\nvllm:request_inference_time_seconds_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.78896590428492e+09\n# HELP vllm:request_prefill_time_seconds Histogram of time spent in PREFILL phase for request.\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"0.3\",model_name=\"stage3-document-qa\"} 4.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"0.5\",model_name=\"stage3-document-qa\"} 4.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"0.8\",model_name=\"stage3-document-qa\"} 4.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 4.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"1.5\",model_name=\"stage3-document-qa\"} 4.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 4.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"2.5\",model_name=\"stage3-document-qa\"} 4.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 4.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"15.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"30.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"40.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"60.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"120.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"240.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"480.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"960.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"1920.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"7680.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prefill_time_seconds_count{engine=\"0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prefill_time_seconds_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 29.763803059000054\n# HELP vllm:request_prefill_time_seconds_created Histogram of time spent in PREFILL phase for request.\n# TYPE vllm:request_prefill_time_seconds_created gauge\nvllm:request_prefill_time_seconds_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042849686e+09\n# HELP vllm:request_decode_time_seconds Histogram of time spent in DECODE phase for request.\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"0.3\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"0.5\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"0.8\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"1.5\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"2.5\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"15.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"30.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"40.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"60.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"120.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"240.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"480.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"960.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"1920.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"7680.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_decode_time_seconds_count{engine=\"0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_decode_time_seconds_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 9.491885578999955\n# HELP vllm:request_decode_time_seconds_created Histogram of time spent in DECODE phase for request.\n# TYPE vllm:request_decode_time_seconds_created gauge\nvllm:request_decode_time_seconds_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042850304e+09\n# HELP vllm:request_prefill_kv_computed_tokens Histogram of new KV tokens computed during prefill (excluding cached tokens).\n# TYPE vllm:request_prefill_kv_computed_tokens histogram\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 1.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 3.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"100.0\",model_name=\"stage3-document-qa\"} 4.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"200.0\",model_name=\"stage3-document-qa\"} 4.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"500.0\",model_name=\"stage3-document-qa\"} 4.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"1000.0\",model_name=\"stage3-document-qa\"} 4.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"2000.0\",model_name=\"stage3-document-qa\"} 4.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"5000.0\",model_name=\"stage3-document-qa\"} 4.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"10000.0\",model_name=\"stage3-document-qa\"} 4.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prefill_kv_computed_tokens_count{engine=\"0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_prefill_kv_computed_tokens_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 65902.0\n# HELP vllm:request_prefill_kv_computed_tokens_created Histogram of new KV tokens computed during prefill (excluding cached tokens).\n# TYPE vllm:request_prefill_kv_computed_tokens_created gauge\nvllm:request_prefill_kv_computed_tokens_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042850986e+09\n# HELP vllm:cache_config_info Information of the LLMEngine CacheConfig\n# TYPE vllm:cache_config_info gauge\nvllm:cache_config_info{_block_size_resolved=\"True\",block_size=\"16\",cache_dtype=\"fp8_per_token_head\",calculate_kv_scales=\"True\",enable_prefix_caching=\"True\",engine=\"0\",gpu_memory_utilization=\"0.8\",hash_block_size=\"None\",is_attention_free=\"False\",kv_cache_dtype_skip_layers=\"[]\",kv_cache_memory_bytes=\"None\",kv_offloading_backend=\"native\",kv_offloading_size=\"None\",kv_sharing_fast_prefill=\"False\",mamba_block_size=\"None\",mamba_cache_dtype=\"auto\",mamba_cache_mode=\"none\",mamba_page_size_padded=\"None\",mamba_ssm_cache_dtype=\"auto\",num_cpu_blocks=\"None\",num_gpu_blocks=\"3480\",num_gpu_blocks_override=\"None\",prefix_caching_hash_algo=\"sha256\",sliding_window=\"None\",user_specified_block_size=\"False\",user_specified_mamba_block_size=\"False\"} 1.0\n# HELP http_requests_total Total number of requests by method, status and handler.\n# TYPE http_requests_total counter\nhttp_requests_total{handler=\"/v1/chat/completions\",method=\"POST\",status=\"2xx\"} 8.0\nhttp_requests_total{handler=\"/reset_prefix_cache\",method=\"POST\",status=\"2xx\"} 2.0\n# HELP http_requests_created Total number of requests by method, status and handler.\n# TYPE http_requests_created gauge\nhttp_requests_created{handler=\"/v1/chat/completions\",method=\"POST\",status=\"2xx\"} 1.7889659060900133e+09\nhttp_requests_created{handler=\"/reset_prefix_cache\",method=\"POST\",status=\"2xx\"} 1.788965906676199e+09\n# HELP http_request_size_bytes Content length of incoming requests by handler. Only value of header is respected. Otherwise ignored. No percentile calculated. \n# TYPE http_request_size_bytes summary\nhttp_request_size_bytes_count{handler=\"/v1/chat/completions\"} 8.0\nhttp_request_size_bytes_sum{handler=\"/v1/chat/completions\"} 933857.0\nhttp_request_size_bytes_count{handler=\"/reset_prefix_cache\"} 2.0\nhttp_request_size_bytes_sum{handler=\"/reset_prefix_cache\"} 4.0\n# HELP http_request_size_bytes_created Content length of incoming requests by handler. Only value of header is respected. Otherwise ignored. No percentile calculated. \n# TYPE http_request_size_bytes_created gauge\nhttp_request_size_bytes_created{handler=\"/v1/chat/completions\"} 1.788965906090029e+09\nhttp_request_size_bytes_created{handler=\"/reset_prefix_cache\"} 1.7889659066762116e+09\n# HELP http_response_size_bytes Content length of outgoing responses by handler. Only value of header is respected. Otherwise ignored. No percentile calculated. \n# TYPE http_response_size_bytes summary\nhttp_response_size_bytes_count{handler=\"/v1/chat/completions\"} 8.0\nhttp_response_size_bytes_sum{handler=\"/v1/chat/completions\"} 0.0\nhttp_response_size_bytes_count{handler=\"/reset_prefix_cache\"} 2.0\nhttp_response_size_bytes_sum{handler=\"/reset_prefix_cache\"} 0.0\n# HELP http_response_size_bytes_created Content length of outgoing responses by handler. Only value of header is respected. Otherwise ignored. No percentile calculated. \n# TYPE http_response_size_bytes_created gauge\nhttp_response_size_bytes_created{handler=\"/v1/chat/completions\"} 1.7889659060900471e+09\nhttp_response_size_bytes_created{handler=\"/reset_prefix_cache\"} 1.7889659066762247e+09\n# HELP http_request_duration_highr_seconds Latency with many buckets but no API specific labels. Made for more accurate percentile calculations. \n# TYPE http_request_duration_highr_seconds histogram\nhttp_request_duration_highr_seconds_bucket{le=\"0.01\"} 2.0\nhttp_request_duration_highr_seconds_bucket{le=\"0.025\"} 2.0\nhttp_request_duration_highr_seconds_bucket{le=\"0.05\"} 2.0\nhttp_request_duration_highr_seconds_bucket{le=\"0.075\"} 2.0\nhttp_request_duration_highr_seconds_bucket{le=\"0.1\"} 2.0\nhttp_request_duration_highr_seconds_bucket{le=\"0.25\"} 2.0\nhttp_request_duration_highr_seconds_bucket{le=\"0.5\"} 3.0\nhttp_request_duration_highr_seconds_bucket{le=\"0.75\"} 4.0\nhttp_request_duration_highr_seconds_bucket{le=\"1.0\"} 4.0\nhttp_request_duration_highr_seconds_bucket{le=\"1.5\"} 4.0\nhttp_request_duration_highr_seconds_bucket{le=\"2.0\"} 4.0\nhttp_request_duration_highr_seconds_bucket{le=\"2.5\"} 4.0\nhttp_request_duration_highr_seconds_bucket{le=\"3.0\"} 4.0\nhttp_request_duration_highr_seconds_bucket{le=\"3.5\"} 4.0\nhttp_request_duration_highr_seconds_bucket{le=\"4.0\"} 6.0\nhttp_request_duration_highr_seconds_bucket{le=\"4.5\"} 6.0\nhttp_request_duration_highr_seconds_bucket{le=\"5.0\"} 6.0\nhttp_request_duration_highr_seconds_bucket{le=\"7.5\"} 6.0\nhttp_request_duration_highr_seconds_bucket{le=\"10.0\"} 10.0\nhttp_request_duration_highr_seconds_bucket{le=\"30.0\"} 10.0\nhttp_request_duration_highr_seconds_bucket{le=\"60.0\"} 10.0\nhttp_request_duration_highr_seconds_bucket{le=\"+Inf\"} 10.0\nhttp_request_duration_highr_seconds_count 10.0\nhttp_request_duration_highr_seconds_sum 39.40867022999993\n# HELP http_request_duration_highr_seconds_created Latency with many buckets but no API specific labels. Made for more accurate percentile calculations. \n# TYPE http_request_duration_highr_seconds_created gauge\nhttp_request_duration_highr_seconds_created 1.7889659044085999e+09\n# HELP http_request_duration_seconds Latency with only few buckets by handler. Made to be only used if aggregation by handler is important. \n# TYPE http_request_duration_seconds histogram\nhttp_request_duration_seconds_bucket{handler=\"/v1/chat/completions\",le=\"0.1\",method=\"POST\"} 0.0\nhttp_request_duration_seconds_bucket{handler=\"/v1/chat/completions\",le=\"0.5\",method=\"POST\"} 1.0\nhttp_request_duration_seconds_bucket{handler=\"/v1/chat/completions\",le=\"1.0\",method=\"POST\"} 2.0\nhttp_request_duration_seconds_bucket{handler=\"/v1/chat/completions\",le=\"+Inf\",method=\"POST\"} 8.0\nhttp_request_duration_seconds_count{handler=\"/v1/chat/completions\",method=\"POST\"} 8.0\nhttp_request_duration_seconds_sum{handler=\"/v1/chat/completions\",method=\"POST\"} 39.403024169999924\nhttp_request_duration_seconds_bucket{handler=\"/reset_prefix_cache\",le=\"0.1\",method=\"POST\"} 2.0\nhttp_request_duration_seconds_bucket{handler=\"/reset_prefix_cache\",le=\"0.5\",method=\"POST\"} 2.0\nhttp_request_duration_seconds_bucket{handler=\"/reset_prefix_cache\",le=\"1.0\",method=\"POST\"} 2.0\nhttp_request_duration_seconds_bucket{handler=\"/reset_prefix_cache\",le=\"+Inf\",method=\"POST\"} 2.0\nhttp_request_duration_seconds_count{handler=\"/reset_prefix_cache\",method=\"POST\"} 2.0\nhttp_request_duration_seconds_sum{handler=\"/reset_prefix_cache\",method=\"POST\"} 0.005646060000003672\n# HELP http_request_duration_seconds_created Latency with only few buckets by handler. Made to be only used if aggregation by handler is important. \n# TYPE http_request_duration_seconds_created gauge\nhttp_request_duration_seconds_created{handler=\"/v1/chat/completions\",method=\"POST\"} 1.7889659060900655e+09\nhttp_request_duration_seconds_created{handler=\"/reset_prefix_cache\",method=\"POST\"} 1.7889659066762402e+09\n",
+    "selected": [
+      {
+        "name": "vllm:num_requests_running",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:num_requests_waiting",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:num_requests_waiting_by_reason",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa",
+          "reason": "capacity"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:num_requests_waiting_by_reason",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa",
+          "reason": "deferred"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:kv_cache_usage_perc",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:prefix_cache_queries_total",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 98782.0
+      },
+      {
+        "name": "vllm:prefix_cache_queries_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.2838056
+      },
+      {
+        "name": "vllm:prefix_cache_hits_total",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 32880.0
+      },
+      {
+        "name": "vllm:prefix_cache_hits_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.283828
+      },
+      {
+        "name": "vllm:external_prefix_cache_queries_total",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:external_prefix_cache_queries_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.283858
+      },
+      {
+        "name": "vllm:external_prefix_cache_hits_total",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:external_prefix_cache_hits_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.2839086
+      },
+      {
+        "name": "vllm:mm_cache_queries_total",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:mm_cache_queries_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.283941
+      },
+      {
+        "name": "vllm:mm_cache_hits_total",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:mm_cache_hits_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.283971
+      },
+      {
+        "name": "vllm:num_preemptions_total",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:num_preemptions_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.2839978
+      },
+      {
+        "name": "vllm:prompt_tokens_cached_total",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 32880.0
+      },
+      {
+        "name": "vllm:prompt_tokens_cached_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.2841175
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.3",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.8",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "2.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "2.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "5.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "10.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "15.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "20.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "30.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "40.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "50.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "60.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "120.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "240.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "480.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "960.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1920.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "7680.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "+Inf",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_count",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_sum",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 7.858300000407326e-05
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.2848628
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.3",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 4.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 4.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.8",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 4.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 4.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 4.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "2.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 4.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "2.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 4.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "5.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 4.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "10.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "15.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "20.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "30.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "40.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "50.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "60.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "120.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "240.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "480.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "960.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1920.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "7680.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "+Inf",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_count",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_sum",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 29.763803059000054
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.2849686
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.3",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.8",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "2.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "2.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "5.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "10.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "15.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "20.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "30.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "40.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "50.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "60.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "120.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "240.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "480.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "960.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1920.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "7680.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "+Inf",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_count",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_sum",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 9.491885578999955
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.2850304
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "2.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "5.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "10.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "20.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "50.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 3.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "100.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 4.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "200.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 4.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "500.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 4.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1000.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 4.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "2000.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 4.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "5000.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 4.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "10000.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 4.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "+Inf",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_count",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 8.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_sum",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 65902.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.2850986
+      },
+      {
+        "name": "vllm:cache_config_info",
+        "labels": {
+          "_block_size_resolved": "True",
+          "block_size": "16",
+          "cache_dtype": "fp8_per_token_head",
+          "calculate_kv_scales": "True",
+          "enable_prefix_caching": "True",
+          "engine": "0",
+          "gpu_memory_utilization": "0.8",
+          "hash_block_size": "None",
+          "is_attention_free": "False",
+          "kv_cache_dtype_skip_layers": "[]",
+          "kv_cache_memory_bytes": "None",
+          "kv_offloading_backend": "native",
+          "kv_offloading_size": "None",
+          "kv_sharing_fast_prefill": "False",
+          "mamba_block_size": "None",
+          "mamba_cache_dtype": "auto",
+          "mamba_cache_mode": "none",
+          "mamba_page_size_padded": "None",
+          "mamba_ssm_cache_dtype": "auto",
+          "num_cpu_blocks": "None",
+          "num_gpu_blocks": "3480",
+          "num_gpu_blocks_override": "None",
+          "prefix_caching_hash_algo": "sha256",
+          "sliding_window": "None",
+          "user_specified_block_size": "False",
+          "user_specified_mamba_block_size": "False"
+        },
+        "value": 1.0
+      }
+    ],
+    "cache_config": {
+      "_block_size_resolved": "True",
+      "block_size": "16",
+      "cache_dtype": "fp8_per_token_head",
+      "calculate_kv_scales": "True",
+      "enable_prefix_caching": "True",
+      "engine": "0",
+      "gpu_memory_utilization": "0.8",
+      "hash_block_size": "None",
+      "is_attention_free": "False",
+      "kv_cache_dtype_skip_layers": "[]",
+      "kv_cache_memory_bytes": "None",
+      "kv_offloading_backend": "native",
+      "kv_offloading_size": "None",
+      "kv_sharing_fast_prefill": "False",
+      "mamba_block_size": "None",
+      "mamba_cache_dtype": "auto",
+      "mamba_cache_mode": "none",
+      "mamba_page_size_padded": "None",
+      "mamba_ssm_cache_dtype": "auto",
+      "num_cpu_blocks": "None",
+      "num_gpu_blocks": "3480",
+      "num_gpu_blocks_override": "None",
+      "prefix_caching_hash_algo": "sha256",
+      "sliding_window": "None",
+      "user_specified_block_size": "False",
+      "user_specified_mamba_block_size": "False"
+    },
+    "captured_at": 1788965942.068195
+  },
+  "metrics_after": {
+    "status": 200,
+    "elapsed_seconds": 0.0038472239999975955,
+    "raw": "# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 12439.0\npython_gc_objects_collected_total{generation=\"1\"} 2552.0\npython_gc_objects_collected_total{generation=\"2\"} 344.0\n# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC\n# TYPE python_gc_objects_uncollectable_total counter\npython_gc_objects_uncollectable_total{generation=\"0\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"1\"} 0.0\npython_gc_objects_uncollectable_total{generation=\"2\"} 0.0\n# HELP python_gc_collections_total Number of times this generation was collected\n# TYPE python_gc_collections_total counter\npython_gc_collections_total{generation=\"0\"} 1375.0\npython_gc_collections_total{generation=\"1\"} 125.0\npython_gc_collections_total{generation=\"2\"} 9.0\n# HELP python_info Python platform information\n# TYPE python_info gauge\npython_info{implementation=\"CPython\",major=\"3\",minor=\"12\",patchlevel=\"3\",version=\"3.12.3\"} 1.0\n# HELP process_virtual_memory_bytes Virtual memory size in bytes.\n# TYPE process_virtual_memory_bytes gauge\nprocess_virtual_memory_bytes 1.2948369408e+10\n# HELP process_resident_memory_bytes Resident memory size in bytes.\n# TYPE process_resident_memory_bytes gauge\nprocess_resident_memory_bytes 1.302044672e+09\n# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.\n# TYPE process_start_time_seconds gauge\nprocess_start_time_seconds 1.78896588187e+09\n# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.\n# TYPE process_cpu_seconds_total counter\nprocess_cpu_seconds_total 14.12\n# HELP process_open_fds Number of open file descriptors.\n# TYPE process_open_fds gauge\nprocess_open_fds 50.0\n# HELP process_max_fds Maximum number of open file descriptors.\n# TYPE process_max_fds gauge\nprocess_max_fds 65535.0\n# HELP vllm:estimated_flops_per_gpu_total Estimated number of floating point operations per GPU (for Model Flops Utilization calculations).\n# TYPE vllm:estimated_flops_per_gpu_total counter\nvllm:estimated_flops_per_gpu_total{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:estimated_flops_per_gpu_created Estimated number of floating point operations per GPU (for Model Flops Utilization calculations).\n# TYPE vllm:estimated_flops_per_gpu_created gauge\nvllm:estimated_flops_per_gpu_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042835162e+09\n# HELP vllm:estimated_read_bytes_per_gpu_total Estimated number of bytes read from memory per GPU (for Model Flops Utilization calculations).\n# TYPE vllm:estimated_read_bytes_per_gpu_total counter\nvllm:estimated_read_bytes_per_gpu_total{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:estimated_read_bytes_per_gpu_created Estimated number of bytes read from memory per GPU (for Model Flops Utilization calculations).\n# TYPE vllm:estimated_read_bytes_per_gpu_created gauge\nvllm:estimated_read_bytes_per_gpu_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042835448e+09\n# HELP vllm:estimated_write_bytes_per_gpu_total Estimated number of bytes written to memory per GPU (for Model Flops Utilization calculations).\n# TYPE vllm:estimated_write_bytes_per_gpu_total counter\nvllm:estimated_write_bytes_per_gpu_total{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:estimated_write_bytes_per_gpu_created Estimated number of bytes written to memory per GPU (for Model Flops Utilization calculations).\n# TYPE vllm:estimated_write_bytes_per_gpu_created gauge\nvllm:estimated_write_bytes_per_gpu_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.788965904283561e+09\n# HELP vllm:num_requests_running Number of requests in model execution batches.\n# TYPE vllm:num_requests_running gauge\nvllm:num_requests_running{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:num_requests_waiting Number of requests waiting to be processed.\n# TYPE vllm:num_requests_waiting gauge\nvllm:num_requests_waiting{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:num_requests_waiting_by_reason Number of waiting requests by reason. Reason labels: 'capacity' = waiting for scheduling capacity; 'deferred' = deferred by transient constraints (LoRA budget, KV transfer, blocked status). Sum of all reasons equals vllm:num_requests_waiting.\n# TYPE vllm:num_requests_waiting_by_reason gauge\nvllm:num_requests_waiting_by_reason{engine=\"0\",model_name=\"stage3-document-qa\",reason=\"capacity\"} 0.0\nvllm:num_requests_waiting_by_reason{engine=\"0\",model_name=\"stage3-document-qa\",reason=\"deferred\"} 0.0\n# HELP vllm:engine_sleep_state Engine sleep state; awake = 0 means engine is sleeping; awake = 1 means engine is awake; weights_offloaded = 1 means sleep level 1; discard_all = 1 means sleep level 2.\n# TYPE vllm:engine_sleep_state gauge\nvllm:engine_sleep_state{engine=\"0\",model_name=\"stage3-document-qa\",sleep_state=\"awake\"} 1.0\nvllm:engine_sleep_state{engine=\"0\",model_name=\"stage3-document-qa\",sleep_state=\"weights_offloaded\"} 0.0\nvllm:engine_sleep_state{engine=\"0\",model_name=\"stage3-document-qa\",sleep_state=\"discard_all\"} 0.0\n# HELP vllm:kv_cache_usage_perc KV-cache usage. 1 means 100 percent usage.\n# TYPE vllm:kv_cache_usage_perc gauge\nvllm:kv_cache_usage_perc{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:prefix_cache_queries_total Prefix cache queries, in terms of number of queried tokens.\n# TYPE vllm:prefix_cache_queries_total counter\nvllm:prefix_cache_queries_total{engine=\"0\",model_name=\"stage3-document-qa\"} 148120.0\n# HELP vllm:prefix_cache_queries_created Prefix cache queries, in terms of number of queried tokens.\n# TYPE vllm:prefix_cache_queries_created gauge\nvllm:prefix_cache_queries_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042838056e+09\n# HELP vllm:prefix_cache_hits_total Prefix cache hits, in terms of number of cached tokens.\n# TYPE vllm:prefix_cache_hits_total counter\nvllm:prefix_cache_hits_total{engine=\"0\",model_name=\"stage3-document-qa\"} 65712.0\n# HELP vllm:prefix_cache_hits_created Prefix cache hits, in terms of number of cached tokens.\n# TYPE vllm:prefix_cache_hits_created gauge\nvllm:prefix_cache_hits_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.788965904283828e+09\n# HELP vllm:external_prefix_cache_queries_total External prefix cache queries from KV connector cross-instance cache sharing, in terms of number of queried tokens.\n# TYPE vllm:external_prefix_cache_queries_total counter\nvllm:external_prefix_cache_queries_total{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:external_prefix_cache_queries_created External prefix cache queries from KV connector cross-instance cache sharing, in terms of number of queried tokens.\n# TYPE vllm:external_prefix_cache_queries_created gauge\nvllm:external_prefix_cache_queries_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.788965904283858e+09\n# HELP vllm:external_prefix_cache_hits_total External prefix cache hits from KV connector cross-instance cache sharing, in terms of number of cached tokens.\n# TYPE vllm:external_prefix_cache_hits_total counter\nvllm:external_prefix_cache_hits_total{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:external_prefix_cache_hits_created External prefix cache hits from KV connector cross-instance cache sharing, in terms of number of cached tokens.\n# TYPE vllm:external_prefix_cache_hits_created gauge\nvllm:external_prefix_cache_hits_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042839086e+09\n# HELP vllm:mm_cache_queries_total Multi-modal cache queries, in terms of number of queried items.\n# TYPE vllm:mm_cache_queries_total counter\nvllm:mm_cache_queries_total{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:mm_cache_queries_created Multi-modal cache queries, in terms of number of queried items.\n# TYPE vllm:mm_cache_queries_created gauge\nvllm:mm_cache_queries_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.788965904283941e+09\n# HELP vllm:mm_cache_hits_total Multi-modal cache hits, in terms of number of cached items.\n# TYPE vllm:mm_cache_hits_total counter\nvllm:mm_cache_hits_total{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:mm_cache_hits_created Multi-modal cache hits, in terms of number of cached items.\n# TYPE vllm:mm_cache_hits_created gauge\nvllm:mm_cache_hits_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.788965904283971e+09\n# HELP vllm:num_preemptions_total Cumulative number of preemption from the engine.\n# TYPE vllm:num_preemptions_total counter\nvllm:num_preemptions_total{engine=\"0\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:num_preemptions_created Cumulative number of preemption from the engine.\n# TYPE vllm:num_preemptions_created gauge\nvllm:num_preemptions_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042839978e+09\n# HELP vllm:prompt_tokens_total Number of prefill tokens processed.\n# TYPE vllm:prompt_tokens_total counter\nvllm:prompt_tokens_total{engine=\"0\",model_name=\"stage3-document-qa\"} 148120.0\n# HELP vllm:prompt_tokens_created Number of prefill tokens processed.\n# TYPE vllm:prompt_tokens_created gauge\nvllm:prompt_tokens_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042840147e+09\n# HELP vllm:prompt_tokens_by_source_total Number of prompt tokens by source.\n# TYPE vllm:prompt_tokens_by_source_total counter\nvllm:prompt_tokens_by_source_total{engine=\"0\",model_name=\"stage3-document-qa\",source=\"local_compute\"} 82408.0\nvllm:prompt_tokens_by_source_total{engine=\"0\",model_name=\"stage3-document-qa\",source=\"local_cache_hit\"} 65712.0\nvllm:prompt_tokens_by_source_total{engine=\"0\",model_name=\"stage3-document-qa\",source=\"external_kv_transfer\"} 0.0\n# HELP vllm:prompt_tokens_by_source_created Number of prompt tokens by source.\n# TYPE vllm:prompt_tokens_by_source_created gauge\nvllm:prompt_tokens_by_source_created{engine=\"0\",model_name=\"stage3-document-qa\",source=\"local_compute\"} 1.7889659042840412e+09\nvllm:prompt_tokens_by_source_created{engine=\"0\",model_name=\"stage3-document-qa\",source=\"local_cache_hit\"} 1.7889659042840652e+09\nvllm:prompt_tokens_by_source_created{engine=\"0\",model_name=\"stage3-document-qa\",source=\"external_kv_transfer\"} 1.7889659042840753e+09\n# HELP vllm:prompt_tokens_cached_total Number of cached prompt tokens (local + external).\n# TYPE vllm:prompt_tokens_cached_total counter\nvllm:prompt_tokens_cached_total{engine=\"0\",model_name=\"stage3-document-qa\"} 65712.0\n# HELP vllm:prompt_tokens_cached_created Number of cached prompt tokens (local + external).\n# TYPE vllm:prompt_tokens_cached_created gauge\nvllm:prompt_tokens_cached_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042841175e+09\n# HELP vllm:generation_tokens_total Number of generation tokens processed.\n# TYPE vllm:generation_tokens_total counter\nvllm:generation_tokens_total{engine=\"0\",model_name=\"stage3-document-qa\"} 736.0\n# HELP vllm:generation_tokens_created Number of generation tokens processed.\n# TYPE vllm:generation_tokens_created gauge\nvllm:generation_tokens_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042841318e+09\n# HELP vllm:request_success_total Count of successfully processed requests.\n# TYPE vllm:request_success_total counter\nvllm:request_success_total{engine=\"0\",finished_reason=\"stop\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_success_total{engine=\"0\",finished_reason=\"length\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_success_total{engine=\"0\",finished_reason=\"abort\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_success_total{engine=\"0\",finished_reason=\"error\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_success_total{engine=\"0\",finished_reason=\"repetition\",model_name=\"stage3-document-qa\"} 0.0\n# HELP vllm:request_success_created Count of successfully processed requests.\n# TYPE vllm:request_success_created gauge\nvllm:request_success_created{engine=\"0\",finished_reason=\"stop\",model_name=\"stage3-document-qa\"} 1.788965904284155e+09\nvllm:request_success_created{engine=\"0\",finished_reason=\"length\",model_name=\"stage3-document-qa\"} 1.7889659042841606e+09\nvllm:request_success_created{engine=\"0\",finished_reason=\"abort\",model_name=\"stage3-document-qa\"} 1.7889659042841835e+09\nvllm:request_success_created{engine=\"0\",finished_reason=\"error\",model_name=\"stage3-document-qa\"} 1.7889659042842035e+09\nvllm:request_success_created{engine=\"0\",finished_reason=\"repetition\",model_name=\"stage3-document-qa\"} 1.788965904284214e+09\n# HELP vllm:request_prompt_tokens Number of prefill tokens processed.\n# TYPE vllm:request_prompt_tokens histogram\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"100.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"200.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"500.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"1000.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"2000.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"5000.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"10000.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_prompt_tokens_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prompt_tokens_count{engine=\"0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prompt_tokens_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 148120.0\n# HELP vllm:request_prompt_tokens_created Number of prefill tokens processed.\n# TYPE vllm:request_prompt_tokens_created gauge\nvllm:request_prompt_tokens_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.788965904284282e+09\n# HELP vllm:request_generation_tokens Number of generation tokens processed.\n# TYPE vllm:request_generation_tokens histogram\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"100.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"200.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"500.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"1000.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"2000.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"5000.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"10000.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_generation_tokens_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_generation_tokens_count{engine=\"0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_generation_tokens_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 736.0\n# HELP vllm:request_generation_tokens_created Number of generation tokens processed.\n# TYPE vllm:request_generation_tokens_created gauge\nvllm:request_generation_tokens_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042843666e+09\n# HELP vllm:iteration_tokens_total Histogram of number of tokens per engine_step.\n# TYPE vllm:iteration_tokens_total histogram\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 151.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"8.0\",model_name=\"stage3-document-qa\"} 386.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"16.0\",model_name=\"stage3-document-qa\"} 387.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"32.0\",model_name=\"stage3-document-qa\"} 391.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"64.0\",model_name=\"stage3-document-qa\"} 392.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"128.0\",model_name=\"stage3-document-qa\"} 392.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"256.0\",model_name=\"stage3-document-qa\"} 392.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"512.0\",model_name=\"stage3-document-qa\"} 392.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"1024.0\",model_name=\"stage3-document-qa\"} 392.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"2048.0\",model_name=\"stage3-document-qa\"} 392.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"4096.0\",model_name=\"stage3-document-qa\"} 392.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"8192.0\",model_name=\"stage3-document-qa\"} 392.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"16384.0\",model_name=\"stage3-document-qa\"} 392.0\nvllm:iteration_tokens_total_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 397.0\nvllm:iteration_tokens_total_count{engine=\"0\",model_name=\"stage3-document-qa\"} 397.0\nvllm:iteration_tokens_total_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 83144.0\n# HELP vllm:iteration_tokens_total_created Histogram of number of tokens per engine_step.\n# TYPE vllm:iteration_tokens_total_created gauge\nvllm:iteration_tokens_total_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.788965904284432e+09\n# HELP vllm:request_max_num_generation_tokens Histogram of maximum number of requested generation tokens.\n# TYPE vllm:request_max_num_generation_tokens histogram\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"100.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"200.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"500.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"1000.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"2000.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"5000.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"10000.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_max_num_generation_tokens_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_max_num_generation_tokens_count{engine=\"0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_max_num_generation_tokens_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 736.0\n# HELP vllm:request_max_num_generation_tokens_created Histogram of maximum number of requested generation tokens.\n# TYPE vllm:request_max_num_generation_tokens_created gauge\nvllm:request_max_num_generation_tokens_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042844791e+09\n# HELP vllm:request_params_n Histogram of the n request parameter.\n# TYPE vllm:request_params_n histogram\nvllm:request_params_n_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_params_n_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_params_n_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_params_n_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_params_n_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_params_n_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_params_n_count{engine=\"0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_params_n_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 11.0\n# HELP vllm:request_params_n_created Histogram of the n request parameter.\n# TYPE vllm:request_params_n_created gauge\nvllm:request_params_n_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042845085e+09\n# HELP vllm:request_params_max_tokens Histogram of the max_tokens request parameter.\n# TYPE vllm:request_params_max_tokens histogram\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"100.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"200.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"500.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"1000.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"2000.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"5000.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"10000.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_params_max_tokens_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_params_max_tokens_count{engine=\"0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_params_max_tokens_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 736.0\n# HELP vllm:request_params_max_tokens_created Histogram of the max_tokens request parameter.\n# TYPE vllm:request_params_max_tokens_created gauge\nvllm:request_params_max_tokens_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.788965904284529e+09\n# HELP vllm:time_to_first_token_seconds Histogram of time to first token in seconds.\n# TYPE vllm:time_to_first_token_seconds histogram\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.001\",model_name=\"stage3-document-qa\"} 0.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.005\",model_name=\"stage3-document-qa\"} 0.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.01\",model_name=\"stage3-document-qa\"} 0.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.02\",model_name=\"stage3-document-qa\"} 0.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.04\",model_name=\"stage3-document-qa\"} 0.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.06\",model_name=\"stage3-document-qa\"} 0.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.08\",model_name=\"stage3-document-qa\"} 0.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.1\",model_name=\"stage3-document-qa\"} 2.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.25\",model_name=\"stage3-document-qa\"} 5.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.5\",model_name=\"stage3-document-qa\"} 6.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"0.75\",model_name=\"stage3-document-qa\"} 6.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"2.5\",model_name=\"stage3-document-qa\"} 6.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"7.5\",model_name=\"stage3-document-qa\"} 9.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"40.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"80.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"160.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"640.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"2560.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:time_to_first_token_seconds_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 11.0\nvllm:time_to_first_token_seconds_count{engine=\"0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:time_to_first_token_seconds_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 38.60909914970398\n# HELP vllm:time_to_first_token_seconds_created Histogram of time to first token in seconds.\n# TYPE vllm:time_to_first_token_seconds_created gauge\nvllm:time_to_first_token_seconds_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042845712e+09\n# HELP vllm:inter_token_latency_seconds Histogram of inter-token latency in seconds.\n# TYPE vllm:inter_token_latency_seconds histogram\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.01\",model_name=\"stage3-document-qa\"} 0.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.025\",model_name=\"stage3-document-qa\"} 144.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.05\",model_name=\"stage3-document-qa\"} 705.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.075\",model_name=\"stage3-document-qa\"} 708.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.1\",model_name=\"stage3-document-qa\"} 710.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.15\",model_name=\"stage3-document-qa\"} 710.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.2\",model_name=\"stage3-document-qa\"} 710.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.3\",model_name=\"stage3-document-qa\"} 711.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.4\",model_name=\"stage3-document-qa\"} 711.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.5\",model_name=\"stage3-document-qa\"} 711.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"0.75\",model_name=\"stage3-document-qa\"} 715.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 717.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"2.5\",model_name=\"stage3-document-qa\"} 725.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 725.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"7.5\",model_name=\"stage3-document-qa\"} 725.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 725.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 725.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"40.0\",model_name=\"stage3-document-qa\"} 725.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"80.0\",model_name=\"stage3-document-qa\"} 725.0\nvllm:inter_token_latency_seconds_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 725.0\nvllm:inter_token_latency_seconds_count{engine=\"0\",model_name=\"stage3-document-qa\"} 725.0\nvllm:inter_token_latency_seconds_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 36.72866471599994\n# HELP vllm:inter_token_latency_seconds_created Histogram of inter-token latency in seconds.\n# TYPE vllm:inter_token_latency_seconds_created gauge\nvllm:inter_token_latency_seconds_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042846367e+09\n# HELP vllm:request_time_per_output_token_seconds Histogram of time_per_output_token_seconds per request.\n# TYPE vllm:request_time_per_output_token_seconds histogram\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.01\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.025\",model_name=\"stage3-document-qa\"} 5.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.05\",model_name=\"stage3-document-qa\"} 9.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.075\",model_name=\"stage3-document-qa\"} 9.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.1\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.15\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.2\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.3\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.4\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.5\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"0.75\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"2.5\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"7.5\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"40.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"80.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_time_per_output_token_seconds_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_time_per_output_token_seconds_count{engine=\"0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_time_per_output_token_seconds_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 0.41382770492178284\n# HELP vllm:request_time_per_output_token_seconds_created Histogram of time_per_output_token_seconds per request.\n# TYPE vllm:request_time_per_output_token_seconds_created gauge\nvllm:request_time_per_output_token_seconds_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042847037e+09\n# HELP vllm:e2e_request_latency_seconds Histogram of e2e request latency in seconds.\n# TYPE vllm:e2e_request_latency_seconds histogram\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"0.3\",model_name=\"stage3-document-qa\"} 0.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"0.5\",model_name=\"stage3-document-qa\"} 1.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"0.8\",model_name=\"stage3-document-qa\"} 2.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"1.5\",model_name=\"stage3-document-qa\"} 2.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"2.5\",model_name=\"stage3-document-qa\"} 2.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 4.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"15.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"30.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"40.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"60.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"120.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"240.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"480.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"960.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"1920.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"7680.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:e2e_request_latency_seconds_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 11.0\nvllm:e2e_request_latency_seconds_count{engine=\"0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:e2e_request_latency_seconds_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 75.33616662025452\n# HELP vllm:e2e_request_latency_seconds_created Histogram of e2e request latency in seconds.\n# TYPE vllm:e2e_request_latency_seconds_created gauge\nvllm:e2e_request_latency_seconds_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042848108e+09\n# HELP vllm:request_queue_time_seconds Histogram of time spent in WAITING phase for request.\n# TYPE vllm:request_queue_time_seconds histogram\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"0.3\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"0.5\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"0.8\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"1.5\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"2.5\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"15.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"30.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"40.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"60.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"120.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"240.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"480.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"960.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"1920.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"7680.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_count{engine=\"0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_queue_time_seconds_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 0.00010221899998441586\n# HELP vllm:request_queue_time_seconds_created Histogram of time spent in WAITING phase for request.\n# TYPE vllm:request_queue_time_seconds_created gauge\nvllm:request_queue_time_seconds_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042848628e+09\n# HELP vllm:request_inference_time_seconds Histogram of time spent in RUNNING phase for request.\n# TYPE vllm:request_inference_time_seconds histogram\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"0.3\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"0.5\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"0.8\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"1.5\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"2.5\",model_name=\"stage3-document-qa\"} 2.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 4.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 8.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"15.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"30.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"40.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"60.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"120.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"240.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"480.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"960.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"1920.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"7680.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_inference_time_seconds_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_inference_time_seconds_count{engine=\"0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_inference_time_seconds_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 75.07987576900004\n# HELP vllm:request_inference_time_seconds_created Histogram of time spent in RUNNING phase for request.\n# TYPE vllm:request_inference_time_seconds_created gauge\nvllm:request_inference_time_seconds_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.78896590428492e+09\n# HELP vllm:request_prefill_time_seconds Histogram of time spent in PREFILL phase for request.\n# TYPE vllm:request_prefill_time_seconds histogram\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"0.3\",model_name=\"stage3-document-qa\"} 5.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"0.5\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"0.8\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"1.5\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"2.5\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"15.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"30.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"40.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"60.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"120.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"240.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"480.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"960.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"1920.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"7680.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prefill_time_seconds_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prefill_time_seconds_count{engine=\"0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prefill_time_seconds_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 38.3512110530001\n# HELP vllm:request_prefill_time_seconds_created Histogram of time spent in PREFILL phase for request.\n# TYPE vllm:request_prefill_time_seconds_created gauge\nvllm:request_prefill_time_seconds_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042849686e+09\n# HELP vllm:request_decode_time_seconds Histogram of time spent in DECODE phase for request.\n# TYPE vllm:request_decode_time_seconds histogram\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"0.3\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"0.5\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"0.8\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"1.5\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"2.5\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 9.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 9.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"15.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"30.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"40.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"60.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"120.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"240.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"480.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"960.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"1920.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"7680.0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_decode_time_seconds_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_decode_time_seconds_count{engine=\"0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_decode_time_seconds_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 36.72866471599994\n# HELP vllm:request_decode_time_seconds_created Histogram of time spent in DECODE phase for request.\n# TYPE vllm:request_decode_time_seconds_created gauge\nvllm:request_decode_time_seconds_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042850304e+09\n# HELP vllm:request_prefill_kv_computed_tokens Histogram of new KV tokens computed during prefill (excluding cached tokens).\n# TYPE vllm:request_prefill_kv_computed_tokens histogram\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"1.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"2.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"5.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"10.0\",model_name=\"stage3-document-qa\"} 0.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"20.0\",model_name=\"stage3-document-qa\"} 1.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"50.0\",model_name=\"stage3-document-qa\"} 5.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"100.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"200.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"500.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"1000.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"2000.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"5000.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"10000.0\",model_name=\"stage3-document-qa\"} 6.0\nvllm:request_prefill_kv_computed_tokens_bucket{engine=\"0\",le=\"+Inf\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prefill_kv_computed_tokens_count{engine=\"0\",model_name=\"stage3-document-qa\"} 11.0\nvllm:request_prefill_kv_computed_tokens_sum{engine=\"0\",model_name=\"stage3-document-qa\"} 82408.0\n# HELP vllm:request_prefill_kv_computed_tokens_created Histogram of new KV tokens computed during prefill (excluding cached tokens).\n# TYPE vllm:request_prefill_kv_computed_tokens_created gauge\nvllm:request_prefill_kv_computed_tokens_created{engine=\"0\",model_name=\"stage3-document-qa\"} 1.7889659042850986e+09\n# HELP vllm:cache_config_info Information of the LLMEngine CacheConfig\n# TYPE vllm:cache_config_info gauge\nvllm:cache_config_info{_block_size_resolved=\"True\",block_size=\"16\",cache_dtype=\"fp8_per_token_head\",calculate_kv_scales=\"True\",enable_prefix_caching=\"True\",engine=\"0\",gpu_memory_utilization=\"0.8\",hash_block_size=\"None\",is_attention_free=\"False\",kv_cache_dtype_skip_layers=\"[]\",kv_cache_memory_bytes=\"None\",kv_offloading_backend=\"native\",kv_offloading_size=\"None\",kv_sharing_fast_prefill=\"False\",mamba_block_size=\"None\",mamba_cache_dtype=\"auto\",mamba_cache_mode=\"none\",mamba_page_size_padded=\"None\",mamba_ssm_cache_dtype=\"auto\",num_cpu_blocks=\"None\",num_gpu_blocks=\"3480\",num_gpu_blocks_override=\"None\",prefix_caching_hash_algo=\"sha256\",sliding_window=\"None\",user_specified_block_size=\"False\",user_specified_mamba_block_size=\"False\"} 1.0\n# HELP http_requests_total Total number of requests by method, status and handler.\n# TYPE http_requests_total counter\nhttp_requests_total{handler=\"/v1/chat/completions\",method=\"POST\",status=\"2xx\"} 11.0\nhttp_requests_total{handler=\"/reset_prefix_cache\",method=\"POST\",status=\"2xx\"} 2.0\n# HELP http_requests_created Total number of requests by method, status and handler.\n# TYPE http_requests_created gauge\nhttp_requests_created{handler=\"/v1/chat/completions\",method=\"POST\",status=\"2xx\"} 1.7889659060900133e+09\nhttp_requests_created{handler=\"/reset_prefix_cache\",method=\"POST\",status=\"2xx\"} 1.788965906676199e+09\n# HELP http_request_size_bytes Content length of incoming requests by handler. Only value of header is respected. Otherwise ignored. No percentile calculated. \n# TYPE http_request_size_bytes summary\nhttp_request_size_bytes_count{handler=\"/v1/chat/completions\"} 11.0\nhttp_request_size_bytes_sum{handler=\"/v1/chat/completions\"} 1.400062e+06\nhttp_request_size_bytes_count{handler=\"/reset_prefix_cache\"} 2.0\nhttp_request_size_bytes_sum{handler=\"/reset_prefix_cache\"} 4.0\n# HELP http_request_size_bytes_created Content length of incoming requests by handler. Only value of header is respected. Otherwise ignored. No percentile calculated. \n# TYPE http_request_size_bytes_created gauge\nhttp_request_size_bytes_created{handler=\"/v1/chat/completions\"} 1.788965906090029e+09\nhttp_request_size_bytes_created{handler=\"/reset_prefix_cache\"} 1.7889659066762116e+09\n# HELP http_response_size_bytes Content length of outgoing responses by handler. Only value of header is respected. Otherwise ignored. No percentile calculated. \n# TYPE http_response_size_bytes summary\nhttp_response_size_bytes_count{handler=\"/v1/chat/completions\"} 11.0\nhttp_response_size_bytes_sum{handler=\"/v1/chat/completions\"} 0.0\nhttp_response_size_bytes_count{handler=\"/reset_prefix_cache\"} 2.0\nhttp_response_size_bytes_sum{handler=\"/reset_prefix_cache\"} 0.0\n# HELP http_response_size_bytes_created Content length of outgoing responses by handler. Only value of header is respected. Otherwise ignored. No percentile calculated. \n# TYPE http_response_size_bytes_created gauge\nhttp_response_size_bytes_created{handler=\"/v1/chat/completions\"} 1.7889659060900471e+09\nhttp_response_size_bytes_created{handler=\"/reset_prefix_cache\"} 1.7889659066762247e+09\n# HELP http_request_duration_highr_seconds Latency with many buckets but no API specific labels. Made for more accurate percentile calculations. \n# TYPE http_request_duration_highr_seconds histogram\nhttp_request_duration_highr_seconds_bucket{le=\"0.01\"} 2.0\nhttp_request_duration_highr_seconds_bucket{le=\"0.025\"} 2.0\nhttp_request_duration_highr_seconds_bucket{le=\"0.05\"} 2.0\nhttp_request_duration_highr_seconds_bucket{le=\"0.075\"} 2.0\nhttp_request_duration_highr_seconds_bucket{le=\"0.1\"} 2.0\nhttp_request_duration_highr_seconds_bucket{le=\"0.25\"} 2.0\nhttp_request_duration_highr_seconds_bucket{le=\"0.5\"} 3.0\nhttp_request_duration_highr_seconds_bucket{le=\"0.75\"} 4.0\nhttp_request_duration_highr_seconds_bucket{le=\"1.0\"} 4.0\nhttp_request_duration_highr_seconds_bucket{le=\"1.5\"} 4.0\nhttp_request_duration_highr_seconds_bucket{le=\"2.0\"} 4.0\nhttp_request_duration_highr_seconds_bucket{le=\"2.5\"} 4.0\nhttp_request_duration_highr_seconds_bucket{le=\"3.0\"} 4.0\nhttp_request_duration_highr_seconds_bucket{le=\"3.5\"} 4.0\nhttp_request_duration_highr_seconds_bucket{le=\"4.0\"} 6.0\nhttp_request_duration_highr_seconds_bucket{le=\"4.5\"} 6.0\nhttp_request_duration_highr_seconds_bucket{le=\"5.0\"} 6.0\nhttp_request_duration_highr_seconds_bucket{le=\"7.5\"} 6.0\nhttp_request_duration_highr_seconds_bucket{le=\"10.0\"} 10.0\nhttp_request_duration_highr_seconds_bucket{le=\"30.0\"} 13.0\nhttp_request_duration_highr_seconds_bucket{le=\"60.0\"} 13.0\nhttp_request_duration_highr_seconds_bucket{le=\"+Inf\"} 13.0\nhttp_request_duration_highr_seconds_count 13.0\nhttp_request_duration_highr_seconds_sum 75.35505605099993\n# HELP http_request_duration_highr_seconds_created Latency with many buckets but no API specific labels. Made for more accurate percentile calculations. \n# TYPE http_request_duration_highr_seconds_created gauge\nhttp_request_duration_highr_seconds_created 1.7889659044085999e+09\n# HELP http_request_duration_seconds Latency with only few buckets by handler. Made to be only used if aggregation by handler is important. \n# TYPE http_request_duration_seconds histogram\nhttp_request_duration_seconds_bucket{handler=\"/v1/chat/completions\",le=\"0.1\",method=\"POST\"} 0.0\nhttp_request_duration_seconds_bucket{handler=\"/v1/chat/completions\",le=\"0.5\",method=\"POST\"} 1.0\nhttp_request_duration_seconds_bucket{handler=\"/v1/chat/completions\",le=\"1.0\",method=\"POST\"} 2.0\nhttp_request_duration_seconds_bucket{handler=\"/v1/chat/completions\",le=\"+Inf\",method=\"POST\"} 11.0\nhttp_request_duration_seconds_count{handler=\"/v1/chat/completions\",method=\"POST\"} 11.0\nhttp_request_duration_seconds_sum{handler=\"/v1/chat/completions\",method=\"POST\"} 75.34940999099993\nhttp_request_duration_seconds_bucket{handler=\"/reset_prefix_cache\",le=\"0.1\",method=\"POST\"} 2.0\nhttp_request_duration_seconds_bucket{handler=\"/reset_prefix_cache\",le=\"0.5\",method=\"POST\"} 2.0\nhttp_request_duration_seconds_bucket{handler=\"/reset_prefix_cache\",le=\"1.0\",method=\"POST\"} 2.0\nhttp_request_duration_seconds_bucket{handler=\"/reset_prefix_cache\",le=\"+Inf\",method=\"POST\"} 2.0\nhttp_request_duration_seconds_count{handler=\"/reset_prefix_cache\",method=\"POST\"} 2.0\nhttp_request_duration_seconds_sum{handler=\"/reset_prefix_cache\",method=\"POST\"} 0.005646060000003672\n# HELP http_request_duration_seconds_created Latency with only few buckets by handler. Made to be only used if aggregation by handler is important. \n# TYPE http_request_duration_seconds_created gauge\nhttp_request_duration_seconds_created{handler=\"/v1/chat/completions\",method=\"POST\"} 1.7889659060900655e+09\nhttp_request_duration_seconds_created{handler=\"/reset_prefix_cache\",method=\"POST\"} 1.7889659066762402e+09\n",
+    "selected": [
+      {
+        "name": "vllm:num_requests_running",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:num_requests_waiting",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:num_requests_waiting_by_reason",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa",
+          "reason": "capacity"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:num_requests_waiting_by_reason",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa",
+          "reason": "deferred"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:kv_cache_usage_perc",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:prefix_cache_queries_total",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 148120.0
+      },
+      {
+        "name": "vllm:prefix_cache_queries_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.2838056
+      },
+      {
+        "name": "vllm:prefix_cache_hits_total",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 65712.0
+      },
+      {
+        "name": "vllm:prefix_cache_hits_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.283828
+      },
+      {
+        "name": "vllm:external_prefix_cache_queries_total",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:external_prefix_cache_queries_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.283858
+      },
+      {
+        "name": "vllm:external_prefix_cache_hits_total",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:external_prefix_cache_hits_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.2839086
+      },
+      {
+        "name": "vllm:mm_cache_queries_total",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:mm_cache_queries_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.283941
+      },
+      {
+        "name": "vllm:mm_cache_hits_total",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:mm_cache_hits_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.283971
+      },
+      {
+        "name": "vllm:num_preemptions_total",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:num_preemptions_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.2839978
+      },
+      {
+        "name": "vllm:prompt_tokens_cached_total",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 65712.0
+      },
+      {
+        "name": "vllm:prompt_tokens_cached_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.2841175
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.3",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.8",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "2.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "2.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "5.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "10.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "15.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "20.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "30.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "40.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "50.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "60.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "120.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "240.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "480.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "960.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1920.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "7680.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "+Inf",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_count",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_sum",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.00010221899998441586
+      },
+      {
+        "name": "vllm:request_queue_time_seconds_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.2848628
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.3",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 5.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.8",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "2.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "2.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "5.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "10.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "15.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "20.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "30.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "40.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "50.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "60.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "120.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "240.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "480.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "960.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1920.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "7680.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "+Inf",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_count",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_sum",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 38.3512110530001
+      },
+      {
+        "name": "vllm:request_prefill_time_seconds_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.2849686
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.3",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "0.8",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "2.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "2.5",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "5.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 9.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "10.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 9.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "15.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "20.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "30.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "40.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "50.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "60.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "120.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "240.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "480.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "960.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1920.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "7680.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "+Inf",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_count",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_sum",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 36.72866471599994
+      },
+      {
+        "name": "vllm:request_decode_time_seconds_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.2850304
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "2.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "5.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "10.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 0.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "20.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "50.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 5.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "100.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "200.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "500.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "1000.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "2000.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "5000.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "10000.0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 6.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+        "labels": {
+          "engine": "0",
+          "le": "+Inf",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_count",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 11.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_sum",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 82408.0
+      },
+      {
+        "name": "vllm:request_prefill_kv_computed_tokens_created",
+        "labels": {
+          "engine": "0",
+          "model_name": "stage3-document-qa"
+        },
+        "value": 1788965904.2850986
+      },
+      {
+        "name": "vllm:cache_config_info",
+        "labels": {
+          "_block_size_resolved": "True",
+          "block_size": "16",
+          "cache_dtype": "fp8_per_token_head",
+          "calculate_kv_scales": "True",
+          "enable_prefix_caching": "True",
+          "engine": "0",
+          "gpu_memory_utilization": "0.8",
+          "hash_block_size": "None",
+          "is_attention_free": "False",
+          "kv_cache_dtype_skip_layers": "[]",
+          "kv_cache_memory_bytes": "None",
+          "kv_offloading_backend": "native",
+          "kv_offloading_size": "None",
+          "kv_sharing_fast_prefill": "False",
+          "mamba_block_size": "None",
+          "mamba_cache_dtype": "auto",
+          "mamba_cache_mode": "none",
+          "mamba_page_size_padded": "None",
+          "mamba_ssm_cache_dtype": "auto",
+          "num_cpu_blocks": "None",
+          "num_gpu_blocks": "3480",
+          "num_gpu_blocks_override": "None",
+          "prefix_caching_hash_algo": "sha256",
+          "sliding_window": "None",
+          "user_specified_block_size": "False",
+          "user_specified_mamba_block_size": "False"
+        },
+        "value": 1.0
+      }
+    ],
+    "cache_config": {
+      "_block_size_resolved": "True",
+      "block_size": "16",
+      "cache_dtype": "fp8_per_token_head",
+      "calculate_kv_scales": "True",
+      "enable_prefix_caching": "True",
+      "engine": "0",
+      "gpu_memory_utilization": "0.8",
+      "hash_block_size": "None",
+      "is_attention_free": "False",
+      "kv_cache_dtype_skip_layers": "[]",
+      "kv_cache_memory_bytes": "None",
+      "kv_offloading_backend": "native",
+      "kv_offloading_size": "None",
+      "kv_sharing_fast_prefill": "False",
+      "mamba_block_size": "None",
+      "mamba_cache_dtype": "auto",
+      "mamba_cache_mode": "none",
+      "mamba_page_size_padded": "None",
+      "mamba_ssm_cache_dtype": "auto",
+      "num_cpu_blocks": "None",
+      "num_gpu_blocks": "3480",
+      "num_gpu_blocks_override": "None",
+      "prefix_caching_hash_algo": "sha256",
+      "sliding_window": "None",
+      "user_specified_block_size": "False",
+      "user_specified_mamba_block_size": "False"
+    },
+    "captured_at": 1788965954.7447195
+  },
+  "metric_deltas": [
+    {
+      "name": "vllm:cache_config_info",
+      "labels": {
+        "_block_size_resolved": "True",
+        "block_size": "16",
+        "cache_dtype": "fp8_per_token_head",
+        "calculate_kv_scales": "True",
+        "enable_prefix_caching": "True",
+        "engine": "0",
+        "gpu_memory_utilization": "0.8",
+        "hash_block_size": "None",
+        "is_attention_free": "False",
+        "kv_cache_dtype_skip_layers": "[]",
+        "kv_cache_memory_bytes": "None",
+        "kv_offloading_backend": "native",
+        "kv_offloading_size": "None",
+        "kv_sharing_fast_prefill": "False",
+        "mamba_block_size": "None",
+        "mamba_cache_dtype": "auto",
+        "mamba_cache_mode": "none",
+        "mamba_page_size_padded": "None",
+        "mamba_ssm_cache_dtype": "auto",
+        "num_cpu_blocks": "None",
+        "num_gpu_blocks": "3480",
+        "num_gpu_blocks_override": "None",
+        "prefix_caching_hash_algo": "sha256",
+        "sliding_window": "None",
+        "user_specified_block_size": "False",
+        "user_specified_mamba_block_size": "False"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:external_prefix_cache_hits_created",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:external_prefix_cache_hits_total",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:external_prefix_cache_queries_created",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:external_prefix_cache_queries_total",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:kv_cache_usage_perc",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:mm_cache_hits_created",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:mm_cache_hits_total",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:mm_cache_queries_created",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:mm_cache_queries_total",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:num_preemptions_created",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:num_preemptions_total",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:num_requests_running",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:num_requests_waiting",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:num_requests_waiting_by_reason",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa",
+        "reason": "capacity"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:num_requests_waiting_by_reason",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa",
+        "reason": "deferred"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:prefix_cache_hits_created",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:prefix_cache_hits_total",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 32832.0
+    },
+    {
+      "name": "vllm:prefix_cache_queries_created",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:prefix_cache_queries_total",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 49338.0
+    },
+    {
+      "name": "vllm:prompt_tokens_cached_created",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:prompt_tokens_cached_total",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 32832.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "+Inf",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "0.3",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "0.5",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "0.8",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "1.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "1.5",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "10.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 1.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "120.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "15.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "1920.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "2.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "2.5",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "20.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "240.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "30.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "40.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "480.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "5.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 1.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "50.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "60.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "7680.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "960.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_count",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_created",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:request_decode_time_seconds_sum",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 27.236779136999985
+    },
+    {
+      "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "+Inf",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "1.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "10.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "100.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 2.0
+    },
+    {
+      "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "1000.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 2.0
+    },
+    {
+      "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "10000.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 2.0
+    },
+    {
+      "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "2.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "20.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "200.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 2.0
+    },
+    {
+      "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "2000.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 2.0
+    },
+    {
+      "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "5.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "50.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 2.0
+    },
+    {
+      "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "500.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 2.0
+    },
+    {
+      "name": "vllm:request_prefill_kv_computed_tokens_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "5000.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 2.0
+    },
+    {
+      "name": "vllm:request_prefill_kv_computed_tokens_count",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_prefill_kv_computed_tokens_created",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:request_prefill_kv_computed_tokens_sum",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 16506.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "+Inf",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "0.3",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 1.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "0.5",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 2.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "0.8",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 2.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "1.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 2.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "1.5",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 2.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "10.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "120.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "15.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "1920.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "2.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 2.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "2.5",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 2.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "20.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "240.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "30.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "40.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "480.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "5.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 2.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "50.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "60.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "7680.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "960.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_count",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_created",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:request_prefill_time_seconds_sum",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 8.587407994000046
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "+Inf",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "0.3",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "0.5",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "0.8",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "1.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "1.5",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "10.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "120.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "15.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "1920.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "2.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "2.5",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "20.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "240.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "30.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "40.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "480.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "5.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "50.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "60.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "7680.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_bucket",
+      "labels": {
+        "engine": "0",
+        "le": "960.0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_count",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 3.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_created",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 0.0
+    },
+    {
+      "name": "vllm:request_queue_time_seconds_sum",
+      "labels": {
+        "engine": "0",
+        "model_name": "stage3-document-qa"
+      },
+      "delta": 2.3635999980342604e-05
+    }
+  ],
+  "preemptions": 0.0
+}
