@@ -97,8 +97,8 @@ def prepare():
     print('Material and version preflight passed',flush=True)
 
 class Budget:
-    def __init__(self):
-        self.start=time.time()
+    def __init__(self,original_start=None):
+        self.start=time.time() if original_start is None else original_start
         self.deadline=self.start+1800
         self.events=[]
         self.record('start')
@@ -175,7 +175,20 @@ def numerical_checks():
     write_json(OUT/'numerical-checks.json',{'comparisons':results,'cache_bytes_unchanged':True})
     print('Numerical gate passed',flush=True)
 
-def run():
+def run(recover_environment=False):
+    original_start=None
+    if recover_environment:
+        # A single explicit pre-measurement exception, never a numerical/performance rerun.
+        if (OUT/'environment-attempt').exists() or (OUT/'numerical-checks.json').exists() or (OUT/'measurements.json').exists():
+            raise RuntimeError('Environment recovery not allowed after any numerical result or prior recovery')
+        log=(OUT/'numerical.log').read_text()
+        if 'Python.h: No such file or directory' not in log or any(OUT.glob('r*-*')):
+            raise RuntimeError('Only missing-header pre-measurement recovery is allowed')
+        original_start=json.loads((OUT/'budget.json').read_text())['started_epoch']
+        archive=OUT/'environment-attempt'
+        archive.mkdir()
+        for name in ['budget.json','protocol.json','failure.json','numerical.log','cleanup.json']:
+            (OUT/name).rename(archive/name)
     if (OUT/'budget.json').exists():
         raise RuntimeError('Refuse existing GPU evidence')
     if port_open(config('bf16')):
@@ -183,11 +196,18 @@ def run():
     data=json.loads((OUT/'materials.json').read_text(encoding='utf-8'))
     write_json(OUT/'protocol.json',{'sources':hashes(source_paths()),
         'git_head':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()})
-    budget=Budget()
+    budget=Budget(original_start)
     rows=[]
     try:
         # A subprocess frees its CUDA context/allocations before server profiling.
-        result=subprocess.run([sys.executable,__file__,'numerical'],capture_output=True,text=True,timeout=120)
+        budget.ensure(120,120)
+        _,_,headers=OwnedVllm(config('bf16'),OUT/'unused')._paths()
+        if not Path(headers,'Python.h').is_file():
+            raise RuntimeError('Existing Python development headers unavailable')
+        numeric_env=dict(os.environ)
+        numeric_env['C_INCLUDE_PATH']=headers+':'+str(Path(headers).parent)
+        write_json(OUT/'numerical-environment.json',{'C_INCLUDE_PATH':numeric_env['C_INCLUDE_PATH']})
+        result=subprocess.run([sys.executable,__file__,'numerical'],capture_output=True,text=True,timeout=120,env=numeric_env)
         (OUT/'numerical.log').write_text(result.stdout+result.stderr,encoding='utf-8')
         if result.returncode:
             raise RuntimeError('Numerical checks failed; see numerical.log')
@@ -242,5 +262,6 @@ def run():
 if __name__=='__main__':
     signal.signal(signal.SIGTERM,lambda *_: (_ for _ in ()).throw(KeyboardInterrupt()))
     parser=argparse.ArgumentParser()
-    parser.add_argument('phase',choices=['prepare','run','numerical'])
-    {'prepare':prepare,'run':run,'numerical':numerical_checks}[parser.parse_args().phase]()
+    parser.add_argument('phase',choices=['prepare','run','numerical','recover-environment'])
+    {'prepare':prepare,'run':run,'numerical':numerical_checks,
+     'recover-environment':lambda:run(True)}[parser.parse_args().phase]()

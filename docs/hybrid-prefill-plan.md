@@ -84,3 +84,16 @@ References: installed vllm/v1/attention/backends/triton_attn.py and
 vllm/v1/attention/ops/triton_prefill_attention.py; upstream
 https://docs.vllm.ai/en/latest/design/plugin_system/ and
 https://docs.vllm.ai/en/stable/api/vllm/v1/attention/backends/registry/ .
+
+## Pre-measurement environment amendment
+
+The first numerical subprocess failed compiling the Triton launcher because the
+collector did not propagate the existing Python.h include path used by OwnedVllm.
+No attention kernel, numerical comparison or model request completed. This is an
+environment failure, not an accuracy/performance result. Preserve original logs,
+protocol, cleanup and budget in environment-attempt/ (original collector.log kept).
+Allow exactly one recovery for this missing-header condition, using the existing
+headers, with the ORIGINAL 30-minute start/deadline including repair time. This
+explicitly narrows the prior blanket no-retry rule before any numerical result;
+no algorithm, workload, threshold or measurement-count change. Recovery refuses
+if numerical results or model-run directories exist. Any subsequent failure stops.

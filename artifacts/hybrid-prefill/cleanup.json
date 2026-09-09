@@ -1,0 +1,10 @@
+{
+  "port_closed": true,
+  "gpu": {
+    "captured_at": 1788937822.4214666,
+    "returncode": 0,
+    "csv": "2026/09/09 17:10:22.411, NVIDIA GeForce RTX 4090 Laptop GPU, 53, 36.61, 2040, 9001, 936, 16376, 2",
+    "stderr": ""
+  },
+  "compute_processes": "pid, process_name\n"
+}

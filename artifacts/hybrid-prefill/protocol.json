@@ -1,0 +1,19 @@
+{
+  "sources": {
+    "docs/hybrid-prefill-plan.md": "4d97d59270f10fdb8a6bc1d01d92b37de19ed95e1c77026d3745bc71b1c734d0",
+    "scripts/validate_hybrid_prefill.py": "57e66d1ae0f8b9a5e7e257c780dd1f64cefa9b47490812b11cb86a82406c5dbe",
+    "scripts/hybrid_vllm_entry.py": "c0e2c96933b541b4f831a2c0a07c250cf9b55a5f313c29bdaaa4bdd439159df3",
+    "scripts/stage3_lib.py": "2a762dbb48c19b8562d232494f6608b7a12322430bbfcf957583676dffbe18cb",
+    "scripts/stage3_collect.py": "a554a535dfb9c292386c7c12b1b038542b1c36304e88baf670f3389a1ad458e7",
+    "scripts/stage3_request.py": "04045ba50b030b00c1de0ae1a65ab63f4f575d5423db6fa7185e38c0027c9012",
+    "scripts/local_document_qa.py": "49559194399f0bb142e82931c103f8e218635f1995e359fa9686c4aa6fd20763",
+    "scripts/validate_fp8_capacity.py": "820c19887f23b2db8960b6d9189c31071d89a2c604a56cba7cae9913133c2418",
+    "scripts/validate_prefix_cache.py": "aefdd67bdeb19e1bb64414bdea04725cab19659f96064abfd6a365b28a9e97fc",
+    "configs/local-document-qa.json": "0298564cd56079433d012ae722087bd2b8482675bc2fecab138efb327e190f62",
+    "experiments/hybrid_prefill/hybrid_backend.py": "aa1f03f79af6fd7526043036e85d9c1fb5bde7bdac5dc6043e0406ef82b24095",
+    "experiments/hybrid_prefill/hybrid_routes.py": "220e28cf626860b52e68190e297e39ad5f46f924122117526652b1c46e918f51",
+    "experiments/hybrid_prefill/hybrid_prefill-0.1.dist-info/entry_points.txt": "61992c45c7981974f3ae22118a8e4954d8c8892b2dfd562252f184f5eb2c34dd",
+    "experiments/hybrid_prefill/hybrid_prefill-0.1.dist-info/METADATA": "efa129d5522f544651477cb028b4333896e361fc3a050a156b949e87f52ef544"
+  },
+  "git_head": "4566164d5080231426b325999cc3713b7588fda4"
+}

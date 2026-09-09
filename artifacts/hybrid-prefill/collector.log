@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/mnt/d/Lunacia/Inference/scripts/validate_hybrid_prefill.py", line 246, in <module>
+    {'prepare':prepare,'run':run,'numerical':numerical_checks}[parser.parse_args().phase]()
+  File "/mnt/d/Lunacia/Inference/scripts/validate_hybrid_prefill.py", line 193, in run
+    raise RuntimeError('Numerical checks failed; see numerical.log')
+RuntimeError: Numerical checks failed; see numerical.log
