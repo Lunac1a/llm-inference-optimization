@@ -10,3 +10,4 @@ artifacts/prefix-cache/** -text whitespace=cr-at-eol
 artifacts/fp8-capacity/** -text whitespace=cr-at-eol
 artifacts/hybrid-prefill/** -text whitespace=cr-at-eol
 artifacts/mixed-load/** -text whitespace=cr-at-eol
+artifacts/mixed-load-rerun/** -text whitespace=cr-at-eol

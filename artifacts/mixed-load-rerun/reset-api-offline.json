@@ -1,0 +1,6 @@
+{
+  "status": 200,
+  "mock_engine_reset_awaited": true,
+  "gpu_started": false,
+  "limitation": "Handler contract only; real reset/cache validation required in trials"
+}
