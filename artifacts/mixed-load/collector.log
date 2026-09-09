@@ -1,0 +1,22 @@
+START full
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 4366.27it/s]
+Traceback (most recent call last):
+  File "/mnt/d/Lunacia/Inference/scripts/validate_mixed_load.py", line 284, in <module>
+    prepare() if phase == 'prepare' else asyncio.run(collect())
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/mnt/d/Lunacia/Inference/scripts/validate_mixed_load.py", line 247, in collect
+    pair[mixed] = await trial(session, docs, folder / label, mixed)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Lunacia/Inference/scripts/validate_mixed_load.py", line 147, in trial
+    assert reset['ok'], reset
+           ~~~~~^^^^^^
+AssertionError: {'status': 404, 'body': {'detail': 'Not Found'}, 'elapsed_seconds': 0.0025107099999956972, 'ok': False}

@@ -1,0 +1,22 @@
+{
+  "trials": [],
+  "routes": {
+    "full": {
+      "schedule_batches": 2,
+      "direct_bf16_query_lengths": [
+        59
+      ],
+      "cached_fp8_query_sequence_lengths": [
+        [
+          11,
+          59
+        ]
+      ],
+      "cache_tokens": [
+        "55,680"
+      ],
+      "mixed_decode_prefill_batches": 0
+    }
+  },
+  "quality": []
+}

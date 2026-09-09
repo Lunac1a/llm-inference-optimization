@@ -103,6 +103,11 @@ in the unchanged delivered default.
 
 ## Facts, inferences and unresolved questions
 
+Follow-up: the [mixed-load diagnostic](mixed-load-validation.md) stopped at an API
+integration error before any A/B/C trial. Continuous-arrival interference and the
+conditional chunking comparison remain unvalidated; this does not change the
+historical full-wave results below.
+
 **Facts:** six successful server starts and clean stops; matching native FP8/hybrid
 cache capacity; correct cold/cached routes; two paired cold-latency improvements;
 three running long clients; retained prefix reuse; bounded warm-latency changes;

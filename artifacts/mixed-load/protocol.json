@@ -1,0 +1,8 @@
+{
+  "git_head": "741823fa5aa045d23c3c36c89fb78378142acfa3",
+  "sources": {
+    "docs/mixed-load-plan.md": "8d66d25737abedf6bed358cc83802850c24334b7593e0075eb8437b4cef85b03",
+    "scripts/validate_mixed_load.py": "c04af182a162f88686897d565fece1bfcd7a68ea60508ab90722fad22187071c",
+    "scripts/mixed_vllm_entry.py": "164e9edf39f77a74a28685b2628e2104dd5c7e0e1e862e4c54d86fc7d30771f6"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "type": "AssertionError",
+  "message": "{'status': 404, 'body': {'detail': 'Not Found'}, 'elapsed_seconds': 0.0025107099999956972, 'ok': False}"
+}

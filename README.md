@@ -91,6 +91,10 @@ All 54 performance requests and 27 inspected fact answers pass. It trades a
 16,640-token context limit and lower KV budget for faster cold computation;
 the default stays unchanged. [Prototype boundaries](docs/hybrid-prefill.md).
 
+The [mixed-arrival follow-up](docs/mixed-load-validation.md) stopped before A/B/C
+measurement: its prefix-reset endpoint returned 404. The launcher was repaired
+offline; no GPU retry or scheduling comparison was run. Interference remains unknown.
+
 The llama.cpp KV-quantization route is archived at Git tag
 `archive/llama-cpp-stage1`, commit `99b39106539123847f860a9ac47415415e92a884`.
 The upstream q8_0 control saved KV memory but did not establish a single-request

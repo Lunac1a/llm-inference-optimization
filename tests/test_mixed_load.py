@@ -5,11 +5,31 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
+import os
+import runpy
+from types import ModuleType
+from unittest.mock import patch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from validate_mixed_load import interference, labelled_delta, request, content_times
 
 
 class MixedTests(unittest.TestCase):
+    def test_scoped_launcher_registers_reset_api_and_preserves_budget(self):
+        cli = ModuleType('vllm.entrypoints.cli.main')
+        cli.main = lambda: None
+        root = Path(__file__).resolve().parents[1]
+        for mode in ('full', 'chunk'):
+            with tempfile.TemporaryDirectory() as directory:
+                evidence = Path(directory) / 'launch.json'
+                args = ['mixed_vllm_entry.py', '--enable-chunked-prefill', '--max-num-batched-tokens', '16640']
+                with patch.dict(os.environ, {'MIXED_MODE': mode, 'HYBRID_LAUNCH_EVIDENCE': str(evidence)}), \
+                     patch.dict(sys.modules, {'vllm.entrypoints.cli.main': cli}), patch.object(sys, 'argv', args):
+                    runpy.run_path(str(root / 'scripts/mixed_vllm_entry.py'), run_name='__main__')
+                saved = json.loads(evidence.read_text())
+                self.assertEqual(saved['environment']['VLLM_SERVER_DEV_MODE'], '1')
+                self.assertEqual(saved['argv'][saved['argv'].index('--max-num-batched-tokens') + 1], '16640')
+                self.assertEqual('--long-prefill-token-threshold' in saved['argv'], mode == 'chunk')
+
     def test_gate_needs_two_pairs_and_absolute_increase(self):
         c = {'A_gap': .05, 'B_ttft': .1}
         small = {'A_gap': .11, 'B_ttft': .3}
