@@ -1,0 +1,36 @@
+START r1-graph
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 4202.06it/s]
+{"run": "r1-graph", "concurrency": 1, "repeat": 0, "e2e": [9.593959314999992], "pass": true}
+{"run": "r1-graph", "concurrency": 1, "repeat": 1, "e2e": [9.606584870000006], "pass": true}
+{"run": "r1-graph", "concurrency": 1, "repeat": 2, "e2e": [10.305471879999999], "pass": true}
+{"run": "r1-graph", "concurrency": 4, "repeat": 0, "e2e": [10.432645756, 10.628449853000006, 10.495313616000004, 10.56737989299998], "pass": true}
+START r1-eager
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 3414.49it/s]
+{"run": "r1-eager", "concurrency": 1, "repeat": 0, "e2e": [10.415536199999991], "pass": true}
+{"run": "r1-eager", "concurrency": 1, "repeat": 1, "e2e": [10.19091384699999], "pass": true}
+{"run": "r1-eager", "concurrency": 1, "repeat": 2, "e2e": [10.433401580000009], "pass": true}
+{"run": "r1-eager", "concurrency": 4, "repeat": 0, "e2e": [12.02760936300001, 12.142481376000006, 12.104791087000024, 12.064604724999981], "pass": true}
+START r2-eager
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 4193.34it/s]
+{"run": "r2-eager", "concurrency": 1, "repeat": 0, "e2e": [9.591654849000008], "pass": true}
+{"run": "r2-eager", "concurrency": 1, "repeat": 1, "e2e": [10.147771397999975], "pass": true}
+{"run": "r2-eager", "concurrency": 1, "repeat": 2, "e2e": [10.640713018999975], "pass": true}
+{"run": "r2-eager", "concurrency": 4, "repeat": 0, "e2e": [11.841430917000025, 11.95854618300001, 11.925802574999977, 11.880343123999978], "pass": true}
+START r2-graph
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 3805.82it/s]
+{"run": "r2-graph", "concurrency": 1, "repeat": 0, "e2e": [9.125924977000011], "pass": true}
+{"run": "r2-graph", "concurrency": 1, "repeat": 1, "e2e": [9.567965759000003], "pass": true}
+{"run": "r2-graph", "concurrency": 1, "repeat": 2, "e2e": [9.819130567999991], "pass": true}
+{"run": "r2-graph", "concurrency": 4, "repeat": 0, "e2e": [10.440407389999962, 10.472052399999995, 10.498393185999987, 10.524914049000017], "pass": true}
+START r3-graph
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 3074.31it/s]
+{"run": "r3-graph", "concurrency": 1, "repeat": 0, "e2e": [9.398501703000022], "pass": true}
+{"run": "r3-graph", "concurrency": 1, "repeat": 1, "e2e": [10.019834016000004], "pass": true}
+{"run": "r3-graph", "concurrency": 1, "repeat": 2, "e2e": [9.713014787999953], "pass": true}
+{"run": "r3-graph", "concurrency": 4, "repeat": 0, "e2e": [10.490231307999977, 10.550904954000032, 10.579061151000019, 10.522045569], "pass": true}
+START r3-eager
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 3708.74it/s]
+{"run": "r3-eager", "concurrency": 1, "repeat": 0, "e2e": [9.995865408999975], "pass": true}
+{"run": "r3-eager", "concurrency": 1, "repeat": 1, "e2e": [10.179093625999997], "pass": true}
+{"run": "r3-eager", "concurrency": 1, "repeat": 2, "e2e": [10.59924365300003], "pass": true}
+{"run": "r3-eager", "concurrency": 4, "repeat": 0, "e2e": [12.226695762999952, 12.409108593999974, 12.325549194000018, 12.256398876999981], "pass": true}

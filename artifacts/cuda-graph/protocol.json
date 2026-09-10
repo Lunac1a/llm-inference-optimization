@@ -1,0 +1,8 @@
+{
+  "git_head": "89677aab261c72e08a27cb1f0b29af30ef7de75a",
+  "hashes": {
+    "scripts/validate_cuda_graph.py": "b8514620396482143f9c97c13f04757f5f7026d5b1f81ad300409db1b7a4916d",
+    "scripts/cuda_graph_entry.py": "ae9fe0d103098c0b60710588c018d20b57f5ac48862ec64e65633d7239c730c9",
+    "docs/cuda-graph-plan.md": "16a0222ac15d36095b711e973e60b07acbef60706a79ddba92c157a3109fe2b0"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "old_evidence": {
+    "count": 2095,
+    "changed_or_missing": [],
+    "pass": true
+  },
+  "frozen_sources": {
+    "count": 80,
+    "changed_or_missing": [],
+    "pass": true
+  },
+  "installed_sources": {
+    "count": 6,
+    "changed_or_missing": [],
+    "pass": true
+  },
+  "tests": [
+    {
+      "pattern": "test_cuda_graph.py",
+      "returncode": 0
+    },
+    {
+      "pattern": "test_kv_offload_integration.py",
+      "returncode": 0
+    },
+    {
+      "pattern": "test_mixed_load.py",
+      "returncode": 0
+    },
+    {
+      "pattern": "test_hybrid_prefill.py",
+      "returncode": 0
+    }
+  ],
+  "port_closed": true,
+  "compute_processes": "pid, process_name\n",
+  "accepted": false,
+  "gpu_retry": false
+}

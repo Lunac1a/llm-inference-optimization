@@ -117,6 +117,13 @@ pairs reduce revisit p95 TTFT by 88.9–89.9%, but cold E2E rises 8.0%/18.5%
 BF16 default stays unchanged. All 24 measured performance responses, six fact
 answers and two nonstream API checks complete. [Usage and limits](docs/cpu-kv-api.md).
 
+The [decode-only CUDA Graph comparison](docs/cuda-graph-validation.md) completes
+three pairs at concurrency 1/4 with compilation disabled. At concurrency 4,
+post-first-content rate improves 14.1–17.5% and p95 E2E falls 12.0–14.7%, with
+0.88% less GPU KV capacity. Single-request rate improves only 4.7–8.4%, below
+the fixed 10% gate, so combined acceptance fails and defaults stay unchanged.
+All 42 performance responses and six fact answers complete; no GPU retry.
+
 The llama.cpp KV-quantization route is archived at Git tag
 `archive/llama-cpp-stage1`, commit `99b39106539123847f860a9ac47415415e92a884`.
 The upstream q8_0 control saved KV memory but did not establish a single-request

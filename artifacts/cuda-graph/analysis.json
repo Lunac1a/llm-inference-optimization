@@ -1,0 +1,1271 @@
+{
+  "accepted": false,
+  "runs": [
+    {
+      "name": "r1-eager",
+      "gpu_kv_tokens": 36528,
+      "groups": {
+        "1": {
+          "requests": [
+            {
+              "name": "c1-0-0",
+              "tokens": 512,
+              "ttft": 0.042027904999997645,
+              "e2e": 10.415536199999991,
+              "start": 171.255040777,
+              "end": 181.670576977,
+              "output_tok_s": 49.15733478992665,
+              "client_post_first_rate": 49.26035779073041,
+              "max_content_gap": 0.0591858540000203,
+              "p95_content_gap": 0.029002915250001135,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c1-1-0",
+              "tokens": 512,
+              "ttft": 0.046348326000014595,
+              "e2e": 10.19091384699999,
+              "start": 181.75456831,
+              "end": 191.945482157,
+              "output_tok_s": 50.240832930868415,
+              "client_post_first_rate": 50.372082113391365,
+              "max_content_gap": 0.06194299699998851,
+              "p95_content_gap": 0.022942076749986023,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c1-2-0",
+              "tokens": 512,
+              "ttft": 0.04036220899999421,
+              "e2e": 10.433401580000009,
+              "start": 192.023996224,
+              "end": 202.457397804,
+              "output_tok_s": 49.07316143006158,
+              "client_post_first_rate": 49.16783589768955,
+              "max_content_gap": 0.05365672199999949,
+              "p95_content_gap": 0.025394487100001584,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            }
+          ],
+          "count": 3,
+          "post_first_rate_median": 49.26035779073041,
+          "ttft_p95": 0.0459162839000129,
+          "e2e_p95": 10.431615042000008,
+          "wave_output_tok_s": 49.22705033696234
+        },
+        "4": {
+          "requests": [
+            {
+              "name": "c4-0-0",
+              "tokens": 512,
+              "ttft": 0.08875063799999339,
+              "e2e": 12.02760936300001,
+              "start": 202.548832194,
+              "end": 214.576441557,
+              "output_tok_s": 42.56872538403537,
+              "client_post_first_rate": 42.80176799023267,
+              "max_content_gap": 0.07196503800000187,
+              "p95_content_gap": 0.028069967399996187,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-1",
+              "tokens": 512,
+              "ttft": 0.11596427700001755,
+              "e2e": 12.142481376000006,
+              "start": 202.549107634,
+              "end": 214.69158901,
+              "output_tok_s": 42.16601073088603,
+              "client_post_first_rate": 42.48969230102752,
+              "max_content_gap": 0.08174744400000122,
+              "p95_content_gap": 0.028154455699994682,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-2",
+              "tokens": 512,
+              "ttft": 0.11550464399999782,
+              "e2e": 12.104791087000024,
+              "start": 202.549344336,
+              "end": 214.654135423,
+              "output_tok_s": 42.2973016485897,
+              "client_post_first_rate": 42.6216509434103,
+              "max_content_gap": 0.08194259100000068,
+              "p95_content_gap": 0.028144578450000776,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-3",
+              "tokens": 512,
+              "ttft": 0.11508980899998278,
+              "e2e": 12.064604724999981,
+              "start": 202.549500082,
+              "end": 214.614104807,
+              "output_tok_s": 42.43819102826021,
+              "client_post_first_rate": 42.76341683468042,
+              "max_content_gap": 0.07186724199999617,
+              "p95_content_gap": 0.02815617920000903,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            }
+          ],
+          "count": 4,
+          "post_first_rate_median": 42.692533889045365,
+          "ttft_p95": 0.1158953320500146,
+          "e2e_p95": 12.13682783265001,
+          "wave_output_tok_s": 168.66021703584116
+        }
+      },
+      "startup": {
+        "ready_at": "20260910T071953Z",
+        "startup_seconds": 22.0384521484375,
+        "health": "",
+        "log_tail": "-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c', 'dtype': 'bfloat16', 'max_model_len': 32768, 'enforce_eager': True, 'served_model_name': ['stage3-document-qa'], 'generation_config': 'vllm', 'attention_backend': 'FLASH_ATTN', 'gpu_memory_utilization': 0.8, 'kv_cache_dtype': 'bfloat16', 'enable_prefix_caching': True, 'calculate_kv_scales': True, 'cudagraph_metrics': True, 'max_num_batched_tokens': 2048, 'max_num_seqs': 8, 'enable_chunked_prefill': True, 'compilation_config': {'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': [], 'ir_enable_torch_wrap': None, 'splitting_ops': None, 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': None, 'compile_ranges_endpoints': None, 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [1, 2, 4], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': None, 'pass_config': {}, 'max_cudagraph_capture_size': 4, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': None, 'static_all_moe_layers': []}}\n(APIServer pid=767) INFO 09-10 17:19:37 [model.py:611] Resolved architecture: Qwen3ForCausalLM\n(APIServer pid=767) INFO 09-10 17:19:37 [model.py:1745] Using max model len 32768\n(APIServer pid=767) WARNING 09-10 17:19:37 [cache.py:250] The `--calculate-kv-scales` option is deprecated and will be removed in v0.19. The scales will be loaded from the model checkpoint if available, otherwise they default to 1.0.\n(APIServer pid=767) INFO 09-10 17:19:37 [vllm.py:999] Asynchronous scheduling is enabled.\n(APIServer pid=767) WARNING 09-10 17:19:37 [vllm.py:1055] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none\n(APIServer pid=767) WARNING 09-10 17:19:37 [vllm.py:1097] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.\n(APIServer pid=767) INFO 09-10 17:19:37 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])\n(APIServer pid=767) INFO 09-10 17:19:37 [vllm.py:1273] Cudagraph is disabled under eager mode\n(APIServer pid=767) INFO 09-10 17:19:37 [compilation.py:321] Enabled custom fusions: norm_quant, act_quant\nWARNING 09-10 17:19:42 [config.py:71] Support for Transformers v4 is deprecated. The Transformers v4 codepath will become unmaintained in vLLM v0.22.0 and will be removed in vLLM v0.24.0. Please upgrade to Transformers v5: pip install --upgrade transformers\n(EngineCore pid=841) INFO 09-10 17:19:43 [core.py:113] Initializing a V1 LLM engine (v0.23.0) with config: model='/home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c', speculative_config=None, tokenizer='/home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, quantization_config=None, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=bfloat16, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=True, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=stage3-document-qa, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'ir_enable_torch_wrap': False, 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native']), enable_flashinfer_autotune=True, moe_backend='auto', linear_backend='auto')\n(EngineCore pid=841) WARNING 09-10 17:19:44 [interface.py:757] Using 'pin_memory=False' as WSL is detected. This may slow down the performance.\n(EngineCore pid=841) INFO 09-10 17:19:44 [parallel_state.py:1568] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://172.20.48.164:45383 backend=nccl\n(EngineCore pid=841) INFO 09-10 17:19:44 [parallel_state.py:1903] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A\n(EngineCore pid=841) INFO 09-10 17:19:44 [topk_topp_sampler.py:39] FlashInfer top-p/top-k sampling disabled via VLLM_USE_FLASHINFER_SAMPLER=0.\n(EngineCore pid=841) INFO 09-10 17:19:44 [gpu_model_runner.py:5092] Starting to load model /home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c...\n(EngineCore pid=841) INFO 09-10 17:19:44 [cuda.py:318] Using AttentionBackendEnum.FLASH_ATTN backend.\n(EngineCore pid=841) INFO 09-10 17:19:44 [flash_attn.py:636] Using FlashAttention version 2\n(EngineCore pid=841) INFO 09-10 17:19:44 [weight_utils.py:922] Filesystem type for checkpoints: EXT4. Checkpoint size: 7.49 GiB. Available RAM: 13.01 GiB.\n(EngineCore pid=841) INFO 09-10 17:19:44 [weight_utils.py:945] Auto-prefetch is disabled because the filesystem (EXT4) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.\n(EngineCore pid=841) \nLoading safetensors checkpoint shards:   0% Completed | 0/3 [00:00<?, ?it/s]\n(EngineCore pid=841) \nLoading safetensors checkpoint shards:  33% Completed | 1/3 [00:01<00:03,  1.75s/it]\n(EngineCore pid=841) \nLoading safetensors checkpoint shards:  67% Completed | 2/3 [00:04<00:02,  2.31s/it]\n(EngineCore pid=841) \nLoading safetensors checkpoint shards: 100% Completed | 3/3 [00:04<00:00,  1.51s/it]\n(EngineCore pid=841) \n(EngineCore pid=841) INFO 09-10 17:19:49 [default_loader.py:397] Loading weights took 4.54 seconds\n(EngineCore pid=841) INFO 09-10 17:19:49 [gpu_model_runner.py:5187] Model loading took 7.56 GiB memory and 4.856050 seconds\n(EngineCore pid=841) INFO 09-10 17:19:50 [gpu_worker.py:480] Available KV cache memory: 5.02 GiB\n(EngineCore pid=841) INFO 09-10 17:19:50 [kv_cache_utils.py:1744] GPU KV cache size: 36,528 tokens\n(EngineCore pid=841) INFO 09-10 17:19:50 [kv_cache_utils.py:1745] Maximum concurrency for 32,768 tokens per request: 1.11x\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408] Module vllm.third_party.deep_gemm was found but failed to import\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408] Traceback (most recent call last):\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/utils/import_utils.py\", line 406, in _has_module\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408]     importlib.import_module(module_name)\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408]   File \"/usr/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408]     return _bootstrap._gcd_import(name[level:], package, level)\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408]   File \"<frozen importlib._bootstrap_external>\", line 995, in exec_module\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/third_party/deep_gemm/__init__.py\", line 123, in <module>\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408]     _find_cuda_home()                           # CUDA home\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408]     ^^^^^^^^^^^^^^^^^\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/third_party/deep_gemm/__init__.py\", line 117, in _find_cuda_home\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408]     assert cuda_home is not None\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408]            ^^^^^^^^^^^^^^^^^^^^^\n(EngineCore pid=841) WARNING 09-10 17:19:51 [import_utils.py:408] AssertionError\n(EngineCore pid=841) INFO 09-10 17:19:51 [jit_monitor.py:54] Kernel JIT monitor activated — Triton JIT compilations during inference will be logged as warnings.\n(EngineCore pid=841) INFO 09-10 17:19:51 [core.py:313] init engine (profile, create kv cache, warmup model) took 1.73 s\n(EngineCore pid=841) INFO 09-10 17:19:51 [vllm.py:999] Asynchronous scheduling is enabled.\n(EngineCore pid=841) WARNING 09-10 17:19:51 [vllm.py:1055] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none\n(EngineCore pid=841) WARNING 09-10 17:19:51 [vllm.py:1097] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.\n(EngineCore pid=841) INFO 09-10 17:19:51 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])\n(EngineCore pid=841) INFO 09-10 17:19:51 [vllm.py:1273] Cudagraph is disabled under eager mode\n(EngineCore pid=841) INFO 09-10 17:19:51 [compilation.py:321] Enabled custom fusions: norm_quant, act_quant\n(APIServer pid=767) INFO 09-10 17:19:51 [api_server.py:579] Supported tasks: ['generate']\n(APIServer pid=767) INFO 09-10 17:19:51 [hf.py:548] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.\n(APIServer pid=767) INFO 09-10 17:19:51 [api_server.py:583] Starting vLLM server on http://127.0.0.1:8000\n(APIServer pid=767) INFO 09-10 17:19:51 [launcher.py:37] Available routes are:\n(APIServer pid=767) INFO 09-10 17:19:51 [launcher.py:46] Route: /openapi.json, Methods: HEAD, GET\n(APIServer pid=767) INFO 09-10 17:19:51 [launcher.py:46] Route: /docs, Methods: HEAD, GET\n(APIServer pid=767) INFO 09-10 17:19:51 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: HEAD, GET\n(APIServer pid=767) INFO 09-10 17:19:51 [launcher.py:46] Route: /redoc, Methods: HEAD, GET\n(APIServer pid=767) INFO 09-10 17:19:51 [launcher.py:46] Route: /load, Methods: GET\n(APIServer pid=767) INFO 09-10 17:19:51 [launcher.py:46] Route: /version, Methods: GET\n(APIServer pid=767) INFO 09-10 17:19:51 [launcher.py:46] Route: /health, Methods: GET\n(APIServer pid=767) INFO 09-10 17:19:51 [launcher.py:46] Route: /metrics, Methods: GET\n(APIServer pid=767) INFO 09-10 17:19:51 [launcher.py:46] Route: /tokenize, Methods: POST\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /detokenize, Methods: POST\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /v1/models, Methods: GET\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /ping, Methods: GET\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /ping, Methods: POST\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /invocations, Methods: POST\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /v1/chat/completions, Methods: POST\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /v1/chat/completions/batch, Methods: POST\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /v1/responses, Methods: POST\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /v1/completions, Methods: POST\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /v1/messages, Methods: POST\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /v1/messages/count_tokens, Methods: POST\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /generative_scoring, Methods: POST\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /inference/v1/generate, Methods: POST\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /v1/chat/completions/render, Methods: POST\n(APIServer pid=767) INFO 09-10 17:19:52 [launcher.py:46] Route: /v1/completions/render, Methods: POST\n(APIServer pid=767) INFO:     Started server process [767]\n(APIServer pid=767) INFO:     Waiting for application startup.\n(APIServer pid=767) INFO:     Application startup complete.\n(APIServer pid=767) INFO:     127.0.0.1:33626 - \"GET /health HTTP/1.1\" 200 OK\n"
+      },
+      "runtime": {
+        "mode": "NONE",
+        "rows": [
+          "| 1               | 1             | 0            | NONE         | 414   |",
+          "| 14              | 14            | 0            | NONE         | 2     |",
+          "| 2048            | 2048          | 0            | NONE         | 1     |",
+          "| 62              | 62            | 0            | NONE         | 1     |",
+          "| 1               | 1             | 0            | NONE         | 497   |",
+          "| 14              | 14            | 0            | NONE         | 1     |",
+          "| 1               | 1             | 0            | NONE         | 493   |",
+          "| 14              | 14            | 0            | NONE         | 1     |",
+          "| 4               | 4             | 0            | NONE         | 250   |",
+          "| 1               | 1             | 0            | NONE         | 191   |",
+          "| 14              | 14            | 0            | NONE         | 1     |",
+          "| 43              | 43            | 0            | NONE         | 1     |"
+        ]
+      },
+      "telemetry": {
+        "max_sum_rss_bytes": 3036487680,
+        "min_mem_available": 13349838848,
+        "max_swap_used": 0
+      }
+    },
+    {
+      "name": "r1-graph",
+      "gpu_kv_tokens": 36208,
+      "groups": {
+        "1": {
+          "requests": [
+            {
+              "name": "c1-0-0",
+              "tokens": 512,
+              "ttft": 0.035885700999997994,
+              "e2e": 9.593959314999992,
+              "start": 102.254937459,
+              "end": 111.848896774,
+              "output_tok_s": 53.36691382456633,
+              "client_post_first_rate": 53.46309971668181,
+              "max_content_gap": 0.05523781200000144,
+              "p95_content_gap": 0.019436224300011417,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c1-1-0",
+              "tokens": 512,
+              "ttft": 0.03277050600000564,
+              "e2e": 9.606584870000006,
+              "start": 111.945584734,
+              "end": 121.552169604,
+              "output_tok_s": 53.29677579791159,
+              "client_post_first_rate": 53.375074321043755,
+              "max_content_gap": 0.05595664999999883,
+              "p95_content_gap": 0.019594017950000618,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c1-2-0",
+              "tokens": 512,
+              "ttft": 0.03208136299998898,
+              "e2e": 10.305471879999999,
+              "start": 121.628847906,
+              "end": 131.934319786,
+              "output_tok_s": 49.68234409465975,
+              "client_post_first_rate": 49.74038745519904,
+              "max_content_gap": 0.060674982999998406,
+              "p95_content_gap": 0.02103955125000496,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            }
+          ],
+          "count": 3,
+          "post_first_rate_median": 53.375074321043755,
+          "ttft_p95": 0.03557418149999876,
+          "e2e_p95": 10.235583178999999,
+          "wave_output_tok_s": 51.75309860147144
+        },
+        "4": {
+          "requests": [
+            {
+              "name": "c4-0-0",
+              "tokens": 512,
+              "ttft": 0.06451822500000048,
+              "e2e": 10.432645756,
+              "start": 132.108346822,
+              "end": 142.540992578,
+              "output_tok_s": 49.076716680956956,
+              "client_post_first_rate": 49.285892179883376,
+              "max_content_gap": 0.06088077000001135,
+              "p95_content_gap": 0.02130209334999762,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-1",
+              "tokens": 512,
+              "ttft": 0.07664649500000564,
+              "e2e": 10.628449853000006,
+              "start": 132.108569594,
+              "end": 142.737019447,
+              "output_tok_s": 48.17259403594795,
+              "client_post_first_rate": 49.45401201944744,
+              "max_content_gap": 0.06170725900000207,
+              "p95_content_gap": 0.02130091325000194,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-2",
+              "tokens": 512,
+              "ttft": 0.07622977200000491,
+              "e2e": 10.495313616000004,
+              "start": 132.108785149,
+              "end": 142.604098765,
+              "output_tok_s": 48.7836780045773,
+              "client_post_first_rate": 49.453552744356585,
+              "max_content_gap": 0.06171430500000952,
+              "p95_content_gap": 0.021275998000007235,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-3",
+              "tokens": 512,
+              "ttft": 0.07620822999999177,
+              "e2e": 10.56737989299998,
+              "start": 132.1089215,
+              "end": 142.676301393,
+              "output_tok_s": 48.450988341883864,
+              "client_post_first_rate": 49.45370810369125,
+              "max_content_gap": 0.061709151000002294,
+              "p95_content_gap": 0.02128940000001478,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            }
+          ],
+          "count": 4,
+          "post_first_rate_median": 49.45363042402391,
+          "ttft_p95": 0.07658398655000553,
+          "e2e_p95": 10.619289359000003,
+          "wave_output_tok_s": 192.68633744375947
+        }
+      },
+      "startup": {
+        "ready_at": "20260910T071844Z",
+        "startup_seconds": 22.293126821517944,
+        "health": "",
+        "log_tail": "p': None, 'splitting_ops': None, 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': None, 'compile_ranges_endpoints': None, 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_DECODE_ONLY: (2, 0)>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [1, 2, 4], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': None, 'pass_config': {}, 'max_cudagraph_capture_size': 4, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': None, 'static_all_moe_layers': []}}\n(APIServer pid=410) INFO 09-10 17:18:29 [model.py:611] Resolved architecture: Qwen3ForCausalLM\n(APIServer pid=410) INFO 09-10 17:18:29 [model.py:1745] Using max model len 32768\n(APIServer pid=410) WARNING 09-10 17:18:29 [cache.py:250] The `--calculate-kv-scales` option is deprecated and will be removed in v0.19. The scales will be loaded from the model checkpoint if available, otherwise they default to 1.0.\n(APIServer pid=410) INFO 09-10 17:18:29 [vllm.py:999] Asynchronous scheduling is enabled.\n(APIServer pid=410) WARNING 09-10 17:18:29 [vllm.py:1097] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.\n(APIServer pid=410) INFO 09-10 17:18:29 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])\n(APIServer pid=410) INFO 09-10 17:18:29 [compilation.py:321] Enabled custom fusions: norm_quant, act_quant\nWARNING 09-10 17:18:33 [config.py:71] Support for Transformers v4 is deprecated. The Transformers v4 codepath will become unmaintained in vLLM v0.22.0 and will be removed in vLLM v0.24.0. Please upgrade to Transformers v5: pip install --upgrade transformers\n(EngineCore pid=489) INFO 09-10 17:18:34 [core.py:113] Initializing a V1 LLM engine (v0.23.0) with config: model='/home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c', speculative_config=None, tokenizer='/home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, quantization_config=None, enforce_eager=False, enable_return_routed_experts=False, kv_cache_dtype=bfloat16, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=True, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=stage3-document-qa, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'ir_enable_torch_wrap': False, 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_DECODE_ONLY: (2, 0)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False}, 'max_cudagraph_capture_size': 4, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native']), enable_flashinfer_autotune=True, moe_backend='auto', linear_backend='auto')\n(EngineCore pid=489) WARNING 09-10 17:18:35 [interface.py:757] Using 'pin_memory=False' as WSL is detected. This may slow down the performance.\n(EngineCore pid=489) INFO 09-10 17:18:35 [parallel_state.py:1568] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://172.20.48.164:46341 backend=nccl\n(EngineCore pid=489) INFO 09-10 17:18:35 [parallel_state.py:1903] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A\n(EngineCore pid=489) INFO 09-10 17:18:35 [topk_topp_sampler.py:39] FlashInfer top-p/top-k sampling disabled via VLLM_USE_FLASHINFER_SAMPLER=0.\n(EngineCore pid=489) INFO 09-10 17:18:35 [gpu_model_runner.py:5092] Starting to load model /home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c...\n(EngineCore pid=489) INFO 09-10 17:18:35 [cuda.py:318] Using AttentionBackendEnum.FLASH_ATTN backend.\n(EngineCore pid=489) INFO 09-10 17:18:35 [flash_attn.py:636] Using FlashAttention version 2\n(EngineCore pid=489) INFO 09-10 17:18:35 [weight_utils.py:922] Filesystem type for checkpoints: EXT4. Checkpoint size: 7.49 GiB. Available RAM: 12.96 GiB.\n(EngineCore pid=489) INFO 09-10 17:18:35 [weight_utils.py:945] Auto-prefetch is disabled because the filesystem (EXT4) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.\n(EngineCore pid=489) \nLoading safetensors checkpoint shards:   0% Completed | 0/3 [00:00<?, ?it/s]\n(EngineCore pid=489) \nLoading safetensors checkpoint shards:  33% Completed | 1/3 [00:01<00:02,  1.43s/it]\n(EngineCore pid=489) \nLoading safetensors checkpoint shards:  67% Completed | 2/3 [00:03<00:01,  1.74s/it]\n(EngineCore pid=489) \nLoading safetensors checkpoint shards: 100% Completed | 3/3 [00:03<00:00,  1.14s/it]\n(EngineCore pid=489) \n(EngineCore pid=489) INFO 09-10 17:18:39 [default_loader.py:397] Loading weights took 3.44 seconds\n(EngineCore pid=489) INFO 09-10 17:18:39 [gpu_model_runner.py:5187] Model loading took 7.56 GiB memory and 3.795547 seconds\n(EngineCore pid=489) INFO 09-10 17:18:40 [gpu_model_runner.py:6412] Profiling CUDA graph memory: FULL=3 (largest=4)\n(EngineCore pid=489) INFO 09-10 17:18:41 [gpu_model_runner.py:6517] Estimated CUDA graph memory: 0.04 GiB total\n(EngineCore pid=489) INFO 09-10 17:18:41 [gpu_worker.py:480] Available KV cache memory: 4.97 GiB\n(EngineCore pid=489) INFO 09-10 17:18:41 [gpu_worker.py:495] CUDA graph memory profiling is enabled (default since v0.21.0). The current --gpu-memory-utilization=0.8000 is equivalent to --gpu-memory-utilization=0.7978 without CUDA graph memory profiling. To maintain the same effective KV cache size as before, increase --gpu-memory-utilization to 0.8022. To disable, set VLLM_MEMORY_PROFILER_ESTIMATE_CUDAGRAPHS=0.\n(EngineCore pid=489) INFO 09-10 17:18:41 [kv_cache_utils.py:1744] GPU KV cache size: 36,208 tokens\n(EngineCore pid=489) INFO 09-10 17:18:41 [kv_cache_utils.py:1745] Maximum concurrency for 32,768 tokens per request: 1.10x\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408] Module vllm.third_party.deep_gemm was found but failed to import\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408] Traceback (most recent call last):\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/utils/import_utils.py\", line 406, in _has_module\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408]     importlib.import_module(module_name)\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408]   File \"/usr/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408]     return _bootstrap._gcd_import(name[level:], package, level)\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408]   File \"<frozen importlib._bootstrap_external>\", line 995, in exec_module\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/third_party/deep_gemm/__init__.py\", line 123, in <module>\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408]     _find_cuda_home()                           # CUDA home\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408]     ^^^^^^^^^^^^^^^^^\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/third_party/deep_gemm/__init__.py\", line 117, in _find_cuda_home\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408]     assert cuda_home is not None\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408]            ^^^^^^^^^^^^^^^^^^^^^\n(EngineCore pid=489) WARNING 09-10 17:18:41 [import_utils.py:408] AssertionError\n(EngineCore pid=489) \nCapturing CUDA graphs (decode, FULL):   0%|          | 0/3 [00:00<?, ?it/s]\nCapturing CUDA graphs (decode, FULL): 100%|██████████| 3/3 [00:00<00:00, 19.98it/s]\nCapturing CUDA graphs (decode, FULL): 100%|██████████| 3/3 [00:00<00:00, 19.90it/s]\n(EngineCore pid=489) INFO 09-10 17:18:42 [gpu_model_runner.py:6585] Graph capturing finished in 0 secs, took 0.03 GiB\n(EngineCore pid=489) INFO 09-10 17:18:42 [gpu_worker.py:639] CUDA graph pool memory: 0.03 GiB (actual), 0.04 GiB (estimated), difference: 0.0 GiB (15.2%).\n(EngineCore pid=489) INFO 09-10 17:18:42 [jit_monitor.py:54] Kernel JIT monitor activated — Triton JIT compilations during inference will be logged as warnings.\n(EngineCore pid=489) INFO 09-10 17:18:42 [core.py:313] init engine (profile, create kv cache, warmup model) took 2.83 s\n(EngineCore pid=489) INFO 09-10 17:18:42 [vllm.py:999] Asynchronous scheduling is enabled.\n(EngineCore pid=489) WARNING 09-10 17:18:42 [vllm.py:1097] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.\n(EngineCore pid=489) INFO 09-10 17:18:42 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])\n(EngineCore pid=489) INFO 09-10 17:18:42 [compilation.py:321] Enabled custom fusions: norm_quant, act_quant\n(APIServer pid=410) INFO 09-10 17:18:42 [api_server.py:579] Supported tasks: ['generate']\n(APIServer pid=410) INFO 09-10 17:18:43 [hf.py:548] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.\n(APIServer pid=410) INFO 09-10 17:18:43 [api_server.py:583] Starting vLLM server on http://127.0.0.1:8000\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:37] Available routes are:\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /openapi.json, Methods: GET, HEAD\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /docs, Methods: GET, HEAD\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: GET, HEAD\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /redoc, Methods: GET, HEAD\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /load, Methods: GET\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /version, Methods: GET\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /health, Methods: GET\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /metrics, Methods: GET\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /tokenize, Methods: POST\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /detokenize, Methods: POST\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /v1/models, Methods: GET\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /ping, Methods: GET\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /ping, Methods: POST\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /invocations, Methods: POST\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /v1/chat/completions, Methods: POST\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /v1/chat/completions/batch, Methods: POST\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /v1/responses, Methods: POST\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /v1/completions, Methods: POST\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /v1/messages, Methods: POST\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /v1/messages/count_tokens, Methods: POST\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /generative_scoring, Methods: POST\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /inference/v1/generate, Methods: POST\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /v1/chat/completions/render, Methods: POST\n(APIServer pid=410) INFO 09-10 17:18:43 [launcher.py:46] Route: /v1/completions/render, Methods: POST\n(APIServer pid=410) INFO:     Started server process [410]\n(APIServer pid=410) INFO:     Waiting for application startup.\n(APIServer pid=410) INFO:     Application startup complete.\n(APIServer pid=410) INFO:     127.0.0.1:42078 - \"GET /health HTTP/1.1\" 200 OK\n"
+      },
+      "runtime": {
+        "mode": "FULL",
+        "rows": [
+          "| 1               | 1             | 0            | FULL         | 461   |",
+          "| 1               | 1             | 0            | FULL         | 528   |",
+          "| 1               | 1             | 0            | FULL         | 496   |",
+          "| 4               | 4             | 0            | FULL         | 375   |",
+          "| 1               | 1             | 0            | FULL         | 110   |"
+        ]
+      },
+      "telemetry": {
+        "max_sum_rss_bytes": 3067019264,
+        "min_mem_available": 13359718400,
+        "max_swap_used": 0
+      }
+    },
+    {
+      "name": "r2-eager",
+      "gpu_kv_tokens": 36528,
+      "groups": {
+        "1": {
+          "requests": [
+            {
+              "name": "c1-0-0",
+              "tokens": 512,
+              "ttft": 0.03969802599999639,
+              "e2e": 9.591654849000008,
+              "start": 242.559520112,
+              "end": 252.151174961,
+              "output_tok_s": 53.379735620217744,
+              "client_post_first_rate": 53.497197170396525,
+              "max_content_gap": 0.05257540299999164,
+              "p95_content_gap": 0.021738444650000587,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c1-1-0",
+              "tokens": 512,
+              "ttft": 0.04444995399998675,
+              "e2e": 10.147771397999975,
+              "start": 252.217942988,
+              "end": 262.365714386,
+              "output_tok_s": 50.454427865896754,
+              "client_post_first_rate": 50.57783407683023,
+              "max_content_gap": 0.05889826899999662,
+              "p95_content_gap": 0.022719712550015456,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c1-2-0",
+              "tokens": 512,
+              "ttft": 0.047891266000021915,
+              "e2e": 10.640713018999975,
+              "start": 262.432441133,
+              "end": 273.073154152,
+              "output_tok_s": 48.11707627917197,
+              "client_post_first_rate": 48.240489608048925,
+              "max_content_gap": 0.06143790099997659,
+              "p95_content_gap": 0.026513567799997865,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            }
+          ],
+          "count": 3,
+          "post_first_rate_median": 50.57783407683023,
+          "ttft_p95": 0.0475471348000184,
+          "e2e_p95": 10.591418856899974,
+          "wave_output_tok_s": 50.33815369177186
+        },
+        "4": {
+          "requests": [
+            {
+              "name": "c4-0-0",
+              "tokens": 512,
+              "ttft": 0.08400696199998947,
+              "e2e": 11.841430917000025,
+              "start": 273.174152376,
+              "end": 285.015583293,
+              "output_tok_s": 43.23801773525129,
+              "client_post_first_rate": 43.46205141404209,
+              "max_content_gap": 0.06543958899999325,
+              "p95_content_gap": 0.027916324649990543,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-1",
+              "tokens": 512,
+              "ttft": 0.10867158399997834,
+              "e2e": 11.95854618300001,
+              "start": 273.174428244,
+              "end": 285.132974427,
+              "output_tok_s": 42.81456894215513,
+              "client_post_first_rate": 43.12305502152447,
+              "max_content_gap": 0.07795831999999336,
+              "p95_content_gap": 0.028087036399986682,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-2",
+              "tokens": 512,
+              "ttft": 0.10814619899997524,
+              "e2e": 11.925802574999977,
+              "start": 273.174667219,
+              "end": 285.100469794,
+              "output_tok_s": 42.9321210694284,
+              "client_post_first_rate": 43.240620565929795,
+              "max_content_gap": 0.0848836260000212,
+              "p95_content_gap": 0.028104399149987098,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-3",
+              "tokens": 512,
+              "ttft": 0.10754472799999348,
+              "e2e": 11.880343123999978,
+              "start": 273.174819301,
+              "end": 285.055162425,
+              "output_tok_s": 43.09639836628013,
+              "client_post_first_rate": 43.40533312932504,
+              "max_content_gap": 0.06377250799999956,
+              "p95_content_gap": 0.028102407649984677,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            }
+          ],
+          "count": 4,
+          "post_first_rate_median": 43.322976847627416,
+          "ttft_p95": 0.10859277624997787,
+          "e2e_p95": 11.953634641800004,
+          "wave_output_tok_s": 171.25432515560686
+        }
+      },
+      "startup": {
+        "ready_at": "20260910T072102Z",
+        "startup_seconds": 21.16417360305786,
+        "health": "",
+        "log_tail": " 32768, 'enforce_eager': True, 'served_model_name': ['stage3-document-qa'], 'generation_config': 'vllm', 'attention_backend': 'FLASH_ATTN', 'gpu_memory_utilization': 0.8, 'kv_cache_dtype': 'bfloat16', 'enable_prefix_caching': True, 'calculate_kv_scales': True, 'cudagraph_metrics': True, 'max_num_batched_tokens': 2048, 'max_num_seqs': 8, 'enable_chunked_prefill': True, 'compilation_config': {'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': [], 'ir_enable_torch_wrap': None, 'splitting_ops': None, 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': None, 'compile_ranges_endpoints': None, 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [1, 2, 4], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': None, 'pass_config': {}, 'max_cudagraph_capture_size': 4, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': None, 'static_all_moe_layers': []}}\n(APIServer pid=1231) INFO 09-10 17:20:48 [model.py:611] Resolved architecture: Qwen3ForCausalLM\n(APIServer pid=1231) INFO 09-10 17:20:48 [model.py:1745] Using max model len 32768\n(APIServer pid=1231) WARNING 09-10 17:20:48 [cache.py:250] The `--calculate-kv-scales` option is deprecated and will be removed in v0.19. The scales will be loaded from the model checkpoint if available, otherwise they default to 1.0.\n(APIServer pid=1231) INFO 09-10 17:20:48 [vllm.py:999] Asynchronous scheduling is enabled.\n(APIServer pid=1231) WARNING 09-10 17:20:48 [vllm.py:1055] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none\n(APIServer pid=1231) WARNING 09-10 17:20:48 [vllm.py:1097] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.\n(APIServer pid=1231) INFO 09-10 17:20:48 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])\n(APIServer pid=1231) INFO 09-10 17:20:48 [vllm.py:1273] Cudagraph is disabled under eager mode\n(APIServer pid=1231) INFO 09-10 17:20:48 [compilation.py:321] Enabled custom fusions: norm_quant, act_quant\nWARNING 09-10 17:20:54 [config.py:71] Support for Transformers v4 is deprecated. The Transformers v4 codepath will become unmaintained in vLLM v0.22.0 and will be removed in vLLM v0.24.0. Please upgrade to Transformers v5: pip install --upgrade transformers\n(EngineCore pid=1306) INFO 09-10 17:20:56 [core.py:113] Initializing a V1 LLM engine (v0.23.0) with config: model='/home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c', speculative_config=None, tokenizer='/home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, quantization_config=None, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=bfloat16, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=True, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=stage3-document-qa, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'ir_enable_torch_wrap': False, 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native']), enable_flashinfer_autotune=True, moe_backend='auto', linear_backend='auto')\n(EngineCore pid=1306) WARNING 09-10 17:20:56 [interface.py:757] Using 'pin_memory=False' as WSL is detected. This may slow down the performance.\n(EngineCore pid=1306) INFO 09-10 17:20:56 [parallel_state.py:1568] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://172.20.48.164:41797 backend=nccl\n(EngineCore pid=1306) INFO 09-10 17:20:56 [parallel_state.py:1903] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A\n(EngineCore pid=1306) INFO 09-10 17:20:56 [topk_topp_sampler.py:39] FlashInfer top-p/top-k sampling disabled via VLLM_USE_FLASHINFER_SAMPLER=0.\n(EngineCore pid=1306) INFO 09-10 17:20:57 [gpu_model_runner.py:5092] Starting to load model /home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c...\n(EngineCore pid=1306) INFO 09-10 17:20:57 [cuda.py:318] Using AttentionBackendEnum.FLASH_ATTN backend.\n(EngineCore pid=1306) INFO 09-10 17:20:57 [flash_attn.py:636] Using FlashAttention version 2\n(EngineCore pid=1306) INFO 09-10 17:20:57 [weight_utils.py:922] Filesystem type for checkpoints: EXT4. Checkpoint size: 7.49 GiB. Available RAM: 13.00 GiB.\n(EngineCore pid=1306) INFO 09-10 17:20:57 [weight_utils.py:945] Auto-prefetch is disabled because the filesystem (EXT4) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.\n(EngineCore pid=1306) \nLoading safetensors checkpoint shards:   0% Completed | 0/3 [00:00<?, ?it/s]\n(EngineCore pid=1306) \nLoading safetensors checkpoint shards:  33% Completed | 1/3 [00:00<00:01,  1.95it/s]\n(EngineCore pid=1306) \nLoading safetensors checkpoint shards:  67% Completed | 2/3 [00:01<00:00,  1.34it/s]\n(EngineCore pid=1306) \nLoading safetensors checkpoint shards: 100% Completed | 3/3 [00:01<00:00,  2.09it/s]\n(EngineCore pid=1306) \n(EngineCore pid=1306) INFO 09-10 17:20:58 [default_loader.py:397] Loading weights took 1.45 seconds\n(EngineCore pid=1306) INFO 09-10 17:20:59 [gpu_model_runner.py:5187] Model loading took 7.56 GiB memory and 1.823983 seconds\n(EngineCore pid=1306) INFO 09-10 17:21:00 [gpu_worker.py:480] Available KV cache memory: 5.02 GiB\n(EngineCore pid=1306) INFO 09-10 17:21:00 [kv_cache_utils.py:1744] GPU KV cache size: 36,528 tokens\n(EngineCore pid=1306) INFO 09-10 17:21:00 [kv_cache_utils.py:1745] Maximum concurrency for 32,768 tokens per request: 1.11x\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408] Module vllm.third_party.deep_gemm was found but failed to import\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408] Traceback (most recent call last):\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/utils/import_utils.py\", line 406, in _has_module\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408]     importlib.import_module(module_name)\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408]   File \"/usr/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408]     return _bootstrap._gcd_import(name[level:], package, level)\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408]   File \"<frozen importlib._bootstrap_external>\", line 995, in exec_module\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/third_party/deep_gemm/__init__.py\", line 123, in <module>\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408]     _find_cuda_home()                           # CUDA home\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408]     ^^^^^^^^^^^^^^^^^\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/third_party/deep_gemm/__init__.py\", line 117, in _find_cuda_home\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408]     assert cuda_home is not None\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408]            ^^^^^^^^^^^^^^^^^^^^^\n(EngineCore pid=1306) WARNING 09-10 17:21:00 [import_utils.py:408] AssertionError\n(EngineCore pid=1306) INFO 09-10 17:21:00 [jit_monitor.py:54] Kernel JIT monitor activated — Triton JIT compilations during inference will be logged as warnings.\n(EngineCore pid=1306) INFO 09-10 17:21:00 [core.py:313] init engine (profile, create kv cache, warmup model) took 1.71 s\n(EngineCore pid=1306) INFO 09-10 17:21:01 [vllm.py:999] Asynchronous scheduling is enabled.\n(EngineCore pid=1306) WARNING 09-10 17:21:01 [vllm.py:1055] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none\n(EngineCore pid=1306) WARNING 09-10 17:21:01 [vllm.py:1097] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.\n(EngineCore pid=1306) INFO 09-10 17:21:01 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])\n(EngineCore pid=1306) INFO 09-10 17:21:01 [vllm.py:1273] Cudagraph is disabled under eager mode\n(EngineCore pid=1306) INFO 09-10 17:21:01 [compilation.py:321] Enabled custom fusions: norm_quant, act_quant\n(APIServer pid=1231) INFO 09-10 17:21:01 [api_server.py:579] Supported tasks: ['generate']\n(APIServer pid=1231) INFO 09-10 17:21:01 [hf.py:548] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.\n(APIServer pid=1231) INFO 09-10 17:21:01 [api_server.py:583] Starting vLLM server on http://127.0.0.1:8000\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:37] Available routes are:\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /openapi.json, Methods: HEAD, GET\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /docs, Methods: HEAD, GET\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: HEAD, GET\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /redoc, Methods: HEAD, GET\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /load, Methods: GET\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /version, Methods: GET\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /health, Methods: GET\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /metrics, Methods: GET\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /tokenize, Methods: POST\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /detokenize, Methods: POST\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /v1/models, Methods: GET\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /ping, Methods: GET\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /ping, Methods: POST\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /invocations, Methods: POST\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /v1/chat/completions, Methods: POST\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /v1/chat/completions/batch, Methods: POST\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /v1/responses, Methods: POST\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /v1/completions, Methods: POST\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /v1/messages, Methods: POST\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /v1/messages/count_tokens, Methods: POST\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /generative_scoring, Methods: POST\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /inference/v1/generate, Methods: POST\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /v1/chat/completions/render, Methods: POST\n(APIServer pid=1231) INFO 09-10 17:21:01 [launcher.py:46] Route: /v1/completions/render, Methods: POST\n(APIServer pid=1231) INFO:     Started server process [1231]\n(APIServer pid=1231) INFO:     Waiting for application startup.\n(APIServer pid=1231) INFO:     Application startup complete.\n(APIServer pid=1231) INFO:     127.0.0.1:59046 - \"GET /health HTTP/1.1\" 200 OK\n"
+      },
+      "runtime": {
+        "mode": "NONE",
+        "rows": [
+          "| 1               | 1             | 0            | NONE         | 451   |",
+          "| 14              | 14            | 0            | NONE         | 2     |",
+          "| 2048            | 2048          | 0            | NONE         | 1     |",
+          "| 62              | 62            | 0            | NONE         | 1     |",
+          "| 1               | 1             | 0            | NONE         | 501   |",
+          "| 14              | 14            | 0            | NONE         | 1     |",
+          "| 1               | 1             | 0            | NONE         | 486   |",
+          "| 14              | 14            | 0            | NONE         | 1     |",
+          "| 4               | 4             | 0            | NONE         | 289   |",
+          "| 1               | 1             | 0            | NONE         | 157   |",
+          "| 14              | 14            | 0            | NONE         | 1     |",
+          "| 43              | 43            | 0            | NONE         | 1     |"
+        ]
+      },
+      "telemetry": {
+        "max_sum_rss_bytes": 3055374336,
+        "min_mem_available": 13367926784,
+        "max_swap_used": 0
+      }
+    },
+    {
+      "name": "r2-graph",
+      "gpu_kv_tokens": 36208,
+      "groups": {
+        "1": {
+          "requests": [
+            {
+              "name": "c1-0-0",
+              "tokens": 512,
+              "ttft": 0.031016520999969543,
+              "e2e": 9.125924977000011,
+              "start": 312.438518482,
+              "end": 321.564443459,
+              "output_tok_s": 56.10390193765444,
+              "client_post_first_rate": 56.18557320855252,
+              "max_content_gap": 0.04996740400002864,
+              "p95_content_gap": 0.01924149819997467,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c1-1-0",
+              "tokens": 512,
+              "ttft": 0.03677524699998003,
+              "e2e": 9.567965759000003,
+              "start": 321.665032293,
+              "end": 331.232998052,
+              "output_tok_s": 53.51189718863623,
+              "client_post_first_rate": 53.61373321118692,
+              "max_content_gap": 0.055217193000032694,
+              "p95_content_gap": 0.019848977699973604,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c1-2-0",
+              "tokens": 512,
+              "ttft": 0.033848832999979095,
+              "e2e": 9.819130567999991,
+              "start": 331.308525836,
+              "end": 341.127656404,
+              "output_tok_s": 52.1431094590574,
+              "client_post_first_rate": 52.221588578592645,
+              "max_content_gap": 0.056754250000039974,
+              "p95_content_gap": 0.01983463990000587,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            }
+          ],
+          "count": 3,
+          "post_first_rate_median": 53.61373321118692,
+          "ttft_p95": 0.036482605599979935,
+          "e2e_p95": 9.794014087099992,
+          "wave_output_tok_s": 53.53942680941045
+        },
+        "4": {
+          "requests": [
+            {
+              "name": "c4-0-0",
+              "tokens": 512,
+              "ttft": 0.07098555299995724,
+              "e2e": 10.440407389999962,
+              "start": 341.344212194,
+              "end": 351.784619584,
+              "output_tok_s": 49.040231944435824,
+              "client_post_first_rate": 49.27967520238601,
+              "max_content_gap": 0.060849447000009604,
+              "p95_content_gap": 0.020888018199977407,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-1",
+              "tokens": 512,
+              "ttft": 0.08279075799998736,
+              "e2e": 10.472052399999995,
+              "start": 341.344524491,
+              "end": 351.816576891,
+              "output_tok_s": 48.89203953945076,
+              "client_post_first_rate": 49.44593516047389,
+              "max_content_gap": 0.06110029299998132,
+              "p95_content_gap": 0.02088431500001775,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-2",
+              "tokens": 512,
+              "ttft": 0.0826246610000112,
+              "e2e": 10.498393185999987,
+              "start": 341.344857699,
+              "end": 351.843250885,
+              "output_tok_s": 48.769367933635,
+              "client_post_first_rate": 49.44642731283942,
+              "max_content_gap": 0.0611619800000085,
+              "p95_content_gap": 0.02087162525002384,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-3",
+              "tokens": 512,
+              "ttft": 0.0825302499999907,
+              "e2e": 10.524914049000017,
+              "start": 341.345082506,
+              "end": 351.869996555,
+              "output_tok_s": 48.64647802502916,
+              "client_post_first_rate": 49.44688380006889,
+              "max_content_gap": 0.06116055000001097,
+              "p95_content_gap": 0.02087557299998366,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            }
+          ],
+          "count": 4,
+          "post_first_rate_median": 49.446181236656656,
+          "ttft_p95": 0.08276584344999094,
+          "e2e_p95": 10.520935919550013,
+          "wave_output_tok_s": 194.569822994686
+        }
+      },
+      "startup": {
+        "ready_at": "20260910T072211Z",
+        "startup_seconds": 22.213473558425903,
+        "health": "",
+        "log_tail": "oder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': None, 'compile_ranges_endpoints': None, 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_DECODE_ONLY: (2, 0)>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [1, 2, 4], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': None, 'pass_config': {}, 'max_cudagraph_capture_size': 4, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': None, 'static_all_moe_layers': []}}\n(APIServer pid=1586) INFO 09-10 17:21:56 [model.py:611] Resolved architecture: Qwen3ForCausalLM\n(APIServer pid=1586) INFO 09-10 17:21:56 [model.py:1745] Using max model len 32768\n(APIServer pid=1586) WARNING 09-10 17:21:56 [cache.py:250] The `--calculate-kv-scales` option is deprecated and will be removed in v0.19. The scales will be loaded from the model checkpoint if available, otherwise they default to 1.0.\n(APIServer pid=1586) INFO 09-10 17:21:56 [vllm.py:999] Asynchronous scheduling is enabled.\n(APIServer pid=1586) WARNING 09-10 17:21:56 [vllm.py:1097] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.\n(APIServer pid=1586) INFO 09-10 17:21:56 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])\n(APIServer pid=1586) INFO 09-10 17:21:56 [compilation.py:321] Enabled custom fusions: norm_quant, act_quant\nWARNING 09-10 17:22:02 [config.py:71] Support for Transformers v4 is deprecated. The Transformers v4 codepath will become unmaintained in vLLM v0.22.0 and will be removed in vLLM v0.24.0. Please upgrade to Transformers v5: pip install --upgrade transformers\n(EngineCore pid=1660) INFO 09-10 17:22:03 [core.py:113] Initializing a V1 LLM engine (v0.23.0) with config: model='/home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c', speculative_config=None, tokenizer='/home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, quantization_config=None, enforce_eager=False, enable_return_routed_experts=False, kv_cache_dtype=bfloat16, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=True, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=stage3-document-qa, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'ir_enable_torch_wrap': False, 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_DECODE_ONLY: (2, 0)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False}, 'max_cudagraph_capture_size': 4, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native']), enable_flashinfer_autotune=True, moe_backend='auto', linear_backend='auto')\n(EngineCore pid=1660) WARNING 09-10 17:22:04 [interface.py:757] Using 'pin_memory=False' as WSL is detected. This may slow down the performance.\n(EngineCore pid=1660) INFO 09-10 17:22:04 [parallel_state.py:1568] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://172.20.48.164:57055 backend=nccl\n(EngineCore pid=1660) INFO 09-10 17:22:04 [parallel_state.py:1903] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A\n(EngineCore pid=1660) INFO 09-10 17:22:04 [topk_topp_sampler.py:39] FlashInfer top-p/top-k sampling disabled via VLLM_USE_FLASHINFER_SAMPLER=0.\n(EngineCore pid=1660) INFO 09-10 17:22:04 [gpu_model_runner.py:5092] Starting to load model /home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c...\n(EngineCore pid=1660) INFO 09-10 17:22:05 [cuda.py:318] Using AttentionBackendEnum.FLASH_ATTN backend.\n(EngineCore pid=1660) INFO 09-10 17:22:05 [flash_attn.py:636] Using FlashAttention version 2\n(EngineCore pid=1660) INFO 09-10 17:22:05 [weight_utils.py:922] Filesystem type for checkpoints: EXT4. Checkpoint size: 7.49 GiB. Available RAM: 13.00 GiB.\n(EngineCore pid=1660) INFO 09-10 17:22:05 [weight_utils.py:945] Auto-prefetch is disabled because the filesystem (EXT4) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.\n(EngineCore pid=1660) \nLoading safetensors checkpoint shards:   0% Completed | 0/3 [00:00<?, ?it/s]\n(EngineCore pid=1660) \nLoading safetensors checkpoint shards:  33% Completed | 1/3 [00:00<00:01,  1.70it/s]\n(EngineCore pid=1660) \nLoading safetensors checkpoint shards:  67% Completed | 2/3 [00:01<00:00,  1.43it/s]\n(EngineCore pid=1660) \nLoading safetensors checkpoint shards: 100% Completed | 3/3 [00:01<00:00,  2.16it/s]\n(EngineCore pid=1660) \n(EngineCore pid=1660) INFO 09-10 17:22:06 [default_loader.py:397] Loading weights took 1.39 seconds\n(EngineCore pid=1660) INFO 09-10 17:22:07 [gpu_model_runner.py:5187] Model loading took 7.56 GiB memory and 1.784425 seconds\n(EngineCore pid=1660) INFO 09-10 17:22:08 [gpu_model_runner.py:6412] Profiling CUDA graph memory: FULL=3 (largest=4)\n(EngineCore pid=1660) INFO 09-10 17:22:08 [gpu_model_runner.py:6517] Estimated CUDA graph memory: 0.04 GiB total\n(EngineCore pid=1660) INFO 09-10 17:22:09 [gpu_worker.py:480] Available KV cache memory: 4.97 GiB\n(EngineCore pid=1660) INFO 09-10 17:22:09 [gpu_worker.py:495] CUDA graph memory profiling is enabled (default since v0.21.0). The current --gpu-memory-utilization=0.8000 is equivalent to --gpu-memory-utilization=0.7978 without CUDA graph memory profiling. To maintain the same effective KV cache size as before, increase --gpu-memory-utilization to 0.8022. To disable, set VLLM_MEMORY_PROFILER_ESTIMATE_CUDAGRAPHS=0.\n(EngineCore pid=1660) INFO 09-10 17:22:09 [kv_cache_utils.py:1744] GPU KV cache size: 36,208 tokens\n(EngineCore pid=1660) INFO 09-10 17:22:09 [kv_cache_utils.py:1745] Maximum concurrency for 32,768 tokens per request: 1.10x\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408] Module vllm.third_party.deep_gemm was found but failed to import\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408] Traceback (most recent call last):\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/utils/import_utils.py\", line 406, in _has_module\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408]     importlib.import_module(module_name)\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408]   File \"/usr/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408]     return _bootstrap._gcd_import(name[level:], package, level)\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408]   File \"<frozen importlib._bootstrap_external>\", line 995, in exec_module\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/third_party/deep_gemm/__init__.py\", line 123, in <module>\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408]     _find_cuda_home()                           # CUDA home\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408]     ^^^^^^^^^^^^^^^^^\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/third_party/deep_gemm/__init__.py\", line 117, in _find_cuda_home\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408]     assert cuda_home is not None\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408]            ^^^^^^^^^^^^^^^^^^^^^\n(EngineCore pid=1660) WARNING 09-10 17:22:09 [import_utils.py:408] AssertionError\n(EngineCore pid=1660) \nCapturing CUDA graphs (decode, FULL):   0%|          | 0/3 [00:00<?, ?it/s]\nCapturing CUDA graphs (decode, FULL): 100%|██████████| 3/3 [00:00<00:00, 22.35it/s]\nCapturing CUDA graphs (decode, FULL): 100%|██████████| 3/3 [00:00<00:00, 21.95it/s]\n(EngineCore pid=1660) INFO 09-10 17:22:09 [gpu_model_runner.py:6585] Graph capturing finished in 0 secs, took 0.03 GiB\n(EngineCore pid=1660) INFO 09-10 17:22:09 [gpu_worker.py:639] CUDA graph pool memory: 0.03 GiB (actual), 0.04 GiB (estimated), difference: 0.01 GiB (28.6%).\n(EngineCore pid=1660) INFO 09-10 17:22:09 [jit_monitor.py:54] Kernel JIT monitor activated — Triton JIT compilations during inference will be logged as warnings.\n(EngineCore pid=1660) INFO 09-10 17:22:10 [core.py:313] init engine (profile, create kv cache, warmup model) took 2.94 s\n(EngineCore pid=1660) INFO 09-10 17:22:10 [vllm.py:999] Asynchronous scheduling is enabled.\n(EngineCore pid=1660) WARNING 09-10 17:22:10 [vllm.py:1097] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.\n(EngineCore pid=1660) INFO 09-10 17:22:10 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])\n(EngineCore pid=1660) INFO 09-10 17:22:10 [compilation.py:321] Enabled custom fusions: norm_quant, act_quant\n(APIServer pid=1586) INFO 09-10 17:22:10 [api_server.py:579] Supported tasks: ['generate']\n(APIServer pid=1586) INFO 09-10 17:22:10 [hf.py:548] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.\n(APIServer pid=1586) INFO 09-10 17:22:10 [api_server.py:583] Starting vLLM server on http://127.0.0.1:8000\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:37] Available routes are:\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /openapi.json, Methods: HEAD, GET\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /docs, Methods: HEAD, GET\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: HEAD, GET\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /redoc, Methods: HEAD, GET\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /load, Methods: GET\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /version, Methods: GET\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /health, Methods: GET\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /metrics, Methods: GET\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /tokenize, Methods: POST\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /detokenize, Methods: POST\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /v1/models, Methods: GET\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /ping, Methods: GET\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /ping, Methods: POST\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /invocations, Methods: POST\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /v1/chat/completions, Methods: POST\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /v1/chat/completions/batch, Methods: POST\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /v1/responses, Methods: POST\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /v1/completions, Methods: POST\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /v1/messages, Methods: POST\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /v1/messages/count_tokens, Methods: POST\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /generative_scoring, Methods: POST\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /inference/v1/generate, Methods: POST\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /v1/chat/completions/render, Methods: POST\n(APIServer pid=1586) INFO 09-10 17:22:10 [launcher.py:46] Route: /v1/completions/render, Methods: POST\n(APIServer pid=1586) INFO:     Started server process [1586]\n(APIServer pid=1586) INFO:     Waiting for application startup.\n(APIServer pid=1586) INFO:     Application startup complete.\n(APIServer pid=1586) INFO:     127.0.0.1:53130 - \"GET /health HTTP/1.1\" 200 OK\n"
+      },
+      "runtime": {
+        "mode": "FULL",
+        "rows": [
+          "| 1               | 1             | 0            | FULL         | 504   |",
+          "| 1               | 1             | 0            | FULL         | 531   |",
+          "| 1               | 1             | 0            | FULL         | 517   |",
+          "| 4               | 4             | 0            | FULL         | 437   |",
+          "| 1               | 1             | 0            | FULL         | 43    |"
+        ]
+      },
+      "telemetry": {
+        "max_sum_rss_bytes": 3071213568,
+        "min_mem_available": 13363834880,
+        "max_swap_used": 0
+      }
+    },
+    {
+      "name": "r3-eager",
+      "gpu_kv_tokens": 36528,
+      "groups": {
+        "1": {
+          "requests": [
+            {
+              "name": "c1-0-0",
+              "tokens": 512,
+              "ttft": 0.0433342779999748,
+              "e2e": 9.995865408999975,
+              "start": 442.25925545,
+              "end": 452.255120859,
+              "output_tok_s": 51.22117786209993,
+              "client_post_first_rate": 51.34401068562457,
+              "max_content_gap": 0.058841113000028145,
+              "p95_content_gap": 0.021299894400010542,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c1-1-0",
+              "tokens": 512,
+              "ttft": 0.04325966600003994,
+              "e2e": 10.179093625999997,
+              "start": 452.448159096,
+              "end": 462.627252722,
+              "output_tok_s": 50.29917385691606,
+              "client_post_first_rate": 50.415479466603365,
+              "max_content_gap": 0.05882500499996013,
+              "p95_content_gap": 0.022307767350045537,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c1-2-0",
+              "tokens": 512,
+              "ttft": 0.04847526700001481,
+              "e2e": 10.59924365300003,
+              "start": 462.737394373,
+              "end": 473.336638026,
+              "output_tok_s": 48.3053335466142,
+              "client_post_first_rate": 48.432764248043796,
+              "max_content_gap": 0.0601566729999945,
+              "p95_content_gap": 0.02389621040000236,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            }
+          ],
+          "count": 3,
+          "post_first_rate_median": 50.415479466603365,
+          "ttft_p95": 0.04796116810001081,
+          "e2e_p95": 10.557228650300027,
+          "wave_output_tok_s": 49.42501178288421
+        },
+        "4": {
+          "requests": [
+            {
+              "name": "c4-0-0",
+              "tokens": 512,
+              "ttft": 0.07804618500000515,
+              "e2e": 12.226695762999952,
+              "start": 473.521377447,
+              "end": 485.74807321,
+              "output_tok_s": 41.87558191718473,
+              "client_post_first_rate": 42.06256831929335,
+              "max_content_gap": 0.07279595699998254,
+              "p95_content_gap": 0.03133317485003885,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-1",
+              "tokens": 512,
+              "ttft": 0.10035308299995904,
+              "e2e": 12.409108593999974,
+              "start": 473.521622533,
+              "end": 485.930731127,
+              "output_tok_s": 41.26001445805391,
+              "client_post_first_rate": 41.51540990831345,
+              "max_content_gap": 0.152439749999985,
+              "p95_content_gap": 0.03152542214999982,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-2",
+              "tokens": 512,
+              "ttft": 0.10000518100002864,
+              "e2e": 12.325549194000018,
+              "start": 473.521843484,
+              "end": 485.847392678,
+              "output_tok_s": 41.539731166643485,
+              "client_post_first_rate": 41.79794535282916,
+              "max_content_gap": 0.07253267299995514,
+              "p95_content_gap": 0.03150916379996431,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-3",
+              "tokens": 512,
+              "ttft": 0.09962111999999479,
+              "e2e": 12.256398876999981,
+              "start": 473.522001375,
+              "end": 485.778400252,
+              "output_tok_s": 41.774097362383095,
+              "client_post_first_rate": 42.034314966380286,
+              "max_content_gap": 0.06728310999994846,
+              "p95_content_gap": 0.03131692635000149,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            }
+          ],
+          "count": 4,
+          "post_first_rate_median": 41.91613015960472,
+          "ttft_p95": 0.10030089769996949,
+          "e2e_p95": 12.396574683999981,
+          "wave_output_tok_s": 165.0367982742517
+        }
+      },
+      "startup": {
+        "ready_at": "20260910T072417Z",
+        "startup_seconds": 20.15674901008606,
+        "health": "",
+        "log_tail": " 32768, 'enforce_eager': True, 'served_model_name': ['stage3-document-qa'], 'generation_config': 'vllm', 'attention_backend': 'FLASH_ATTN', 'gpu_memory_utilization': 0.8, 'kv_cache_dtype': 'bfloat16', 'enable_prefix_caching': True, 'calculate_kv_scales': True, 'cudagraph_metrics': True, 'max_num_batched_tokens': 2048, 'max_num_seqs': 8, 'enable_chunked_prefill': True, 'compilation_config': {'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': [], 'ir_enable_torch_wrap': None, 'splitting_ops': None, 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': None, 'compile_ranges_endpoints': None, 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [1, 2, 4], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': None, 'pass_config': {}, 'max_cudagraph_capture_size': 4, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': None, 'static_all_moe_layers': []}}\n(APIServer pid=2284) INFO 09-10 17:24:04 [model.py:611] Resolved architecture: Qwen3ForCausalLM\n(APIServer pid=2284) INFO 09-10 17:24:04 [model.py:1745] Using max model len 32768\n(APIServer pid=2284) WARNING 09-10 17:24:04 [cache.py:250] The `--calculate-kv-scales` option is deprecated and will be removed in v0.19. The scales will be loaded from the model checkpoint if available, otherwise they default to 1.0.\n(APIServer pid=2284) INFO 09-10 17:24:04 [vllm.py:999] Asynchronous scheduling is enabled.\n(APIServer pid=2284) WARNING 09-10 17:24:04 [vllm.py:1055] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none\n(APIServer pid=2284) WARNING 09-10 17:24:04 [vllm.py:1097] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.\n(APIServer pid=2284) INFO 09-10 17:24:04 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])\n(APIServer pid=2284) INFO 09-10 17:24:04 [vllm.py:1273] Cudagraph is disabled under eager mode\n(APIServer pid=2284) INFO 09-10 17:24:04 [compilation.py:321] Enabled custom fusions: norm_quant, act_quant\nWARNING 09-10 17:24:09 [config.py:71] Support for Transformers v4 is deprecated. The Transformers v4 codepath will become unmaintained in vLLM v0.22.0 and will be removed in vLLM v0.24.0. Please upgrade to Transformers v5: pip install --upgrade transformers\n(EngineCore pid=2358) INFO 09-10 17:24:11 [core.py:113] Initializing a V1 LLM engine (v0.23.0) with config: model='/home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c', speculative_config=None, tokenizer='/home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, quantization_config=None, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=bfloat16, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=True, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=stage3-document-qa, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'ir_enable_torch_wrap': False, 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native']), enable_flashinfer_autotune=True, moe_backend='auto', linear_backend='auto')\n(EngineCore pid=2358) WARNING 09-10 17:24:11 [interface.py:757] Using 'pin_memory=False' as WSL is detected. This may slow down the performance.\n(EngineCore pid=2358) INFO 09-10 17:24:11 [parallel_state.py:1568] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://172.20.48.164:40401 backend=nccl\n(EngineCore pid=2358) INFO 09-10 17:24:11 [parallel_state.py:1903] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A\n(EngineCore pid=2358) INFO 09-10 17:24:12 [topk_topp_sampler.py:39] FlashInfer top-p/top-k sampling disabled via VLLM_USE_FLASHINFER_SAMPLER=0.\n(EngineCore pid=2358) INFO 09-10 17:24:12 [gpu_model_runner.py:5092] Starting to load model /home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c...\n(EngineCore pid=2358) INFO 09-10 17:24:12 [cuda.py:318] Using AttentionBackendEnum.FLASH_ATTN backend.\n(EngineCore pid=2358) INFO 09-10 17:24:12 [flash_attn.py:636] Using FlashAttention version 2\n(EngineCore pid=2358) INFO 09-10 17:24:12 [weight_utils.py:922] Filesystem type for checkpoints: EXT4. Checkpoint size: 7.49 GiB. Available RAM: 12.99 GiB.\n(EngineCore pid=2358) INFO 09-10 17:24:12 [weight_utils.py:945] Auto-prefetch is disabled because the filesystem (EXT4) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.\n(EngineCore pid=2358) \nLoading safetensors checkpoint shards:   0% Completed | 0/3 [00:00<?, ?it/s]\n(EngineCore pid=2358) \nLoading safetensors checkpoint shards:  33% Completed | 1/3 [00:00<00:00,  2.42it/s]\n(EngineCore pid=2358) \nLoading safetensors checkpoint shards:  67% Completed | 2/3 [00:00<00:00,  2.16it/s]\n(EngineCore pid=2358) \nLoading safetensors checkpoint shards: 100% Completed | 3/3 [00:00<00:00,  3.23it/s]\n(EngineCore pid=2358) \n(EngineCore pid=2358) INFO 09-10 17:24:13 [default_loader.py:397] Loading weights took 0.93 seconds\n(EngineCore pid=2358) INFO 09-10 17:24:13 [gpu_model_runner.py:5187] Model loading took 7.56 GiB memory and 1.292313 seconds\n(EngineCore pid=2358) INFO 09-10 17:24:15 [gpu_worker.py:480] Available KV cache memory: 5.02 GiB\n(EngineCore pid=2358) INFO 09-10 17:24:15 [kv_cache_utils.py:1744] GPU KV cache size: 36,528 tokens\n(EngineCore pid=2358) INFO 09-10 17:24:15 [kv_cache_utils.py:1745] Maximum concurrency for 32,768 tokens per request: 1.11x\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408] Module vllm.third_party.deep_gemm was found but failed to import\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408] Traceback (most recent call last):\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/utils/import_utils.py\", line 406, in _has_module\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408]     importlib.import_module(module_name)\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408]   File \"/usr/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408]     return _bootstrap._gcd_import(name[level:], package, level)\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408]   File \"<frozen importlib._bootstrap_external>\", line 995, in exec_module\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/third_party/deep_gemm/__init__.py\", line 123, in <module>\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408]     _find_cuda_home()                           # CUDA home\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408]     ^^^^^^^^^^^^^^^^^\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/third_party/deep_gemm/__init__.py\", line 117, in _find_cuda_home\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408]     assert cuda_home is not None\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408]            ^^^^^^^^^^^^^^^^^^^^^\n(EngineCore pid=2358) WARNING 09-10 17:24:15 [import_utils.py:408] AssertionError\n(EngineCore pid=2358) INFO 09-10 17:24:15 [jit_monitor.py:54] Kernel JIT monitor activated — Triton JIT compilations during inference will be logged as warnings.\n(EngineCore pid=2358) INFO 09-10 17:24:15 [core.py:313] init engine (profile, create kv cache, warmup model) took 1.87 s\n(EngineCore pid=2358) INFO 09-10 17:24:16 [vllm.py:999] Asynchronous scheduling is enabled.\n(EngineCore pid=2358) WARNING 09-10 17:24:16 [vllm.py:1055] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none\n(EngineCore pid=2358) WARNING 09-10 17:24:16 [vllm.py:1097] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.\n(EngineCore pid=2358) INFO 09-10 17:24:16 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])\n(EngineCore pid=2358) INFO 09-10 17:24:16 [vllm.py:1273] Cudagraph is disabled under eager mode\n(EngineCore pid=2358) INFO 09-10 17:24:16 [compilation.py:321] Enabled custom fusions: norm_quant, act_quant\n(APIServer pid=2284) INFO 09-10 17:24:16 [api_server.py:579] Supported tasks: ['generate']\n(APIServer pid=2284) INFO 09-10 17:24:16 [hf.py:548] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.\n(APIServer pid=2284) INFO 09-10 17:24:16 [api_server.py:583] Starting vLLM server on http://127.0.0.1:8000\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:37] Available routes are:\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /openapi.json, Methods: GET, HEAD\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /docs, Methods: GET, HEAD\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: GET, HEAD\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /redoc, Methods: GET, HEAD\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /load, Methods: GET\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /version, Methods: GET\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /health, Methods: GET\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /metrics, Methods: GET\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /tokenize, Methods: POST\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /detokenize, Methods: POST\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /v1/models, Methods: GET\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /ping, Methods: GET\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /ping, Methods: POST\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /invocations, Methods: POST\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /v1/chat/completions, Methods: POST\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /v1/chat/completions/batch, Methods: POST\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /v1/responses, Methods: POST\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /v1/completions, Methods: POST\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /v1/messages, Methods: POST\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /v1/messages/count_tokens, Methods: POST\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /generative_scoring, Methods: POST\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /inference/v1/generate, Methods: POST\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /v1/chat/completions/render, Methods: POST\n(APIServer pid=2284) INFO 09-10 17:24:16 [launcher.py:46] Route: /v1/completions/render, Methods: POST\n(APIServer pid=2284) INFO:     Started server process [2284]\n(APIServer pid=2284) INFO:     Waiting for application startup.\n(APIServer pid=2284) INFO:     Application startup complete.\n(APIServer pid=2284) INFO:     127.0.0.1:50974 - \"GET /health HTTP/1.1\" 200 OK\n"
+      },
+      "runtime": {
+        "mode": "NONE",
+        "rows": [
+          "| 1               | 1             | 0            | NONE         | 452   |",
+          "| 14              | 14            | 0            | NONE         | 2     |",
+          "| 2048            | 2048          | 0            | NONE         | 1     |",
+          "| 62              | 62            | 0            | NONE         | 1     |",
+          "| 1               | 1             | 0            | NONE         | 494   |",
+          "| 14              | 14            | 0            | NONE         | 1     |",
+          "| 1               | 1             | 0            | NONE         | 483   |",
+          "| 14              | 14            | 0            | NONE         | 1     |",
+          "| 4               | 4             | 0            | NONE         | 270   |",
+          "| 1               | 1             | 0            | NONE         | 166   |",
+          "| 14              | 14            | 0            | NONE         | 1     |",
+          "| 43              | 43            | 0            | NONE         | 1     |"
+        ]
+      },
+      "telemetry": {
+        "max_sum_rss_bytes": 3035475968,
+        "min_mem_available": 13413707776,
+        "max_swap_used": 0
+      }
+    },
+    {
+      "name": "r3-graph",
+      "gpu_kv_tokens": 36208,
+      "groups": {
+        "1": {
+          "requests": [
+            {
+              "name": "c1-0-0",
+              "tokens": 512,
+              "ttft": 0.03163865999999871,
+              "e2e": 9.398501703000022,
+              "start": 377.090675353,
+              "end": 386.489177056,
+              "output_tok_s": 54.476768338145696,
+              "client_post_first_rate": 54.55432209283093,
+              "max_content_gap": 0.05559185200002048,
+              "p95_content_gap": 0.018872781500007818,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c1-1-0",
+              "tokens": 512,
+              "ttft": 0.03125835000003008,
+              "e2e": 10.019834016000004,
+              "start": 386.563632117,
+              "end": 396.583466133,
+              "output_tok_s": 51.098650854138036,
+              "client_post_first_rate": 51.158725976362575,
+              "max_content_gap": 0.05918945500002337,
+              "p95_content_gap": 0.020431844699984936,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c1-2-0",
+              "tokens": 512,
+              "ttft": 0.0364358100000004,
+              "e2e": 9.713014787999953,
+              "start": 396.668883121,
+              "end": 406.381897909,
+              "output_tok_s": 52.71277879990009,
+              "client_post_first_rate": 52.80820732368531,
+              "max_content_gap": 0.057252195999978994,
+              "p95_content_gap": 0.019554912999984707,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            }
+          ],
+          "count": 3,
+          "post_first_rate_median": 52.80820732368531,
+          "ttft_p95": 0.03595609500000023,
+          "e2e_p95": 9.9891520932,
+          "wave_output_tok_s": 52.43891739456834
+        },
+        "4": {
+          "requests": [
+            {
+              "name": "c4-0-0",
+              "tokens": 512,
+              "ttft": 0.07890682099997548,
+              "e2e": 10.490231307999977,
+              "start": 406.480159329,
+              "end": 416.970390637,
+              "output_tok_s": 48.8073127243193,
+              "client_post_first_rate": 49.08138257128339,
+              "max_content_gap": 0.05973964800000431,
+              "p95_content_gap": 0.02114630884998121,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-1",
+              "tokens": 512,
+              "ttft": 0.08943909499998881,
+              "e2e": 10.550904954000032,
+              "start": 406.480445628,
+              "end": 417.031350582,
+              "output_tok_s": 48.52664318674313,
+              "client_post_first_rate": 49.24432309029376,
+              "max_content_gap": 0.060504791000028035,
+              "p95_content_gap": 0.021126497749961004,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-2",
+              "tokens": 512,
+              "ttft": 0.08956816700003856,
+              "e2e": 10.579061151000019,
+              "start": 406.480673332,
+              "end": 417.059734483,
+              "output_tok_s": 48.39748940780077,
+              "client_post_first_rate": 49.24566691101614,
+              "max_content_gap": 0.060469993000026534,
+              "p95_content_gap": 0.021141091750010332,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            },
+            {
+              "name": "c4-0-3",
+              "tokens": 512,
+              "ttft": 0.08927432899997712,
+              "e2e": 10.522045569,
+              "start": 406.48081853,
+              "end": 417.002864099,
+              "output_tok_s": 48.65973984264542,
+              "client_post_first_rate": 49.24503771261228,
+              "max_content_gap": 0.0604736319999688,
+              "p95_content_gap": 0.021139795750016788,
+              "usage": {
+                "prompt_tokens": 2110,
+                "total_tokens": 2622,
+                "completion_tokens": 512,
+                "prompt_tokens_details": {
+                  "cached_tokens": 2096
+                }
+              },
+              "finish_reason": "length"
+            }
+          ],
+          "count": 4,
+          "post_first_rate_median": 49.244680401453024,
+          "ttft_p95": 0.0895488062000311,
+          "e2e_p95": 10.57483772145002,
+          "wave_output_tok_s": 193.58055216666034
+        }
+      },
+      "startup": {
+        "ready_at": "20260910T072314Z",
+        "startup_seconds": 20.254981756210327,
+        "health": "",
+        "log_tail": "oder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': None, 'compile_ranges_endpoints': None, 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_DECODE_ONLY: (2, 0)>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [1, 2, 4], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': None, 'pass_config': {}, 'max_cudagraph_capture_size': 4, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': None, 'static_all_moe_layers': []}}\n(APIServer pid=1933) INFO 09-10 17:23:01 [model.py:611] Resolved architecture: Qwen3ForCausalLM\n(APIServer pid=1933) INFO 09-10 17:23:01 [model.py:1745] Using max model len 32768\n(APIServer pid=1933) WARNING 09-10 17:23:01 [cache.py:250] The `--calculate-kv-scales` option is deprecated and will be removed in v0.19. The scales will be loaded from the model checkpoint if available, otherwise they default to 1.0.\n(APIServer pid=1933) INFO 09-10 17:23:01 [vllm.py:999] Asynchronous scheduling is enabled.\n(APIServer pid=1933) WARNING 09-10 17:23:01 [vllm.py:1097] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.\n(APIServer pid=1933) INFO 09-10 17:23:01 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])\n(APIServer pid=1933) INFO 09-10 17:23:01 [compilation.py:321] Enabled custom fusions: norm_quant, act_quant\nWARNING 09-10 17:23:07 [config.py:71] Support for Transformers v4 is deprecated. The Transformers v4 codepath will become unmaintained in vLLM v0.22.0 and will be removed in vLLM v0.24.0. Please upgrade to Transformers v5: pip install --upgrade transformers\n(EngineCore pid=2007) INFO 09-10 17:23:08 [core.py:113] Initializing a V1 LLM engine (v0.23.0) with config: model='/home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c', speculative_config=None, tokenizer='/home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, quantization_config=None, enforce_eager=False, enable_return_routed_experts=False, kv_cache_dtype=bfloat16, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=True, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=stage3-document-qa, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'ir_enable_torch_wrap': False, 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_DECODE_ONLY: (2, 0)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False}, 'max_cudagraph_capture_size': 4, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native']), enable_flashinfer_autotune=True, moe_backend='auto', linear_backend='auto')\n(EngineCore pid=2007) WARNING 09-10 17:23:08 [interface.py:757] Using 'pin_memory=False' as WSL is detected. This may slow down the performance.\n(EngineCore pid=2007) INFO 09-10 17:23:08 [parallel_state.py:1568] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://172.20.48.164:36295 backend=nccl\n(EngineCore pid=2007) INFO 09-10 17:23:08 [parallel_state.py:1903] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A\n(EngineCore pid=2007) INFO 09-10 17:23:09 [topk_topp_sampler.py:39] FlashInfer top-p/top-k sampling disabled via VLLM_USE_FLASHINFER_SAMPLER=0.\n(EngineCore pid=2007) INFO 09-10 17:23:09 [gpu_model_runner.py:5092] Starting to load model /home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c...\n(EngineCore pid=2007) INFO 09-10 17:23:09 [cuda.py:318] Using AttentionBackendEnum.FLASH_ATTN backend.\n(EngineCore pid=2007) INFO 09-10 17:23:09 [flash_attn.py:636] Using FlashAttention version 2\n(EngineCore pid=2007) INFO 09-10 17:23:09 [weight_utils.py:922] Filesystem type for checkpoints: EXT4. Checkpoint size: 7.49 GiB. Available RAM: 12.96 GiB.\n(EngineCore pid=2007) INFO 09-10 17:23:09 [weight_utils.py:945] Auto-prefetch is disabled because the filesystem (EXT4) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.\n(EngineCore pid=2007) \nLoading safetensors checkpoint shards:   0% Completed | 0/3 [00:00<?, ?it/s]\n(EngineCore pid=2007) \nLoading safetensors checkpoint shards:  33% Completed | 1/3 [00:00<00:00,  2.45it/s]\n(EngineCore pid=2007) \nLoading safetensors checkpoint shards:  67% Completed | 2/3 [00:01<00:00,  1.91it/s]\n(EngineCore pid=2007) \nLoading safetensors checkpoint shards: 100% Completed | 3/3 [00:01<00:00,  2.91it/s]\n(EngineCore pid=2007) \n(EngineCore pid=2007) INFO 09-10 17:23:10 [default_loader.py:397] Loading weights took 1.04 seconds\n(EngineCore pid=2007) INFO 09-10 17:23:11 [gpu_model_runner.py:5187] Model loading took 7.56 GiB memory and 1.389127 seconds\n(EngineCore pid=2007) INFO 09-10 17:23:12 [gpu_model_runner.py:6412] Profiling CUDA graph memory: FULL=3 (largest=4)\n(EngineCore pid=2007) INFO 09-10 17:23:12 [gpu_model_runner.py:6517] Estimated CUDA graph memory: 0.04 GiB total\n(EngineCore pid=2007) INFO 09-10 17:23:12 [gpu_worker.py:480] Available KV cache memory: 4.97 GiB\n(EngineCore pid=2007) INFO 09-10 17:23:12 [gpu_worker.py:495] CUDA graph memory profiling is enabled (default since v0.21.0). The current --gpu-memory-utilization=0.8000 is equivalent to --gpu-memory-utilization=0.7978 without CUDA graph memory profiling. To maintain the same effective KV cache size as before, increase --gpu-memory-utilization to 0.8022. To disable, set VLLM_MEMORY_PROFILER_ESTIMATE_CUDAGRAPHS=0.\n(EngineCore pid=2007) INFO 09-10 17:23:12 [kv_cache_utils.py:1744] GPU KV cache size: 36,208 tokens\n(EngineCore pid=2007) INFO 09-10 17:23:12 [kv_cache_utils.py:1745] Maximum concurrency for 32,768 tokens per request: 1.10x\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408] Module vllm.third_party.deep_gemm was found but failed to import\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408] Traceback (most recent call last):\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/utils/import_utils.py\", line 406, in _has_module\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408]     importlib.import_module(module_name)\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408]   File \"/usr/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408]     return _bootstrap._gcd_import(name[level:], package, level)\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408]   File \"<frozen importlib._bootstrap_external>\", line 995, in exec_module\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408]   File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/third_party/deep_gemm/__init__.py\", line 123, in <module>\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408]     _find_cuda_home()                           # CUDA home\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408]     ^^^^^^^^^^^^^^^^^\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408]   File \"/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/third_party/deep_gemm/__init__.py\", line 117, in _find_cuda_home\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408]     assert cuda_home is not None\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408]            ^^^^^^^^^^^^^^^^^^^^^\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [import_utils.py:408] AssertionError\n(EngineCore pid=2007) \nCapturing CUDA graphs (decode, FULL):   0%|          | 0/3 [00:00<?, ?it/s]\nCapturing CUDA graphs (decode, FULL): 100%|██████████| 3/3 [00:00<00:00, 26.01it/s]\nCapturing CUDA graphs (decode, FULL): 100%|██████████| 3/3 [00:00<00:00, 25.89it/s]\n(EngineCore pid=2007) INFO 09-10 17:23:13 [gpu_model_runner.py:6585] Graph capturing finished in 0 secs, took 0.03 GiB\n(EngineCore pid=2007) INFO 09-10 17:23:13 [gpu_worker.py:639] CUDA graph pool memory: 0.03 GiB (actual), 0.04 GiB (estimated), difference: 0.01 GiB (36.5%).\n(EngineCore pid=2007) INFO 09-10 17:23:13 [jit_monitor.py:54] Kernel JIT monitor activated — Triton JIT compilations during inference will be logged as warnings.\n(EngineCore pid=2007) INFO 09-10 17:23:13 [core.py:313] init engine (profile, create kv cache, warmup model) took 2.46 s\n(EngineCore pid=2007) INFO 09-10 17:23:13 [vllm.py:999] Asynchronous scheduling is enabled.\n(EngineCore pid=2007) WARNING 09-10 17:23:13 [vllm.py:1097] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.\n(EngineCore pid=2007) INFO 09-10 17:23:13 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])\n(EngineCore pid=2007) INFO 09-10 17:23:13 [compilation.py:321] Enabled custom fusions: norm_quant, act_quant\n(APIServer pid=1933) INFO 09-10 17:23:13 [api_server.py:579] Supported tasks: ['generate']\n(APIServer pid=1933) INFO 09-10 17:23:14 [hf.py:548] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.\n(APIServer pid=1933) INFO 09-10 17:23:14 [api_server.py:583] Starting vLLM server on http://127.0.0.1:8000\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:37] Available routes are:\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /openapi.json, Methods: HEAD, GET\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /docs, Methods: HEAD, GET\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: HEAD, GET\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /redoc, Methods: HEAD, GET\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /load, Methods: GET\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /version, Methods: GET\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /health, Methods: GET\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /metrics, Methods: GET\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /tokenize, Methods: POST\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /detokenize, Methods: POST\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /v1/models, Methods: GET\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /ping, Methods: GET\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /ping, Methods: POST\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /invocations, Methods: POST\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /v1/chat/completions, Methods: POST\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /v1/chat/completions/batch, Methods: POST\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /v1/responses, Methods: POST\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /v1/completions, Methods: POST\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /v1/messages, Methods: POST\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /v1/messages/count_tokens, Methods: POST\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /generative_scoring, Methods: POST\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /inference/v1/generate, Methods: POST\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /v1/chat/completions/render, Methods: POST\n(APIServer pid=1933) INFO 09-10 17:23:14 [launcher.py:46] Route: /v1/completions/render, Methods: POST\n(APIServer pid=1933) INFO:     Started server process [1933]\n(APIServer pid=1933) INFO:     Waiting for application startup.\n(APIServer pid=1933) INFO:     Application startup complete.\n(APIServer pid=1933) INFO:     127.0.0.1:49242 - \"GET /health HTTP/1.1\" 200 OK\n"
+      },
+      "runtime": {
+        "mode": "FULL",
+        "rows": [
+          "| 1               | 1             | 0            | FULL         | 518   |",
+          "| 1               | 1             | 0            | FULL         | 509   |",
+          "| 1               | 1             | 0            | FULL         | 521   |",
+          "| 4               | 4             | 0            | FULL         | 440   |",
+          "| 1               | 1             | 0            | FULL         | 47    |"
+        ]
+      },
+      "telemetry": {
+        "max_sum_rss_bytes": 3077427200,
+        "min_mem_available": 13356773376,
+        "max_swap_used": 0
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "round": 1,
+      "groups": {
+        "1": {
+          "rate_gain": 0.083529976533943,
+          "e2e_reduction": 0.018792091369432384,
+          "pass": false
+        },
+        "4": {
+          "rate_gain": 0.1583671878682611,
+          "e2e_reduction": 0.12503584087825526,
+          "pass": true
+        }
+      },
+      "kv_capacity_pass": true,
+      "pass": false
+    },
+    {
+      "round": 2,
+      "groups": {
+        "1": {
+          "rate_gain": 0.060024300956522,
+          "e2e_reduction": 0.07528781370783932,
+          "pass": false
+        },
+        "4": {
+          "rate_gain": 0.14133849598021286,
+          "e2e_reduction": 0.11985465217751146,
+          "pass": true
+        }
+      },
+      "kv_capacity_pass": true,
+      "pass": false
+    },
+    {
+      "round": 3,
+      "groups": {
+        "1": {
+          "rate_gain": 0.04746018251531159,
+          "e2e_reduction": 0.053809250127767494,
+          "pass": false
+        },
+        "4": {
+          "rate_gain": 0.17483842649460413,
+          "e2e_reduction": 0.14695486527429558,
+          "pass": true
+        }
+      },
+      "kv_capacity_pass": true,
+      "pass": false
+    }
+  ],
+  "quality": [
+    {
+      "run": "r1-eager",
+      "doc": "doc-a",
+      "text": "项目负责人是林若安，正式预算金额是480万元。",
+      "pass": true
+    },
+    {
+      "run": "r1-eager",
+      "doc": "doc-b",
+      "text": "项目负责人是周明川，正式预算金额是315万元。",
+      "pass": true
+    },
+    {
+      "run": "r1-eager",
+      "doc": "doc-c",
+      "text": "项目负责人是顾清禾，正式预算金额是260万元。",
+      "pass": true
+    },
+    {
+      "run": "r1-graph",
+      "doc": "doc-a",
+      "text": "项目负责人是林若安，正式预算金额是480万元。",
+      "pass": true
+    },
+    {
+      "run": "r1-graph",
+      "doc": "doc-b",
+      "text": "项目负责人是周明川，正式预算金额是315万元。",
+      "pass": true
+    },
+    {
+      "run": "r1-graph",
+      "doc": "doc-c",
+      "text": "项目负责人是顾清禾，正式预算金额是260万元。",
+      "pass": true
+    }
+  ],
+  "performance_requests": 42,
+  "timing_scope": "client SSE content arrival, not precise token generation; fixed 512 tokens"
+}
