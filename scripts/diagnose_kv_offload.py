@@ -26,9 +26,11 @@ def probe(op, pin, direction):
         cpu.copy_(expected)
         src = expected.cuda() if direction in ('d2h', 'd2d') else cpu
         dst = torch.zeros_like(src) if direction == 'd2d' else (
-            torch.zeros(size, device='cuda', dtype=torch.uint8) if direction == 'h2d' else torch.empty_like(cpu))
+            torch.zeros(size, device='cuda', dtype=torch.uint8) if direction == 'h2d' else
+            torch.empty(size, dtype=torch.uint8, pin_memory=pin))
         torch.cuda.synchronize()
-        row.update({'stage': 'submission', 'payload_host_is_pinned': cpu.is_pinned()})
+        host = dst if direction == 'd2h' else cpu
+        row.update({'stage': 'submission', 'payload_host_is_pinned': host.is_pinned()})
         print(json.dumps(row), flush=True)
         start = time.perf_counter()
         if op == 'batch':
