@@ -46,6 +46,8 @@ def main() -> None:
     sub = parser.add_subparsers(dest='command', required=True)
     serve = sub.add_parser('serve')
     serve.add_argument('--no-prefix-cache', action='store_true')
+    serve.add_argument('--cpu-kv-cache', action='store_true',
+                       help='Use the optional 8 GiB CPU KV cache profile (pinned WSL runtime)')
     query = sub.add_parser('ask')
     query.add_argument('--document', type=Path, required=True)
     query.add_argument('--question', required=True)
@@ -61,7 +63,13 @@ def main() -> None:
         return
     if port_open(config):
         raise SystemExit('Port 8000 is occupied; refusing to replace another service')
-    server = OwnedVllm(config, ROOT / '.tmp/document-qa' / now_utc())
+    server_type = OwnedVllm
+    if args.cpu_kv_cache:
+        if args.no_prefix_cache:
+            parser.error('--cpu-kv-cache requires prefix caching')
+        from cpu_kv_api import CpuKvServer
+        server_type = CpuKvServer
+    server = server_type(config, ROOT / '.tmp/document-qa' / now_utc())
     def interrupt(signum, frame):
         raise KeyboardInterrupt
     signal.signal(signal.SIGTERM, interrupt)

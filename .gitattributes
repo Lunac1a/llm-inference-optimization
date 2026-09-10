@@ -14,3 +14,4 @@ artifacts/mixed-load-rerun/** -text whitespace=cr-at-eol
 artifacts/kv-offload/** -text whitespace=cr-at-eol
 artifacts/kv-offload-compat/** -text whitespace=cr-at-eol
 artifacts/kv-offload-recovery/** -text whitespace=cr-at-eol
+artifacts/kv-offload-integration/** -text whitespace=cr-at-eol
