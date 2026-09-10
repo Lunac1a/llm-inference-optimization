@@ -1,0 +1,34 @@
+{
+  "layouts": [
+    {
+      "count": 2,
+      "page_bytes": 65536,
+      "direction": "h2d",
+      "equal": true,
+      "pinned": false
+    },
+    {
+      "count": 2,
+      "page_bytes": 65536,
+      "direction": "d2h",
+      "equal": true,
+      "pinned": false
+    },
+    {
+      "count": 1,
+      "page_bytes": 2359296,
+      "direction": "h2d",
+      "equal": true,
+      "pinned": false
+    },
+    {
+      "count": 1,
+      "page_bytes": 2359296,
+      "direction": "d2h",
+      "equal": true,
+      "pinned": false
+    }
+  ],
+  "pass": true,
+  "transport": "native_single_adapter"
+}

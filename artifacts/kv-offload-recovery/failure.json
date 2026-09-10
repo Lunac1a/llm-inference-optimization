@@ -1,0 +1,4 @@
+{
+  "type": "AssertionError",
+  "message": "{'pass': False, 'local_hit_tokens': 3360.0, 'external_hit_tokens': 0.0, 'restored_bytes': 0, 'preemptions': 0.0}"
+}

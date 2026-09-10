@@ -1,0 +1,32 @@
+START r1-offload
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 3759.63it/s]
+{"run": "r1-offload", "phase": "cold", "doc": "doc-a", "ttft": 3.6149831279999773, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r1-offload", "phase": "cold", "doc": "doc-b", "ttft": 3.4920979340000144, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r1-offload", "phase": "cold", "doc": "doc-c", "ttft": 3.3630401759999984, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r1-offload", "phase": "revisit", "doc": "doc-a", "ttft": 0.30010681499999237, "pass": true, "local_hit_tokens": 3360.0, "external_hit_tokens": 13072.0, "restored_bytes": 1927544832.0, "preemptions": 0.0}
+{"run": "r1-offload", "phase": "revisit", "doc": "doc-b", "ttft": 0.27170436100001893, "pass": true, "local_hit_tokens": 3360.0, "external_hit_tokens": 13072.0, "restored_bytes": 1927544832.0, "preemptions": 0.0}
+{"run": "r1-offload", "phase": "revisit", "doc": "doc-c", "ttft": 0.28605794800000695, "pass": true, "local_hit_tokens": 3360.0, "external_hit_tokens": 13072.0, "restored_bytes": 1927544832.0, "preemptions": 0.0}
+START r1-baseline
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 4668.32it/s]
+{"run": "r1-baseline", "phase": "cold", "doc": "doc-a", "ttft": 3.2432228819999978, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r1-baseline", "phase": "cold", "doc": "doc-b", "ttft": 3.3339132250000034, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r1-baseline", "phase": "cold", "doc": "doc-c", "ttft": 3.293687691999992, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r1-baseline", "phase": "revisit", "doc": "doc-a", "ttft": 2.852493585000019, "pass": false, "local_hit_tokens": 3360.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+Traceback (most recent call last):
+  File "/mnt/d/Lunacia/Inference/scripts/run_kv_offload_recovery.py", line 86, in <module>
+    {'prepare': original.prepare, 'copy-probe': probe, 'run': run}[sys.argv[1]]()
+  File "/mnt/d/Lunacia/Inference/scripts/run_kv_offload_recovery.py", line 81, in run
+    asyncio.run(original.run())
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/mnt/d/Lunacia/Inference/scripts/validate_kv_offload.py", line 253, in run
+    assert checked['pass'], checked
+           ~~~~~~~^^^^^^^^
+AssertionError: {'pass': False, 'local_hit_tokens': 3360.0, 'external_hit_tokens': 0.0, 'restored_bytes': 0, 'preemptions': 0.0}

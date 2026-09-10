@@ -1,0 +1,18 @@
+{
+  "elapsed_seconds": 129.86402916908264,
+  "port_closed": true,
+  "gpu": {
+    "captured_at": 1789021371.417231,
+    "returncode": 0,
+    "csv": "2026/09/10 16:22:51.402, NVIDIA GeForce RTX 4090 Laptop GPU, 77, 55.10, 2340, 9001, 848, 16376, 10",
+    "stderr": ""
+  },
+  "memory": {
+    "MemTotal": 16562987008,
+    "MemAvailable": 15682031616,
+    "SwapTotal": 4294967296,
+    "SwapFree": 4294918144,
+    "swap_used": 49152
+  },
+  "compute_processes": "pid, process_name\n"
+}

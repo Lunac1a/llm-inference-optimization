@@ -102,6 +102,14 @@ stopped before model measurement: its 4 MiB native batch-copy roundtrip failed
 under the existing WSL environment. No CPU-restoration speedup or slowdown is
 established. Default service settings and all earlier evidence are preserved.
 
+A subsequent [scoped transfer compatibility repair](docs/kv-offload-recovery-validation.md)
+enabled real CPU KV recovery: three offload revisits reached 0.272–0.300 s TTFT,
+restoring 13,072 tokens each. The comparison stopped when the first baseline
+revisit retained 20.43% GPU prefix hits, exceeding its predeclared <10% control.
+No complete paired repetition or adoption claim follows. The adapter reuses
+upstream single-copy operations and consumes an 8 GiB CPU cache; defaults stay
+unchanged. The initial batch-copy failure is retained separately.
+
 The llama.cpp KV-quantization route is archived at Git tag
 `archive/llama-cpp-stage1`, commit `99b39106539123847f860a9ac47415415e92a884`.
 The upstream q8_0 control saved KV memory but did not establish a single-request

@@ -1,0 +1,15 @@
+{
+  "git_head": "f3554f4cb1ac239756da1f11d969d2e9b656e52e",
+  "sources": {
+    "scripts/run_kv_offload_recovery.py": "29527e0f27aed9e56e8d44450a7261efca537221de20f9b2e0521f10ea6d4226",
+    "scripts/validate_kv_offload.py": "09858c9443ac379b04fbdf797b82e67b156bd595bca06ad5b2eadcbd525787ce",
+    "scripts/kv_offload_recovery_entry.py": "6a57bcf323ec5e940b37a75c7ca0620cb39aa74e6cf583f5b7dd4546e6fb199c",
+    "docs/kv-offload-plan.md": "e9dba4d28298761753a93d4d6f46993f4fdfd65cfae86f5e482fe623dbd44ec6",
+    "docs/kv-offload-compat-plan.md": "a89a45e09a15307fd730561971a23c61094a23c3dafe9de2753093396da3d1b9",
+    "experiments/kv_offload_compat/transport.py": "6597a5254efb26cebca2e6d3e518ab1111c01f6b285fb352b84a52006fef2c5c",
+    "experiments/kv_offload_compat/inference_kv_transport-0.1.dist-info/entry_points.txt": "ecaa15c7f7b61695c266c9fa079dc4c0d644c7e31a214cc8a08d6dc5602ca77f",
+    "experiments/kv_offload_compat/inference_kv_transport-0.1.dist-info/METADATA": "e9befd768b1ffb82c31e7b65ff8a7f04bdfe31914110b4e9185f0d1923acf80c"
+  },
+  "transport": "scoped upstream single-copy adapter",
+  "performance_gates": "unchanged"
+}

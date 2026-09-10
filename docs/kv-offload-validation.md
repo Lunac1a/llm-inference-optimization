@@ -1,5 +1,10 @@
 # Native GPU/CPU KV reuse: compatibility stop
 
+Historical first attempt. A separately authorized
+[compatibility recovery](kv-offload-recovery-validation.md) later enabled model
+CPU restoration; it stopped on a different workload-control gate. The original
+failure and evidence below remain unchanged in meaning.
+
 **The current native transfer path did not pass its WSL compatibility check.**
 No model server or cold/revisit request was started, so there is no measured
 CPU-restoration speedup, slowdown, cache-capacity benefit or answer-quality result.

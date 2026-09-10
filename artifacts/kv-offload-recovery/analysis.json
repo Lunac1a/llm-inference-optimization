@@ -1,0 +1,572 @@
+{
+  "result": "stopped_on_baseline_cache_control",
+  "accepted": false,
+  "completed_pairs": 0,
+  "performance_requests": 10,
+  "quality_requests": 3,
+  "warmup_requests": 4,
+  "runs": [
+    {
+      "run": "r1-baseline",
+      "capacity": {
+        "gpu_tokens": 36528,
+        "cpu_bytes": 0
+      },
+      "requests": [
+        {
+          "phase": "cold",
+          "document": "doc-a",
+          "ttft": 3.2432228819999978,
+          "e2e": 6.436991261999992,
+          "output_tok_s": 19.885066608002514,
+          "start": 201.299504671,
+          "end": 207.736495933,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 2.0989999995890685e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 0.0,
+          "max_sse_content_gap_seconds": 0.08168238300001462,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "cold",
+          "document": "doc-b",
+          "ttft": 3.3339132250000034,
+          "e2e": 6.411922470999997,
+          "output_tok_s": 19.96281155596026,
+          "start": 208.882392753,
+          "end": 215.294315224,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.2208000015334619e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 0.0,
+          "max_sse_content_gap_seconds": 0.07246239999997783,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "cold",
+          "document": "doc-c",
+          "ttft": 3.293687691999992,
+          "e2e": 6.382245681000001,
+          "output_tok_s": 20.055636589023372,
+          "start": 216.404804942,
+          "end": 222.787050623,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.0970000005272595e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 0.0,
+          "max_sse_content_gap_seconds": 0.07186137499999745,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "revisit",
+          "document": "doc-a",
+          "ttft": 2.852493585000019,
+          "e2e": 5.914448432,
+          "output_tok_s": 21.641916650664946,
+          "start": 223.892150435,
+          "end": 229.806598867,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 3360
+            }
+          },
+          "controls": {
+            "pass": false,
+            "local_hit_tokens": 3360.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.1541000020542924e-05,
+          "computed_prefill_tokens": 13086.0,
+          "local_queries": 16446.0,
+          "external_queries": 0.0,
+          "max_sse_content_gap_seconds": 0.08624147499998003,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        }
+      ],
+      "phases": {
+        "cold": {
+          "count": 3,
+          "complete_wave": true,
+          "ttft_median": 3.293687691999992,
+          "ttft_p95": 3.329890671700002,
+          "e2e_p95": 6.434484382899993,
+          "output_tokens_per_request_seconds": 19.967594866924866,
+          "output_tokens_per_observed_wave_second": 17.87081693078396
+        },
+        "revisit": {
+          "count": 1,
+          "complete_wave": false,
+          "ttft_median": 2.852493585000019,
+          "ttft_p95": 2.852493585000019,
+          "e2e_p95": 5.914448432,
+          "output_tokens_per_request_seconds": 21.641916650664946,
+          "output_tokens_per_observed_wave_second": 21.641916650664946
+        }
+      },
+      "sampled_max_owned_rss_bytes": 3011743744,
+      "sampled_min_mem_available_bytes": 13349027840,
+      "sampled_max_swap_used_bytes": 49152,
+      "sampled_max_active_gpu_cache_fraction": 0.45354951796669585
+    },
+    {
+      "run": "r1-offload",
+      "capacity": {
+        "gpu_tokens": 36528,
+        "cpu_bytes": 8589934592
+      },
+      "requests": [
+        {
+          "phase": "cold",
+          "document": "doc-a",
+          "ttft": 3.6149831279999773,
+          "e2e": 6.503704112999998,
+          "output_tok_s": 19.681092155491182,
+          "start": 130.768725025,
+          "end": 137.272429138,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 5.681100000742845e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 16446.0,
+          "max_sse_content_gap_seconds": 0.06908955899999114,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 2422996992.0,
+              "cuda_event_seconds": 0.314334625005722,
+              "count": 9.0,
+              "effective_bytes_per_event_second": 7708336273.663434
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "cold",
+          "document": "doc-b",
+          "ttft": 3.4920979340000144,
+          "e2e": 6.329752376000016,
+          "output_tok_s": 20.221960101524147,
+          "start": 138.370632592,
+          "end": 144.700384968,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.0260999999900378e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 16446.0,
+          "max_sse_content_gap_seconds": 0.0664331370000184,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 2422996992.0,
+              "cuda_event_seconds": 0.3354238047003745,
+              "count": 9.0,
+              "effective_bytes_per_event_second": 7223688235.736284
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "cold",
+          "document": "doc-c",
+          "ttft": 3.3630401759999984,
+          "e2e": 6.223931229999977,
+          "output_tok_s": 20.565779933914932,
+          "start": 145.759484605,
+          "end": 151.983415835,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.0298999995939084e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 16446.0,
+          "max_sse_content_gap_seconds": 0.07114874600000576,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 2422996992.0,
+              "cuda_event_seconds": 0.30467833697795876,
+              "count": 9.0,
+              "effective_bytes_per_event_second": 7952639547.770953
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "revisit",
+          "document": "doc-a",
+          "ttft": 0.30010681499999237,
+          "e2e": 3.3073258839999937,
+          "output_tok_s": 38.70196179313071,
+          "start": 153.098307392,
+          "end": 156.405633276,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 16432
+            }
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 3360.0,
+            "external_hit_tokens": 13072.0,
+            "restored_bytes": 1927544832.0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 0.2313193100000035,
+          "computed_prefill_tokens": 14.0,
+          "local_queries": 16446.0,
+          "external_queries": 13086.0,
+          "max_sse_content_gap_seconds": 0.0791710600000215,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0.0,
+              "cuda_event_seconds": 0.0,
+              "count": 0.0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 1927544832.0,
+              "cuda_event_seconds": 0.21263711547851563,
+              "count": 1.0,
+              "effective_bytes_per_event_second": 9064950056.636536
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "revisit",
+          "document": "doc-b",
+          "ttft": 0.27170436100001893,
+          "e2e": 3.13419664700001,
+          "output_tok_s": 40.839811414679104,
+          "start": 157.480084652,
+          "end": 160.614281299,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 16432
+            }
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 3360.0,
+            "external_hit_tokens": 13072.0,
+            "restored_bytes": 1927544832.0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 0.20914840899999376,
+          "computed_prefill_tokens": 14.0,
+          "local_queries": 16446.0,
+          "external_queries": 13086.0,
+          "max_sse_content_gap_seconds": 0.06868968400002018,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0.0,
+              "cuda_event_seconds": 0.0,
+              "count": 0.0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 1927544832.0,
+              "cuda_event_seconds": 0.2049954833984375,
+              "count": 1.0,
+              "effective_bytes_per_event_second": 9402864882.898643
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "revisit",
+          "document": "doc-c",
+          "ttft": 0.28605794800000695,
+          "e2e": 3.208970572999988,
+          "output_tok_s": 39.888181299318035,
+          "start": 161.692271672,
+          "end": 164.901242245,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 16432
+            }
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 3360.0,
+            "external_hit_tokens": 13072.0,
+            "restored_bytes": 1927544832.0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 0.2211940459999937,
+          "computed_prefill_tokens": 14.0,
+          "local_queries": 16446.0,
+          "external_queries": 13086.0,
+          "max_sse_content_gap_seconds": 0.06063234099997317,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0.0,
+              "cuda_event_seconds": 0.0,
+              "count": 0.0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 1927544832.0,
+              "cuda_event_seconds": 0.21061302185058595,
+              "count": 1.0,
+              "effective_bytes_per_event_second": 9152068637.842571
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        }
+      ],
+      "phases": {
+        "cold": {
+          "count": 3,
+          "complete_wave": true,
+          "ttft_median": 3.4920979340000144,
+          "ttft_p95": 3.602694608599981,
+          "e2e_p95": 6.4863089393,
+          "output_tokens_per_request_seconds": 20.149666137985772,
+          "output_tokens_per_observed_wave_second": 18.100664461204108
+        },
+        "revisit": {
+          "count": 3,
+          "complete_wave": true,
+          "ttft_median": 0.28605794800000695,
+          "ttft_p95": 0.2987019282999938,
+          "e2e_p95": 3.297490352899993,
+          "output_tokens_per_request_seconds": 39.79071285392013,
+          "output_tokens_per_observed_wave_second": 32.5342810735245
+        }
+      },
+      "sampled_max_owned_rss_bytes": 11639775232,
+      "sampled_min_mem_available_bytes": 4749094912,
+      "sampled_max_swap_used_bytes": 49152,
+      "sampled_max_active_gpu_cache_fraction": 0.45398773006134974
+    }
+  ],
+  "quality": [
+    {
+      "run": "r1-offload",
+      "document": "doc-a",
+      "text": "项目负责人是林若安，正式预算金额是480万元。",
+      "expected": {
+        "code": "云桥甲-17",
+        "date": "2026年5月12日",
+        "owner": "林若安",
+        "budget": "480万元",
+        "region": "墨尔本北区",
+        "relation": "先校验数据层，再执行模型评估，最后提交服务报告",
+        "risk": "供应商接口延迟"
+      },
+      "normal_eos": true,
+      "exact_values_present": true,
+      "foreign_values": false
+    },
+    {
+      "run": "r1-offload",
+      "document": "doc-b",
+      "text": "项目负责人是周明川，正式预算金额是315万元。",
+      "expected": {
+        "code": "澄海乙-29",
+        "date": "2026年6月3日",
+        "owner": "周明川",
+        "budget": "315万元",
+        "region": "悉尼西区",
+        "relation": "先清理路线数据，再训练预测模型，最后进行人工抽检",
+        "risk": "节假日样本不足"
+      },
+      "normal_eos": true,
+      "exact_values_present": true,
+      "foreign_values": false
+    },
+    {
+      "run": "r1-offload",
+      "document": "doc-c",
+      "text": "项目负责人是顾清禾，正式预算金额是260万元。",
+      "expected": {
+        "code": "星环丙-08",
+        "date": "2026年4月21日",
+        "owner": "顾清禾",
+        "budget": "260万元",
+        "region": "布里斯班南区",
+        "relation": "先整理知识库，再进行检索评测，最后接入客服试点",
+        "risk": "历史工单缺少标签"
+      },
+      "normal_eos": true,
+      "exact_values_present": true,
+      "foreign_values": false
+    }
+  ],
+  "timing_scope": "SSE content arrivals, not exact token generation; partial waves are not acceptance samples"
+}

@@ -1,0 +1,44 @@
+{
+  "old_evidence": {
+    "count": 1936,
+    "changed_or_missing": [],
+    "pass": true
+  },
+  "pre_diagnosis_evidence": {
+    "count": 1923,
+    "changed_or_missing": [],
+    "pass": true
+  },
+  "frozen_sources": {
+    "count": 55,
+    "changed_or_missing": [],
+    "pass": true
+  },
+  "installed_sources": {
+    "count": 9,
+    "changed_or_missing": [],
+    "pass": true
+  },
+  "tests": [
+    {
+      "pattern": "test_kv_offload.py",
+      "returncode": 0
+    },
+    {
+      "pattern": "test_kv_offload_transport.py",
+      "returncode": 0
+    },
+    {
+      "pattern": "test_mixed_load.py",
+      "returncode": 0
+    },
+    {
+      "pattern": "test_hybrid_prefill.py",
+      "returncode": 0
+    }
+  ],
+  "port_closed": true,
+  "compute_processes": "pid, process_name\n",
+  "gpu_retry": false,
+  "accepted": false
+}
