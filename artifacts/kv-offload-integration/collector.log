@@ -1,0 +1,54 @@
+START r1-offload
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 3575.24it/s]
+{"run": "r1-offload", "phase": "cold", "doc": "doc-a", "ttft": 3.432205287000002, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r1-offload", "phase": "cold", "doc": "doc-b", "ttft": 3.6873465329999817, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r1-offload", "phase": "cold", "doc": "doc-c", "ttft": 3.493639440999999, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r1-offload", "phase": "revisit", "doc": "doc-a", "ttft": 0.32765555800000357, "pass": true, "local_hit_tokens": 3360.0, "external_hit_tokens": 13072.0, "restored_bytes": 1927544832.0, "preemptions": 0.0}
+{"run": "r1-offload", "phase": "revisit", "doc": "doc-b", "ttft": 0.30039380099998425, "pass": true, "local_hit_tokens": 3360.0, "external_hit_tokens": 13072.0, "restored_bytes": 1927544832.0, "preemptions": 0.0}
+{"run": "r1-offload", "phase": "revisit", "doc": "doc-c", "ttft": 0.30938308200001075, "pass": true, "local_hit_tokens": 3360.0, "external_hit_tokens": 13072.0, "restored_bytes": 1927544832.0, "preemptions": 0.0}
+START r1-baseline
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 5173.73it/s]
+{"run": "r1-baseline", "phase": "cold", "doc": "doc-a", "ttft": 3.262142780000005, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r1-baseline", "phase": "cold", "doc": "doc-b", "ttft": 3.4351497010000003, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r1-baseline", "phase": "cold", "doc": "doc-c", "ttft": 3.2882572970000012, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r1-baseline", "phase": "revisit", "doc": "doc-a", "ttft": 2.8129960670000003, "pass": true, "local_hit_tokens": 3360.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r1-baseline", "phase": "revisit", "doc": "doc-b", "ttft": 2.8391969379999864, "pass": true, "local_hit_tokens": 3360.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r1-baseline", "phase": "revisit", "doc": "doc-c", "ttft": 2.9485073200000045, "pass": true, "local_hit_tokens": 3360.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+START r2-baseline
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 3649.17it/s]
+{"run": "r2-baseline", "phase": "cold", "doc": "doc-a", "ttft": 3.1672421619999795, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r2-baseline", "phase": "cold", "doc": "doc-b", "ttft": 3.160340012000006, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r2-baseline", "phase": "cold", "doc": "doc-c", "ttft": 3.2226788960000476, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r2-baseline", "phase": "revisit", "doc": "doc-a", "ttft": 2.8662435620000224, "pass": true, "local_hit_tokens": 3360.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r2-baseline", "phase": "revisit", "doc": "doc-b", "ttft": 2.832277954999995, "pass": true, "local_hit_tokens": 3360.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r2-baseline", "phase": "revisit", "doc": "doc-c", "ttft": 3.082378575000007, "pass": true, "local_hit_tokens": 3360.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+START r2-offload
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 3455.60it/s]
+{"run": "r2-offload", "phase": "cold", "doc": "doc-a", "ttft": 4.052994436999995, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r2-offload", "phase": "cold", "doc": "doc-b", "ttft": 4.135981486999981, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r2-offload", "phase": "cold", "doc": "doc-c", "ttft": 4.20662846099998, "pass": true, "local_hit_tokens": 0.0, "external_hit_tokens": 0.0, "restored_bytes": 0, "preemptions": 0.0}
+{"run": "r2-offload", "phase": "revisit", "doc": "doc-a", "ttft": 0.30972870800002283, "pass": true, "local_hit_tokens": 3360.0, "external_hit_tokens": 13072.0, "restored_bytes": 1927544832.0, "preemptions": 0.0}
+{"run": "r2-offload", "phase": "revisit", "doc": "doc-b", "ttft": 0.2992007260000378, "pass": true, "local_hit_tokens": 3360.0, "external_hit_tokens": 13072.0, "restored_bytes": 1927544832.0, "preemptions": 0.0}
+{"run": "r2-offload", "phase": "revisit", "doc": "doc-c", "ttft": 0.29376903899998297, "pass": true, "local_hit_tokens": 3360.0, "external_hit_tokens": 13072.0, "restored_bytes": 1927544832.0, "preemptions": 0.0}
+START r3-offload
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 3291.04it/s]
+Traceback (most recent call last):
+  File "/mnt/d/Lunacia/Inference/scripts/validate_kv_offload_integration.py", line 91, in <module>
+    {'prepare': original.prepare, 'copy-probe': recovery.probe, 'run': run}[sys.argv[1]]()
+  File "/mnt/d/Lunacia/Inference/scripts/validate_kv_offload_integration.py", line 86, in run
+    asyncio.run(original.run())
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/mnt/d/Lunacia/Inference/scripts/validate_kv_offload.py", line 239, in run
+    ensure()
+  File "/mnt/d/Lunacia/Inference/scripts/validate_kv_offload.py", line 203, in ensure
+    assert mem['swap_used'] - pre['memory']['swap_used'] <= 256 * 2**20, mem
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'MemTotal': 16562999296, 'MemAvailable': 5246595072, 'SwapTotal': 4294967296, 'SwapFree': 3596009472, 'swap_used': 698957824}

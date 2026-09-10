@@ -1,4 +1,8 @@
-# Experimental CPU KV reuse: mechanism verified, acceptance incomplete
+# CPU KV experiments and API integration
+
+For the new API integration and its separate partial-eviction protocol, see
+[CPU KV API usage](cpu-kv-api.md) and [integration validation](kv-offload-integration-validation.md).
+The recovery attempt described below remains historical and incomplete.
 
 The original native batch-copy attempt stopped at its compatibility gate. A
 separately authorized [compatibility recovery](kv-offload-recovery-validation.md)

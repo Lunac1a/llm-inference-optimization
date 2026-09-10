@@ -7,11 +7,29 @@ from unittest.mock import patch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from cpu_kv_api import CpuKvServer, launch
 from local_document_qa import configuration
+import local_document_qa
 from stage3_lib import OwnedVllm
 from validate_kv_offload_integration import controls, Server
 
 
 class IntegrationTests(unittest.TestCase):
+    def test_cli_selects_explicit_profile_and_cleans_up(self):
+        for cpu in (False, True):
+            target = 'cpu_kv_api.CpuKvServer' if cpu else 'local_document_qa.OwnedVllm'
+            with patch(target) as factory, patch('local_document_qa.port_open', return_value=False), \
+                 patch.object(sys, 'argv', ['local_document_qa.py', 'serve'] + (['--cpu-kv-cache'] if cpu else [])):
+                factory.return_value.start.side_effect = KeyboardInterrupt()
+                local_document_qa.main()
+                factory.assert_called_once()
+                factory.return_value.stop.assert_called_once()
+
+    def test_cli_rejects_prefix_off_combination(self):
+        with patch('local_document_qa.port_open', return_value=False), \
+             patch.object(sys, 'argv', ['local_document_qa.py', 'serve', '--cpu-kv-cache', '--no-prefix-cache']):
+            with self.assertRaises(SystemExit) as error:
+                local_document_qa.main()
+            self.assertEqual(error.exception.code, 2)
+
     def test_partial_eviction(self):
         def row(name, value, **labels): return {'name': 'vllm:' + name, 'delta': value, 'labels': labels}
         local = row('prefix_cache_hits_total', 3360)

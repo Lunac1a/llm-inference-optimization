@@ -1,0 +1,17 @@
+[
+  {
+    "document": "doc-a",
+    "local_hit_difference": 0.0,
+    "pass": true
+  },
+  {
+    "document": "doc-b",
+    "local_hit_difference": 0.0,
+    "pass": true
+  },
+  {
+    "document": "doc-c",
+    "local_hit_difference": 0.0,
+    "pass": true
+  }
+]

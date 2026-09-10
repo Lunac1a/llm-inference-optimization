@@ -1,0 +1,1357 @@
+{
+  "result": "not_accepted",
+  "accepted": false,
+  "completed_pairs": 2,
+  "performance_requests": 24,
+  "quality_requests": 6,
+  "warmup_requests": 10,
+  "runs": [
+    {
+      "run": "r1-baseline",
+      "capacity": {
+        "gpu_tokens": 36528,
+        "cpu_bytes": 0
+      },
+      "requests": [
+        {
+          "phase": "cold",
+          "document": "doc-a",
+          "ttft": 3.262142780000005,
+          "e2e": 6.269838154000013,
+          "output_tok_s": 20.41520001889346,
+          "start": 192.272938415,
+          "end": 198.542776569,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.1749000009331212e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 0.0,
+          "max_sse_content_gap_seconds": 0.07186803400000485,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "cold",
+          "document": "doc-b",
+          "ttft": 3.4351497010000003,
+          "e2e": 6.410844400999991,
+          "output_tok_s": 19.96616857212039,
+          "start": 199.677811748,
+          "end": 206.088656149,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.1422000000038679e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 0.0,
+          "max_sse_content_gap_seconds": 0.06871083899997643,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "cold",
+          "document": "doc-c",
+          "ttft": 3.2882572970000012,
+          "e2e": 6.304179583000007,
+          "output_tok_s": 20.303990125085853,
+          "start": 207.235145007,
+          "end": 213.53932459,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.0838000008561721e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 0.0,
+          "max_sse_content_gap_seconds": 0.07107037700001229,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "revisit",
+          "document": "doc-a",
+          "ttft": 2.8129960670000003,
+          "e2e": 5.806699137999999,
+          "output_tok_s": 22.043504744777774,
+          "start": 214.63107902,
+          "end": 220.437778158,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 3360
+            }
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 3360.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.0962000004610672e-05,
+          "computed_prefill_tokens": 13086.0,
+          "local_queries": 16446.0,
+          "external_queries": 0.0,
+          "max_sse_content_gap_seconds": 0.07196300700002212,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "revisit",
+          "document": "doc-b",
+          "ttft": 2.8391969379999864,
+          "e2e": 5.878343672999989,
+          "output_tok_s": 21.77484120023825,
+          "start": 221.806659012,
+          "end": 227.685002685,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 3360
+            }
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 3360.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.1189999980842913e-05,
+          "computed_prefill_tokens": 13086.0,
+          "local_queries": 16446.0,
+          "external_queries": 0.0,
+          "max_sse_content_gap_seconds": 0.0730963059999965,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "revisit",
+          "document": "doc-c",
+          "ttft": 2.9485073200000045,
+          "e2e": 5.972083391000012,
+          "output_tok_s": 21.433056375752763,
+          "start": 228.772946242,
+          "end": 234.745029633,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 3360
+            }
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 3360.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.1169000003974361e-05,
+          "computed_prefill_tokens": 13086.0,
+          "local_queries": 16446.0,
+          "external_queries": 0.0,
+          "max_sse_content_gap_seconds": 0.06722138500001051,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        }
+      ],
+      "phases": {
+        "cold": {
+          "count": 3,
+          "complete_wave": true,
+          "ttft_median": 3.2882572970000012,
+          "ttft_p95": 3.4204604606,
+          "e2e_p95": 6.400177919199993,
+          "output_tokens_per_request_seconds": 20.226641479338817,
+          "output_tokens_per_observed_wave_second": 18.05666448639104
+        },
+        "revisit": {
+          "count": 3,
+          "complete_wave": true,
+          "ttft_median": 2.8391969379999864,
+          "ttft_p95": 2.937576281800003,
+          "e2e_p95": 5.96270941920001,
+          "output_tokens_per_request_seconds": 21.74759332900417,
+          "output_tokens_per_observed_wave_second": 19.091227148177136
+        }
+      },
+      "sampled_max_owned_rss_bytes": 3013001216,
+      "sampled_min_mem_available_bytes": 13366898688,
+      "sampled_max_swap_used_bytes": 53248,
+      "sampled_max_active_gpu_cache_fraction": 0.45398773006134974
+    },
+    {
+      "run": "r1-offload",
+      "capacity": {
+        "gpu_tokens": 36528,
+        "cpu_bytes": 8589934592
+      },
+      "requests": [
+        {
+          "phase": "cold",
+          "document": "doc-a",
+          "ttft": 3.432205287000002,
+          "e2e": 6.563376555000019,
+          "output_tok_s": 19.502156996079837,
+          "start": 121.712179419,
+          "end": 128.275555974,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.0703999990369084e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 16446.0,
+          "max_sse_content_gap_seconds": 0.0749806829999784,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 2422996992.0,
+              "cuda_event_seconds": 0.2808629409074783,
+              "count": 9.0,
+              "effective_bytes_per_event_second": 8626972943.355251
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "cold",
+          "document": "doc-b",
+          "ttft": 3.6873465329999817,
+          "e2e": 6.951439050000005,
+          "output_tok_s": 18.41345354239996,
+          "start": 129.383351258,
+          "end": 136.334790308,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.8713000002890112e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 16446.0,
+          "max_sse_content_gap_seconds": 0.07613376299997299,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 2422996992.0,
+              "cuda_event_seconds": 0.3210810902118685,
+              "count": 9.0,
+              "effective_bytes_per_event_second": 7546370888.429343
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "cold",
+          "document": "doc-c",
+          "ttft": 3.493639440999999,
+          "e2e": 6.436573108999994,
+          "output_tok_s": 19.886358444530504,
+          "start": 137.474902643,
+          "end": 143.911475752,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.0911000003943627e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 16446.0,
+          "max_sse_content_gap_seconds": 0.06948930900000505,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 2422996992.0,
+              "cuda_event_seconds": 0.32441923272609696,
+              "count": 9.0,
+              "effective_bytes_per_event_second": 7468721788.284684
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "revisit",
+          "document": "doc-a",
+          "ttft": 0.32765555800000357,
+          "e2e": 3.29218359799998,
+          "output_tok_s": 38.879970144362765,
+          "start": 145.00525995,
+          "end": 148.297443548,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 16432
+            }
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 3360.0,
+            "external_hit_tokens": 13072.0,
+            "restored_bytes": 1927544832.0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 0.25894381399999133,
+          "computed_prefill_tokens": 14.0,
+          "local_queries": 16446.0,
+          "external_queries": 13086.0,
+          "max_sse_content_gap_seconds": 0.07057672900000966,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0.0,
+              "cuda_event_seconds": 0.0,
+              "count": 0.0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 1927544832.0,
+              "cuda_event_seconds": 0.25141894531250003,
+              "count": 1.0,
+              "effective_bytes_per_event_second": 7666665014.460891
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "revisit",
+          "document": "doc-b",
+          "ttft": 0.30039380099998425,
+          "e2e": 3.235743619999994,
+          "output_tok_s": 39.55814027070545,
+          "start": 149.422892579,
+          "end": 152.658636199,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 16432
+            }
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 3360.0,
+            "external_hit_tokens": 13072.0,
+            "restored_bytes": 1927544832.0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 0.23157123100000376,
+          "computed_prefill_tokens": 14.0,
+          "local_queries": 16446.0,
+          "external_queries": 13086.0,
+          "max_sse_content_gap_seconds": 0.06957500999999411,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0.0,
+              "cuda_event_seconds": 0.0,
+              "count": 0.0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 1927544832.0,
+              "cuda_event_seconds": 0.22666076660156248,
+              "count": 1.0,
+              "effective_bytes_per_event_second": 8504095617.872637
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "revisit",
+          "document": "doc-c",
+          "ttft": 0.30938308200001075,
+          "e2e": 3.2503304990000004,
+          "output_tok_s": 39.38061069155293,
+          "start": 153.735164877,
+          "end": 156.985495376,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 16432
+            }
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 3360.0,
+            "external_hit_tokens": 13072.0,
+            "restored_bytes": 1927544832.0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 0.24344895600000882,
+          "computed_prefill_tokens": 14.0,
+          "local_queries": 16446.0,
+          "external_queries": 13086.0,
+          "max_sse_content_gap_seconds": 0.07006085800000506,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0.0,
+              "cuda_event_seconds": 0.0,
+              "count": 0.0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 1927544832.0,
+              "cuda_event_seconds": 0.2383411865234375,
+              "count": 1.0,
+              "effective_bytes_per_event_second": 8087334212.420954
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        }
+      ],
+      "phases": {
+        "cold": {
+          "count": 3,
+          "complete_wave": true,
+          "ttft_median": 3.493639440999999,
+          "ttft_p95": 3.6679758237999835,
+          "e2e_p95": 6.912632800500006,
+          "output_tokens_per_request_seconds": 19.246780537664765,
+          "output_tokens_per_observed_wave_second": 17.297845582121944
+        },
+        "revisit": {
+          "count": 3,
+          "complete_wave": true,
+          "ttft_median": 0.30938308200001075,
+          "ttft_p95": 0.32582831040000426,
+          "e2e_p95": 3.287998288099982,
+          "output_tokens_per_request_seconds": 39.270799677574196,
+          "output_tokens_per_observed_wave_second": 32.052792482410496
+        }
+      },
+      "sampled_max_owned_rss_bytes": 11626577920,
+      "sampled_min_mem_available_bytes": 4766015488,
+      "sampled_max_swap_used_bytes": 53248,
+      "sampled_max_active_gpu_cache_fraction": 0.45354951796669585
+    },
+    {
+      "run": "r2-baseline",
+      "capacity": {
+        "gpu_tokens": 36528,
+        "cpu_bytes": 0
+      },
+      "requests": [
+        {
+          "phase": "cold",
+          "document": "doc-a",
+          "ttft": 3.1672421619999795,
+          "e2e": 6.016128594000008,
+          "output_tok_s": 21.276140960094615,
+          "start": 275.738021989,
+          "end": 281.754150583,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 3.247400002237555e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 0.0,
+          "max_sse_content_gap_seconds": 0.0678032349999853,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "cold",
+          "document": "doc-b",
+          "ttft": 3.160340012000006,
+          "e2e": 5.9956775030000244,
+          "output_tok_s": 21.348713291525993,
+          "start": 282.815251043,
+          "end": 288.810928546,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.1037999968266377e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 0.0,
+          "max_sse_content_gap_seconds": 0.06719265899999982,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "cold",
+          "document": "doc-c",
+          "ttft": 3.2226788960000476,
+          "e2e": 6.12786380700004,
+          "output_tok_s": 20.888192693476938,
+          "start": 290.018273359,
+          "end": 296.146137166,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.0905999999977212e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 0.0,
+          "max_sse_content_gap_seconds": 0.06910866499998747,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "revisit",
+          "document": "doc-a",
+          "ttft": 2.8662435620000224,
+          "e2e": 5.886469465999994,
+          "output_tok_s": 21.744782800509327,
+          "start": 297.301556706,
+          "end": 303.188026172,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 3360
+            }
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 3360.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.1529000005339185e-05,
+          "computed_prefill_tokens": 13086.0,
+          "local_queries": 16446.0,
+          "external_queries": 0.0,
+          "max_sse_content_gap_seconds": 0.077034838999964,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "revisit",
+          "document": "doc-b",
+          "ttft": 2.832277954999995,
+          "e2e": 6.026548680999952,
+          "output_tok_s": 21.23935386161382,
+          "start": 304.350994112,
+          "end": 310.377542793,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 3360
+            }
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 3360.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.1719000042376138e-05,
+          "computed_prefill_tokens": 13086.0,
+          "local_queries": 16446.0,
+          "external_queries": 0.0,
+          "max_sse_content_gap_seconds": 0.06936064400002806,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "revisit",
+          "document": "doc-c",
+          "ttft": 3.082378575000007,
+          "e2e": 6.181474013000013,
+          "output_tok_s": 20.70703520403196,
+          "start": 311.570733479,
+          "end": 317.752207492,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 3360
+            }
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 3360.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.2101000038455823e-05,
+          "computed_prefill_tokens": 13086.0,
+          "local_queries": 16446.0,
+          "external_queries": 0.0,
+          "max_sse_content_gap_seconds": 0.07294372499995916,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        }
+      ],
+      "phases": {
+        "cold": {
+          "count": 3,
+          "complete_wave": true,
+          "ttft_median": 3.1672421619999795,
+          "ttft_p95": 3.217135222600041,
+          "e2e_p95": 6.116690285700036,
+          "output_tokens_per_request_seconds": 21.16907319880844,
+          "output_tokens_per_observed_wave_second": 18.81604433675329
+        },
+        "revisit": {
+          "count": 3,
+          "complete_wave": true,
+          "ttft_median": 2.8662435620000224,
+          "ttft_p95": 3.0607650737000087,
+          "e2e_p95": 6.165981479800007,
+          "output_tokens_per_request_seconds": 21.22192745750986,
+          "output_tokens_per_observed_wave_second": 18.776908569720234
+        }
+      },
+      "sampled_max_owned_rss_bytes": 3018608640,
+      "sampled_min_mem_available_bytes": 13378338816,
+      "sampled_max_swap_used_bytes": 53248,
+      "sampled_max_active_gpu_cache_fraction": 0.45398773006134974
+    },
+    {
+      "run": "r2-offload",
+      "capacity": {
+        "gpu_tokens": 36528,
+        "cpu_bytes": 8589934592
+      },
+      "requests": [
+        {
+          "phase": "cold",
+          "document": "doc-a",
+          "ttft": 4.052994436999995,
+          "e2e": 7.1460571079999795,
+          "output_tok_s": 17.911975522376466,
+          "start": 349.814859838,
+          "end": 356.960916946,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.0616999986723386e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 16446.0,
+          "max_sse_content_gap_seconds": 0.07383084699995379,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 2422996992.0,
+              "cuda_event_seconds": 0.6788274853229523,
+              "count": 9.0,
+              "effective_bytes_per_event_second": 3569385513.091384
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "cold",
+          "document": "doc-b",
+          "ttft": 4.135981486999981,
+          "e2e": 7.226267242000006,
+          "output_tok_s": 17.713156144578676,
+          "start": 358.167879949,
+          "end": 365.394147191,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.1080999968271499e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 16446.0,
+          "max_sse_content_gap_seconds": 0.07172451499997123,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 2422996992.0,
+              "cuda_event_seconds": 0.6898603477478028,
+              "count": 9.0,
+              "effective_bytes_per_event_second": 3512300714.065381
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "cold",
+          "document": "doc-c",
+          "ttft": 4.20662846099998,
+          "e2e": 7.24908480199997,
+          "output_tok_s": 17.65740138185247,
+          "start": 366.556074463,
+          "end": 373.805159265,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 0.0,
+            "external_hit_tokens": 0.0,
+            "restored_bytes": 0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 1.4910000004419999e-05,
+          "computed_prefill_tokens": 16446.0,
+          "local_queries": 16446.0,
+          "external_queries": 16446.0,
+          "max_sse_content_gap_seconds": 0.0727477930000191,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 2422996992.0,
+              "cuda_event_seconds": 0.7389531822204591,
+              "count": 9.0,
+              "effective_bytes_per_event_second": 3278958735.544255
+            },
+            "CPU_to_GPU": {
+              "bytes": 0,
+              "cuda_event_seconds": 0,
+              "count": 0,
+              "effective_bytes_per_event_second": null
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "revisit",
+          "document": "doc-a",
+          "ttft": 0.30972870800002283,
+          "e2e": 3.422194260000026,
+          "output_tok_s": 37.402903013459856,
+          "start": 374.918775843,
+          "end": 378.340970103,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 16432
+            }
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 3360.0,
+            "external_hit_tokens": 13072.0,
+            "restored_bytes": 1927544832.0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 0.23277694799998017,
+          "computed_prefill_tokens": 14.0,
+          "local_queries": 16446.0,
+          "external_queries": 13086.0,
+          "max_sse_content_gap_seconds": 0.07150184099998569,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0.0,
+              "cuda_event_seconds": 0.0,
+              "count": 0.0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 1927544832.0,
+              "cuda_event_seconds": 0.21979737854003906,
+              "count": 1.0,
+              "effective_bytes_per_event_second": 8769644318.796421
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "revisit",
+          "document": "doc-b",
+          "ttft": 0.2992007260000378,
+          "e2e": 3.073734626000032,
+          "output_tok_s": 41.64315257318465,
+          "start": 379.49826397,
+          "end": 382.571998596,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 16432
+            }
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 3360.0,
+            "external_hit_tokens": 13072.0,
+            "restored_bytes": 1927544832.0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 0.227986589000011,
+          "computed_prefill_tokens": 14.0,
+          "local_queries": 16446.0,
+          "external_queries": 13086.0,
+          "max_sse_content_gap_seconds": 0.07107152899999392,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0.0,
+              "cuda_event_seconds": 0.0,
+              "count": 0.0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 1927544832.0,
+              "cuda_event_seconds": 0.21724739074707028,
+              "count": 1.0,
+              "effective_bytes_per_event_second": 8872579897.83702
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        },
+        {
+          "phase": "revisit",
+          "document": "doc-c",
+          "ttft": 0.29376903899998297,
+          "e2e": 3.196438797999974,
+          "output_tok_s": 40.04456461987952,
+          "start": 383.689779862,
+          "end": 386.88621866,
+          "token_count": 128,
+          "usage": {
+            "prompt_tokens": 16446,
+            "total_tokens": 16574,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 16432
+            }
+          },
+          "controls": {
+            "pass": true,
+            "local_hit_tokens": 3360.0,
+            "external_hit_tokens": 13072.0,
+            "restored_bytes": 1927544832.0,
+            "preemptions": 0.0
+          },
+          "queue_seconds": 0.2263420460000134,
+          "computed_prefill_tokens": 14.0,
+          "local_queries": 16446.0,
+          "external_queries": 13086.0,
+          "max_sse_content_gap_seconds": 0.0640339390000122,
+          "transfer": {
+            "GPU_to_CPU": {
+              "bytes": 0.0,
+              "cuda_event_seconds": 0.0,
+              "count": 0.0,
+              "effective_bytes_per_event_second": null
+            },
+            "CPU_to_GPU": {
+              "bytes": 1927544832.0,
+              "cuda_event_seconds": 0.21273033142089848,
+              "count": 1.0,
+              "effective_bytes_per_event_second": 9060977901.577412
+            }
+          },
+          "finish_reason": "length",
+          "done": true
+        }
+      ],
+      "phases": {
+        "cold": {
+          "count": 3,
+          "complete_wave": true,
+          "ttft_median": 4.135981486999981,
+          "ttft_p95": 4.19956376359998,
+          "e2e_p95": 7.2468030459999735,
+          "output_tokens_per_request_seconds": 17.760174524262236,
+          "output_tokens_per_observed_wave_second": 16.00646966364354
+        },
+        "revisit": {
+          "count": 3,
+          "complete_wave": true,
+          "ttft_median": 0.2992007260000378,
+          "ttft_p95": 0.30867590980002435,
+          "e2e_p95": 3.399618713800021,
+          "output_tokens_per_request_seconds": 39.61880239375355,
+          "output_tokens_per_observed_wave_second": 32.08705534439821
+        }
+      },
+      "sampled_max_owned_rss_bytes": 11389411328,
+      "sampled_min_mem_available_bytes": 4696440832,
+      "sampled_max_swap_used_bytes": 26718208,
+      "sampled_max_active_gpu_cache_fraction": 0.45398773006134974
+    }
+  ],
+  "quality": [
+    {
+      "run": "r1-baseline",
+      "document": "doc-a",
+      "text": "项目负责人是林若安，正式预算金额是480万元。",
+      "expected": {
+        "code": "云桥甲-17",
+        "date": "2026年5月12日",
+        "owner": "林若安",
+        "budget": "480万元",
+        "region": "墨尔本北区",
+        "relation": "先校验数据层，再执行模型评估，最后提交服务报告",
+        "risk": "供应商接口延迟"
+      },
+      "normal_eos": true,
+      "exact_values_present": true,
+      "foreign_values": false
+    },
+    {
+      "run": "r1-baseline",
+      "document": "doc-b",
+      "text": "项目负责人是周明川，正式预算金额是315万元。",
+      "expected": {
+        "code": "澄海乙-29",
+        "date": "2026年6月3日",
+        "owner": "周明川",
+        "budget": "315万元",
+        "region": "悉尼西区",
+        "relation": "先清理路线数据，再训练预测模型，最后进行人工抽检",
+        "risk": "节假日样本不足"
+      },
+      "normal_eos": true,
+      "exact_values_present": true,
+      "foreign_values": false
+    },
+    {
+      "run": "r1-baseline",
+      "document": "doc-c",
+      "text": "项目负责人是顾清禾，正式预算金额是260万元。",
+      "expected": {
+        "code": "星环丙-08",
+        "date": "2026年4月21日",
+        "owner": "顾清禾",
+        "budget": "260万元",
+        "region": "布里斯班南区",
+        "relation": "先整理知识库，再进行检索评测，最后接入客服试点",
+        "risk": "历史工单缺少标签"
+      },
+      "normal_eos": true,
+      "exact_values_present": true,
+      "foreign_values": false
+    },
+    {
+      "run": "r1-offload",
+      "document": "doc-a",
+      "text": "项目负责人是林若安，正式预算金额是480万元。",
+      "expected": {
+        "code": "云桥甲-17",
+        "date": "2026年5月12日",
+        "owner": "林若安",
+        "budget": "480万元",
+        "region": "墨尔本北区",
+        "relation": "先校验数据层，再执行模型评估，最后提交服务报告",
+        "risk": "供应商接口延迟"
+      },
+      "normal_eos": true,
+      "exact_values_present": true,
+      "foreign_values": false
+    },
+    {
+      "run": "r1-offload",
+      "document": "doc-b",
+      "text": "项目负责人是周明川，正式预算金额是315万元。",
+      "expected": {
+        "code": "澄海乙-29",
+        "date": "2026年6月3日",
+        "owner": "周明川",
+        "budget": "315万元",
+        "region": "悉尼西区",
+        "relation": "先清理路线数据，再训练预测模型，最后进行人工抽检",
+        "risk": "节假日样本不足"
+      },
+      "normal_eos": true,
+      "exact_values_present": true,
+      "foreign_values": false
+    },
+    {
+      "run": "r1-offload",
+      "document": "doc-c",
+      "text": "项目负责人是顾清禾，正式预算金额是260万元。",
+      "expected": {
+        "code": "星环丙-08",
+        "date": "2026年4月21日",
+        "owner": "顾清禾",
+        "budget": "260万元",
+        "region": "布里斯班南区",
+        "relation": "先整理知识库，再进行检索评测，最后接入客服试点",
+        "risk": "历史工单缺少标签"
+      },
+      "normal_eos": true,
+      "exact_values_present": true,
+      "foreign_values": false
+    }
+  ],
+  "timing_scope": "SSE content arrivals, not exact token generation; n=3 per wave, not population SLA",
+  "pairs": [
+    {
+      "round": 1,
+      "ttft_reduction": 0.8890826044522825,
+      "cold_e2e_regression": 0.08006884929912528,
+      "gates": {
+        "ttft_below_2s": true,
+        "ttft_reduction_at_least_30pct": true,
+        "revisit_e2e_no_regression": true,
+        "cold_e2e_regression_at_most_15pct": true,
+        "matched_retained_prefix": true,
+        "request_controls": true
+      },
+      "pass": true
+    },
+    {
+      "round": 2,
+      "ttft_reduction": 0.8991507344185415,
+      "cold_e2e_regression": 0.18475886590857504,
+      "gates": {
+        "ttft_below_2s": true,
+        "ttft_reduction_at_least_30pct": true,
+        "revisit_e2e_no_regression": true,
+        "cold_e2e_regression_at_most_15pct": false,
+        "matched_retained_prefix": true,
+        "request_controls": true
+      },
+      "pass": false
+    }
+  ],
+  "api_checks": [
+    {
+      "run": "r1-offload",
+      "pass": true
+    },
+    {
+      "run": "r3-offload",
+      "pass": true
+    }
+  ],
+  "quality_value_checks": true,
+  "quality_review": "See validation document for human body review"
+}

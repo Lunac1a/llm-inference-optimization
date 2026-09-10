@@ -110,6 +110,13 @@ No complete paired repetition or adoption claim follows. The adapter reuses
 upstream single-copy operations and consumes an 8 GiB CPU cache; defaults stay
 unchanged. The initial batch-copy failure is retained separately.
 
+The [CPU KV API integration](docs/kv-offload-integration-validation.md) adds
+`serve --cpu-kv-cache` as an **experimental** option. Two matched partial-eviction
+pairs reduce revisit p95 TTFT by 88.9–89.9%, but cold E2E rises 8.0%/18.5%
+(limit 15%), and round 3 stops on WSL swap growth. Full acceptance fails; the
+BF16 default stays unchanged. All 24 measured performance responses, six fact
+answers and two nonstream API checks complete. [Usage and limits](docs/cpu-kv-api.md).
+
 The llama.cpp KV-quantization route is archived at Git tag
 `archive/llama-cpp-stage1`, commit `99b39106539123847f860a9ac47415415e92a884`.
 The upstream q8_0 control saved KV memory but did not establish a single-request

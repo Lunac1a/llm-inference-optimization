@@ -1,0 +1,7 @@
+usage: local_document_qa.py [-h] {serve,ask} ...
+local_document_qa.py: error: --cpu-kv-cache requires prefix caching
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.017s
+
+OK

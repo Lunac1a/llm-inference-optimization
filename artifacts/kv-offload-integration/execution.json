@@ -1,0 +1,7 @@
+{
+  "git_head": "2ffdde18dbbab20996b05be5ab55060616745267",
+  "transport": "scoped upstream single-copy adapter",
+  "latency_gates": "unchanged",
+  "cache_controls": "partial eviction plus paired GPU retained-prefix matching",
+  "plan": "docs/kv-offload-integration-plan.md"
+}

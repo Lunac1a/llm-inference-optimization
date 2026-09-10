@@ -1,0 +1,6 @@
+{
+  "scripts/validate_kv_offload_integration.py": "208885d70fe11f96ee85ddddd2ed8430de2d78d8354173b4cb17dab5dd1dc222",
+  "scripts/cpu_kv_api.py": "011f3d9556eb2dac6522781a9adedc6e608e7be01fee0cc035dd897a2b13be38",
+  "scripts/local_document_qa.py": "75d657bfd44bd687d764e49fd49112d565be2240e134b4c8d5f26f1e132a2556",
+  "docs/kv-offload-integration-plan.md": "85fd9b398b69084181643fa559608fc95a1175e50aae1475fabd5b14deac57f6"
+}

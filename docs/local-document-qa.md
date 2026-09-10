@@ -17,6 +17,12 @@ attention from FP8 cache storage and passes its own bounded comparison, reducing
 cold TTFT by 48.5–55.8% versus a matched FP8 control. It needs full prefill and a
 16,640-token context limit; it remains an opt-in prototype, not this default.
 
+The separate [CPU KV profile](cpu-kv-api.md) is selected with
+`serve --cpu-kv-cache`; it keeps BF16 weights/KV and adds an 8 GiB host cache with
+the pinned WSL transfer adapter. See its [acceptance and limits](kv-offload-integration-validation.md).
+It uses the same endpoint, alias and request format. It is not enabled by default
+and does not combine with the hybrid prototype.
+
 In the existing pinned WSL Ubuntu environment, terminal 1:
 
 ```bash

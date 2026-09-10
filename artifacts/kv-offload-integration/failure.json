@@ -1,0 +1,4 @@
+{
+  "type": "AssertionError",
+  "message": "{'MemTotal': 16562999296, 'MemAvailable': 5246595072, 'SwapTotal': 4294967296, 'SwapFree': 3596009472, 'swap_used': 698957824}"
+}
