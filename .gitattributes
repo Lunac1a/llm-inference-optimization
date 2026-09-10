@@ -12,3 +12,5 @@ artifacts/hybrid-prefill/** -text whitespace=cr-at-eol
 artifacts/mixed-load/** -text whitespace=cr-at-eol
 artifacts/mixed-load-rerun/** -text whitespace=cr-at-eol
 artifacts/kv-offload/** -text whitespace=cr-at-eol
+artifacts/kv-offload-compat/** -text whitespace=cr-at-eol
+artifacts/kv-offload-recovery/** -text whitespace=cr-at-eol
