@@ -1,0 +1,96 @@
+[
+  {
+    "op": "batch",
+    "pin": false,
+    "direction": "d2h",
+    "bytes": 4194304,
+    "stage": "submission",
+    "payload_host_is_pinned": false,
+    "pass": false,
+    "error": "RuntimeError: swap_blocks_batch, /workspace/csrc/libtorch_stable/cache_kernels.cu:145, cuMemcpyBatchAsync failed at index 0 with error 1"
+  },
+  {
+    "op": "batch",
+    "pin": false,
+    "direction": "h2d",
+    "bytes": 4194304,
+    "stage": "submission",
+    "payload_host_is_pinned": false,
+    "pass": false,
+    "error": "RuntimeError: swap_blocks_batch, /workspace/csrc/libtorch_stable/cache_kernels.cu:145, cuMemcpyBatchAsync failed at index 0 with error 1"
+  },
+  {
+    "op": "batch",
+    "pin": true,
+    "direction": "d2h",
+    "bytes": 4194304,
+    "stage": "submission",
+    "payload_host_is_pinned": true,
+    "pass": false,
+    "error": "RuntimeError: swap_blocks_batch, /workspace/csrc/libtorch_stable/cache_kernels.cu:145, cuMemcpyBatchAsync failed at index 0 with error 1"
+  },
+  {
+    "op": "batch",
+    "pin": true,
+    "direction": "h2d",
+    "bytes": 4194304,
+    "stage": "submission",
+    "payload_host_is_pinned": true,
+    "pass": false,
+    "error": "RuntimeError: swap_blocks_batch, /workspace/csrc/libtorch_stable/cache_kernels.cu:145, cuMemcpyBatchAsync failed at index 0 with error 1"
+  },
+  {
+    "op": "single",
+    "pin": false,
+    "direction": "d2h",
+    "bytes": 4194304,
+    "stage": "finished",
+    "payload_host_is_pinned": false,
+    "wall_seconds": 0.0019975320000042984,
+    "equal": true,
+    "pass": true
+  },
+  {
+    "op": "single",
+    "pin": false,
+    "direction": "h2d",
+    "bytes": 4194304,
+    "stage": "finished",
+    "payload_host_is_pinned": false,
+    "wall_seconds": 0.000646973000002049,
+    "equal": true,
+    "pass": true
+  },
+  {
+    "op": "torch",
+    "pin": false,
+    "direction": "d2h",
+    "bytes": 4194304,
+    "stage": "finished",
+    "payload_host_is_pinned": false,
+    "wall_seconds": 0.0013441679999957046,
+    "equal": true,
+    "pass": true
+  },
+  {
+    "op": "torch",
+    "pin": false,
+    "direction": "h2d",
+    "bytes": 4194304,
+    "stage": "finished",
+    "payload_host_is_pinned": false,
+    "wall_seconds": 0.0005385799999970686,
+    "equal": true,
+    "pass": true
+  },
+  {
+    "op": "batch",
+    "pin": false,
+    "direction": "d2d",
+    "bytes": 4194304,
+    "stage": "submission",
+    "payload_host_is_pinned": false,
+    "pass": false,
+    "error": "RuntimeError: swap_blocks_batch, /workspace/csrc/libtorch_stable/cache_kernels.cu:145, cuMemcpyBatchAsync failed at index 0 with error 1"
+  }
+]

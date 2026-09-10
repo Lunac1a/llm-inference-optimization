@@ -1,0 +1,9 @@
+{
+  "start": 1789020982.8375106,
+  "deadline": 1789021582.8375106,
+  "git_head": "c130e57d93a50b4e43a937cac290fe5b0d705c9e",
+  "sources": {
+    "scripts/diagnose_kv_offload.py": "08e9cbcd5bbee72f5744d0e022f56cdb2e4ecc343d825516e6f79caced78a131",
+    "docs/kv-offload-compat-plan.md": "a89a45e09a15307fd730561971a23c61094a23c3dafe9de2753093396da3d1b9"
+  }
+}

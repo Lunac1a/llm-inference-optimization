@@ -1,0 +1,3 @@
+{"op": "single", "pin": false, "direction": "h2d", "bytes": 4194304, "stage": "allocation"}
+{"op": "single", "pin": false, "direction": "h2d", "bytes": 4194304, "stage": "submission", "payload_host_is_pinned": false}
+RESULT {"op": "single", "pin": false, "direction": "h2d", "bytes": 4194304, "stage": "finished", "payload_host_is_pinned": false, "wall_seconds": 0.000646973000002049, "equal": true, "pass": true}

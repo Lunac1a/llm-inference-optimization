@@ -1,0 +1,2 @@
+[vllm.general_plugins]
+inference_kv_transport = transport:install

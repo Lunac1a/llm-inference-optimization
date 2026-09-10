@@ -1,0 +1,3 @@
+{"op": "batch", "pin": false, "direction": "h2d", "bytes": 4194304, "stage": "allocation"}
+{"op": "batch", "pin": false, "direction": "h2d", "bytes": 4194304, "stage": "submission", "payload_host_is_pinned": false}
+RESULT {"op": "batch", "pin": false, "direction": "h2d", "bytes": 4194304, "stage": "submission", "payload_host_is_pinned": false, "pass": false, "error": "RuntimeError: swap_blocks_batch, /workspace/csrc/libtorch_stable/cache_kernels.cu:145, cuMemcpyBatchAsync failed at index 0 with error 1"}
