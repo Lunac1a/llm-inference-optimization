@@ -1,0 +1,16 @@
+{
+  "budget.json": "8fc380b8e045906d23225666ddbedffc0fcd76d55884248b018379a339e0574d",
+  "cleanup.json": "890f16c59b38f423c5ba6e9c8ce00e6061b4ebee8da5cbfc3c2e6973653cdb86",
+  "closure.json": "ccd32d08ae73cccb0cbe2ac67e9123117040fd557c17e0ab1599b476ee2cc7c8",
+  "collector.log": "9a77c3746dff9d304b4be22bca94ee953e3ba0da413670e5d951bf14e66f566f",
+  "copy-probe.log": "e04ee75f6cfdfb62d153f88b56ab40fbe06491693b8d60b7c4849ac16d730b91",
+  "failure.json": "6a6e1ee1122c9dff331019f16800126871a46c3cf5eaecadc3769b8d2dcdf02a",
+  "frozen-source-hashes.json": "1528b29866b99cd935831624e44907159eed3610091cdc4cf5488d1f63f889bb",
+  "materials.json": "60805f60092b8ac214a33672a340094d9644cc9eea2fe5b928adc477d8b79b6a",
+  "old-evidence-hashes.json": "78effd3501861cb83ad982b5ba595992c222b6be80d657533e6cf1d2469c1178",
+  "preflight.json": "207613446f097f4e0d525e15ee9b889bbe560d6b03aebd8a9dfcc83e2802e238",
+  "protocol.json": "4c8ce945d8dcfeebd21f043113ba91185cbe4481037144f913f3c66d1937a68c",
+  "test_hybrid_prefill.py.log": "a25b5619af971eae96a8c9d37ebc69133b4c28e990455e210be0507206df182c",
+  "test_kv_offload.py.log": "d3e71e6369c2ee2914dd522d60ac70a106429d6e8d9ec0089d14a1c1f065633f",
+  "test_mixed_load.py.log": "256e590ba9183f73cc663d8cfa132c3c8611787f5bb806ea54e951f3d8a7d3ca"
+}

@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/mnt/d/Lunacia/Inference/scripts/validate_kv_offload.py", line 281, in <module>
+    {'prepare': prepare, 'copy-probe': copy_probe, 'run': lambda: asyncio.run(run())}[phase]()
+  File "/mnt/d/Lunacia/Inference/scripts/validate_kv_offload.py", line 281, in <lambda>
+    {'prepare': prepare, 'copy-probe': copy_probe, 'run': lambda: asyncio.run(run())}[phase]()
+                                                                  ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/mnt/d/Lunacia/Inference/scripts/validate_kv_offload.py", line 210, in run
+    assert p.returncode == 0, 'Native copy probe failed; no model run'
+           ^^^^^^^^^^^^^^^^^
+AssertionError: Native copy probe failed; no model run

@@ -1,0 +1,8 @@
+{
+  "git_head": "eefddc4aac1c172f599253568d8f40a6602d6811",
+  "sources": {
+    "scripts/validate_kv_offload.py": "09858c9443ac379b04fbdf797b82e67b156bd595bca06ad5b2eadcbd525787ce",
+    "scripts/kv_offload_entry.py": "3c56c8ad972536e4c19a7795359e367b4c42bd9ef85293ea985a7a6a18e8e396",
+    "docs/kv-offload-plan.md": "e9dba4d28298761753a93d4d6f46993f4fdfd65cfae86f5e482fe623dbd44ec6"
+  }
+}

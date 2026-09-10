@@ -1,0 +1,12 @@
+WARNING 09-10 16:03:02 [interface.py:757] Using 'pin_memory=False' as WSL is detected. This may slow down the performance.
+Traceback (most recent call last):
+  File "/mnt/d/Lunacia/Inference/scripts/validate_kv_offload.py", line 281, in <module>
+    {'prepare': prepare, 'copy-probe': copy_probe, 'run': lambda: asyncio.run(run())}[phase]()
+  File "/mnt/d/Lunacia/Inference/scripts/validate_kv_offload.py", line 115, in copy_probe
+    ops.swap_blocks_batch(*pointers, is_src_access_order_any=any_order)
+  File "/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/vllm/_custom_ops.py", line 2830, in swap_blocks_batch
+    torch.ops._C_cache_ops.swap_blocks_batch(
+  File "/home/lunacia/.venvs/inference-vllm/lib/python3.12/site-packages/torch/_ops.py", line 1269, in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: swap_blocks_batch, /workspace/csrc/libtorch_stable/cache_kernels.cu:145, cuMemcpyBatchAsync failed at index 0 with error 1

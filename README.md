@@ -97,6 +97,11 @@ and B first-content latency by 89%, but increases A/B E2E by 74%/72% and reduces
 throughput by 42%; it fails the adoption gate. All 30 performance responses and
 six fact answers pass. The earlier reset-API failure remains archived separately.
 
+The subsequent [native GPU/CPU KV offload experiment](docs/kv-offload-validation.md)
+stopped before model measurement: its 4 MiB native batch-copy roundtrip failed
+under the existing WSL environment. No CPU-restoration speedup or slowdown is
+established. Default service settings and all earlier evidence are preserved.
+
 The llama.cpp KV-quantization route is archived at Git tag
 `archive/llama-cpp-stage1`, commit `99b39106539123847f860a9ac47415415e92a884`.
 The upstream q8_0 control saved KV memory but did not establish a single-request
