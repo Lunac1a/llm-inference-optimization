@@ -1,8 +1,0 @@
-==WARNING== Could not deploy stock section files to "/home/lunacia/Documents/NVIDIA Nsight Compute/2026.2.1/Sections".
-Set the HOME environment variable to a writable directory.
-==WARNING== Using "/mnt/d/Lunacia/Inference/.tmp/bandwidth-ncu/../../sections" instead.
-==WARNING== See https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#faq.
-==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.
-==PROF== Connected to process 1830 (/usr/bin/python3.12)
-==PROF== Trying to shutdown target application
-==PROF== Report: /mnt/d/Lunacia/Inference/artifacts/stage2-bandwidth/capture-3/kernels.ncu-rep

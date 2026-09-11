@@ -1,8 +1,0 @@
-{
-  "observed_windows_python_pid": 15816,
-  "observed_cpu_seconds": 189.7,
-  "observed_process_start_display": "2026-09-08 15:54:36",
-  "stop_log_mtime_epoch": 1788847117.893198,
-  "scope": "Task-created Windows matplotlib pip install produced no output and consumed CPU; it was stopped, then uv installed plotting deps in separate WSL target. Setup overlapped early A screening; it must not be treated as controlled CPU background. All confirmation and cap contrasts occur after setup has ended.",
-  "inference_environment_changed": false
-}

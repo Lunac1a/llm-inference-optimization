@@ -1,14 +1,18 @@
-/.idea/
-/.venv/
+/.local/
 /.tmp/
+/artifacts/
+/experiments/
 /models/
+/results/
+/.venv/
+/.idea/
 /build/
 /dist/
-.env
-.env.*
-!.env.example
+*.egg-info/
 __pycache__/
 *.py[cod]
 .pytest_cache/
-# Local scratch; curated evidence belongs under artifacts/.
-/results/raw/
+.env
+.env.*
+!.env.example
+*.log

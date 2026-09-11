@@ -1,9 +1,0 @@
-{
-  "start_epoch": 1788846465.5347962,
-  "deadline_epoch": 1788851865.5347962,
-  "accounting": "conservative wall time including startup and idle",
-  "cleanup_end_epoch": 1788849207.0123684,
-  "conservative_elapsed_minutes": 45.691292870044705,
-  "within_90_minutes": true,
-  "cloud_spend_aud": 0
-}
