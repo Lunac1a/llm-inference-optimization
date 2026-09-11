@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-inference-service"
+version = "0.1.0"
+description = "Local vLLM API with selective reasoning budgets and scoped KV optimizations"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["fastapi==0.136.3", "httpx==0.28.1", "pydantic==2.13.5", "uvicorn==0.52.4"]
+
+[project.optional-dependencies]
+runtime = ["vllm==0.23.0", "transformers==4.57.6"]
+
+[project.scripts]
+inference-api = "inference_service.cli:main"
+
+[project.entry-points."vllm.general_plugins"]
+inference_hybrid_prefill = "inference_service.plugins:register_hybrid"
+inference_kv_transport = "inference_service.plugins:register_cpu_kv"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+inference_service = ["policies.json"]

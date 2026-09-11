@@ -1,8 +1,0 @@
-==WARNING== Could not deploy stock section files to "/home/lunacia/Documents/NVIDIA Nsight Compute/2026.2.1/Sections".
-Set the HOME environment variable to a writable directory.
-==WARNING== Using "/mnt/d/Lunacia/Inference/.tmp/bandwidth-ncu/../../sections" instead.
-==WARNING== See https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#faq.
-==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.
-==PROF== Connected to process 393 (/usr/bin/python3.12)
-==ERROR== ERR_NVGPUCTRPERM - The user does not have permission to access NVIDIA GPU Performance Counters on the target device 0. For instructions on enabling permissions and to get more information see https://developer.nvidia.com/ERR_NVGPUCTRPERM
-==PROF== Disconnected from process 393

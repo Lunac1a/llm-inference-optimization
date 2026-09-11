@@ -1,2 +1,0 @@
-input_tokens,concurrency,rounds,output_throughput_mean_tok_s,output_throughput_cv_percent,stability_passed_cv_le_5_percent
-512,1,3,37.316599495076304,4.132136754886117,True

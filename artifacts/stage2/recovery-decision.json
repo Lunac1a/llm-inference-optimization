@@ -1,9 +1,0 @@
-{
-  "reason": "Initial cold anchors differ by 8.33%; stop and inspect completed, no formal data collected. Temperature rose during short batches; cause unproven.",
-  "action": "One continuous 128-request warmup at A/c4 with 180-second timeout, then two 16-request anchors, original settings. No further readiness attempts if >5%.",
-  "budget": "Original 90-minute wall deadline retained; warmup total bounded below ten minutes.",
-  "hashes": {
-    "scripts\\stage2-recovery.sh": "4accd3ab0d1c9b6dec53fb27ffe2ed925a5d030b58356c57e10de88dc7dbaf24",
-    "scripts\\analyze-stage2.py": "4d3327c13ea51023f06595bce02db3ec40f6f7ff9877772baf19be734805dcbe"
-  }
-}

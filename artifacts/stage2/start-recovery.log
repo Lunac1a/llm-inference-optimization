@@ -1,4 +1,0 @@
-Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 4225.84it/s]
-Starting qwen3-4b-baseline from /home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c
-Server log: /mnt/d/Lunacia/Inference/.tmp/stage2/vllm-server.log
-Started PID 404. Use scripts/status-vllm-baseline.sh to wait for readiness.
