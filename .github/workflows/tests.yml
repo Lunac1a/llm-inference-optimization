@@ -12,4 +12,6 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install -e . setuptools wheel
       - run: python -m unittest discover -s tests -v
+      - run: python -m pip install numpy==2.3.5
+      - run: python -m unittest discover -s benchmarks/evaluation -p 'test_*.py' -v
       - run: python -m pip wheel --no-deps --no-build-isolation . -w dist

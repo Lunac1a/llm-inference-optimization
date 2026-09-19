@@ -1,4 +1,0 @@
-{
-  "economy": {"lookup": 0, "arithmetic": 512, "sequential": 512, "counting": 512, "unknown": 512},
-  "quality": {"lookup": 0, "arithmetic": 512, "sequential": 1024, "counting": 1024, "unknown": 512}
-}

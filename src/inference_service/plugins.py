@@ -8,7 +8,7 @@ def register_hybrid():
         register()
 
 
-def register_cpu_kv():
-    if os.environ.get("INFERENCE_RUNTIME_PROFILE") == "cpu-kv":
-        from .backends.cpu_kv import install
-        install()
+def register_chunked():
+    if os.environ.get("INFERENCE_RUNTIME_PROFILE") == "chunked-hybrid":
+        from .backends.chunked_hybrid import register
+        register()

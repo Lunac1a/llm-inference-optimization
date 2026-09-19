@@ -1,0 +1,24 @@
+{
+  "complete": true,
+  "state": "completed",
+  "quality_responses": 2340,
+  "planned_quality_responses": 2340,
+  "unique_quality_inputs": 780,
+  "fixed_output_measurements": 54,
+  "planned_fixed_output_measurements": 54,
+  "numerical_cases_passed": 20,
+  "gpu_lifecycle_seconds": 8984.998598369999,
+  "budget_seconds": 10800,
+  "remaining_budget_seconds": 1815.001401630001,
+  "port_released": true,
+  "compute_processes_after": "pid, process_name, used_gpu_memory [MiB]\n",
+  "power_guard_active": false,
+  "full_hash_audit_passed": true,
+  "original_failures_and_pause_preserved": true,
+  "repeated_completed_quality_requests": 0,
+  "timing_caveats": {
+    "4096": "pre-resume Modern Standby exposure",
+    "8192": "spans interrupted and resumed segments",
+    "16384": "block 0 entirely resume-2; block 1 FP8 timing in resume-2 and BF16/mixed timing in resume-3; cross-segment descriptive comparison"
+  }
+}

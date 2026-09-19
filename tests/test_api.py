@@ -36,32 +36,10 @@ class ApiTests(unittest.TestCase):
     def client(self, **settings):
         return TestClient(create_app(Settings(**settings), transport=httpx.MockTransport(self.handler)))
 
-    def test_budget_is_chosen_on_server_and_response_stays_openai_shaped(self):
-        with self.client(profile="adaptive") as client:
-            response = client.post("/v1/solve", json={"question": "Record values: A=42. What value for record A?"})
-        sent = json.loads(self.requests[0].content)
-        self.assertEqual(sent["thinking_token_budget"], 0)
-        self.assertFalse(sent["chat_template_kwargs"]["enable_thinking"])
-        self.assertEqual(response.headers["x-thinking-budget"], "0")
-        self.assertEqual(response.json()["choices"][0]["message"]["content"], "42")
-
-    def test_quality_and_unknown_fallback(self):
-        with self.client(profile="adaptive") as client:
-            high = client.post("/v1/solve", json={"question": "How many subsets of exactly four?", "budget_profile": "quality"})
-            fallback = client.post("/v1/solve", json={"question": "What is seven plus nine?", "budget_profile": "quality"})
-        self.assertEqual(high.headers["x-thinking-budget"], "1024")
-        self.assertEqual(fallback.headers["x-thinking-budget"], "512")
-        self.assertEqual(json.loads(self.requests[0].content)["max_tokens"], 1216)
-
-    def test_invalid_budget_profile_or_override_does_not_reach_backend(self):
-        with self.client(profile="adaptive") as client:
-            self.assertEqual(client.post("/v1/solve", json={"question": "x", "budget_profile": "unlimited"}).status_code, 422)
-            self.assertEqual(client.post("/v1/solve", json={"question": "x", "thinking_token_budget": 999}).status_code, 422)
-        self.assertEqual(self.requests, [])
-
-    def test_profile_boundary(self):
-        with self.client(profile="document") as client:
-            self.assertEqual(client.post("/v1/solve", json={"question": "x"}).status_code, 409)
+    def test_archived_budget_endpoint_is_absent(self):
+        with self.client() as client:
+            self.assertNotIn("/v1/solve", client.get("/openapi.json").json()["paths"])
+            self.assertEqual(client.post("/v1/solve", json={"question": "x"}).status_code, 404)
         self.assertEqual(self.requests, [])
 
     def test_generic_chat_preserves_fields_without_integer_policy(self):
@@ -110,6 +88,7 @@ class ApiTests(unittest.TestCase):
         with TestClient(app) as client:
             response = client.post("/v1/chat/completions", json={"messages": [{"role": "user", "content": "Hi"}], "stream": True})
         self.assertIn('data: [DONE]', response.text)
+        self.assertEqual(response.headers['X-Inference-Profile'], 'chunked-hybrid')
         self.assertTrue(response.headers["content-type"].startswith("text/event-stream"))
         self.assertTrue(stream.closed)
 
@@ -124,6 +103,22 @@ class ApiTests(unittest.TestCase):
 
 
 class StreamCancellationTests(unittest.IsolatedAsyncioTestCase):
+    async def test_busy_stream_holds_slot_until_closed(self):
+        app = create_app(Settings(max_inflight=1), transport=httpx.MockTransport(
+            lambda _: httpx.Response(200, stream=EventStream())))
+        async with app.router.lifespan_context(app):
+            endpoint = next(r.endpoint for r in app.routes if r.path == '/v1/chat/completions')
+            request = ChatRequest(messages=[{'role': 'user', 'content': 'Hi'}], stream=True)
+            first = await endpoint(request)
+            await anext(first.body_iterator)
+            busy = await endpoint(request)
+            self.assertEqual(busy.status_code, 429)
+            await first.body_iterator.aclose()
+            resumed = await endpoint(request)
+            self.assertEqual(resumed.status_code, 200)
+            await anext(resumed.body_iterator)
+            await resumed.body_iterator.aclose()
+
     async def test_closing_consumer_closes_upstream(self):
         stream = EventStream()
         app = create_app(transport=httpx.MockTransport(lambda _: httpx.Response(200, stream=stream)))

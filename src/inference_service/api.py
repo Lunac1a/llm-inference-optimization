@@ -1,8 +1,9 @@
-"""OpenAI-compatible proxy and server-side optimization endpoints."""
+"""OpenAI-compatible chat and document QA for attention comparisons."""
 from contextlib import asynccontextmanager
+import asyncio
 import hmac
 import json
-from typing import Any, Literal
+from typing import Any
 
 import httpx
 from fastapi import Depends, FastAPI, Header, HTTPException
@@ -10,7 +11,7 @@ from fastapi.responses import JSONResponse, Response, StreamingResponse
 from pydantic import BaseModel, ConfigDict, Field
 from starlette.background import BackgroundTask
 
-from .budget import solve_request
+from . import __version__
 from .config import Settings
 from .prompts import document_prompt
 
@@ -19,13 +20,6 @@ class ChatRequest(BaseModel):
     model_config = ConfigDict(extra="allow")
     model: str | None = None
     messages: list[dict[str, Any]] = Field(min_length=1)
-    stream: bool = False
-
-
-class SolveRequest(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-    question: str = Field(min_length=1, max_length=16000)
-    budget_profile: Literal["economy", "quality"] = "economy"
     stream: bool = False
 
 
@@ -47,9 +41,10 @@ def create_app(settings: Settings | None = None, *, transport=None) -> FastAPI:
                                      timeout=httpx.Timeout(settings.request_timeout, connect=5),
                                      transport=transport, trust_env=False) as client:
             app.state.backend = client
+            app.state.slots = asyncio.Semaphore(settings.max_inflight)
             yield
 
-    app = FastAPI(title="Local Inference API", version="0.1.0", lifespan=lifespan)
+    app = FastAPI(title="Mixed-Attention Inference API", version=__version__, lifespan=lifespan)
 
     async def authorize(authorization: str | None = Header(default=None)):
         if settings.api_key and not hmac.compare_digest((authorization or "").encode(), f"Bearer {settings.api_key}".encode()):
@@ -60,7 +55,21 @@ def create_app(settings: Settings | None = None, *, transport=None) -> FastAPI:
         stream = bool(body and body.get("stream"))
         handed_off = False
         response = None
+        acquired = False
+
+        def release():
+            nonlocal acquired
+            if acquired:
+                acquired = False
+                app.state.slots.release()
+
         try:
+            if body is not None:
+                if app.state.slots.locked():
+                    return JSONResponse({"error": {"type": "overloaded", "message": "Too many active requests; retry later"}},
+                                        429, headers={"Retry-After": "1"})
+                await app.state.slots.acquire()
+                acquired = True
             request = client.build_request("POST" if body is not None else "GET", path, json=body)
             response = await client.send(request, stream=True)
             response_headers = {"X-Inference-Profile": settings.profile, **(headers or {})}
@@ -79,10 +88,15 @@ def create_app(settings: Settings | None = None, *, transport=None) -> FastAPI:
                            "message": "Backend stream interrupted"}}) + "\n\n").encode()
                 finally:
                     await response.aclose()
+                    release()
+
+            async def cleanup():
+                await response.aclose()
+                release()
 
             response_headers.update({"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
             result = StreamingResponse(chunks(), media_type="text/event-stream", headers=response_headers,
-                                       background=BackgroundTask(response.aclose))
+                                       background=BackgroundTask(cleanup))
             # Ownership transfers to the streaming iterator only after construction succeeds.
             handed_off = True
             return result
@@ -93,6 +107,8 @@ def create_app(settings: Settings | None = None, *, transport=None) -> FastAPI:
         finally:
             if response is not None and not handed_off:
                 await response.aclose()
+            if not handed_off:
+                release()
 
     @app.get("/health", dependencies=[Depends(authorize)])
     async def health():
@@ -114,22 +130,12 @@ def create_app(settings: Settings | None = None, *, transport=None) -> FastAPI:
         body.setdefault("model", settings.served_model)
         return await forward("/v1/chat/completions", body)
 
-    @app.post("/v1/solve", dependencies=[Depends(authorize)])
-    async def solve(request: SolveRequest):
-        if settings.profile != "adaptive":
-            raise HTTPException(409, "Start the adaptive runtime profile to use integer budget routing")
-        body, decision = solve_request(request.question, request.budget_profile,
-                                       settings.served_model, request.stream)
-        return await forward("/v1/chat/completions", body, headers={
-            "X-Budget-Profile": decision["profile"], "X-Task-Type": decision["task_type"],
-            "X-Thinking-Budget": str(decision["thinking_tokens"])})
-
     @app.post("/v1/document/qa", dependencies=[Depends(authorize)])
     async def document_qa(request: DocumentRequest):
         return await forward("/v1/chat/completions", {
             "model": settings.served_model,
             "messages": [{"role": "user", "content": document_prompt(request.document, request.question,
-                          independent_title=settings.profile in ("hybrid", "cpu-kv"))}],
+                          independent_title=settings.profile == "hybrid")}],
             "temperature": 0, "max_tokens": request.max_tokens, "stream": request.stream,
             "chat_template_kwargs": {"enable_thinking": False},
             **({"stream_options": {"include_usage": True}} if request.stream else {}),

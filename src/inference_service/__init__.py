@@ -1,2 +1,2 @@
-"""Inference API and opt-in runtime optimizations; no model is loaded on import."""
-__version__ = "0.1.0"
+"""Inference baseline and mixed attention; no model is loaded on import."""
+__version__ = "0.1.4"

@@ -1,0 +1,296 @@
+{
+  "frozen_hashes": {
+    "/mnt/d/Lunacia/Inference/src/inference_service/api.py": "541dbf6745bf7ccbf77d2fd233bc7543672453ada79d4615279f9ea5598bf424",
+    "/mnt/d/Lunacia/Inference/src/inference_service/cli.py": "4b8f15a3862c4d0d8482061e69d304fe5703213ac407d2e0a56b5072266396e8",
+    "/mnt/d/Lunacia/Inference/src/inference_service/config.py": "1c23c8a40aea253aa9a429024aaa6aa96ba4e971d2ed5d0830aea7cd774c00c1",
+    "/mnt/d/Lunacia/Inference/src/inference_service/plugins.py": "1f4a2bfea270d6882d54e0cce367ea584b975e641c41c9d092079e569c34b386",
+    "/mnt/d/Lunacia/Inference/src/inference_service/prompts.py": "7aecc90846709bb1881ced76fd16be718f78a6c30a430b5b83ab9347fa853bf0",
+    "/mnt/d/Lunacia/Inference/src/inference_service/runtime.py": "f608353c39d64a66ac873b9168a98bbc761df3e26a926d9cc466910289852a8b",
+    "/mnt/d/Lunacia/Inference/src/inference_service/vllm_entry.py": "083428b49008e3d8131ec97353cab8cd6d5756244a27d06627f8e8e1f5a2c023",
+    "/mnt/d/Lunacia/Inference/src/inference_service/__init__.py": "b5952edd8b75990cdc621b7815ea223f262fd2bfbbf68fbb888b438303cc5bae",
+    "/mnt/d/Lunacia/Inference/src/inference_service/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "/mnt/d/Lunacia/Inference/src/inference_service/backends/chunked_hybrid.py": "019336172723552056b1ab4709ea1f536c462b26c644c6b7e31088dd8b191294",
+    "/mnt/d/Lunacia/Inference/src/inference_service/backends/dual_source_kernel.py": "0d13d84dca949012313f887777d5a5b7a382be21f7c82f7bc509268ed8b76150",
+    "/mnt/d/Lunacia/Inference/src/inference_service/backends/hybrid.py": "fcdcf199bacce9493956bc1dfc4d737e9af9e5faf4d0eb21a4988692909c9184",
+    "/mnt/d/Lunacia/Inference/src/inference_service/backends/routes.py": "220e28cf626860b52e68190e297e39ad5f46f924122117526652b1c46e918f51",
+    "/mnt/d/Lunacia/Inference/src/inference_service/backends/__init__.py": "004acb91194d718a785b3d0d62c4fdee5fc3959c25a16080b1f0b4ff502ff48d",
+    "/mnt/d/Lunacia/Inference/benchmarks/evaluation/config.py": "041fe4bf39ee69b60c389ea63175ab1fccf31dd0faeb2969e5cd41a9da75f81a",
+    "/mnt/d/Lunacia/Inference/benchmarks/evaluation/prepare.py": "e409f3d6f9236a74ff203748fd62ef2f67cba93cdd6d8bab2c59bccbc4f5f5f3",
+    "/mnt/d/Lunacia/Inference/benchmarks/evaluation/report.py": "793841b34f6be33acd6e10502b77169ad95aada955b0e58220a3f5a37ea18135",
+    "/mnt/d/Lunacia/Inference/benchmarks/evaluation/run.py": "2e68d7da03c43878dd259aa1b8f882de5e8b78d74cd5df1e2f1755d6d0621c66",
+    "/mnt/d/Lunacia/Inference/benchmarks/evaluation/test_evaluation.py": "681f18b129dc245f9215c8144534e95e9299c69e391a37dd37108d6432442385",
+    "/mnt/d/Lunacia/Inference/benchmarks/ruler/common.py": "760a32efc8c712ea1ea9189ec4695a70b246b09b29f3f4bbe26925cc76b4f47a",
+    "/mnt/d/Lunacia/Inference/benchmarks/ruler/collect.py": "ef0ac12ec2808594800a17ed55e822bece0adf27b8421e12fc38d6614896a708",
+    "/mnt/d/Lunacia/Inference/benchmarks/ruler/report.py": "af8d17786cd06889f587c88d8cfbb86c1be7c3d735cc8f3fd4c141d95dacdb52",
+    "/mnt/d/Lunacia/Inference/benchmarks/latency/branch_micro.py": "409a0e4f8b60a36462a44f4c4a2a92ecf1c910ea3fb6d763ab01eabff124844b",
+    "/mnt/d/Lunacia/Inference/docs/final-benchmark-protocol.md": "fdb9e4d05d7c36a9c9164d97d06fec72745bb933e81a9f4ff88258424be6a500",
+    "/mnt/d/Lunacia/Inference/pyproject.toml": "2493f548132e6db8fab3c59bb62f596a62b3e96c2a1a9525c469ee96c81ecfaf",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data-manifest.json": "8e2aab210cd191af8c3ae7a785a507c8360e2c1305efc8508c42625b01cf2fa2",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/timing-inputs.json": "5613e6db9ef6a99a126b9d0d80154268be2edf3ee81898ad224ce408256c9176",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/environment.json": "90a61606fc1cafeb11877546788219e297a1642712a4dce2d7b7a9d2a110ac65",
+    "/mnt/d/Lunacia/Inference/.local/research/mixed-branch-2026-09-18/baseline-source/inference_service/backends/dual_source_kernel.py": "375a4c3f1a25e2ed0d1db459d35a805719c67945ef8730fda585e286df0d19f9",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/4096/niah_single_1.jsonl": "4473b5e57c4d3646d5cdd03be482907c784af1fb9f61aa8d7f729cae03e1e1e5",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/4096/niah_single_2.jsonl": "f5c4ee22b0759b8f527fc50f7599543f939df32b57baae082bd63a86e9bdc64b",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/4096/niah_single_3.jsonl": "9a57c755cd092c3ca894213bb6c1fb15affab9f519c5c605f54adf406ac6078b",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/4096/niah_multikey_1.jsonl": "5e2ca09b20156959f51a3f832001cbc8707a651d6fb286a4adc51a90469fdc0d",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/4096/niah_multikey_2.jsonl": "3251bc778ca45283fc900fae61cacc65e01a3bfbf17aa2e25275964db5f84e86",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/4096/niah_multikey_3.jsonl": "27ec13838becafbf1cef81592b22d908c182df158f41eebd5691ed092c1aa51e",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/4096/niah_multivalue.jsonl": "a7ce47121a1baccb498ae2990f0e8ce6b81e08663d1c3323451c1512533b4cb0",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/4096/niah_multiquery.jsonl": "19f1d9018b591d1654dbacf9b2bec2b468a5b6b943827bd8b25c20cb18e27eea",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/4096/vt.jsonl": "7350dabd11dd18fe8e442c0b6f20bc95b02172868090bf039569d6c09a119423",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/4096/cwe.jsonl": "c400527def807143a3a47d543a37935c067533217bbd310fd67891c94c78cb6b",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/4096/fwe.jsonl": "c4957b5acc0ffd490ae8bd25709b96967b00fddb97cf9e7befb826f530e4a92b",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/4096/qa_1.jsonl": "59a4d180bf0ef9b5c9a858701cb735183725b7286b60c91e592effe4ae09f714",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/4096/qa_2.jsonl": "f7bdc823e18f7a4b5ec5e7ce6e13c30638c0362472742333b76a9eb81219c835",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/8192/niah_single_1.jsonl": "df216a6c99a930a78727145285d89af8153cb07c7730addbfbd27f5ca40b9414",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/8192/niah_single_2.jsonl": "f97f6eb95d332dcc8b821bf6f6c133b6d9e450c68900debc0f37017a56d27b62",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/8192/niah_single_3.jsonl": "9a6648429e5e83112e16b1dd68d05f73c49d369380f1e3e2bd6cee2c39c62db6",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/8192/niah_multikey_1.jsonl": "280b8d0b93e61c409364eebaa40640d9e03a4a73ddb19fd83578dad2277ab575",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/8192/niah_multikey_2.jsonl": "0e4c245c22f0be4e4f0b988aaa21ab88c8e7f79c502fbc0b550ce17f11fcf3eb",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/8192/niah_multikey_3.jsonl": "e237a7ba76d3c0b38eea6eb0f2cd3b407ec4b0a52bb6a34f98096a25c5b6305e",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/8192/niah_multivalue.jsonl": "62d2176380c951132e7e69685d012b0d34cd74712a74d40a613fe0f43cd211c2",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/8192/niah_multiquery.jsonl": "a30765b1834725f128f5e01303621bf6c64d497f9cc507708d42e861b8709b26",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/8192/vt.jsonl": "f5907849dec8174dc4943fd2e41f0977a1cd16504944b4169bff806d97eb3e4d",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/8192/cwe.jsonl": "c633c7c0f409927dc48105ba243d0252ad3eb4695a00828d38ef8863172c9394",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/8192/fwe.jsonl": "b88f5cdb1f2a4fb5348ef7f0d6d48a90eee908c88ff3e61ebef9fb64469e6c21",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/8192/qa_1.jsonl": "37d30ce0657c0904d6500db7e4df3b6fbbb751092a591a6c81d696f74ca62c3a",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/8192/qa_2.jsonl": "75de92cf37129c315b877d24ec0959dbd79727d586e82635baa7191251c33e22",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/16384/niah_single_1.jsonl": "5994b3c5be9fd23e9d51dda4827a18d7d1571101f41e51ce2015cf5098dbe9e7",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/16384/niah_single_2.jsonl": "de786681b52ba721b27a44368553a2fe71ea2dff086eaf6f296450f03971e60a",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/16384/niah_single_3.jsonl": "b097b8e0ee4eed25b9fced7d0e2f4ec7a385832d2a95e04ebb5ee8f3397936a4",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/16384/niah_multikey_1.jsonl": "51f2f21e28805ab9975c4222f3e6efb33c6dfd76aaa17a716bbcc79c91fdeb38",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/16384/niah_multikey_2.jsonl": "a80d402a99f46e4454c9e00d8d38de85a3522e641e8e9bcb522aba0f994bae60",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/16384/niah_multikey_3.jsonl": "08f74492c72258e63b9fca38fcf5109f088a766fe59a11e77dd1c4ceab3dcb7d",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/16384/niah_multivalue.jsonl": "727159305b871a1d575d51a1dc8266b4eb2f173f95235a7baa94aac807fd2726",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/16384/niah_multiquery.jsonl": "d70d68138403083277ea25e10a7e963bd3464dab7514c36da6528778b9fde687",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/16384/vt.jsonl": "9476e29f30986605445299d195f39c71ef78bf89a58436b1b431379cbba746be",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/16384/cwe.jsonl": "03640bd353330a1f001f5c742137c1fbacc0213a6348552e054cdad007582c9a",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/16384/fwe.jsonl": "462a9bba5794d1a601587400e5d186a80d2be95956fc7d0b11ddc4c91b8bdc57",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/16384/qa_1.jsonl": "1ca8cb6e00ad15420e42babe37c6b8dcdfddac915f1a69ee186a87611c8d9972",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-final-2026-09-19/data/16384/qa_2.jsonl": "f1d2b35198cf38ee3dc8c05c6fbd8de47c14589717ff82c7a9ad9b2b5f25b0b6",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/data/manifest_utils.py": "ecac79322f28ce9a12388b12e35d560ecb7cdad6b9888467a5a13b0eff2db91e",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/data/prepare.py": "f2d210860fbf5c640cb41ed104c7a923c9f4043f6e6c354277daacc73afc643d",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/data/template.py": "2e82d85152212136fffcd5624b158a2c75fd5036ec1c537f4b21eeb78fd18069",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/data/tokenizer.py": "c2e4bfab607eef87a86334558303c1811bc8e93f22a5c4b129f302726d2357a4",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/eval/evaluate.py": "b9a5fcbded7209663d97670496c74dbcd6358ddbe3d9887a0c5f0c4f974bfe1c",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/pred/call_api.py": "949d06ae8a19266c637064c2dd18c7b3d21a0a7064bfc2ac52fe274b84d19e48",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/pred/client_wrappers.py": "4530a6b53f451d1af8f29f6ee794fca789feffa92b2e838af2c67a4568244b2c",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/pred/model_wrappers.py": "78def2b2b619e2095dee3ff8fc52e038c531c6c3bb11735e9ac4ce38cf2e0cd7",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/pred/serve_trt.py": "4d785ace0cfa9ea320ea351db96dcfc422ed0ad21107ec49086d0131668d529a",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/pred/serve_vllm.py": "57ded4db3e84b5c0f9d5394b45a965ae470282fcbbc4b13674763f4340f9e81a",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/data/synthetic/common_words_extraction.py": "2671d4a84a383acef2d9e8f691a0bea4da03f1632ca3f4ad3c1de6d27ccbc6b9",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/data/synthetic/constants.py": "6296e901d495ec6200dc3f68993ea13d8282e3c0dbe1a8c47967f111105d1fde",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/data/synthetic/freq_words_extraction.py": "29b7af97ffdd2122fde348df20cd02add390a21cd6d64b6fd66c8663dc487f67",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/data/synthetic/niah.py": "e9cada0a7660d274fe73a1338a90a7087e17b630169f1aaf14a8d3221c6805b5",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/data/synthetic/qa.py": "f00c0b59cf8698e90831bbf461c2c4f40f2a30f2469534c27455808c717281d0",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/data/synthetic/variable_tracking.py": "9aac483420e158d116ab63fc43b9606bdb284ac0c053288c30776d5c365530e5",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/data/synthetic/json/download_paulgraham_essay.py": "d89622edfe08d4011718bb2634da742d69a56728139fa5e236e00cca703cc84c",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/eval/synthetic/constants.py": "6740467c17b8dc06b6b30f4f97e54ce8de81db0dd879f1538d0b6b5727f4bd5f",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/data/synthetic/json/english_words.json": "affcd6d45fdf3cc843d585c99c97ad615094e760e6c4756b654bab6c73bc2eca",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/data/synthetic/json/hotpotqa.json": "e3da074df24e8369009918aa5cdbdd254dadcde4c63f7569d36afd6f2268caa8",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/data/synthetic/json/PaulGrahamEssays.json": "cea81a37f713aaed8c9903974126d69d03e6d9b1b8a49eae59cc0b8d341a9998",
+    "/mnt/d/Lunacia/Inference/.local/research/ruler-tradeoff-2026-09-16/upstream/scripts/data/synthetic/json/squad.json": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8"
+  },
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "versions": {
+      "vllm": "0.23.0",
+      "torch": "2.11.0+cu130",
+      "transformers": "4.57.6",
+      "numpy": "2.3.5",
+      "httpx": "0.28.1",
+      "psutil": "7.2.2"
+    },
+    "gpu": "name, memory.used [MiB], temperature.gpu, power.draw [W], clocks.current.sm [MHz], clocks.current.memory [MHz]\nNVIDIA GeForce RTX 4090 Laptop GPU, 927 MiB, 51, 3.26 W, 210 MHz, 405 MHz\n",
+    "model": "/home/lunacia/.cache/huggingface/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c"
+  },
+  "completion": {
+    "complete": true,
+    "gpu_lifecycle_seconds": 8984.998598369999,
+    "completed_quality_responses": 2340,
+    "port_released": true,
+    "compute_processes_after": "pid, process_name, used_gpu_memory [MiB]\n"
+  },
+  "numerical_cases": 20,
+  "full_hash_audit_passed": true,
+  "resume_frozen_hashes": {
+    "/mnt/d/Lunacia/Inference/benchmarks/evaluation/resume3.py": "e0d6dbc83c993af5bd83b54f918a18529d3fffbf8b62790e72b43dd34ab36ca2",
+    "/mnt/d/Lunacia/Inference/benchmarks/evaluation/report_resumed3.py": "d567a7b20f1c7759d5ed973c4723bec5e5fb0c0b6f29efaec12124cd8b18df92",
+    "/mnt/d/Lunacia/Inference/benchmarks/evaluation/keep_awake3.py": "0e3e446e78a3f3eabcdbda863d76f8ed8fc66d79fa814f725384017436b61c73",
+    "/mnt/d/Lunacia/Inference/docs/final-benchmark-resume3-protocol.md": "1240d5e437cbbce2a7a603591470ad75f1d27eec538733c4d2f479215c619191"
+  },
+  "original_ledger": [
+    {
+      "job": "numerical",
+      "seconds": 11.04690377199995,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "4096-0-bf16_flash",
+      "seconds": 291.30884776000005,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "4096-0-fp8",
+      "seconds": 329.47629928800006,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "4096-0-mixed",
+      "seconds": 189.13282975300012,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "4096-1-mixed",
+      "seconds": 192.20756178400006,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "4096-1-fp8",
+      "seconds": 228.13576276599997,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "4096-1-bf16_flash",
+      "seconds": 176.91878748299973,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "8192-0-fp8",
+      "seconds": 534.632778145,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "8192-0-mixed",
+      "seconds": 330.7659915260001,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "8192-0-bf16_flash",
+      "seconds": 143.00460159099975,
+      "reason": "child_failed",
+      "code": 1
+    }
+  ],
+  "failed_resume_ledger": [
+    {
+      "job": "8192-0-bf16_flash",
+      "seconds": 148.045583331,
+      "reason": "child_failed",
+      "code": 1
+    }
+  ],
+  "paused_resume_ledger": [
+    {
+      "job": "8192-0-bf16_flash",
+      "seconds": 281.304037242,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "8192-1-bf16_flash",
+      "seconds": 295.56432477299995,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "8192-1-mixed",
+      "seconds": 331.053114294,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "8192-1-fp8",
+      "seconds": 450.3894351519999,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "16384-0-mixed",
+      "seconds": 716.1299013969999,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "16384-0-bf16_flash",
+      "seconds": 612.8662915689997,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "16384-0-fp8",
+      "seconds": 1201.30223462,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "16384-1-fp8",
+      "seconds": 275.13437678499986,
+      "reason": "interrupted",
+      "code": null
+    }
+  ],
+  "resume_ledger": [
+    {
+      "job": "16384-1-fp8",
+      "seconds": 917.168955461,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "16384-1-bf16_flash",
+      "seconds": 600.9438501340001,
+      "reason": "completed",
+      "code": 0
+    },
+    {
+      "job": "16384-1-mixed",
+      "seconds": 728.4661297439998,
+      "reason": "completed",
+      "code": 0
+    }
+  ],
+  "paused_frozen_hashes": {
+    "/mnt/d/Lunacia/Inference/benchmarks/evaluation/resume2.py": "3ee776eb60df7e2c0bd2c67e39ee87508eecfcb7f3c413934a293e885b6989c8",
+    "/mnt/d/Lunacia/Inference/benchmarks/evaluation/report_resumed2.py": "1450c7a9a8698716c053c00566af04756ccb7ef570cee47686e03363a08f4082",
+    "/mnt/d/Lunacia/Inference/benchmarks/evaluation/keep_awake2.py": "f1f15ac5e240a897c2dc598fbfcdadc55b04a3985d9badd9e76cc1e1834b01d5",
+    "/mnt/d/Lunacia/Inference/docs/final-benchmark-resume2-protocol.md": "18d217eb618c67c3324042f1f40cf30a23a3309cbed2c0940a095d1389887841"
+  },
+  "power_guard": {
+    "pid": 38992,
+    "active": false,
+    "start_utc": "2026-09-19T06:29:27.031485+00:00",
+    "requests": [
+      "SystemRequired",
+      "ExecutionRequired"
+    ],
+    "display_required": false,
+    "exit_code": 0,
+    "end_utc": "2026-09-19T07:08:43.874587+00:00"
+  },
+  "host_event_audit": {
+    "events": {
+      "resume-2": [],
+      "resume-3": []
+    },
+    "system_event_ids": [
+      1,
+      42,
+      107,
+      4101,
+      506,
+      507
+    ],
+    "provider_filter": "Power|Display|nvlddmkm",
+    "scope": "Each continuation power-guard start through end; absence does not prove identical hardware conditions."
+  }
+}

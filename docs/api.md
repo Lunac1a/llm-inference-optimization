@@ -1,26 +1,8 @@
 # API usage
 
-`inference-api serve --profile adaptive` starts the API and its owned GPU backend. `inference-api api --profile adaptive --backend-url http://127.0.0.1:8001` starts only the API against an existing compatible backend. For API-only operation, ensure the external backend enables Qwen3 reasoning parsing and native thinking-budget support; declaring a profile does not reconfigure that external process.
+`inference-api serve` starts the mixed-attention API and its owned GPU backend (`chunked-hybrid`). Choose `--profile document` for the BF16 comparison or `--profile hybrid` for the earlier full-prefill comparison.
 
-## Automatic budget selection
-
-```bash
-curl -i http://127.0.0.1:8000/v1/solve \
-  -H 'Content-Type: application/json' \
-  -d '{"question":"Record values: A=42, B=17. What is the value for record A?","budget_profile":"economy","stream":false}'
-```
-
-| Question pattern | economy | quality |
-|---|---:|---:|
-| Record lookup |0|0|
-| Arithmetic |512|512|
-| Sequential transformations |512|1024|
-| Subset counting |512|1024|
-| Unrecognized pattern |512|512|
-
-These are thinking-token limits, not guaranteed token consumption. The output allowance is budget+192. The endpoint adds an integer-answer instruction and bounded integer grammar, with temperature0 and seed42. Unknown questions still require an integer answer; the fallback is not a general-chat mode. Larger budgets can regress individual answers. Quality/economy are cost choices rather than quality guarantees.
-
-The selected budget is returned in response headers, while the body remains a standard chat completion. Streaming uses the same headers and forwards the upstream SSE, including usage events. No extra model call is used to select the budget. Invalid profiles return422; calling solve outside the adaptive runtime profile returns409.
+`inference-api api --backend-url http://127.0.0.1:8001` starts only the API. Ensure the external backend is configured for the intended comparison: selecting an API profile does not reconfigure that external process.
 
 ## Chat and document QA
 
@@ -34,12 +16,18 @@ curl http://127.0.0.1:8000/v1/document/qa \
   -d '{"document":"Project Aurora. The owner is Ada.","question":"Who owns Project Aurora?","max_tokens":128}'
 ```
 
-Generic chat forwards supported vLLM request fields; it does not silently apply the integer budget policy. Document QA places unchanged document bytes before the question. Send the complete document on every request; there is no persistent document upload or session store. Prefix reuse depends on the backend profile and available cache; adaptive mode disables prefix caching to match its measured configuration.
+Generic chat forwards backend request fields without server-side budget selection. Document QA places unchanged document bytes before the changing question, disables thinking and uses temperature 0. Send the complete document with each request; there is no persistent document/session store. Prefix reuse depends on matching tokens and available cache.
+
+The document endpoint accepts `document`, `question`, `max_tokens` (1–2048, default 128), and `stream` (default false). Streaming includes upstream usage events. The earlier `hybrid` profile retains its historical document-title prefix; default and `chunked-hybrid` use the standard document prompt.
+
+`GET /health` reports backend readiness, and `GET /v1/models` returns its model list. Responses include `X-Inference-Profile`. The OpenAPI schema is at `/openapi.json`, with interactive documentation at `/docs`.
 
 ## Configuration and errors
 
-The settings listed in `.env.example` are read from environment variables. Export them explicitly; a dotenv loader is not included. `--profile`, `--host`, `--port`, `--backend-url` and `--batch-invariant` override their corresponding settings. API and backend ports must differ for the combined `serve` command. Existing listeners are never replaced.
+Export settings from `.env.example` explicitly; a dotenv loader is not included. CLI overrides are `--profile`, `--host`, `--port` and `--backend-url`. API and backend ports must differ for `serve`. Existing listeners are never replaced.
 
-Set `INFERENCE_API_KEY` to require `Authorization: Bearer ...` on inference, model and health endpoints. `INFERENCE_BACKEND_API_KEY` is a separate credential used for the upstream backend; client credentials are not forwarded to it. The default bind address is loopback.
+Set `INFERENCE_API_KEY` to require a Bearer token on inference, model and health endpoints. `INFERENCE_BACKEND_API_KEY` is a separate upstream credential; client credentials are not forwarded. The default bind address is loopback.
 
-Backend failures before streaming return502, timeouts return504, and upstream HTTP error statuses/bodies are preserved. A midstream transport failure emits an error event; it does not manufacture a successful completion. Disconnecting a client closes its upstream response. [HTTPX streaming lifecycle](https://www.python-httpx.org/async/) and [FastAPI responses](https://fastapi.tiangolo.com/advanced/custom-response/) define the underlying transport behavior.
+Backend connection failures before streaming return 502, timeouts return 504, and upstream HTTP error statuses/bodies are preserved. A midstream transport failure emits an error event without manufacturing a successful completion. Client disconnection closes its upstream response.
+
+Version 0.1.2 removes `/v1/solve`, adaptive/CPU-KV profiles and the batch-invariance option. See [archive and migration](archive.md).

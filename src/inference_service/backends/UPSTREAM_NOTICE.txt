@@ -1,0 +1,18 @@
+dual_source_kernel.py is derived from vLLM 0.23.0:
+https://github.com/vllm-project/vllm/blob/v0.23.0/vllm/v1/attention/ops/triton_unified_attention.py
+Copyright contributors to the vLLM project. Apache License 2.0.
+Original author credits and SPDX headers remain in the file.
+Installed source SHA256 (UTF-8/LF):
+2d0a32f16fc94dce026850e09f26dc9e9bb830caa0c21a8650d85c8669c618a2
+
+Modifications: disjoint historical-cache/current-BF16 loads, history-only scale
+loads, current K/V pointer parameters, masked page-table tail reads, and
+constrained wrapper validation.
+The online softmax, causal mask and GQA mapping remain upstream. Prefill query
+tiling is enlarged to BLOCK_M=64; small-query Decode geometry remains unchanged.
+This module does not implement quantization, page allocation or decode routing.
+
+Single-loop tile-source branching loads only historical FP8/scales or current
+BF16 for whole-source tiles; boundary tiles retain masked dual-source reads.
+The dot/softmax/accumulator body is shared. The prior three-loop split
+experiment is preserved in the local research archive, not shipped.

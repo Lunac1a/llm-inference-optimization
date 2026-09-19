@@ -29,31 +29,35 @@ def occupied(host: str, port: int) -> bool:
 
 def launch_spec(settings: Settings) -> tuple[list[str], dict[str, str]]:
     host, port = backend_address(settings)
-    adaptive = settings.profile == "adaptive"
-    hybrid = settings.profile == "hybrid"
-    context = 4096 if adaptive else 16640 if hybrid else 32768
+    full_hybrid = settings.profile == "hybrid"
+    chunked_hybrid = settings.profile == "chunked-hybrid"
+    hybrid = full_hybrid or chunked_hybrid
+    context = 16640 if hybrid else 32768
     args = [sys.executable, "-m", "inference_service.vllm_entry", "serve", settings.model,
             "--revision", settings.revision, "--served-model-name", settings.served_model,
             "--host", host, "--port", str(port), "--generation-config", "vllm",
             "--dtype", "bfloat16", "--tensor-parallel-size", "1",
             "--gpu-memory-utilization", "0.8", "--max-model-len", str(context),
-            "--max-num-seqs", "4" if adaptive else "8",
-            "--max-num-batched-tokens", str(context if hybrid else 2048),
+            "--max-num-seqs", "8",
+            "--max-num-batched-tokens", str(context if full_hybrid else 2048),
             "--attention-backend", "TRITON_ATTN" if hybrid else "FLASH_ATTN",
             "--kv-cache-dtype", "fp8_per_token_head" if hybrid else "bfloat16",
             "--calculate-kv-scales", "--enforce-eager",
-            "--no-enable-chunked-prefill" if hybrid else "--enable-chunked-prefill",
-            "--no-enable-prefix-caching" if adaptive else "--enable-prefix-caching",
+            "--no-enable-chunked-prefill" if full_hybrid else "--enable-chunked-prefill",
+            "--enable-prefix-caching",
             "--reasoning-parser", "qwen3", "--reasoning-config",
             '{"reasoning_start_str":"<think>","reasoning_end_str":"</think>"}',
             "--enable-prompt-tokens-details"]
-    if settings.profile == "cpu-kv":
-        args += ["--kv-offloading-size", "8", "--kv-offloading-backend", "native"]
-    plugin = {"hybrid": "inference_hybrid_prefill", "cpu-kv": "inference_kv_transport"}.get(settings.profile, "")
+    if chunked_hybrid:
+        args += ["--kv-cache-memory-bytes", str(4 * 2**30)]
+    plugin = {"hybrid": "inference_hybrid_prefill",
+              "chunked-hybrid": "inference_chunked_prefill"}.get(settings.profile, "")
     env = dict(os.environ)
     env.update(VLLM_PLUGINS=plugin, INFERENCE_RUNTIME_PROFILE=settings.profile,
                VLLM_USE_V2_MODEL_RUNNER="0", VLLM_USE_FLASHINFER_SAMPLER="0",
-               VLLM_BATCH_INVARIANT=str(int(settings.batch_invariant)), VLLM_USE_SIMPLE_KV_OFFLOAD="0")
+               VLLM_BATCH_INVARIANT="0", VLLM_USE_SIMPLE_KV_OFFLOAD="0")
+    if chunked_hybrid:
+        env["VLLM_KV_CACHE_LAYOUT"] = "NHD"
     # Clear inherited backend authentication when no backend key is configured.
     if settings.backend_api_key:
         env["VLLM_API_KEY"] = settings.backend_api_key
@@ -81,11 +85,6 @@ class OwnedBackend:
         host, port = backend_address(self.settings)
         if occupied(host, port):
             raise RuntimeError(f"Backend port {port} is occupied; no process was replaced")
-        if self.settings.profile == "cpu-kv":
-            available = next(int(line.split()[1]) * 1024 for line in Path("/proc/meminfo").read_text().splitlines()
-                             if line.startswith("MemAvailable:"))
-            if available < 12 * 2**30:
-                raise RuntimeError("CPU KV profile needs at least 12 GiB available host memory")
         args, env = launch_spec(self.settings)
         self.settings.log_dir.mkdir(parents=True, exist_ok=True)
         self.log_path = self.settings.log_dir / f"vllm-{time.time_ns()}.log"

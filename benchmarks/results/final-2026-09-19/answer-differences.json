@@ -1,0 +1,530 @@
+[
+  {
+    "id": "4096:cwe:0",
+    "baseline": "bf16_flash",
+    "mixed_score": 1.0,
+    "baseline_score": 0.9,
+    "answers": [
+      "inhibition",
+      "science",
+      "borrower",
+      "spaghetti",
+      "sewer",
+      "pita",
+      "snowflake",
+      "series",
+      "abashed",
+      "experiment"
+    ],
+    "mixed_prediction": " 1. pita 2. inhibition 3. experiment 4. series 5. borrower 6. abashed 7. spaghetti 8. science 9. sewer 10. snowflake",
+    "baseline_prediction": " 1. pita 2. inhibition 3. experiment 4. series 5. borrower 6. abashed 7. spaghetti 8. science 9. sewer 10. pita"
+  },
+  {
+    "id": "4096:niah_single_3:18",
+    "baseline": "fp8",
+    "mixed_score": 1.0,
+    "baseline_score": 0.0,
+    "answers": [
+      "152ec55d-7088-49a2-8401-45e957a59f5f"
+    ],
+    "mixed_prediction": ": **152ec55d-7088-49a2-8401-45e957a59f5f**.",
+    "baseline_prediction": ": **152ec55d-7088-49a2-8401-45e9557a59f5f**."
+  },
+  {
+    "id": "8192:cwe:18",
+    "baseline": "bf16_flash",
+    "mixed_score": 1.0,
+    "baseline_score": 0.8,
+    "answers": [
+      "perpetual",
+      "preface",
+      "unsuitable",
+      "mosque",
+      "verse",
+      "menu",
+      "representative",
+      "respect",
+      "guarantee",
+      "grade"
+    ],
+    "mixed_prediction": " 1. preface 2. grade 3. menu 4. respect 5. verse 6. unsuitable 7. representative 8. mosque 9. perpetual 10. guarantee",
+    "baseline_prediction": " 1. preface 2. grade 3. menu 4. respect 5. verse 6. mosque 7. unsuitable 8. representative 9. grade 10. preface"
+  },
+  {
+    "id": "8192:fwe:3",
+    "baseline": "bf16_flash",
+    "mixed_score": 1.0,
+    "baseline_score": 0.6667000000000001,
+    "answers": [
+      "cgnawl",
+      "tkopqo",
+      "eeziwd"
+    ],
+    "mixed_prediction": " cgnawl, tkopqo, and eeziwd.",
+    "baseline_prediction": " cgnawl, tkopqo, and gbgiye."
+  },
+  {
+    "id": "8192:cwe:6",
+    "baseline": "fp8",
+    "mixed_score": 1.0,
+    "baseline_score": 0.9,
+    "answers": [
+      "parole",
+      "mat",
+      "contrail",
+      "gainful",
+      "syndicate",
+      "popcorn",
+      "codpiece",
+      "conduct",
+      "adrenalin",
+      "tuition"
+    ],
+    "mixed_prediction": " 1. codpiece 2. conduct 3. mat 4. tuition 5. adrenalin 6. contrail 7. gainful 8. syndicate 9. popcorn 10. parole",
+    "baseline_prediction": " 1. codpiece 2. conduct 3. mat 4. tuition 5. adrenalin 6. contrail 7. gainful 8. parody 9. popcorn 10. parole"
+  },
+  {
+    "id": "8192:cwe:9",
+    "baseline": "fp8",
+    "mixed_score": 0.7,
+    "baseline_score": 0.8,
+    "answers": [
+      "bosom",
+      "bran",
+      "camper",
+      "rug",
+      "meridian",
+      "clover",
+      "cub",
+      "toilet",
+      "brushfire",
+      "grasp"
+    ],
+    "mixed_prediction": " 1. camper 2. bran 3. bosom 4. meridian 5. rug 6. grasp 7. clover 8. bosom 9. meridian 10. bran",
+    "baseline_prediction": " 1. bosom 2. camper 3. bran 4. meridian 5. rug 6. grasp 7. toilet 8. clover 9. bosom 10. meridian (Note: \"bosom\" and \"meridian\" are tied for the 9th and 10th positions, each appearing multiple times.)"
+  },
+  {
+    "id": "8192:cwe:15",
+    "baseline": "fp8",
+    "mixed_score": 0.8,
+    "baseline_score": 0.9,
+    "answers": [
+      "nicety",
+      "reamer",
+      "balalaika",
+      "subscription",
+      "permissible",
+      "jackfruit",
+      "bakery",
+      "beef",
+      "stopwatch",
+      "kick"
+    ],
+    "mixed_prediction": " 1. balalaika 2. kick 3. subscription 4. reamer 5. permissible 6. bakery 7. beef 8. nicety 9. balalaika 10. balalaika (Note: \"balalaika\" appears more than once in the list, but \"kick\" and \"subscription\" are the most frequent words, followed by \"reamer\" and \"permissible\".)",
+    "baseline_prediction": " 1. balalaika 2. kick 3. subscription 4. reamer 5. permissible 6. bakery 7. beef 8. nicety 9. jackfruit 10. balalaika (Note: \"balalaika\" appears twice in the list, but it is the most frequent word, followed by \"kick\" and \"subscription\".)"
+  },
+  {
+    "id": "8192:cwe:18",
+    "baseline": "fp8",
+    "mixed_score": 1.0,
+    "baseline_score": 0.9,
+    "answers": [
+      "perpetual",
+      "preface",
+      "unsuitable",
+      "mosque",
+      "verse",
+      "menu",
+      "representative",
+      "respect",
+      "guarantee",
+      "grade"
+    ],
+    "mixed_prediction": " 1. preface 2. grade 3. menu 4. respect 5. verse 6. unsuitable 7. representative 8. mosque 9. perpetual 10. guarantee",
+    "baseline_prediction": " 1. preface 2. grade 3. menu 4. respect 5. verse 6. unsuitable 7. representative 8. mosque 9. grade 10. perennial (Note: \"perpetual\" is the most frequent word, but it is listed as \"perpetual\" in the list, not \"perennial\". The correct top 10 words are: 1. preface 2. grade 3. menu 4. respect 5. verse 6. unsuitable 7. representative 8. mosque "
+  },
+  {
+    "id": "16384:cwe:2",
+    "baseline": "bf16_flash",
+    "mixed_score": 0.8,
+    "baseline_score": 0.9,
+    "answers": [
+      "slope",
+      "clone",
+      "grind",
+      "pledge",
+      "practice",
+      "airmail",
+      "repayment",
+      "wildebeest",
+      "wear",
+      "boycott"
+    ],
+    "mixed_prediction": " 1. airmail 2. pledge 3. repayment 4. slope 5. clone 6. wear 7. practice 8. boycott 9. slope 10. airmail",
+    "baseline_prediction": " 1. airmail 2. practice 3. pledge 4. repayment 5. slope 6. clone 7. wear 8. wildebeest 9. boycott 10. airmail"
+  },
+  {
+    "id": "16384:cwe:9",
+    "baseline": "bf16_flash",
+    "mixed_score": 0.9,
+    "baseline_score": 0.8,
+    "answers": [
+      "modification",
+      "divide",
+      "distortion",
+      "copying",
+      "technique",
+      "favor",
+      "exceed",
+      "tract",
+      "postbox",
+      "pinto"
+    ],
+    "mixed_prediction": " 1. postbox 2. tract 3. favor 4. distortion 5. pinto 6. technique 7. exceed 8. modification 9. copying 10. tract",
+    "baseline_prediction": " 1. postbox 2. tract 3. favor 4. distortion 5. pinto 6. technique 7. modify 8. exceed 9. copying 10. tract"
+  },
+  {
+    "id": "16384:cwe:11",
+    "baseline": "bf16_flash",
+    "mixed_score": 0.8,
+    "baseline_score": 0.7,
+    "answers": [
+      "songbird",
+      "rich",
+      "collision",
+      "geek",
+      "setback",
+      "consequence",
+      "pat",
+      "skiing",
+      "making",
+      "representative"
+    ],
+    "mixed_prediction": " 1. consequence 2. pat 3. making 4. collision 5. geek 6. representative 7. skiing 8. songbird 9. consequence 10. pat",
+    "baseline_prediction": " 1. consequence 2. pat 3. making 4. collision 5. geek 6. representative 7. skiing 8. consequence 9. pat 10. consequence"
+  },
+  {
+    "id": "16384:cwe:18",
+    "baseline": "bf16_flash",
+    "mixed_score": 0.8,
+    "baseline_score": 0.7,
+    "answers": [
+      "guilt",
+      "nut",
+      "sheet",
+      "car",
+      "instant",
+      "coat",
+      "easy",
+      "notoriety",
+      "founding",
+      "receptive"
+    ],
+    "mixed_prediction": " 1. easy 2. coat 3. notoriety 4. sheet 5. car 6. receptive 7. founding 8. nut 9. sheet 10. notoriety",
+    "baseline_prediction": " 1. easy 2. coat 3. notoriety 4. sheet 5. car 6. founding 7. reception 8. nut 9. sheet 10. notoriety"
+  },
+  {
+    "id": "16384:fwe:13",
+    "baseline": "bf16_flash",
+    "mixed_score": 0.6667000000000001,
+    "baseline_score": 1.0,
+    "answers": [
+      "vsbiax",
+      "sizobo",
+      "poamqp"
+    ],
+    "mixed_prediction": " vsbiax, atozlo, and poamqp.",
+    "baseline_prediction": " vsbiax, poamqp, and sizobo."
+  },
+  {
+    "id": "16384:fwe:15",
+    "baseline": "bf16_flash",
+    "mixed_score": 0.6667000000000001,
+    "baseline_score": 1.0,
+    "answers": [
+      "wmnexk",
+      "sopkxv",
+      "qpbxxl"
+    ],
+    "mixed_prediction": " wmnexk, qpbxxl, and amhllk.",
+    "baseline_prediction": " wmnexk, qpbxxl, and sopkxv."
+  },
+  {
+    "id": "16384:qa_2:3",
+    "baseline": "bf16_flash",
+    "mixed_score": 0.0,
+    "baseline_score": 1.0,
+    "answers": [
+      "North Avenue at Techwood Drive"
+    ],
+    "mixed_prediction": " The stadium at which the 1964 Georgia Tech Yellow Jackets football team played their home games is located at Grant Field on the campus of the Georgia Institute",
+    "baseline_prediction": " The stadium at which the 1964 Georgia Tech Yellow Jackets football team played their home games is located at the corner of North Avenue at Techwood Drive"
+  },
+  {
+    "id": "16384:qa_2:8",
+    "baseline": "bf16_flash",
+    "mixed_score": 0.0,
+    "baseline_score": 1.0,
+    "answers": [
+      "7 October 1978"
+    ],
+    "mixed_prediction": " 26 April 1978.",
+    "baseline_prediction": " Zaheer Khan was born on 7 October 1978."
+  },
+  {
+    "id": "16384:cwe:3",
+    "baseline": "fp8",
+    "mixed_score": 0.9,
+    "baseline_score": 0.8,
+    "answers": [
+      "comb",
+      "jam",
+      "stiletto",
+      "earsplitting",
+      "moody",
+      "oak",
+      "inbox",
+      "enigma",
+      "sadness",
+      "anthropology"
+    ],
+    "mixed_prediction": " 1. comb 2. inbox 3. stiletto 4. moody 5. enigma 6. earsplitting 7. anthropology 8. oak 9. stiletto 10. sadness",
+    "baseline_prediction": " 1. comb 2. inbox 3. stiletto 4. earsplitting 5. anthropology 6. oak 7. enigma 8. moody 9. stiletto 10. inbox"
+  },
+  {
+    "id": "16384:cwe:5",
+    "baseline": "fp8",
+    "mixed_score": 1.0,
+    "baseline_score": 0.9,
+    "answers": [
+      "caption",
+      "bus",
+      "inspection",
+      "cell",
+      "deadline",
+      "latency",
+      "chicken",
+      "cream",
+      "grab-bag",
+      "monsoon"
+    ],
+    "mixed_prediction": " 1. deadline 2. cell 3. monsoon 4. bus 5. caption 6. chicken 7. latency 8. grab-bag 9. inspection 10. cream",
+    "baseline_prediction": " 1. chicken 2. deadline 3. cell 4. monsoon 5. bus 6. caption 7. latency 8. inspection 9. grab-bag 10. cell"
+  },
+  {
+    "id": "16384:cwe:8",
+    "baseline": "fp8",
+    "mixed_score": 0.4,
+    "baseline_score": 0.6,
+    "answers": [
+      "wiry",
+      "review",
+      "tavern",
+      "premier",
+      "tiresome",
+      "earn",
+      "poisoning",
+      "espadrille",
+      "perception",
+      "obtain"
+    ],
+    "mixed_prediction": " 1. espadrille 2. tavern 3. perception 4. obtain 5. espadrille 6. espadrille 7. espadrille 8. espadrille 9. espadrille 10. espadrille",
+    "baseline_prediction": " 1. espadrille 2. tavern 3. perception 4. obtain 5. premier 6. review 7. espadrille 8. espadrille 9. espadrille 10. espadrille"
+  },
+  {
+    "id": "16384:cwe:10",
+    "baseline": "fp8",
+    "mixed_score": 0.8,
+    "baseline_score": 0.7,
+    "answers": [
+      "spat",
+      "professor",
+      "smock",
+      "strand",
+      "inside",
+      "perpetual",
+      "middle",
+      "alias",
+      "grove",
+      "gasp"
+    ],
+    "mixed_prediction": " 1. smock 2. strand 3. professor 4. grove 5. middle 6. gasp 7. alien 8. perpetual 9. alias 10. professor",
+    "baseline_prediction": " 1. smock 2. strand 3. professor 4. grove 5. middle 6. gasp 7. alien 8. perpetual 9. alien 10. alien"
+  },
+  {
+    "id": "16384:cwe:11",
+    "baseline": "fp8",
+    "mixed_score": 0.8,
+    "baseline_score": 1.0,
+    "answers": [
+      "songbird",
+      "rich",
+      "collision",
+      "geek",
+      "setback",
+      "consequence",
+      "pat",
+      "skiing",
+      "making",
+      "representative"
+    ],
+    "mixed_prediction": " 1. consequence 2. pat 3. making 4. collision 5. geek 6. representative 7. skiing 8. songbird 9. consequence 10. pat",
+    "baseline_prediction": " 1. consequence 2. pat 3. making 4. geek 5. collision 6. representative 7. skiing 8. rich 9. setback 10. songbird"
+  },
+  {
+    "id": "16384:cwe:12",
+    "baseline": "fp8",
+    "mixed_score": 0.8,
+    "baseline_score": 0.7,
+    "answers": [
+      "jaguar",
+      "graduate",
+      "nibble",
+      "info",
+      "dough",
+      "hemp",
+      "guitarist",
+      "mailing",
+      "instrumentalist",
+      "diagnose"
+    ],
+    "mixed_prediction": " 1. nibble 2. guitarist 3. mailing 4. dough 5. instrumentalist 6. graduate 7. hemp 8. diagnose 9. graduate 10. graduate",
+    "baseline_prediction": " 1. nibble 2. guitarist 3. mailing 4. dough 5. instrumentalist 6. graduate 7. hemp 8. graduate 9. graduate 10. graduate"
+  },
+  {
+    "id": "16384:cwe:14",
+    "baseline": "fp8",
+    "mixed_score": 0.9,
+    "baseline_score": 1.0,
+    "answers": [
+      "negotiate",
+      "obsidian",
+      "anywhere",
+      "step-grandmother",
+      "bunghole",
+      "guy",
+      "plowman",
+      "squeamish",
+      "excellent",
+      "gap"
+    ],
+    "mixed_prediction": " 1. plowman 2. guy 3. excellent 4. bunghole 5. negotiate 6. obsidian 7. step-grandmother 8. gap 9. squirrel 10. anywhere",
+    "baseline_prediction": " 1. plowman 2. guy 3. excellent 4. bunghole 5. negotiate 6. obsidian 7. step-grandmother 8. gap 9. squeamish 10. anywhere"
+  },
+  {
+    "id": "16384:cwe:16",
+    "baseline": "fp8",
+    "mixed_score": 0.7,
+    "baseline_score": 0.8,
+    "answers": [
+      "manacle",
+      "advise",
+      "sniff",
+      "inspiration",
+      "work",
+      "cirrus",
+      "regulator",
+      "chivalry",
+      "brand",
+      "unfasten"
+    ],
+    "mixed_prediction": " 1. regulator 2. chivalry 3. brand 4. cirrus 5. manacle 6. sniff 7. inspiration 8. chivalry 9. brand 10. regulator",
+    "baseline_prediction": " 1. regulator 2. chivalry 3. brand 4. cirrus 5. manacle 6. inspiration 7. sniff 8. work 9. chivalry 10. brand"
+  },
+  {
+    "id": "16384:cwe:18",
+    "baseline": "fp8",
+    "mixed_score": 0.8,
+    "baseline_score": 0.7,
+    "answers": [
+      "guilt",
+      "nut",
+      "sheet",
+      "car",
+      "instant",
+      "coat",
+      "easy",
+      "notoriety",
+      "founding",
+      "receptive"
+    ],
+    "mixed_prediction": " 1. easy 2. coat 3. notoriety 4. sheet 5. car 6. receptive 7. founding 8. nut 9. sheet 10. notoriety",
+    "baseline_prediction": " 1. easy 2. coat 3. notoriety 4. sheet 5. car 6. founding 7. reception 8. nut 9. sheet 10. notoriety"
+  },
+  {
+    "id": "16384:fwe:7",
+    "baseline": "fp8",
+    "mixed_score": 1.0,
+    "baseline_score": 0.6667000000000001,
+    "answers": [
+      "wuumlw",
+      "scxvdn",
+      "plycse"
+    ],
+    "mixed_prediction": " wuumlw, scxvdn, and plycse.",
+    "baseline_prediction": " wuumlw, scxvdn, and jkkyzw."
+  },
+  {
+    "id": "16384:fwe:11",
+    "baseline": "fp8",
+    "mixed_score": 1.0,
+    "baseline_score": 0.6667000000000001,
+    "answers": [
+      "wipaqf",
+      "rrjdzg",
+      "qjjpgz"
+    ],
+    "mixed_prediction": " wipaqf, rrjdzg, and qjjpgz.",
+    "baseline_prediction": " wipaqf, rrjdzg, and anqmvz."
+  },
+  {
+    "id": "16384:fwe:13",
+    "baseline": "fp8",
+    "mixed_score": 0.6667000000000001,
+    "baseline_score": 1.0,
+    "answers": [
+      "vsbiax",
+      "sizobo",
+      "poamqp"
+    ],
+    "mixed_prediction": " vsbiax, atozlo, and poamqp.",
+    "baseline_prediction": " vsbiax, poamqp, and sizobo."
+  },
+  {
+    "id": "16384:fwe:15",
+    "baseline": "fp8",
+    "mixed_score": 0.6667000000000001,
+    "baseline_score": 1.0,
+    "answers": [
+      "wmnexk",
+      "sopkxv",
+      "qpbxxl"
+    ],
+    "mixed_prediction": " wmnexk, qpbxxl, and amhllk.",
+    "baseline_prediction": " wmnexk, sopkxv, and qpbxxl."
+  },
+  {
+    "id": "16384:qa_1:12",
+    "baseline": "fp8",
+    "mixed_score": 1.0,
+    "baseline_score": 0.0,
+    "answers": [
+      "solution",
+      "the solution",
+      "solution"
+    ],
+    "mixed_prediction": " Solution.",
+    "baseline_prediction": " function problem."
+  },
+  {
+    "id": "16384:qa_2:8",
+    "baseline": "fp8",
+    "mixed_score": 0.0,
+    "baseline_score": 1.0,
+    "answers": [
+      "7 October 1978"
+    ],
+    "mixed_prediction": " 26 April 1978.",
+    "baseline_prediction": " Zaheer Khan was born on 7 October 1978."
+  }
+]
